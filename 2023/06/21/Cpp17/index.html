@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang=default>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="">
+  
+    <link rel="icon" href="">
+  
+    
+  <title>Cpp 17 | Jager的工地</title>
+  <meta name="description" content="游戏开发">
+  
+<link rel="stylesheet" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/style.css">
+
+  
+<link rel="stylesheet" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/jquery.fancybox.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <header>
+  <div class="header-container">
+    <a class='logo' href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/">
+      <span>Jager的工地</span>
+    </a>
+    <ul class="right-header">
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/" class="item-link">Index</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/about" class="item-link">About</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/archives" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/tags" class="item-link">Tags</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+</header>
+
+  <main id='post'>
+  <div class="content">
+    <article>
+      <section class="content markdown-body">
+        <h1>
+          Cpp 17
+        </h1>
+        <div class='post-meta'>
+          <i class="fa fa-calendar"
+            aria-hidden="true"></i> <time>
+            2023/06/21</time>
+          
+          | <i class="fa fa-folder-open-o"
+            aria-hidden="true"></i>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/categories/Cpp/">Cpp</a>
+  </div>
+
+
+
+          
+          
+        </div>
+        <h1 id="命名空间嵌套"><a href="#命名空间嵌套" class="headerlink" title="命名空间嵌套"></a>命名空间嵌套</h1><h1 id="std-optional"><a href="#std-optional" class="headerlink" title="std::optional"></a>std::optional</h1><p>主要是为了可以让函数可返回多个值。</p>
+<h1 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h1><p>可捕获对象的副本，而非对象的引用。</p>
+
+      </section>
+    </article>
+    
+    
+  </div>
+  <aside>
+    
+    <div class="toc-container">
+      <h1>
+        catalog
+      </h1>
+      <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4%E5%B5%8C%E5%A5%97"><span class="toc-number">1.</span> <span class="toc-text">命名空间嵌套</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#std-optional"><span class="toc-number">2.</span> <span class="toc-text">std::optional</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">Lambda表达式</span></a></li></ol>
+      </div>
+    </div>
+    
+  </aside>
+</main>
+
+
+
+  <footer>
+  <div class="copyright">
+    <div>
+      &copy;
+      2023 | Powered by <a href="https://hexo.io"
+        target="_blank">Hexo</a>&nbsp
+    </div>
+    <div>
+      Theme by <a href="https://github.com/lewis-geek/hexo-theme-Aath"
+        target="_blank">Aath</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/ScrollMagic.min.js"></script>
+
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/lodash.min.js"></script>
+
+<script>
+  document.body.addEventListener('touchstart', function () { });
+
+  // 文章图片预览
+  $("article img").each(function () {
+    var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
+    $(this).wrapAll(strA);
+  });
+
+  // 目录联动
+  let tocLinkList = $('.toc-link')
+
+  let controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      triggerHook: 0.01
+    }
+  })
+
+  tocLinkList.each(function (index, elem) {
+    let href = $(this).attr("href");
+    let nextHref = tocLinkList.eq(index + 1).attr("href");
+    let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+    new ScrollMagic.Scene({ triggerElement: href })
+      .duration(height)
+      .setClassToggle(".toc [href='" + href + "']", 'active')
+      .addTo(controller)
+  })
+
+  window.addEventListener('load', function () {
+    // 目录联动 图片加载完成后从新计算
+    tocLinkList.each(function (index, elem) {
+      let href = $(this).attr("href");
+      let nextHref = tocLinkList.eq(index + 1).attr("href");
+      let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+      new ScrollMagic.Scene({ triggerElement: href })
+        .duration(height)
+        .setClassToggle(".toc [href='" + href + "']", 'active')
+        .addTo(controller)
+    })
+  })
+</script>
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/jquery.fancybox.min.js"></script>
+
+
+
+</body>
+</html>

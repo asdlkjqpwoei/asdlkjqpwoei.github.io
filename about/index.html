@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang=default>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="">
+  
+    <link rel="icon" href="">
+  
+    
+  <title>About me | Jager的工地</title>
+  <meta name="description" content="游戏开发">
+  
+<link rel="stylesheet" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/style.css">
+
+  
+<link rel="stylesheet" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/jquery.fancybox.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <header>
+  <div class="header-container">
+    <a class='logo' href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/">
+      <span>Jager的工地</span>
+    </a>
+    <ul class="right-header">
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/" class="item-link">Index</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/about" class="item-link">About</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/archives" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/tags" class="item-link">Tags</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+</header>
+
+  <main id='post'>
+  <div class="content">
+    <article>
+      <section class="content markdown-body">
+        <h1>
+          About me
+        </h1>
+        <div class='post-meta'>
+          <i class="fa fa-calendar"
+            aria-hidden="true"></i> <time>
+            2023/06/21</time>
+          
+          
+        </div>
+        <h1 id="个人介绍"><a href="#个人介绍" class="headerlink" title="个人介绍"></a>个人介绍</h1><p>21届民办二本计算机专业毕业生，纯纯的普通人，想做大型游戏&#x2F;主机游戏&#x2F;独立游戏开发。</p>
+<h1 id="状态"><a href="#状态" class="headerlink" title="状态"></a>状态</h1><p>长时间被裁失业中</p>
+
+      </section>
+    </article>
+    
+    
+  </div>
+  <aside>
+    
+    <div class="toc-container">
+      <h1>
+        catalog
+      </h1>
+      <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">个人介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%8A%B6%E6%80%81"><span class="toc-number">2.</span> <span class="toc-text">状态</span></a></li></ol>
+      </div>
+    </div>
+    
+  </aside>
+</main>
+
+
+
+
+  <footer>
+  <div class="copyright">
+    <div>
+      &copy;
+      2023 | Powered by <a href="https://hexo.io"
+        target="_blank">Hexo</a>&nbsp
+    </div>
+    <div>
+      Theme by <a href="https://github.com/lewis-geek/hexo-theme-Aath"
+        target="_blank">Aath</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/ScrollMagic.min.js"></script>
+
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/lodash.min.js"></script>
+
+<script>
+  document.body.addEventListener('touchstart', function () { });
+
+  // 文章图片预览
+  $("article img").each(function () {
+    var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
+    $(this).wrapAll(strA);
+  });
+
+  // 目录联动
+  let tocLinkList = $('.toc-link')
+
+  let controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      triggerHook: 0.01
+    }
+  })
+
+  tocLinkList.each(function (index, elem) {
+    let href = $(this).attr("href");
+    let nextHref = tocLinkList.eq(index + 1).attr("href");
+    let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+    new ScrollMagic.Scene({ triggerElement: href })
+      .duration(height)
+      .setClassToggle(".toc [href='" + href + "']", 'active')
+      .addTo(controller)
+  })
+
+  window.addEventListener('load', function () {
+    // 目录联动 图片加载完成后从新计算
+    tocLinkList.each(function (index, elem) {
+      let href = $(this).attr("href");
+      let nextHref = tocLinkList.eq(index + 1).attr("href");
+      let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+      new ScrollMagic.Scene({ triggerElement: href })
+        .duration(height)
+        .setClassToggle(".toc [href='" + href + "']", 'active')
+        .addTo(controller)
+    })
+  })
+</script>
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/jquery.fancybox.min.js"></script>
+
+
+
+</body>
+</html>

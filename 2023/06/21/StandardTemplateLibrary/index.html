@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang=default>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="">
+  
+    <link rel="icon" href="">
+  
+    
+  <title>Standard Template Library | Jager的工地</title>
+  <meta name="description" content="游戏开发">
+  
+<link rel="stylesheet" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/style.css">
+
+  
+<link rel="stylesheet" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/jquery.fancybox.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <header>
+  <div class="header-container">
+    <a class='logo' href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/">
+      <span>Jager的工地</span>
+    </a>
+    <ul class="right-header">
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/" class="item-link">Index</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/about" class="item-link">About</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/archives" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/tags" class="item-link">Tags</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+</header>
+
+  <main id='post'>
+  <div class="content">
+    <article>
+      <section class="content markdown-body">
+        <h1>
+          Standard Template Library
+        </h1>
+        <div class='post-meta'>
+          <i class="fa fa-calendar"
+            aria-hidden="true"></i> <time>
+            2023/06/21</time>
+          
+          | <i class="fa fa-folder-open-o"
+            aria-hidden="true"></i>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/categories/Cpp/">Cpp</a>
+  </div>
+
+
+
+          
+          
+        </div>
+        <h1 id="标准模板库容器"><a href="#标准模板库容器" class="headerlink" title="标准模板库容器"></a>标准模板库容器</h1><table>
+<thead>
+<tr>
+<th>容器</th>
+<th>数据结构</th>
+<th>时间复杂度</th>
+<th>元素是否有序</th>
+<th>元素是否可重复</th>
+<th>注意事项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Array</td>
+<td>数组</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>支持任意访问</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td>数组</td>
+<td>在尾部操作时$O(1)$，在头部操作时$O(n)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>支持任意访问</td>
+</tr>
+<tr>
+<td>Deque</td>
+<td>双端队列</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>支持任意访问</td>
+</tr>
+<tr>
+<td>forward_list</td>
+<td>单向链表</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>不支持任意访问</td>
+</tr>
+<tr>
+<td>List</td>
+<td>双向链表</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>不支持任意访问</td>
+</tr>
+<tr>
+<td>Stack</td>
+<td>基于链表，deque&#x2F;lsit</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>deque&#x2F;list封闭头端开口。</td>
+</tr>
+<tr>
+<td>Queue</td>
+<td>基于链表，deque&#x2F;list</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>deque&#x2F;list封闭头端开口。</td>
+</tr>
+<tr>
+<td>priority_queue</td>
+<td>vector+max_heap</td>
+<td>$O(log_2n)$</td>
+<td>有序</td>
+<td>可重复</td>
+<td>使用堆处理和规则的vector容器</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>红黑树</td>
+<td>$O(log_2n)$</td>
+<td>有序</td>
+<td>不可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>Multiset</td>
+<td>红黑树</td>
+<td>$O(log_2n)$</td>
+<td>有序</td>
+<td>可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>Map</td>
+<td>红黑树</td>
+<td>$O(log_2n)$</td>
+<td>有序</td>
+<td>不可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>Multimap</td>
+<td>红黑树</td>
+<td>$O(log_2n)$</td>
+<td>有序</td>
+<td>可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>unordered_set</td>
+<td>哈希表</td>
+<td>$O(1)-O(n)$</td>
+<td>无序</td>
+<td>不可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>unordered_multiset</td>
+<td>哈希表</td>
+<td>$O(1)-O(n)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>unordered_map</td>
+<td>哈希表</td>
+<td>$O(1)-O(n)$</td>
+<td>无序</td>
+<td>不可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>unordered_multimap</td>
+<td>哈希表</td>
+<td>$O(1)-O(n)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>|</td>
+</tr>
+</tbody></table>
+
+      </section>
+    </article>
+    
+    
+  </div>
+  <aside>
+    
+    <div class="toc-container">
+      <h1>
+        catalog
+      </h1>
+      <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E5%AE%B9%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">标准模板库容器</span></a></li></ol>
+      </div>
+    </div>
+    
+  </aside>
+</main>
+
+
+
+  <footer>
+  <div class="copyright">
+    <div>
+      &copy;
+      2023 | Powered by <a href="https://hexo.io"
+        target="_blank">Hexo</a>&nbsp
+    </div>
+    <div>
+      Theme by <a href="https://github.com/lewis-geek/hexo-theme-Aath"
+        target="_blank">Aath</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/ScrollMagic.min.js"></script>
+
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/lodash.min.js"></script>
+
+<script>
+  document.body.addEventListener('touchstart', function () { });
+
+  // 文章图片预览
+  $("article img").each(function () {
+    var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
+    $(this).wrapAll(strA);
+  });
+
+  // 目录联动
+  let tocLinkList = $('.toc-link')
+
+  let controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      triggerHook: 0.01
+    }
+  })
+
+  tocLinkList.each(function (index, elem) {
+    let href = $(this).attr("href");
+    let nextHref = tocLinkList.eq(index + 1).attr("href");
+    let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+    new ScrollMagic.Scene({ triggerElement: href })
+      .duration(height)
+      .setClassToggle(".toc [href='" + href + "']", 'active')
+      .addTo(controller)
+  })
+
+  window.addEventListener('load', function () {
+    // 目录联动 图片加载完成后从新计算
+    tocLinkList.each(function (index, elem) {
+      let href = $(this).attr("href");
+      let nextHref = tocLinkList.eq(index + 1).attr("href");
+      let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+      new ScrollMagic.Scene({ triggerElement: href })
+        .duration(height)
+        .setClassToggle(".toc [href='" + href + "']", 'active')
+        .addTo(controller)
+    })
+  })
+</script>
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/jquery.fancybox.min.js"></script>
+
+
+
+</body>
+</html>

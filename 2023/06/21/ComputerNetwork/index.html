@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang=default>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="">
+  
+    <link rel="icon" href="">
+  
+    
+  <title>Computer Network Basis | Jager的工地</title>
+  <meta name="description" content="游戏开发">
+  
+<link rel="stylesheet" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/style.css">
+
+  
+<link rel="stylesheet" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/jquery.fancybox.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <header>
+  <div class="header-container">
+    <a class='logo' href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/">
+      <span>Jager的工地</span>
+    </a>
+    <ul class="right-header">
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/" class="item-link">Index</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/about" class="item-link">About</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/archives" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/tags" class="item-link">Tags</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+</header>
+
+  <main id='post'>
+  <div class="content">
+    <article>
+      <section class="content markdown-body">
+        <h1>
+          Computer Network Basis
+        </h1>
+        <div class='post-meta'>
+          <i class="fa fa-calendar"
+            aria-hidden="true"></i> <time>
+            2023/06/21</time>
+          
+          | <i class="fa fa-folder-open-o"
+            aria-hidden="true"></i>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/categories/Computer-Network/">Computer Network</a>
+  </div>
+
+
+
+          
+          
+        </div>
+        <h1 id="OSI七层模型"><a href="#OSI七层模型" class="headerlink" title="OSI七层模型"></a>OSI七层模型</h1><h1 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h1><h1 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h1><h1 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h1><h1 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h1><h1 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h1><h1 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h1><h1 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h1><h1 id="传输控制协议-Transport-Control-Protocol"><a href="#传输控制协议-Transport-Control-Protocol" class="headerlink" title="传输控制协议(Transport Control Protocol)"></a>传输控制协议(Transport Control Protocol)</h1><h2 id="初次建立通信连接的的过程"><a href="#初次建立通信连接的的过程" class="headerlink" title="初次建立通信连接的的过程"></a>初次建立通信连接的的过程</h2><ol>
+<li>客户端向服务器发送请求报文段，SYN标志位为1，并且包含一个随机的起始序号seq。</li>
+<li>服务器接收到请求报文段，并同意建立连接以后，就回复客户端一个确认报文段，SYN标志位和ACK标志位都为1，还有个确认号字段为客户端起始序号+1(seq+1)，并且包含一个随机起始序号。</li>
+<li>客户端收到确认报文段以后，向服务器发出确认报文，并且给该连接分配缓存和变量。ACK标志位为1，起始序号字段为客户端起始序号+1，服务端确认号ACK为服务端起始序号+1。</li>
+<li>建立连接完成，开始传输。</li>
+</ol>
+<h2 id="断开通信连接的过程"><a href="#断开通信连接的过程" class="headerlink" title="断开通信连接的过程"></a>断开通信连接的过程</h2><ol>
+<li>客户端关闭连接时，向服务器发送释放连接报文段，请求释放连接。</li>
+<li>服务器收到该报文段后，回复确认报文段。（为了回复客户端我收到请求了，但此时并未开始释放，为的是传输剩余的数据）</li>
+<li>服务器数据传输完毕时，向客户端发出请求释放连接报文段。</li>
+<li>客户端收到释放报文段后，回复一个确认报文段。服务端接收后会释放连接，客户端在一段时间后才会释放。</li>
+</ol>
+
+      </section>
+    </article>
+    
+    
+  </div>
+  <aside>
+    
+    <div class="toc-container">
+      <h1>
+        catalog
+      </h1>
+      <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#OSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">OSI七层模型</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82"><span class="toc-number">2.</span> <span class="toc-text">应用层</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A1%A8%E7%A4%BA%E5%B1%82"><span class="toc-number">3.</span> <span class="toc-text">表示层</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%9A%E8%AF%9D%E5%B1%82"><span class="toc-number">4.</span> <span class="toc-text">会话层</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E8%BE%93%E5%B1%82"><span class="toc-number">5.</span> <span class="toc-text">传输层</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BD%91%E7%BB%9C%E5%B1%82"><span class="toc-number">6.</span> <span class="toc-text">网络层</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82"><span class="toc-number">7.</span> <span class="toc-text">数据链路层</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%89%A9%E7%90%86%E5%B1%82"><span class="toc-number">8.</span> <span class="toc-text">物理层</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%A0%E8%BE%93%E6%8E%A7%E5%88%B6%E5%8D%8F%E8%AE%AE-Transport-Control-Protocol"><span class="toc-number">9.</span> <span class="toc-text">传输控制协议(Transport Control Protocol)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E6%AC%A1%E5%BB%BA%E7%AB%8B%E9%80%9A%E4%BF%A1%E8%BF%9E%E6%8E%A5%E7%9A%84%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-number">9.1.</span> <span class="toc-text">初次建立通信连接的的过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%AD%E5%BC%80%E9%80%9A%E4%BF%A1%E8%BF%9E%E6%8E%A5%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-number">9.2.</span> <span class="toc-text">断开通信连接的过程</span></a></li></ol></li></ol>
+      </div>
+    </div>
+    
+  </aside>
+</main>
+
+
+
+  <footer>
+  <div class="copyright">
+    <div>
+      &copy;
+      2023 | Powered by <a href="https://hexo.io"
+        target="_blank">Hexo</a>&nbsp
+    </div>
+    <div>
+      Theme by <a href="https://github.com/lewis-geek/hexo-theme-Aath"
+        target="_blank">Aath</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/ScrollMagic.min.js"></script>
+
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/lodash.min.js"></script>
+
+<script>
+  document.body.addEventListener('touchstart', function () { });
+
+  // 文章图片预览
+  $("article img").each(function () {
+    var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
+    $(this).wrapAll(strA);
+  });
+
+  // 目录联动
+  let tocLinkList = $('.toc-link')
+
+  let controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      triggerHook: 0.01
+    }
+  })
+
+  tocLinkList.each(function (index, elem) {
+    let href = $(this).attr("href");
+    let nextHref = tocLinkList.eq(index + 1).attr("href");
+    let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+    new ScrollMagic.Scene({ triggerElement: href })
+      .duration(height)
+      .setClassToggle(".toc [href='" + href + "']", 'active')
+      .addTo(controller)
+  })
+
+  window.addEventListener('load', function () {
+    // 目录联动 图片加载完成后从新计算
+    tocLinkList.each(function (index, elem) {
+      let href = $(this).attr("href");
+      let nextHref = tocLinkList.eq(index + 1).attr("href");
+      let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+      new ScrollMagic.Scene({ triggerElement: href })
+        .duration(height)
+        .setClassToggle(".toc [href='" + href + "']", 'active')
+        .addTo(controller)
+    })
+  })
+</script>
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/jquery.fancybox.min.js"></script>
+
+
+
+</body>
+</html>

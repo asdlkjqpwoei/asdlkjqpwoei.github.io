@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang=default>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="">
+  
+    <link rel="icon" href="">
+  
+    
+  <title>Cpp Basis | Jager的工地</title>
+  <meta name="description" content="游戏开发">
+  
+<link rel="stylesheet" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/style.css">
+
+  
+<link rel="stylesheet" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/jquery.fancybox.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body>
+  <header>
+  <div class="header-container">
+    <a class='logo' href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/">
+      <span>Jager的工地</span>
+    </a>
+    <ul class="right-header">
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/" class="item-link">Index</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/about" class="item-link">About</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/archives" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/tags" class="item-link">Tags</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+</header>
+
+  <main id='post'>
+  <div class="content">
+    <article>
+      <section class="content markdown-body">
+        <h1>
+          Cpp Basis
+        </h1>
+        <div class='post-meta'>
+          <i class="fa fa-calendar"
+            aria-hidden="true"></i> <time>
+            2023/06/21</time>
+          
+          | <i class="fa fa-folder-open-o"
+            aria-hidden="true"></i>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/categories/Cpp/">Cpp</a>
+  </div>
+
+
+
+          
+          
+        </div>
+        <h1 id="Keyword-关键字"><a href="#Keyword-关键字" class="headerlink" title="Keyword(关键字)"></a>Keyword(关键字)</h1><h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><ol>
+<li>修饰变量，改变变量的生命周期和存储区域，使变量存储在静态区&#x2F;全局区</li>
+<li>修饰函数，改变函数定义的作用范围，只有定义该函数的文件才可使用该函数，防止与其他人的函数发生同名冲突。</li>
+<li>修饰类的成员变量，使该成员变量不需要实例化对象也可以访问。</li>
+<li>修饰类的成员函数，使该成员函数不需要实例化对象也可被调用。</li>
+</ol>
+<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><ol>
+<li>修饰变量，使变量不可变化，在声明定义时必须被初始化。</li>
+<li>修饰指针，使其成为常量指针。</li>
+<li>修饰引用，使引用成为常量引用。</li>
+<li>修饰成员函数，使成员函数的定义不可改变成员变量。</li>
+</ol>
+<h1 id="指针-Pointer-与引用-Reference"><a href="#指针-Pointer-与引用-Reference" class="headerlink" title="指针(Pointer)与引用(Reference)"></a>指针(Pointer)与引用(Reference)</h1><ol>
+<li>指针是存储地址的变量，可以为空，不具有对依附性。</li>
+<li>引用时其他变量的别名，必须初始化，具有依附性。</li>
+</ol>
+<h1 id="野指针"><a href="#野指针" class="headerlink" title="野指针"></a>野指针</h1><p>指向垃圾内存的指针。</p>
+<h2 id="产生的可能："><a href="#产生的可能：" class="headerlink" title="产生的可能："></a>产生的可能：</h2><ol>
+<li>没有初始化指针，导致指针随机指向一块内存，成为非法指针。</li>
+<li>释放指针所指向的内存后没有将指针置为NULL或者nullptr，成为非法指针。</li>
+<li>指针操作超出变量作用域。</li>
+</ol>
+<h1 id="Object-Oriented-Programming-面向对象"><a href="#Object-Oriented-Programming-面向对象" class="headerlink" title="Object Oriented Programming(面向对象)"></a>Object Oriented Programming(面向对象)</h1><p>类与对象的关系：对象是类的实例化。</p>
+<p>主要特性：封装、多态、继承</p>
+<h2 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h2><p>将客观存在的事物抽象成类，其中的成员仅对信任的实例开放，多数都是被隐藏和透明的。</p>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>子类继承父类的公共成员定义和实现。</p>
+<h2 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h2><p>多种状态，有静态多态、动态多态。</p>
+<h3 id="静态多态"><a href="#静态多态" class="headerlink" title="静态多态"></a>静态多态</h3><p>重载函数，在编译时进行绑定。</p>
+<h3 id="动态多态"><a href="#动态多态" class="headerlink" title="动态多态"></a>动态多态</h3><p>与虚函数、虚继承相关。在运行时用基类的引用或者指针调用虚函数会发生绑定，即动态绑定。</p>
+<h2 id="虚函数"><a href="#虚函数" class="headerlink" title="虚函数"></a>虚函数</h2><p>被virtual修饰的成员函数。</p>
+<h2 id="纯虚函数"><a href="#纯虚函数" class="headerlink" title="纯虚函数"></a>纯虚函数</h2><p>被virtual修饰的成员函数，且被赋值0。</p>
+<p>纯虚函数没有实现，无函数体。</p>
+<h3 id="重载和覆写"><a href="#重载和覆写" class="headerlink" title="重载和覆写"></a>重载和覆写</h3><p><em>虚函数</em>可以有实现，可以是空实现，子类继承时与普通继承相似，一样会继承实现，不同的是在子类重新定义函数时，重定义的虚函数叫<em>覆写</em>，重定义的普通函数叫<em>重载</em>。<em>子类</em>可以不覆写虚函数，但是<em>纯虚函数</em>必须被覆写。</p>
+<h3 id="虚函数与纯虚函数的区别"><a href="#虚函数与纯虚函数的区别" class="headerlink" title="虚函数与纯虚函数的区别"></a>虚函数与纯虚函数的区别</h3><p><em>纯虚函数</em>更注重接口的统一性，<em>虚函数</em>用于“实作继承“，继承接口的同时也继承了父类的实现。</p>
+<h2 id="接口类"><a href="#接口类" class="headerlink" title="接口类"></a>接口类</h2><p>成员中有纯虚函数的类。</p>
+<h2 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h2><p>成员中仅有纯虚函数的类。</p>
+<h2 id="虚函数表"><a href="#虚函数表" class="headerlink" title="虚函数表"></a>虚函数表</h2><p>存放指向虚函数的指针的表，存在于目标文件的只读数据段，在编译时根据类的声明创建。如果子类覆写了父类的某个虚函数，则在虚表中覆盖该父类的虚函数指针。这样就可以通过父类指针去调用在子类中覆写虚函数实现，一般都会调用最新的覆写实现。</p>
+<h2 id="虚函数指针"><a href="#虚函数指针" class="headerlink" title="虚函数指针"></a>虚函数指针</h2><p>运行时确定，存在于含有虚函数的类对象中，指向虚函数表。</p>
+<h2 id="虚继承"><a href="#虚继承" class="headerlink" title="虚继承"></a>虚继承</h2><p>主要用于解决在多继承情况下出现的菱形继承问题（浪费存储空间和语义二义性）。</p>
+<h2 id="虚基类指针"><a href="#虚基类指针" class="headerlink" title="虚基类指针"></a>虚基类指针</h2><p>存放虚基类的地址，存在于每一个虚继承的子类。</p>
+<h2 id="虚基类表"><a href="#虚基类表" class="headerlink" title="虚基类表"></a>虚基类表</h2><p>存放虚基类与本类的偏移地址，子类可过该偏移地址找到虚基类。</p>
+<h1 id="内存模型"><a href="#内存模型" class="headerlink" title="内存模型"></a>内存模型</h1><p>栈(Stack)、堆(Heap)、自由存储区、全局&#x2F;静态数据区(全局和静态存在同一块内存中)、常量存储区、自由存储区、执行代码区</p>
+<h2 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h2><p>内存分配的运算内置于中央处理器的指令集中，执行函数时，函数内的局部变量会存在栈上，结束时会被释放。</p>
+<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><p>由用户使用new关键字分配的内存，只由应用程序控制，需要使用delete释放堆内存。没有及时释放可能会造成内存泄漏。</p>
+<h2 id="全局-x2F-静态数据"><a href="#全局-x2F-静态数据" class="headerlink" title="全局&#x2F;静态数据"></a>全局&#x2F;静态数据</h2><p>全局变量和静态变量的存储区域，又分为已初始化区和未初始化区。</p>
+<h2 id="常量存储区"><a href="#常量存储区" class="headerlink" title="常量存储区"></a>常量存储区</h2><p>常量的存储区域。</p>
+<h2 id="自由存储区"><a href="#自由存储区" class="headerlink" title="自由存储区"></a>自由存储区</h2><p>由malloc分配的内存，一般用free释放。</p>
+<h2 id="执行代码区"><a href="#执行代码区" class="headerlink" title="执行代码区"></a>执行代码区</h2><p>存放函数体的二进制代码。</p>
+<p>函数执行时，其中的局部变量会被初始化进入栈中，函数执行结束时被弹出。</p>
+<h1 id="递归和循环"><a href="#递归和循环" class="headerlink" title="递归和循环"></a>递归和循环</h1><p>递归其实就是栈和循环的组合。</p>
+
+      </section>
+    </article>
+    
+    
+  </div>
+  <aside>
+    
+    <div class="toc-container">
+      <h1>
+        catalog
+      </h1>
+      <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Keyword-%E5%85%B3%E9%94%AE%E5%AD%97"><span class="toc-number">1.</span> <span class="toc-text">Keyword(关键字)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#static"><span class="toc-number">1.1.</span> <span class="toc-text">static</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#const"><span class="toc-number">1.2.</span> <span class="toc-text">const</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%87%E9%92%88-Pointer-%E4%B8%8E%E5%BC%95%E7%94%A8-Reference"><span class="toc-number">2.</span> <span class="toc-text">指针(Pointer)与引用(Reference)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%87%8E%E6%8C%87%E9%92%88"><span class="toc-number">3.</span> <span class="toc-text">野指针</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A7%E7%94%9F%E7%9A%84%E5%8F%AF%E8%83%BD%EF%BC%9A"><span class="toc-number">3.1.</span> <span class="toc-text">产生的可能：</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Object-Oriented-Programming-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="toc-number">4.</span> <span class="toc-text">Object Oriented Programming(面向对象)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%81%E8%A3%85"><span class="toc-number">4.1.</span> <span class="toc-text">封装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">4.2.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E6%80%81"><span class="toc-number">4.3.</span> <span class="toc-text">多态</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E5%A4%9A%E6%80%81"><span class="toc-number">4.3.1.</span> <span class="toc-text">静态多态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%A4%9A%E6%80%81"><span class="toc-number">4.3.2.</span> <span class="toc-text">动态多态</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0"><span class="toc-number">4.4.</span> <span class="toc-text">虚函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0"><span class="toc-number">4.5.</span> <span class="toc-text">纯虚函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E8%BD%BD%E5%92%8C%E8%A6%86%E5%86%99"><span class="toc-number">4.5.1.</span> <span class="toc-text">重载和覆写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0%E4%B8%8E%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">4.5.2.</span> <span class="toc-text">虚函数与纯虚函数的区别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3%E7%B1%BB"><span class="toc-number">4.6.</span> <span class="toc-text">接口类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="toc-number">4.7.</span> <span class="toc-text">抽象类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0%E8%A1%A8"><span class="toc-number">4.8.</span> <span class="toc-text">虚函数表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E5%87%BD%E6%95%B0%E6%8C%87%E9%92%88"><span class="toc-number">4.9.</span> <span class="toc-text">虚函数指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E7%BB%A7%E6%89%BF"><span class="toc-number">4.10.</span> <span class="toc-text">虚继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E5%9F%BA%E7%B1%BB%E6%8C%87%E9%92%88"><span class="toc-number">4.11.</span> <span class="toc-text">虚基类指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%99%9A%E5%9F%BA%E7%B1%BB%E8%A1%A8"><span class="toc-number">4.12.</span> <span class="toc-text">虚基类表</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B"><span class="toc-number">5.</span> <span class="toc-text">内存模型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%88"><span class="toc-number">5.1.</span> <span class="toc-text">栈</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A0%86"><span class="toc-number">5.2.</span> <span class="toc-text">堆</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%A8%E5%B1%80-x2F-%E9%9D%99%E6%80%81%E6%95%B0%E6%8D%AE"><span class="toc-number">5.3.</span> <span class="toc-text">全局&#x2F;静态数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E9%87%8F%E5%AD%98%E5%82%A8%E5%8C%BA"><span class="toc-number">5.4.</span> <span class="toc-text">常量存储区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E7%94%B1%E5%AD%98%E5%82%A8%E5%8C%BA"><span class="toc-number">5.5.</span> <span class="toc-text">自由存储区</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%8C%BA"><span class="toc-number">5.6.</span> <span class="toc-text">执行代码区</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E5%92%8C%E5%BE%AA%E7%8E%AF"><span class="toc-number">6.</span> <span class="toc-text">递归和循环</span></a></li></ol>
+      </div>
+    </div>
+    
+  </aside>
+</main>
+
+
+
+  <footer>
+  <div class="copyright">
+    <div>
+      &copy;
+      2023 | Powered by <a href="https://hexo.io"
+        target="_blank">Hexo</a>&nbsp
+    </div>
+    <div>
+      Theme by <a href="https://github.com/lewis-geek/hexo-theme-Aath"
+        target="_blank">Aath</a>
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/ScrollMagic.min.js"></script>
+
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/lodash.min.js"></script>
+
+<script>
+  document.body.addEventListener('touchstart', function () { });
+
+  // 文章图片预览
+  $("article img").each(function () {
+    var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
+    $(this).wrapAll(strA);
+  });
+
+  // 目录联动
+  let tocLinkList = $('.toc-link')
+
+  let controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      triggerHook: 0.01
+    }
+  })
+
+  tocLinkList.each(function (index, elem) {
+    let href = $(this).attr("href");
+    let nextHref = tocLinkList.eq(index + 1).attr("href");
+    let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+    new ScrollMagic.Scene({ triggerElement: href })
+      .duration(height)
+      .setClassToggle(".toc [href='" + href + "']", 'active')
+      .addTo(controller)
+  })
+
+  window.addEventListener('load', function () {
+    // 目录联动 图片加载完成后从新计算
+    tocLinkList.each(function (index, elem) {
+      let href = $(this).attr("href");
+      let nextHref = tocLinkList.eq(index + 1).attr("href");
+      let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+      new ScrollMagic.Scene({ triggerElement: href })
+        .duration(height)
+        .setClassToggle(".toc [href='" + href + "']", 'active')
+        .addTo(controller)
+    })
+  })
+</script>
+
+<script src="/asdlkjqpwoei/asdlkjqpwoei.github.io.git/lib/jquery.fancybox.min.js"></script>
+
+
+
+</body>
+</html>
