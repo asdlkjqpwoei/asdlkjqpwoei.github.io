@@ -1,143 +1,86 @@
 <!DOCTYPE html>
-<html lang=de>
-<head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Version使用Unreal Engine 5.2的Lyra Game Features模块化玩法功能的框架，使玩法和功能成为一个个名为Game Feature插件，降低Pawn、Character等“热点”类的臃肿，降低维护的难度。 极度依赖Asset Manager。 Key Class UGameFeaturesSubsystemSettings   Settings for the Ga">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Lyra Sample">
-<meta property="og:url" content="https://asdlkjqpwoei.github.io/2023/06/20/Lyra/index.html">
-<meta property="og:site_name" content="Jager的工地">
-<meta property="og:description" content="Version使用Unreal Engine 5.2的Lyra Game Features模块化玩法功能的框架，使玩法和功能成为一个个名为Game Feature插件，降低Pawn、Character等“热点”类的臃肿，降低维护的难度。 极度依赖Asset Manager。 Key Class UGameFeaturesSubsystemSettings   Settings for the Ga">
-<meta property="og:locale">
-<meta property="og:image" content="https://asdlkjqpwoei.github.io/2023/06/20/Lyra/Unreal%20Engine%205%20Lyra%20Starter%20Game%20Pawn%20Data%20Flow.png">
-<meta property="og:image" content="https://asdlkjqpwoei.github.io/2023/06/20/Lyra/Unreal%20Engine%205%20Lyra%20Starter%20Game%20Class%20Diagram.png">
-<meta property="og:image" content="https://asdlkjqpwoei.github.io/2023/06/20/Lyra/Unreal%20Engine%205%20Lyra%20Starter%20Game%20Input.png">
-<meta property="og:image" content="https://asdlkjqpwoei.github.io/2023/06/20/Lyra/Unreal%20Engine%205%20Lyra%20Starter%20Game%20Weapon%20Class%20Diagram.png">
-<meta property="article:published_time" content="2023-06-20T07:25:08.856Z">
-<meta property="article:modified_time" content="2023-06-24T11:17:42.914Z">
-<meta property="article:author" content="asdlkjqpwoei">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://asdlkjqpwoei.github.io/2023/06/20/Lyra/Unreal%20Engine%205%20Lyra%20Starter%20Game%20Pawn%20Data%20Flow.png">
+<html lang=default>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="keywords" content="">
+  
+    <link rel="icon" href="">
+  
     
-    
-        
-          
-              <link rel="shortcut icon" href="/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-          
-        
-    
-    <!-- title -->
-    <title>Lyra Sample</title>
-    <!-- styles -->
-    
-<link rel="stylesheet" href="/css/style.css">
+  <title>Lyra Sample | Jager的工地</title>
+  <meta name="description" content="游戏开发">
+  
+<link rel="stylesheet" href="/style.css">
 
-    <!-- rss -->
-    
-    
+  
+<link rel="stylesheet" href="/lib/jquery.fancybox.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/posts/">Writing</a></li>
-         
-          <li><a target="_blank" rel="noopener" href="http://github.com/sergodeeva">Projects</a></li>
-        
-      </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" href="/2023/06/21/Cpp/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        
-        
-        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">Previous post</span>
-      <span id="i-next" class="info" style="display:none;">Next post</span>
-      <span id="i-top" class="info" style="display:none;">Back to top</span>
-      <span id="i-share" class="info" style="display:none;">Share post</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&text=Lyra Sample"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&title=Lyra Sample"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&is_video=false&description=Lyra Sample"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Lyra Sample&body=Check out this article: https://asdlkjqpwoei.github.io/2023/06/20/Lyra/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&title=Lyra Sample"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&title=Lyra Sample"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&title=Lyra Sample"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&title=Lyra Sample"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&name=Lyra Sample&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-    <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Version"><span class="toc-number">1.</span> <span class="toc-text">Version</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Game-Features"><span class="toc-number">2.</span> <span class="toc-text">Game Features</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class"><span class="toc-number">2.1.</span> <span class="toc-text">Key Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Work-Flow"><span class="toc-number">2.2.</span> <span class="toc-text">Work Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#State-Machine"><span class="toc-number">2.3.</span> <span class="toc-text">State Machine</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Implementation"><span class="toc-number">2.4.</span> <span class="toc-text">Key Implementation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Game-Abilities-System"><span class="toc-number">3.</span> <span class="toc-text">Game Abilities System</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Enhanced-Input"><span class="toc-number">4.</span> <span class="toc-text">Enhanced Input</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Input"><span class="toc-number">5.</span> <span class="toc-text">Lyra Input</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class-1"><span class="toc-number">5.1.</span> <span class="toc-text">Key Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Work-Flow-1"><span class="toc-number">5.2.</span> <span class="toc-text">Work Flow</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PawnData-Data-Flow"><span class="toc-number">5.2.1.</span> <span class="toc-text">PawnData Data Flow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Key-Implementation-1"><span class="toc-number">5.2.2.</span> <span class="toc-text">Key Implementation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class-Diagram"><span class="toc-number">5.2.3.</span> <span class="toc-text">Class Diagram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flow-Diagram"><span class="toc-number">5.2.4.</span> <span class="toc-text">Flow Diagram</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Note"><span class="toc-number">5.3.</span> <span class="toc-text">Note</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Animation"><span class="toc-number">6.</span> <span class="toc-text">Lyra Animation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Required-Plugin"><span class="toc-number">6.1.</span> <span class="toc-text">Required Plugin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Solution-Design"><span class="toc-number">6.2.</span> <span class="toc-text">Solution Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E6%88%96%E8%80%85%E8%BF%98%E6%9C%AA%E4%BA%86%E8%A7%A3%E6%B8%85%E6%A5%9A%E7%9A%84%E7%BB%86%E8%8A%82"><span class="toc-number">6.3.</span> <span class="toc-text">部分需要注意或者还未了解清楚的细节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BlueprintThreadSafeUpdateAnimation"><span class="toc-number">6.3.1.</span> <span class="toc-text">BlueprintThreadSafeUpdateAnimation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SelectCardinalDirectionFromAngle"><span class="toc-number">6.3.2.</span> <span class="toc-text">SelectCardinalDirectionFromAngle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Root-Motion"><span class="toc-number">6.3.3.</span> <span class="toc-text">Root Motion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stride-Warping-%E6%AD%A5%E5%B9%85%E6%89%AD%E6%9B%B2"><span class="toc-number">6.3.4.</span> <span class="toc-text">Stride Warping (步幅扭曲)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Orientation-Warping-%E6%96%B9%E5%90%91%E6%89%AD%E6%9B%B2"><span class="toc-number">6.3.5.</span> <span class="toc-text">Orientation Warping (方向扭曲)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Distance-Match-%E8%B7%9D%E7%A6%BB%E5%8C%B9%E9%85%8D"><span class="toc-number">6.3.6.</span> <span class="toc-text">Distance Match (距离匹配)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pivot"><span class="toc-number">6.3.7.</span> <span class="toc-text">Pivot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aim-Offset-%E7%9E%84%E5%87%86%E5%81%8F%E7%A7%BB"><span class="toc-number">6.3.8.</span> <span class="toc-text">Aim Offset (瞄准偏移)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Inventory-and-Lyra-Equipment"><span class="toc-number">7.</span> <span class="toc-text">Lyra Inventory and Lyra Equipment</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-Diagram-1"><span class="toc-number">7.1.</span> <span class="toc-text">Class Diagram</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class-2"><span class="toc-number">7.2.</span> <span class="toc-text">Key Class</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Abilities"><span class="toc-number">8.</span> <span class="toc-text">Lyra Abilities</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class-3"><span class="toc-number">8.1.</span> <span class="toc-text">Key Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Work-Flow-2"><span class="toc-number">8.2.</span> <span class="toc-text">Work Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementation"><span class="toc-number">8.3.</span> <span class="toc-text">Implementation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-Diagram-2"><span class="toc-number">8.4.</span> <span class="toc-text">Class Diagram</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-AI-Behavior-Tree"><span class="toc-number">9.</span> <span class="toc-text">Lyra AI Behavior Tree</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">10.</span> <span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">11.</span> <span class="toc-text">Reference</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Official-Documentation"><span class="toc-number">11.1.</span> <span class="toc-text">Official Documentation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Third-Party-Articles"><span class="toc-number">11.2.</span> <span class="toc-text">Third-Party Articles</span></a></li></ol></li></ol>
-    </div>
-  </span>
-</div>
-
-    
-    <div class="content index width mx-auto px2 my4">
-        
-        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
-    
-    <h1 class="posttitle" itemprop="name headline">
-        Lyra Sample
-    </h1>
-
-
-
-    <div class="meta">
-      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span itemprop="name">Jager的工地</span>
-      </span>
+  <div class="header-container">
+    <a class='logo' href="/">
+      <span>Jager的工地</span>
+    </a>
+    <ul class="right-header">
       
-    <div class="postdate">
-        <time datetime="2023-06-20T07:25:08.856Z" itemprop="datePublished">2023-06-20</time>
-    </div>
-
-
+        <li class="nav-item">
+          
+            <a href="/" class="item-link">Index</a>
+          
+        </li>
       
+        <li class="nav-item">
+          
+            <a href="/about" class="item-link">About</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/archives" class="item-link">Archives</a>
+          
+        </li>
+      
+        <li class="nav-item">
+          
+            <a href="/tags" class="item-link">Tags</a>
+          
+        </li>
+      
+    </ul>
+  </div>
+</header>
 
-    </div>
-  </header>
-  
+  <main id='post'>
+  <div class="content">
+    <article>
+      <section class="content markdown-body">
+        <h1>
+          Lyra Sample
+        </h1>
+        <div class='post-meta'>
+          <i class="fa fa-calendar"
+            aria-hidden="true"></i> <time>
+            2023/06/20</time>
+          
+          | <i class="fa fa-folder-open-o"
+            aria-hidden="true"></i>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Unreal-Engine/">Unreal Engine</a>
+  </div>
 
-  <div class="content" itemprop="articleBody">
-    <h1 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h1><p>使用Unreal Engine 5.2的Lyra</p>
+
+
+          
+          
+        </div>
+        <h1 id="Version"><a href="#Version" class="headerlink" title="Version"></a>Version</h1><p>使用Unreal Engine 5.2的Lyra</p>
 <h1 id="Game-Features"><a href="#Game-Features" class="headerlink" title="Game Features"></a>Game Features</h1><p>模块化玩法功能的框架，使玩法和功能成为一个个名为Game Feature插件，降低Pawn、Character等“热点”类的臃肿，降低维护的难度。</p>
 <p>极度依赖Asset Manager。</p>
 <h2 id="Key-Class"><a href="#Key-Class" class="headerlink" title="Key Class"></a>Key Class</h2><ul>
@@ -367,118 +310,96 @@
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/614718286">UE5新项目Gameplay框架设计(以Lyra为例) - 知乎</a></li>
 </ul>
 
+      </section>
+    </article>
+    
+    
   </div>
-</article>
-
-
-
+  <aside>
+    
+    <div class="toc-container">
+      <h1>
+        catalog
+      </h1>
+      <div class="content">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Version"><span class="toc-number">1.</span> <span class="toc-text">Version</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Game-Features"><span class="toc-number">2.</span> <span class="toc-text">Game Features</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class"><span class="toc-number">2.1.</span> <span class="toc-text">Key Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Work-Flow"><span class="toc-number">2.2.</span> <span class="toc-text">Work Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#State-Machine"><span class="toc-number">2.3.</span> <span class="toc-text">State Machine</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Implementation"><span class="toc-number">2.4.</span> <span class="toc-text">Key Implementation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Game-Abilities-System"><span class="toc-number">3.</span> <span class="toc-text">Game Abilities System</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Enhanced-Input"><span class="toc-number">4.</span> <span class="toc-text">Enhanced Input</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Input"><span class="toc-number">5.</span> <span class="toc-text">Lyra Input</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class-1"><span class="toc-number">5.1.</span> <span class="toc-text">Key Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Work-Flow-1"><span class="toc-number">5.2.</span> <span class="toc-text">Work Flow</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PawnData-Data-Flow"><span class="toc-number">5.2.1.</span> <span class="toc-text">PawnData Data Flow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Key-Implementation-1"><span class="toc-number">5.2.2.</span> <span class="toc-text">Key Implementation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class-Diagram"><span class="toc-number">5.2.3.</span> <span class="toc-text">Class Diagram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flow-Diagram"><span class="toc-number">5.2.4.</span> <span class="toc-text">Flow Diagram</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Note"><span class="toc-number">5.3.</span> <span class="toc-text">Note</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Animation"><span class="toc-number">6.</span> <span class="toc-text">Lyra Animation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Required-Plugin"><span class="toc-number">6.1.</span> <span class="toc-text">Required Plugin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Solution-Design"><span class="toc-number">6.2.</span> <span class="toc-text">Solution Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E6%88%96%E8%80%85%E8%BF%98%E6%9C%AA%E4%BA%86%E8%A7%A3%E6%B8%85%E6%A5%9A%E7%9A%84%E7%BB%86%E8%8A%82"><span class="toc-number">6.3.</span> <span class="toc-text">部分需要注意或者还未了解清楚的细节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BlueprintThreadSafeUpdateAnimation"><span class="toc-number">6.3.1.</span> <span class="toc-text">BlueprintThreadSafeUpdateAnimation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SelectCardinalDirectionFromAngle"><span class="toc-number">6.3.2.</span> <span class="toc-text">SelectCardinalDirectionFromAngle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Root-Motion"><span class="toc-number">6.3.3.</span> <span class="toc-text">Root Motion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stride-Warping-%E6%AD%A5%E5%B9%85%E6%89%AD%E6%9B%B2"><span class="toc-number">6.3.4.</span> <span class="toc-text">Stride Warping (步幅扭曲)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Orientation-Warping-%E6%96%B9%E5%90%91%E6%89%AD%E6%9B%B2"><span class="toc-number">6.3.5.</span> <span class="toc-text">Orientation Warping (方向扭曲)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Distance-Match-%E8%B7%9D%E7%A6%BB%E5%8C%B9%E9%85%8D"><span class="toc-number">6.3.6.</span> <span class="toc-text">Distance Match (距离匹配)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pivot"><span class="toc-number">6.3.7.</span> <span class="toc-text">Pivot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aim-Offset-%E7%9E%84%E5%87%86%E5%81%8F%E7%A7%BB"><span class="toc-number">6.3.8.</span> <span class="toc-text">Aim Offset (瞄准偏移)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Inventory-and-Lyra-Equipment"><span class="toc-number">7.</span> <span class="toc-text">Lyra Inventory and Lyra Equipment</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-Diagram-1"><span class="toc-number">7.1.</span> <span class="toc-text">Class Diagram</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class-2"><span class="toc-number">7.2.</span> <span class="toc-text">Key Class</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Abilities"><span class="toc-number">8.</span> <span class="toc-text">Lyra Abilities</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class-3"><span class="toc-number">8.1.</span> <span class="toc-text">Key Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Work-Flow-2"><span class="toc-number">8.2.</span> <span class="toc-text">Work Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementation"><span class="toc-number">8.3.</span> <span class="toc-text">Implementation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-Diagram-2"><span class="toc-number">8.4.</span> <span class="toc-text">Class Diagram</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-AI-Behavior-Tree"><span class="toc-number">9.</span> <span class="toc-text">Lyra AI Behavior Tree</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">10.</span> <span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">11.</span> <span class="toc-text">Reference</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Official-Documentation"><span class="toc-number">11.1.</span> <span class="toc-text">Official Documentation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Third-Party-Articles"><span class="toc-number">11.2.</span> <span class="toc-text">Third-Party Articles</span></a></li></ol></li></ol>
+      </div>
     </div>
     
-      <div id="footer-post-container">
-  <div id="footer-post">
+  </aside>
+</main>
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/posts/">Writing</a></li>
-         
-          <li><a target="_blank" rel="noopener" href="http://github.com/sergodeeva">Projects</a></li>
-        
-      </ul>
+
+
+  <footer>
+  <div class="copyright">
+    <div>
+      &copy;
+      2023 | Powered by <a href="https://hexo.io"
+        target="_blank">Hexo</a>&nbsp
     </div>
-
-    <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Version"><span class="toc-number">1.</span> <span class="toc-text">Version</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Game-Features"><span class="toc-number">2.</span> <span class="toc-text">Game Features</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class"><span class="toc-number">2.1.</span> <span class="toc-text">Key Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Work-Flow"><span class="toc-number">2.2.</span> <span class="toc-text">Work Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#State-Machine"><span class="toc-number">2.3.</span> <span class="toc-text">State Machine</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Implementation"><span class="toc-number">2.4.</span> <span class="toc-text">Key Implementation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Game-Abilities-System"><span class="toc-number">3.</span> <span class="toc-text">Game Abilities System</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Enhanced-Input"><span class="toc-number">4.</span> <span class="toc-text">Enhanced Input</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Input"><span class="toc-number">5.</span> <span class="toc-text">Lyra Input</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class-1"><span class="toc-number">5.1.</span> <span class="toc-text">Key Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Work-Flow-1"><span class="toc-number">5.2.</span> <span class="toc-text">Work Flow</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PawnData-Data-Flow"><span class="toc-number">5.2.1.</span> <span class="toc-text">PawnData Data Flow</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Key-Implementation-1"><span class="toc-number">5.2.2.</span> <span class="toc-text">Key Implementation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class-Diagram"><span class="toc-number">5.2.3.</span> <span class="toc-text">Class Diagram</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Flow-Diagram"><span class="toc-number">5.2.4.</span> <span class="toc-text">Flow Diagram</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Note"><span class="toc-number">5.3.</span> <span class="toc-text">Note</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Animation"><span class="toc-number">6.</span> <span class="toc-text">Lyra Animation</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Required-Plugin"><span class="toc-number">6.1.</span> <span class="toc-text">Required Plugin</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Solution-Design"><span class="toc-number">6.2.</span> <span class="toc-text">Solution Design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%83%A8%E5%88%86%E9%9C%80%E8%A6%81%E6%B3%A8%E6%84%8F%E6%88%96%E8%80%85%E8%BF%98%E6%9C%AA%E4%BA%86%E8%A7%A3%E6%B8%85%E6%A5%9A%E7%9A%84%E7%BB%86%E8%8A%82"><span class="toc-number">6.3.</span> <span class="toc-text">部分需要注意或者还未了解清楚的细节</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#BlueprintThreadSafeUpdateAnimation"><span class="toc-number">6.3.1.</span> <span class="toc-text">BlueprintThreadSafeUpdateAnimation</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SelectCardinalDirectionFromAngle"><span class="toc-number">6.3.2.</span> <span class="toc-text">SelectCardinalDirectionFromAngle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Root-Motion"><span class="toc-number">6.3.3.</span> <span class="toc-text">Root Motion</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Stride-Warping-%E6%AD%A5%E5%B9%85%E6%89%AD%E6%9B%B2"><span class="toc-number">6.3.4.</span> <span class="toc-text">Stride Warping (步幅扭曲)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Orientation-Warping-%E6%96%B9%E5%90%91%E6%89%AD%E6%9B%B2"><span class="toc-number">6.3.5.</span> <span class="toc-text">Orientation Warping (方向扭曲)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Distance-Match-%E8%B7%9D%E7%A6%BB%E5%8C%B9%E9%85%8D"><span class="toc-number">6.3.6.</span> <span class="toc-text">Distance Match (距离匹配)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Pivot"><span class="toc-number">6.3.7.</span> <span class="toc-text">Pivot</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Aim-Offset-%E7%9E%84%E5%87%86%E5%81%8F%E7%A7%BB"><span class="toc-number">6.3.8.</span> <span class="toc-text">Aim Offset (瞄准偏移)</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Inventory-and-Lyra-Equipment"><span class="toc-number">7.</span> <span class="toc-text">Lyra Inventory and Lyra Equipment</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-Diagram-1"><span class="toc-number">7.1.</span> <span class="toc-text">Class Diagram</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class-2"><span class="toc-number">7.2.</span> <span class="toc-text">Key Class</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-Abilities"><span class="toc-number">8.</span> <span class="toc-text">Lyra Abilities</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Key-Class-3"><span class="toc-number">8.1.</span> <span class="toc-text">Key Class</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Work-Flow-2"><span class="toc-number">8.2.</span> <span class="toc-text">Work Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementation"><span class="toc-number">8.3.</span> <span class="toc-text">Implementation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-Diagram-2"><span class="toc-number">8.4.</span> <span class="toc-text">Class Diagram</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lyra-AI-Behavior-Tree"><span class="toc-number">9.</span> <span class="toc-text">Lyra AI Behavior Tree</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Conclusion"><span class="toc-number">10.</span> <span class="toc-text">Conclusion</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">11.</span> <span class="toc-text">Reference</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Official-Documentation"><span class="toc-number">11.1.</span> <span class="toc-text">Official Documentation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Third-Party-Articles"><span class="toc-number">11.2.</span> <span class="toc-text">Third-Party Articles</span></a></li></ol></li></ol>
+    <div>
+      Theme by <a href="https://github.com/lewis-geek/hexo-theme-Aath"
+        target="_blank">Aath</a>
     </div>
-
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&text=Lyra Sample"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&title=Lyra Sample"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&is_video=false&description=Lyra Sample"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=Lyra Sample&body=Check out this article: https://asdlkjqpwoei.github.io/2023/06/20/Lyra/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&title=Lyra Sample"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&title=Lyra Sample"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&title=Lyra Sample"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&title=Lyra Sample"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://asdlkjqpwoei.github.io/2023/06/20/Lyra/&name=Lyra Sample&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-
-    <div id="actions-footer">
-      <ul>
-        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
-        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
-        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
-        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
-      </ul>
-    </div>
-
-  </div>
-</div>
-
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy; 2023 asdlkjqpwoei
-  </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/about/">About</a></li>
-         
-          <li><a href="/posts/">Writing</a></li>
-         
-          <li><a target="_blank" rel="noopener" href="http://github.com/sergodeeva">Projects</a></li>
-        
-      </ul>
-    </nav>
   </div>
 </footer>
 
+
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+
+<script src="/lib/ScrollMagic.min.js"></script>
+
+
+<script src="/lib/lodash.min.js"></script>
+
+<script>
+  document.body.addEventListener('touchstart', function () { });
+
+  // 文章图片预览
+  $("article img").each(function () {
+    var strA = "<a data-fancybox='gallery' href='" + this.src + "'></a>";
+    $(this).wrapAll(strA);
+  });
+
+  // 目录联动
+  let tocLinkList = $('.toc-link')
+
+  let controller = new ScrollMagic.Controller({
+    globalSceneOptions: {
+      triggerHook: 0.01
+    }
+  })
+
+  tocLinkList.each(function (index, elem) {
+    let href = $(this).attr("href");
+    let nextHref = tocLinkList.eq(index + 1).attr("href");
+    let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+    new ScrollMagic.Scene({ triggerElement: href })
+      .duration(height)
+      .setClassToggle(".toc [href='" + href + "']", 'active')
+      .addTo(controller)
+  })
+
+  window.addEventListener('load', function () {
+    // 目录联动 图片加载完成后从新计算
+    tocLinkList.each(function (index, elem) {
+      let href = $(this).attr("href");
+      let nextHref = tocLinkList.eq(index + 1).attr("href");
+      let height = href && nextHref ? $(nextHref).offset().top - $(href).offset().top : 0
+
+      new ScrollMagic.Scene({ triggerElement: href })
+        .duration(height)
+        .setClassToggle(".toc [href='" + href + "']", 'active')
+        .addTo(controller)
+    })
+  })
+</script>
+
+<script src="/lib/jquery.fancybox.min.js"></script>
+
+
+
 </body>
 </html>
-<!-- styles -->
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-
-
-<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-
-
-<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-
-
-<!-- jquery -->
-
-<script src="/lib/jquery/jquery.min.js"></script>
-
-
-<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-
-
-<script src="/js/main.js"></script>
-
-
-
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-37473492-6', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-
-
