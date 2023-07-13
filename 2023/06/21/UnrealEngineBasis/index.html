@@ -150,8 +150,98 @@
 <h2 id="GameInstance"><a href="#GameInstance" class="headerlink" title="GameInstance"></a>GameInstance</h2><p>全局唯一，一般用来进行一些全局唯一的功能和业务或者保存全局数据。</p>
 <h2 id="Engine"><a href="#Engine" class="headerlink" title="Engine"></a>Engine</h2><p>最底层的基础类。</p>
 <p>保存唯一一个GameInstance指针，在编辑器启动时，会包含两个World指针，一个是PlayWorld，一个是EditorWorld，即编辑器也是一个World。</p>
+<h1 id="Class-Default-Object-CDO"><a href="#Class-Default-Object-CDO" class="headerlink" title="Class Default Object (CDO)"></a>Class Default Object (CDO)</h1><h1 id="Macro"><a href="#Macro" class="headerlink" title="Macro"></a>Macro</h1><h2 id="Class-Specifiers"><a href="#Class-Specifiers" class="headerlink" title="Class Specifiers"></a>Class Specifiers</h2><h2 id="Asserts"><a href="#Asserts" class="headerlink" title="Asserts"></a>Asserts</h2><h3 id="Check"><a href="#Check" class="headerlink" title="Check"></a>Check</h3><blockquote>
+<p>The Check family is the closest to the base assert, in that members of this family halt execution when the first parameter evaluates to a false value, and do not run in shipping builds by default.</p>
+</blockquote>
+<ul>
+<li>check(<Expression>), checkSlow(<Expression>)</li>
+</ul>
+<blockquote>
+<p>Halts execution if Expression if false.</p>
+</blockquote>
+<ul>
+<li>checkf(<Expression>, <FormattedText>, …), checkfSlow(<Expression>, <FormattedText>, …)</li>
+</ul>
+<blockquote>
+<p>Halts execution if Expression is false and outputs FormattedText to the log.</p>
+</blockquote>
+<ul>
+<li>checkCode(<Code>)</li>
+</ul>
+<blockquote>
+<p>Executes Code within a do-while loop structure that runs once; primarily useful as a way to prepare information that another Check requires.</p>
+</blockquote>
+<ul>
+<li>checkNoEntry()</li>
+</ul>
+<blockquote>
+<p>Halts execution if the line is ever hit, similar to <code>check(false)</code>, but intended for code paths that should be unreachable.</p>
+</blockquote>
+<ul>
+<li>checkNoReentry()</li>
+</ul>
+<blockquote>
+<p>Halts execution if the line is hit more than once.</p>
+</blockquote>
+<ul>
+<li>checkNoRecursion()</li>
+</ul>
+<blockquote>
+<p>Halts execution if the line is hit more than once without leaving scope.</p>
+</blockquote>
+<ul>
+<li>unimplemented()</li>
+</ul>
+<blockquote>
+<p>Halts execution if the line is ever hit, similar to <code>check(false)</code>, but intended for virtual functions that should be overridden and not called.</p>
+</blockquote>
+<h3 id="Verify"><a href="#Verify" class="headerlink" title="Verify"></a>Verify</h3><blockquote>
+<p>The Verify family behaves identically to the Check family in most builds. However, Verify macros evaluate their expressions even in builds where Check macros are disabled. This means that you should use Verify macros only when the expression needs to run independently of diagnostic checks.</p>
+</blockquote>
+<ul>
+<li>verify(<Expression>), verifySlow(<Expression>)</li>
+</ul>
+<blockquote>
+<p>Halts execution if Expression is false.</p>
+</blockquote>
+<ul>
+<li>verifyf(<Expression>, <FormattedText>, ...), verifyfSlow(<Expression>, <FormattedText>, ...)</li>
+</ul>
+<blockquote>
+<p>Halts execution if Expression is false and outputs FormattedText to the log</p>
+</blockquote>
+<h3 id="Ensure"><a href="#Ensure" class="headerlink" title="Ensure"></a>Ensure</h3><blockquote>
+<p>The Ensure family is similar to the Verify family, but works with non-fatal errors. This means that if an Ensure macro's expression evaluates as false, the Engine will inform the crash reporter, but will continue running.</p>
+</blockquote>
+<ul>
+<li>ensure(<Expression>)</li>
+</ul>
+<blockquote>
+<p>Notifies the crash reporter on the first time Expression is false.</p>
+</blockquote>
+<ul>
+<li>ensureMsgf(<Expression>, <FormattedText>, ...)</li>
+</ul>
+<blockquote>
+<p>Notifies the crash reporter and outputs FormattedText to the log on the first time Expression is false.</p>
+</blockquote>
+<ul>
+<li>ensureAlways(<Expression>)</li>
+</ul>
+<blockquote>
+<p>Notifies the crash reporter if Expression is false.</p>
+</blockquote>
+<ul>
+<li>ensureAlwaysMsgf(<Expression>, <FormattedText>, ...)</li>
+</ul>
+<blockquote>
+<p>Notifies the crash reporter and outputs FormattedText to the log if Expression is false.</p>
+</blockquote>
+<h2 id="PURE-VIRTUAL"><a href="#PURE-VIRTUAL" class="headerlink" title="PURE_VIRTUAL"></a>PURE_VIRTUAL</h2><p>Unreal Engine特性，由于所有继承UObject的UClass必须能实例化，因此的一般的类不可以包含纯虚函数。一些游戏业务场景要求该类的某个虚函数必须在子类有实现，普通虚函数无法达到该要求，PURE_VIRTUAL因此诞生。</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><h2 id="Official-Documentation"><a href="#Official-Documentation" class="headerlink" title="Official Documentation"></a>Official Documentation</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://docs.unrealengine.com/5.2/en-US/gameplay-framework-quick-reference-in-unreal-engine/">Gameplay Framework Quick Reference in Unreal Engine | Unreal Engine 5.2 Documentation</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.unrealengine.com/5.2/en-US/asserts-in-unreal-engine/">Asserts in Unreal Engine | Unreal Engine 5.2 Documentation</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.unrealengine.com/5.2/en-US/class-specifiers/">Class Specifiers | Unreal Engine 5.2 Documentation</a></li>
 </ul>
 <h2 id="Community-Wiki"><a href="#Community-Wiki" class="headerlink" title="Community Wiki"></a>Community Wiki</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://unrealcommunity.wiki/unreal-property-system-(reflection)-36d1e6">Unreal Property System (Reflection) | Unreal Engine Community Wiki</a></li>
@@ -162,7 +252,7 @@
 <h2 id="Third-Party-Articles"><a href="#Third-Party-Articles" class="headerlink" title="Third Party Articles"></a>Third Party Articles</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/u-n-owen/p/16425358.html">UE4学习笔记：Gameplay框架及其模块梳理（上篇） - U_N_Owen – 博客园</a></li>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/612837045">Unreal Engine的Gameplay框架和重点 – 知乎</a></li>
-<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/591982020">UE5 – Control Rig与IK Rig介绍 – 知乎</a></li>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/591982020">UE5 -- Control Rig与IK Rig介绍 – 知乎</a></li>
 </ul>
 
       </section>
@@ -177,7 +267,7 @@
         catalog
       </h1>
       <div class="content">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reflection-%E5%8F%8D%E5%B0%84"><span class="toc-number">1.</span> <span class="toc-text">Reflection(反射)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage"><span class="toc-number">1.1.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Work-Flow"><span class="toc-number">1.2.</span> <span class="toc-text">Work Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#generated-h-content"><span class="toc-number">1.3.</span> <span class="toc-text">.generated.h content</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Delegate-%E5%A7%94%E6%89%98"><span class="toc-number">2.</span> <span class="toc-text">Delegate (委托)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Multicast-Delegate-%E5%A4%9A%E6%92%AD%E5%A7%94%E6%89%98"><span class="toc-number">2.1.</span> <span class="toc-text">Multicast Delegate(多播委托)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dynamic-Delegate-%E5%8A%A8%E6%80%81%E5%A7%94%E6%89%98"><span class="toc-number">2.2.</span> <span class="toc-text">Dynamic Delegate(动态委托)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Event-Dispatcher-%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E5%99%A8"><span class="toc-number">2.3.</span> <span class="toc-text">Event Dispatcher(事件分发器)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementation"><span class="toc-number">2.4.</span> <span class="toc-text">Implementation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Memory-Management-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">Memory Management(内存管理)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Garbage-Collection-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="toc-number">3.1.</span> <span class="toc-text">Garbage Collection(垃圾回收)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Serialization-%E5%BA%8F%E5%88%97%E5%8C%96"><span class="toc-number">4.</span> <span class="toc-text">Serialization(序列化)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%B8%E5%85%B3"><span class="toc-number">5.</span> <span class="toc-text">性能优化相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%95%88"><span class="toc-number">5.1.</span> <span class="toc-text">特效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93"><span class="toc-number">5.2.</span> <span class="toc-text">渲染</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E7%BA%BF%E7%A8%8B"><span class="toc-number">5.2.1.</span> <span class="toc-text">渲染线程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Animation-%E5%8A%A8%E7%94%BB"><span class="toc-number">6.</span> <span class="toc-text">Animation(动画)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Inverse-Kinematics-%E5%8F%8D%E5%90%91%E8%BF%90%E5%8A%A8%E5%AD%A6-%E5%92%8CForward-Kinematics-%E6%AD%A3%E5%90%91%E8%BF%90%E5%8A%A8%E5%AD%A6"><span class="toc-number">6.1.</span> <span class="toc-text">Inverse Kinematics(反向运动学)和Forward Kinematics(正向运动学)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rag-Doll-%E5%B8%83%E5%A8%83%E5%A8%83"><span class="toc-number">6.2.</span> <span class="toc-text">Rag Doll(布娃娃)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Control-Rig-%E6%8E%A7%E5%88%B6%E7%BB%91%E5%AE%9A"><span class="toc-number">6.3.</span> <span class="toc-text">Control Rig(控制绑定)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gameplay-GameFramework"><span class="toc-number">7.</span> <span class="toc-text">Gameplay GameFramework</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Actor"><span class="toc-number">7.1.</span> <span class="toc-text">Actor</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Component"><span class="toc-number">7.2.</span> <span class="toc-text">Component</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pawn"><span class="toc-number">7.3.</span> <span class="toc-text">Pawn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Character"><span class="toc-number">7.4.</span> <span class="toc-text">Character</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Controller"><span class="toc-number">7.5.</span> <span class="toc-text">Controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GameMode"><span class="toc-number">7.6.</span> <span class="toc-text">GameMode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GameState"><span class="toc-number">7.7.</span> <span class="toc-text">GameState</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Level"><span class="toc-number">7.8.</span> <span class="toc-text">Level</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#World"><span class="toc-number">7.9.</span> <span class="toc-text">World</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WorldContext"><span class="toc-number">7.10.</span> <span class="toc-text">WorldContext</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GameInstance"><span class="toc-number">7.11.</span> <span class="toc-text">GameInstance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Engine"><span class="toc-number">7.12.</span> <span class="toc-text">Engine</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">8.</span> <span class="toc-text">Reference</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Official-Documentation"><span class="toc-number">8.1.</span> <span class="toc-text">Official Documentation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Community-Wiki"><span class="toc-number">8.2.</span> <span class="toc-text">Community Wiki</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Book"><span class="toc-number">8.3.</span> <span class="toc-text">Book</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Third-Party-Articles"><span class="toc-number">8.4.</span> <span class="toc-text">Third Party Articles</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Reflection-%E5%8F%8D%E5%B0%84"><span class="toc-number">1.</span> <span class="toc-text">Reflection(反射)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Usage"><span class="toc-number">1.1.</span> <span class="toc-text">Usage</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Work-Flow"><span class="toc-number">1.2.</span> <span class="toc-text">Work Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#generated-h-content"><span class="toc-number">1.3.</span> <span class="toc-text">.generated.h content</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Delegate-%E5%A7%94%E6%89%98"><span class="toc-number">2.</span> <span class="toc-text">Delegate (委托)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Multicast-Delegate-%E5%A4%9A%E6%92%AD%E5%A7%94%E6%89%98"><span class="toc-number">2.1.</span> <span class="toc-text">Multicast Delegate(多播委托)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dynamic-Delegate-%E5%8A%A8%E6%80%81%E5%A7%94%E6%89%98"><span class="toc-number">2.2.</span> <span class="toc-text">Dynamic Delegate(动态委托)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Event-Dispatcher-%E4%BA%8B%E4%BB%B6%E5%88%86%E5%8F%91%E5%99%A8"><span class="toc-number">2.3.</span> <span class="toc-text">Event Dispatcher(事件分发器)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Implementation"><span class="toc-number">2.4.</span> <span class="toc-text">Implementation</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Memory-Management-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">Memory Management(内存管理)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Garbage-Collection-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6"><span class="toc-number">3.1.</span> <span class="toc-text">Garbage Collection(垃圾回收)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Serialization-%E5%BA%8F%E5%88%97%E5%8C%96"><span class="toc-number">4.</span> <span class="toc-text">Serialization(序列化)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96%E7%9B%B8%E5%85%B3"><span class="toc-number">5.</span> <span class="toc-text">性能优化相关</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E6%95%88"><span class="toc-number">5.1.</span> <span class="toc-text">特效</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93"><span class="toc-number">5.2.</span> <span class="toc-text">渲染</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%B2%E6%9F%93%E7%BA%BF%E7%A8%8B"><span class="toc-number">5.2.1.</span> <span class="toc-text">渲染线程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Animation-%E5%8A%A8%E7%94%BB"><span class="toc-number">6.</span> <span class="toc-text">Animation(动画)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Inverse-Kinematics-%E5%8F%8D%E5%90%91%E8%BF%90%E5%8A%A8%E5%AD%A6-%E5%92%8CForward-Kinematics-%E6%AD%A3%E5%90%91%E8%BF%90%E5%8A%A8%E5%AD%A6"><span class="toc-number">6.1.</span> <span class="toc-text">Inverse Kinematics(反向运动学)和Forward Kinematics(正向运动学)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Rag-Doll-%E5%B8%83%E5%A8%83%E5%A8%83"><span class="toc-number">6.2.</span> <span class="toc-text">Rag Doll(布娃娃)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Control-Rig-%E6%8E%A7%E5%88%B6%E7%BB%91%E5%AE%9A"><span class="toc-number">6.3.</span> <span class="toc-text">Control Rig(控制绑定)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Gameplay-GameFramework"><span class="toc-number">7.</span> <span class="toc-text">Gameplay GameFramework</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Actor"><span class="toc-number">7.1.</span> <span class="toc-text">Actor</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Component"><span class="toc-number">7.2.</span> <span class="toc-text">Component</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Pawn"><span class="toc-number">7.3.</span> <span class="toc-text">Pawn</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Character"><span class="toc-number">7.4.</span> <span class="toc-text">Character</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Controller"><span class="toc-number">7.5.</span> <span class="toc-text">Controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GameMode"><span class="toc-number">7.6.</span> <span class="toc-text">GameMode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GameState"><span class="toc-number">7.7.</span> <span class="toc-text">GameState</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Level"><span class="toc-number">7.8.</span> <span class="toc-text">Level</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#World"><span class="toc-number">7.9.</span> <span class="toc-text">World</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WorldContext"><span class="toc-number">7.10.</span> <span class="toc-text">WorldContext</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#GameInstance"><span class="toc-number">7.11.</span> <span class="toc-text">GameInstance</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Engine"><span class="toc-number">7.12.</span> <span class="toc-text">Engine</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Class-Default-Object-CDO"><span class="toc-number">8.</span> <span class="toc-text">Class Default Object (CDO)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Macro"><span class="toc-number">9.</span> <span class="toc-text">Macro</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Class-Specifiers"><span class="toc-number">9.1.</span> <span class="toc-text">Class Specifiers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Asserts"><span class="toc-number">9.2.</span> <span class="toc-text">Asserts</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Check"><span class="toc-number">9.2.1.</span> <span class="toc-text">Check</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Verify"><span class="toc-number">9.2.2.</span> <span class="toc-text">Verify</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ensure"><span class="toc-number">9.2.3.</span> <span class="toc-text">Ensure</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PURE-VIRTUAL"><span class="toc-number">9.3.</span> <span class="toc-text">PURE_VIRTUAL</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">10.</span> <span class="toc-text">Reference</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Official-Documentation"><span class="toc-number">10.1.</span> <span class="toc-text">Official Documentation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Community-Wiki"><span class="toc-number">10.2.</span> <span class="toc-text">Community Wiki</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Book"><span class="toc-number">10.3.</span> <span class="toc-text">Book</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Third-Party-Articles"><span class="toc-number">10.4.</span> <span class="toc-text">Third Party Articles</span></a></li></ol></li></ol>
       </div>
     </div>
     
