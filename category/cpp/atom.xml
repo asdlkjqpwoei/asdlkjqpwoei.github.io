@@ -1,0 +1,250 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://asdlkjqpwoei.github.io</id>
+    <title>Jager的工地 • Posts by &#34;cpp&#34; category</title>
+    <link href="https://asdlkjqpwoei.github.io" />
+    <updated>2023-06-21T09:18:46.352Z</updated>
+    <entry>
+        <id>https://asdlkjqpwoei.github.io/2023/06/21/StandardTemplateLibrary/</id>
+        <title>Standard Template Library</title>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/StandardTemplateLibrary/"/>
+        <content type="html">&lt;h1 id=&#34;标准模板库容器&#34;&gt;&lt;a href=&#34;#标准模板库容器&#34; class=&#34;headerlink&#34; title=&#34;标准模板库容器&#34;&gt;&lt;/a&gt;标准模板库容器&lt;/h1&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;容器&lt;/th&gt;
+&lt;th&gt;数据结构&lt;/th&gt;
+&lt;th&gt;时间复杂度&lt;/th&gt;
+&lt;th&gt;元素是否有序&lt;/th&gt;
+&lt;th&gt;元素是否可重复&lt;/th&gt;
+&lt;th&gt;注意事项&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;Array&lt;/td&gt;
+&lt;td&gt;数组&lt;/td&gt;
+&lt;td&gt;$O(1)$&lt;/td&gt;
+&lt;td&gt;无序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;支持任意访问&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Vector&lt;/td&gt;
+&lt;td&gt;数组&lt;/td&gt;
+&lt;td&gt;在尾部操作时$O(1)$，在头部操作时$O(n)$&lt;/td&gt;
+&lt;td&gt;无序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;支持任意访问&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Deque&lt;/td&gt;
+&lt;td&gt;双端队列&lt;/td&gt;
+&lt;td&gt;$O(1)$&lt;/td&gt;
+&lt;td&gt;无序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;支持任意访问&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;forward_list&lt;/td&gt;
+&lt;td&gt;单向链表&lt;/td&gt;
+&lt;td&gt;$O(1)$&lt;/td&gt;
+&lt;td&gt;无序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;不支持任意访问&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;List&lt;/td&gt;
+&lt;td&gt;双向链表&lt;/td&gt;
+&lt;td&gt;$O(1)$&lt;/td&gt;
+&lt;td&gt;无序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;不支持任意访问&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Stack&lt;/td&gt;
+&lt;td&gt;基于链表，deque&amp;#x2F;lsit&lt;/td&gt;
+&lt;td&gt;$O(1)$&lt;/td&gt;
+&lt;td&gt;无序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;deque&amp;#x2F;list封闭头端开口。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Queue&lt;/td&gt;
+&lt;td&gt;基于链表，deque&amp;#x2F;list&lt;/td&gt;
+&lt;td&gt;$O(1)$&lt;/td&gt;
+&lt;td&gt;无序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;deque&amp;#x2F;list封闭头端开口。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;priority_queue&lt;/td&gt;
+&lt;td&gt;vector+max_heap&lt;/td&gt;
+&lt;td&gt;$O(log_2n)$&lt;/td&gt;
+&lt;td&gt;有序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;使用堆处理和规则的vector容器&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Set&lt;/td&gt;
+&lt;td&gt;红黑树&lt;/td&gt;
+&lt;td&gt;$O(log_2n)$&lt;/td&gt;
+&lt;td&gt;有序&lt;/td&gt;
+&lt;td&gt;不可重复&lt;/td&gt;
+&lt;td&gt;|&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Multiset&lt;/td&gt;
+&lt;td&gt;红黑树&lt;/td&gt;
+&lt;td&gt;$O(log_2n)$&lt;/td&gt;
+&lt;td&gt;有序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;|&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Map&lt;/td&gt;
+&lt;td&gt;红黑树&lt;/td&gt;
+&lt;td&gt;$O(log_2n)$&lt;/td&gt;
+&lt;td&gt;有序&lt;/td&gt;
+&lt;td&gt;不可重复&lt;/td&gt;
+&lt;td&gt;|&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Multimap&lt;/td&gt;
+&lt;td&gt;红黑树&lt;/td&gt;
+&lt;td&gt;$O(log_2n)$&lt;/td&gt;
+&lt;td&gt;有序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;|&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unordered_set&lt;/td&gt;
+&lt;td&gt;哈希表&lt;/td&gt;
+&lt;td&gt;$O(1)-O(n)$&lt;/td&gt;
+&lt;td&gt;无序&lt;/td&gt;
+&lt;td&gt;不可重复&lt;/td&gt;
+&lt;td&gt;|&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unordered_multiset&lt;/td&gt;
+&lt;td&gt;哈希表&lt;/td&gt;
+&lt;td&gt;$O(1)-O(n)$&lt;/td&gt;
+&lt;td&gt;无序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;|&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unordered_map&lt;/td&gt;
+&lt;td&gt;哈希表&lt;/td&gt;
+&lt;td&gt;$O(1)-O(n)$&lt;/td&gt;
+&lt;td&gt;无序&lt;/td&gt;
+&lt;td&gt;不可重复&lt;/td&gt;
+&lt;td&gt;|&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;unordered_multimap&lt;/td&gt;
+&lt;td&gt;哈希表&lt;/td&gt;
+&lt;td&gt;$O(1)-O(n)$&lt;/td&gt;
+&lt;td&gt;无序&lt;/td&gt;
+&lt;td&gt;可重复&lt;/td&gt;
+&lt;td&gt;|&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+</content>
+        <updated>2023-06-21T09:18:46.352Z</updated>
+    </entry>
+    <entry>
+        <id>https://asdlkjqpwoei.github.io/2023/06/21/Cpp17/</id>
+        <title>Cpp 17</title>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/Cpp17/"/>
+        <content type="html">&lt;h1 id=&#34;命名空间嵌套&#34;&gt;&lt;a href=&#34;#命名空间嵌套&#34; class=&#34;headerlink&#34; title=&#34;命名空间嵌套&#34;&gt;&lt;/a&gt;命名空间嵌套&lt;/h1&gt;&lt;h1 id=&#34;std-optional&#34;&gt;&lt;a href=&#34;#std-optional&#34; class=&#34;headerlink&#34; title=&#34;std::optional&#34;&gt;&lt;/a&gt;std::optional&lt;/h1&gt;&lt;p&gt;主要是为了可以让函数可返回多个值。&lt;/p&gt;
+&lt;h1 id=&#34;Lambda表达式&#34;&gt;&lt;a href=&#34;#Lambda表达式&#34; class=&#34;headerlink&#34; title=&#34;Lambda表达式&#34;&gt;&lt;/a&gt;Lambda表达式&lt;/h1&gt;&lt;p&gt;可捕获对象的副本，而非对象的引用。&lt;/p&gt;
+&lt;h1 id=&#34;智能指针&#34;&gt;&lt;a href=&#34;#智能指针&#34; class=&#34;headerlink&#34; title=&#34;智能指针&#34;&gt;&lt;/a&gt;智能指针&lt;/h1&gt;&lt;p&gt;移除std::auto_ptr。&lt;/p&gt;
+</content>
+        <updated>2023-06-21T09:00:15.298Z</updated>
+    </entry>
+    <entry>
+        <id>https://asdlkjqpwoei.github.io/2023/06/21/Cpp11/</id>
+        <title>Cpp 11</title>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/Cpp11/"/>
+        <content type="html">&lt;h1 id=&#34;智能指针&#34;&gt;&lt;a href=&#34;#智能指针&#34; class=&#34;headerlink&#34; title=&#34;智能指针&#34;&gt;&lt;/a&gt;智能指针&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;unique_ptr：独占一个对象和资源，一旦被销毁或者置空，相关资源都会被销毁。拥有另一个对象后，之前的对象和相关资源都会被销毁。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;weak_ptr：允许共享但不允许拥有一个对象，一旦最后一个拥有该对象的智能指针失去所有权，任何一个weak_ptr都自动为空。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;shared_ptr：允许共享拥有同一个对象，最后一个拥有该对象shared_ptr会销毁该对象，并清理相关资源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;constexpr&#34;&gt;&lt;a href=&#34;#constexpr&#34; class=&#34;headerlink&#34; title=&#34;constexpr&#34;&gt;&lt;/a&gt;constexpr&lt;/h1&gt;&lt;p&gt;const未指明该常量是编译器常量还是运行期常量，constexpr告知变量是编译期常量。&lt;/p&gt;
+&lt;h1 id=&#34;可变模板参数&#34;&gt;&lt;a href=&#34;#可变模板参数&#34; class=&#34;headerlink&#34; title=&#34;可变模板参数&#34;&gt;&lt;/a&gt;可变模板参数&lt;/h1&gt;&lt;p&gt;允许任意多个、任意类别的模板参数，同时在定义时无需固定参数个数。&lt;/p&gt;
+&lt;h1 id=&#34;右值引用&#34;&gt;&lt;a href=&#34;#右值引用&#34; class=&#34;headerlink&#34; title=&#34;右值引用&#34;&gt;&lt;/a&gt;右值引用&lt;/h1&gt;&lt;p&gt;右值可以是字面常量、表达式、函数返回值，用&amp;amp;&amp;amp;表示，使右值可以出现在赋值语句的左边，可实现移动语义。&lt;/p&gt;
+&lt;h1 id=&#34;移动语义&#34;&gt;&lt;a href=&#34;#移动语义&#34; class=&#34;headerlink&#34; title=&#34;移动语义&#34;&gt;&lt;/a&gt;移动语义&lt;/h1&gt;&lt;p&gt;主要是为了降低内存的使用，参数传递的过程中不出现新的无用副本。&lt;/p&gt;
+&lt;h1 id=&#34;完美转发&#34;&gt;&lt;a href=&#34;#完美转发&#34; class=&#34;headerlink&#34; title=&#34;完美转发&#34;&gt;&lt;/a&gt;完美转发&lt;/h1&gt;&lt;p&gt;为了解决参数传递时，参数可能已经不是原来内存的问题。&lt;/p&gt;
+&lt;p&gt;std::forward&amp;lt;&amp;gt;&lt;/p&gt;
+&lt;h1 id=&#34;元组&#34;&gt;&lt;a href=&#34;#元组&#34; class=&#34;headerlink&#34; title=&#34;元组&#34;&gt;&lt;/a&gt;元组&lt;/h1&gt;&lt;p&gt;std::tuple&lt;/p&gt;
+&lt;h1 id=&#34;Lambda表达式&#34;&gt;&lt;a href=&#34;#Lambda表达式&#34; class=&#34;headerlink&#34; title=&#34;Lambda表达式&#34;&gt;&lt;/a&gt;Lambda表达式&lt;/h1&gt;&lt;p&gt;开始支持Lambda表达式&lt;/p&gt;
+&lt;h1 id=&#34;using定义别名&#34;&gt;&lt;a href=&#34;#using定义别名&#34; class=&#34;headerlink&#34; title=&#34;using定义别名&#34;&gt;&lt;/a&gt;using定义别名&lt;/h1&gt;&lt;p&gt;typedef无法重定义模板中的一些语法，using定义别名因此而生。&lt;/p&gt;
+</content>
+        <updated>2023-06-21T08:58:37.322Z</updated>
+    </entry>
+    <entry>
+        <id>https://asdlkjqpwoei.github.io/2023/06/21/Cpp/</id>
+        <title>Cpp Basis</title>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/Cpp/"/>
+        <content type="html">&lt;h1 id=&#34;Keyword-关键字&#34;&gt;&lt;a href=&#34;#Keyword-关键字&#34; class=&#34;headerlink&#34; title=&#34;Keyword(关键字)&#34;&gt;&lt;/a&gt;Keyword(关键字)&lt;/h1&gt;&lt;h2 id=&#34;static&#34;&gt;&lt;a href=&#34;#static&#34; class=&#34;headerlink&#34; title=&#34;static&#34;&gt;&lt;/a&gt;static&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;修饰变量，改变变量的生命周期和存储区域，使变量存储在静态区&amp;#x2F;全局区&lt;/li&gt;
+&lt;li&gt;修饰函数，改变函数定义的作用范围，只有定义该函数的文件才可使用该函数，防止与其他人的函数发生同名冲突。&lt;/li&gt;
+&lt;li&gt;修饰类的成员变量，使该成员变量不需要实例化对象也可以访问。&lt;/li&gt;
+&lt;li&gt;修饰类的成员函数，使该成员函数不需要实例化对象也可被调用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;const&#34;&gt;&lt;a href=&#34;#const&#34; class=&#34;headerlink&#34; title=&#34;const&#34;&gt;&lt;/a&gt;const&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;修饰变量，使变量不可变化，在声明定义时必须被初始化。&lt;/li&gt;
+&lt;li&gt;修饰指针，使其成为常量指针。&lt;/li&gt;
+&lt;li&gt;修饰引用，使引用成为常量引用。&lt;/li&gt;
+&lt;li&gt;修饰成员函数，使成员函数的定义不可改变成员变量。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;指针-Pointer-与引用-Reference&#34;&gt;&lt;a href=&#34;#指针-Pointer-与引用-Reference&#34; class=&#34;headerlink&#34; title=&#34;指针(Pointer)与引用(Reference)&#34;&gt;&lt;/a&gt;指针(Pointer)与引用(Reference)&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;指针是存储地址的变量，可以为空，不具有对依附性。&lt;/li&gt;
+&lt;li&gt;引用时其他变量的别名，必须初始化，具有依附性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;野指针&#34;&gt;&lt;a href=&#34;#野指针&#34; class=&#34;headerlink&#34; title=&#34;野指针&#34;&gt;&lt;/a&gt;野指针&lt;/h1&gt;&lt;p&gt;指向垃圾内存的指针。&lt;/p&gt;
+&lt;h2 id=&#34;产生的可能：&#34;&gt;&lt;a href=&#34;#产生的可能：&#34; class=&#34;headerlink&#34; title=&#34;产生的可能：&#34;&gt;&lt;/a&gt;产生的可能：&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;没有初始化指针，导致指针随机指向一块内存，成为非法指针。&lt;/li&gt;
+&lt;li&gt;释放指针所指向的内存后没有将指针置为NULL或者nullptr，成为非法指针。&lt;/li&gt;
+&lt;li&gt;指针操作超出变量作用域。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;Object-Oriented-Programming-面向对象&#34;&gt;&lt;a href=&#34;#Object-Oriented-Programming-面向对象&#34; class=&#34;headerlink&#34; title=&#34;Object Oriented Programming(面向对象)&#34;&gt;&lt;/a&gt;Object Oriented Programming(面向对象)&lt;/h1&gt;&lt;p&gt;类与对象的关系：对象是类的实例化。&lt;/p&gt;
+&lt;p&gt;主要特性：封装、多态、继承&lt;/p&gt;
+&lt;h2 id=&#34;封装&#34;&gt;&lt;a href=&#34;#封装&#34; class=&#34;headerlink&#34; title=&#34;封装&#34;&gt;&lt;/a&gt;封装&lt;/h2&gt;&lt;p&gt;将客观存在的事物抽象成类，其中的成员仅对信任的实例开放，多数都是被隐藏和透明的。&lt;/p&gt;
+&lt;h2 id=&#34;继承&#34;&gt;&lt;a href=&#34;#继承&#34; class=&#34;headerlink&#34; title=&#34;继承&#34;&gt;&lt;/a&gt;继承&lt;/h2&gt;&lt;p&gt;子类继承父类的公共成员定义和实现。&lt;/p&gt;
+&lt;h2 id=&#34;多态&#34;&gt;&lt;a href=&#34;#多态&#34; class=&#34;headerlink&#34; title=&#34;多态&#34;&gt;&lt;/a&gt;多态&lt;/h2&gt;&lt;p&gt;多种状态，有静态多态、动态多态。&lt;/p&gt;
+&lt;h3 id=&#34;静态多态&#34;&gt;&lt;a href=&#34;#静态多态&#34; class=&#34;headerlink&#34; title=&#34;静态多态&#34;&gt;&lt;/a&gt;静态多态&lt;/h3&gt;&lt;p&gt;重载函数，在编译时进行绑定。&lt;/p&gt;
+&lt;h3 id=&#34;动态多态&#34;&gt;&lt;a href=&#34;#动态多态&#34; class=&#34;headerlink&#34; title=&#34;动态多态&#34;&gt;&lt;/a&gt;动态多态&lt;/h3&gt;&lt;p&gt;与虚函数、虚继承相关。在运行时用基类的引用或者指针调用虚函数会发生绑定，即动态绑定。&lt;/p&gt;
+&lt;h2 id=&#34;虚函数&#34;&gt;&lt;a href=&#34;#虚函数&#34; class=&#34;headerlink&#34; title=&#34;虚函数&#34;&gt;&lt;/a&gt;虚函数&lt;/h2&gt;&lt;p&gt;被virtual修饰的成员函数。&lt;/p&gt;
+&lt;h2 id=&#34;纯虚函数&#34;&gt;&lt;a href=&#34;#纯虚函数&#34; class=&#34;headerlink&#34; title=&#34;纯虚函数&#34;&gt;&lt;/a&gt;纯虚函数&lt;/h2&gt;&lt;p&gt;被virtual修饰的成员函数，且被赋值0。&lt;/p&gt;
+&lt;p&gt;纯虚函数没有实现，无函数体。&lt;/p&gt;
+&lt;h3 id=&#34;重载和覆写&#34;&gt;&lt;a href=&#34;#重载和覆写&#34; class=&#34;headerlink&#34; title=&#34;重载和覆写&#34;&gt;&lt;/a&gt;重载和覆写&lt;/h3&gt;&lt;p&gt;&lt;em&gt;虚函数&lt;/em&gt;可以有实现，可以是空实现，子类继承时与普通继承相似，一样会继承实现，不同的是在子类重新定义函数时，重定义的虚函数叫&lt;em&gt;覆写&lt;/em&gt;，重定义的普通函数叫&lt;em&gt;重载&lt;/em&gt;。&lt;em&gt;子类&lt;/em&gt;可以不覆写虚函数，但是&lt;em&gt;纯虚函数&lt;/em&gt;必须被覆写。&lt;/p&gt;
+&lt;h3 id=&#34;虚函数与纯虚函数的区别&#34;&gt;&lt;a href=&#34;#虚函数与纯虚函数的区别&#34; class=&#34;headerlink&#34; title=&#34;虚函数与纯虚函数的区别&#34;&gt;&lt;/a&gt;虚函数与纯虚函数的区别&lt;/h3&gt;&lt;p&gt;&lt;em&gt;纯虚函数&lt;/em&gt;更注重接口的统一性，&lt;em&gt;虚函数&lt;/em&gt;用于“实作继承“，继承接口的同时也继承了父类的实现。&lt;/p&gt;
+&lt;h2 id=&#34;接口类&#34;&gt;&lt;a href=&#34;#接口类&#34; class=&#34;headerlink&#34; title=&#34;接口类&#34;&gt;&lt;/a&gt;接口类&lt;/h2&gt;&lt;p&gt;成员中有纯虚函数的类。&lt;/p&gt;
+&lt;h2 id=&#34;抽象类&#34;&gt;&lt;a href=&#34;#抽象类&#34; class=&#34;headerlink&#34; title=&#34;抽象类&#34;&gt;&lt;/a&gt;抽象类&lt;/h2&gt;&lt;p&gt;成员中仅有纯虚函数的类。&lt;/p&gt;
+&lt;h2 id=&#34;虚函数表&#34;&gt;&lt;a href=&#34;#虚函数表&#34; class=&#34;headerlink&#34; title=&#34;虚函数表&#34;&gt;&lt;/a&gt;虚函数表&lt;/h2&gt;&lt;p&gt;存放指向虚函数的指针的表，存在于目标文件的只读数据段，在编译时根据类的声明创建。如果子类覆写了父类的某个虚函数，则在虚表中覆盖该父类的虚函数指针。这样就可以通过父类指针去调用在子类中覆写虚函数实现，一般都会调用最新的覆写实现。&lt;/p&gt;
+&lt;h2 id=&#34;虚函数指针&#34;&gt;&lt;a href=&#34;#虚函数指针&#34; class=&#34;headerlink&#34; title=&#34;虚函数指针&#34;&gt;&lt;/a&gt;虚函数指针&lt;/h2&gt;&lt;p&gt;运行时确定，存在于含有虚函数的类对象中，指向虚函数表。&lt;/p&gt;
+&lt;h2 id=&#34;虚继承&#34;&gt;&lt;a href=&#34;#虚继承&#34; class=&#34;headerlink&#34; title=&#34;虚继承&#34;&gt;&lt;/a&gt;虚继承&lt;/h2&gt;&lt;p&gt;主要用于解决在多继承情况下出现的菱形继承问题（浪费存储空间和语义二义性）。&lt;/p&gt;
+&lt;h2 id=&#34;虚基类指针&#34;&gt;&lt;a href=&#34;#虚基类指针&#34; class=&#34;headerlink&#34; title=&#34;虚基类指针&#34;&gt;&lt;/a&gt;虚基类指针&lt;/h2&gt;&lt;p&gt;存放虚基类的地址，存在于每一个虚继承的子类。&lt;/p&gt;
+&lt;h2 id=&#34;虚基类表&#34;&gt;&lt;a href=&#34;#虚基类表&#34; class=&#34;headerlink&#34; title=&#34;虚基类表&#34;&gt;&lt;/a&gt;虚基类表&lt;/h2&gt;&lt;p&gt;存放虚基类与本类的偏移地址，子类可过该偏移地址找到虚基类。&lt;/p&gt;
+&lt;h1 id=&#34;内存模型&#34;&gt;&lt;a href=&#34;#内存模型&#34; class=&#34;headerlink&#34; title=&#34;内存模型&#34;&gt;&lt;/a&gt;内存模型&lt;/h1&gt;&lt;p&gt;栈(Stack)、堆(Heap)、自由存储区、全局&amp;#x2F;静态数据区(全局和静态存在同一块内存中)、常量存储区、自由存储区、执行代码区&lt;/p&gt;
+&lt;h2 id=&#34;栈&#34;&gt;&lt;a href=&#34;#栈&#34; class=&#34;headerlink&#34; title=&#34;栈&#34;&gt;&lt;/a&gt;栈&lt;/h2&gt;&lt;p&gt;内存分配的运算内置于中央处理器的指令集中，执行函数时，函数内的局部变量会存在栈上，结束时会被释放。&lt;/p&gt;
+&lt;h2 id=&#34;堆&#34;&gt;&lt;a href=&#34;#堆&#34; class=&#34;headerlink&#34; title=&#34;堆&#34;&gt;&lt;/a&gt;堆&lt;/h2&gt;&lt;p&gt;由用户使用new关键字分配的内存，只由应用程序控制，需要使用delete释放堆内存。没有及时释放可能会造成内存泄漏。&lt;/p&gt;
+&lt;h2 id=&#34;全局-x2F-静态数据&#34;&gt;&lt;a href=&#34;#全局-x2F-静态数据&#34; class=&#34;headerlink&#34; title=&#34;全局&amp;#x2F;静态数据&#34;&gt;&lt;/a&gt;全局&amp;#x2F;静态数据&lt;/h2&gt;&lt;p&gt;全局变量和静态变量的存储区域，又分为已初始化区和未初始化区。&lt;/p&gt;
+&lt;h2 id=&#34;常量存储区&#34;&gt;&lt;a href=&#34;#常量存储区&#34; class=&#34;headerlink&#34; title=&#34;常量存储区&#34;&gt;&lt;/a&gt;常量存储区&lt;/h2&gt;&lt;p&gt;常量的存储区域。&lt;/p&gt;
+&lt;h2 id=&#34;自由存储区&#34;&gt;&lt;a href=&#34;#自由存储区&#34; class=&#34;headerlink&#34; title=&#34;自由存储区&#34;&gt;&lt;/a&gt;自由存储区&lt;/h2&gt;&lt;p&gt;由malloc分配的内存，一般用free释放。&lt;/p&gt;
+&lt;h2 id=&#34;执行代码区&#34;&gt;&lt;a href=&#34;#执行代码区&#34; class=&#34;headerlink&#34; title=&#34;执行代码区&#34;&gt;&lt;/a&gt;执行代码区&lt;/h2&gt;&lt;p&gt;存放函数体的二进制代码。&lt;/p&gt;
+&lt;p&gt;函数执行时，其中的局部变量会被初始化进入栈中，函数执行结束时被弹出。&lt;/p&gt;
+&lt;h1 id=&#34;递归和循环&#34;&gt;&lt;a href=&#34;#递归和循环&#34; class=&#34;headerlink&#34; title=&#34;递归和循环&#34;&gt;&lt;/a&gt;递归和循环&lt;/h1&gt;&lt;p&gt;递归其实就是栈和循环的组合。&lt;/p&gt;
+&lt;h1 id=&#34;模板&#34;&gt;&lt;a href=&#34;#模板&#34; class=&#34;headerlink&#34; title=&#34;模板&#34;&gt;&lt;/a&gt;模板&lt;/h1&gt;&lt;h2 id=&#34;模板具体化&#34;&gt;&lt;a href=&#34;#模板具体化&#34; class=&#34;headerlink&#34; title=&#34;模板具体化&#34;&gt;&lt;/a&gt;模板具体化&lt;/h2&gt;&lt;p&gt;分为隐式具体化和显式具体化，大多数时候默认都是用隐式具体化，使用通用的模板生成代码。&lt;/p&gt;
+&lt;h3 id=&#34;显式具体化&#34;&gt;&lt;a href=&#34;#显式具体化&#34; class=&#34;headerlink&#34; title=&#34;显式具体化&#34;&gt;&lt;/a&gt;显式具体化&lt;/h3&gt;&lt;p&gt;针对特定类型使用特定的模板，显式具体化就有作用了。&lt;/p&gt;
+&lt;h3 id=&#34;部分具体化&#34;&gt;&lt;a href=&#34;#部分具体化&#34; class=&#34;headerlink&#34; title=&#34;部分具体化&#34;&gt;&lt;/a&gt;部分具体化&lt;/h3&gt;&lt;p&gt;用来限制模板的通用性。&lt;/p&gt;
+&lt;h1 id=&#34;多线程&#34;&gt;&lt;a href=&#34;#多线程&#34; class=&#34;headerlink&#34; title=&#34;多线程&#34;&gt;&lt;/a&gt;多线程&lt;/h1&gt;&lt;h2 id=&#34;volatile&#34;&gt;&lt;a href=&#34;#volatile&#34; class=&#34;headerlink&#34; title=&#34;volatile&#34;&gt;&lt;/a&gt;volatile&lt;/h2&gt;&lt;p&gt;允许变量被未知因素更改，并且不会再被编译器优化。&lt;/p&gt;
+&lt;p&gt;多线程接触得少，难以得出更深的理解。&lt;/p&gt;
+</content>
+        <updated>2023-06-21T08:12:20.048Z</updated>
+    </entry>
+</feed>

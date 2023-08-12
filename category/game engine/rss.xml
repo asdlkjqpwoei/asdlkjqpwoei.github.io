@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Jager的工地 • Posts by &#34;game engine&#34; category</title>
+        <link>https://asdlkjqpwoei.github.io</link>
+        <description>游戏开发</description>
+        <language>default</language>
+        <pubDate>Wed, 28 Jun 2023 16:53:45 +0800</pubDate>
+        <lastBuildDate>Wed, 28 Jun 2023 16:53:45 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/06/28/GameEngineArchitecture/</guid>
+            <title>Game Engine Architecture</title>
+            <link>https://asdlkjqpwoei.github.io/2023/06/28/GameEngineArchitecture/</link>
+            <pubDate>Wed, 28 Jun 2023 16:53:45 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;Runtime-Engine-Architecture&#34;&gt;&lt;a href=&#34;#Runtime-Engine-Architecture&#34; class=&#34;headerlink&#34; title=&#34;Runtime Engine Architecture&#34;&gt;&lt;/a&gt;Runtime Engine Architecture&lt;/h1&gt;&lt;h2 id=&#34;硬件层&#34;&gt;&lt;a href=&#34;#硬件层&#34; class=&#34;headerlink&#34; title=&#34;硬件层&#34;&gt;&lt;/a&gt;硬件层&lt;/h2&gt;&lt;p&gt;代表执行游戏的计算机系统或者主机，例如PC、XBox、PlayStation。&lt;/p&gt;
+&lt;h2 id=&#34;驱动程序&#34;&gt;&lt;a href=&#34;#驱动程序&#34; class=&#34;headerlink&#34; title=&#34;驱动程序&#34;&gt;&lt;/a&gt;驱动程序&lt;/h2&gt;&lt;p&gt;负责管理硬件资源，一般由操作系统或者硬件开发商提供。&lt;/p&gt;
+&lt;h2 id=&#34;操作系统&#34;&gt;&lt;a href=&#34;#操作系统&#34; class=&#34;headerlink&#34; title=&#34;操作系统&#34;&gt;&lt;/a&gt;操作系统&lt;/h2&gt;&lt;h2 id=&#34;第三方软件开发包和中间件&#34;&gt;&lt;a href=&#34;#第三方软件开发包和中间件&#34; class=&#34;headerlink&#34; title=&#34;第三方软件开发包和中间件&#34;&gt;&lt;/a&gt;第三方软件开发包和中间件&lt;/h2&gt;&lt;p&gt;引擎一般都会借用一部分第三方组件，例如DirectX、OpenGL等图形库，又或者Boost等数据结构及算法库，还有Havok、PhysX等负责物理的开发库。&lt;/p&gt;
+&lt;h2 id=&#34;平台独立层&#34;&gt;&lt;a href=&#34;#平台独立层&#34; class=&#34;headerlink&#34; title=&#34;平台独立层&#34;&gt;&lt;/a&gt;平台独立层&lt;/h2&gt;&lt;p&gt;将平台有关的部分与硬件底层分离，通常会有平台检测，包装平台相关的开发库和基础API，保证接口在不同平台的行为一致。&lt;/p&gt;
+&lt;h2 id=&#34;核心系统&#34;&gt;&lt;a href=&#34;#核心系统&#34; class=&#34;headerlink&#34; title=&#34;核心系统&#34;&gt;&lt;/a&gt;核心系统&lt;/h2&gt;&lt;p&gt;主要包含开发时需要用到的使用软件和功能，例如断言、内存分配、数学库和自定义的数据结构及算法等。&lt;/p&gt;
+&lt;h2 id=&#34;资源管理器&#34;&gt;&lt;a href=&#34;#资源管理器&#34; class=&#34;headerlink&#34; title=&#34;资源管理器&#34;&gt;&lt;/a&gt;资源管理器&lt;/h2&gt;&lt;p&gt;负责访问和管理任何类型的游戏资产和其他输入数据。&lt;/p&gt;
+&lt;h2 id=&#34;渲染引擎&#34;&gt;&lt;a href=&#34;#渲染引擎&#34; class=&#34;headerlink&#34; title=&#34;渲染引擎&#34;&gt;&lt;/a&gt;渲染引擎&lt;/h2&gt;&lt;p&gt;渲染引擎没有特别的架构，但是一般通用来说都采用分层架构&lt;/p&gt;
+&lt;h3 id=&#34;低阶渲染器&#34;&gt;&lt;a href=&#34;#低阶渲染器&#34; class=&#34;headerlink&#34; title=&#34;低阶渲染器&#34;&gt;&lt;/a&gt;低阶渲染器&lt;/h3&gt;&lt;p&gt;包含全部原始的渲染功能，着重渲染丰富的几何图元。&lt;/p&gt;
+&lt;h3 id=&#34;剔除优化&#34;&gt;&lt;a href=&#34;#剔除优化&#34; class=&#34;headerlink&#34; title=&#34;剔除优化&#34;&gt;&lt;/a&gt;剔除优化&lt;/h3&gt;&lt;p&gt;在低阶渲染器提交的几何图形不考虑其是否可见，在该层将不可见的图形提出。&lt;/p&gt;
+&lt;h3 id=&#34;视觉效果&#34;&gt;&lt;a href=&#34;#视觉效果&#34; class=&#34;headerlink&#34; title=&#34;视觉效果&#34;&gt;&lt;/a&gt;视觉效果&lt;/h3&gt;&lt;p&gt;一般有粒子系统、贴花系统、光照贴图及环境贴图、动态阴影、全屏后期处理效果等。&lt;/p&gt;
+&lt;h3 id=&#34;前端&#34;&gt;&lt;a href=&#34;#前端&#34; class=&#34;headerlink&#34; title=&#34;前端&#34;&gt;&lt;/a&gt;前端&lt;/h3&gt;&lt;p&gt;一般就是指二维的界面了，例如抬头显示器、菜单等等。&lt;/p&gt;
+&lt;h2 id=&#34;性能剖析及调试工具&#34;&gt;&lt;a href=&#34;#性能剖析及调试工具&#34; class=&#34;headerlink&#34; title=&#34;性能剖析及调试工具&#34;&gt;&lt;/a&gt;性能剖析及调试工具&lt;/h2&gt;&lt;p&gt;进行性能剖析以进行性能优化，否则市面上大多数硬件都无法负担游戏带来的负载从而极大地影响游戏体验。&lt;/p&gt;
+&lt;h2 id=&#34;物理（刚体动力学模拟）&#34;&gt;&lt;a href=&#34;#物理（刚体动力学模拟）&#34; class=&#34;headerlink&#34; title=&#34;物理（刚体动力学模拟）&#34;&gt;&lt;/a&gt;物理（刚体动力学模拟）&lt;/h2&gt;&lt;p&gt;提供拟真的物理模拟&lt;/p&gt;
+&lt;h2 id=&#34;动画&#34;&gt;&lt;a href=&#34;#动画&#34; class=&#34;headerlink&#34; title=&#34;动画&#34;&gt;&lt;/a&gt;动画&lt;/h2&gt;&lt;p&gt;负责提供动画相关的功能。&lt;/p&gt;
+&lt;h2 id=&#34;人体学接口设备&#34;&gt;&lt;a href=&#34;#人体学接口设备&#34; class=&#34;headerlink&#34; title=&#34;人体学接口设备&#34;&gt;&lt;/a&gt;人体学接口设备&lt;/h2&gt;&lt;p&gt;负责处理玩家输入，输入可以有多种设备提供，例如：键盘和鼠标、游戏手柄、方向盘、遥控器等。&lt;/p&gt;
+&lt;h2 id=&#34;音频&#34;&gt;&lt;a href=&#34;#音频&#34; class=&#34;headerlink&#34; title=&#34;音频&#34;&gt;&lt;/a&gt;音频&lt;/h2&gt;&lt;p&gt;提供处理及优化音频的功能，以实现更好的声乐效果。&lt;/p&gt;
+&lt;h2 id=&#34;在线多人-x2F-网络&#34;&gt;&lt;a href=&#34;#在线多人-x2F-网络&#34; class=&#34;headerlink&#34; title=&#34;在线多人&amp;#x2F;网络&#34;&gt;&lt;/a&gt;在线多人&amp;#x2F;网络&lt;/h2&gt;&lt;p&gt;提供多人游戏的功能&lt;/p&gt;
+&lt;h2 id=&#34;游戏性基础系统&#34;&gt;&lt;a href=&#34;#游戏性基础系统&#34; class=&#34;headerlink&#34; title=&#34;游戏性基础系统&#34;&gt;&lt;/a&gt;游戏性基础系统&lt;/h2&gt;&lt;p&gt;游戏性(Gameplay)：游戏内进行的活动、支配游戏虚拟世界的规则、玩家角色的能力、其他角色和对象的能力、玩家的长短目标。&lt;/p&gt;
+&lt;h2 id=&#34;专用子系统&#34;&gt;&lt;a href=&#34;#专用子系统&#34; class=&#34;headerlink&#34; title=&#34;专用子系统&#34;&gt;&lt;/a&gt;专用子系统&lt;/h2&gt;&lt;p&gt;针对游戏性进行特制开发的各类子系统，如专用渲染和AI。&lt;/p&gt;
+&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Game Engine Architecture [Third Edition] – Jason Gergory, 叶劲峰译&lt;/li&gt;
+&lt;/ul&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

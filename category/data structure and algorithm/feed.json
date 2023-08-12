@@ -1,0 +1,16 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Jager的工地 • All posts by \"data structure and algorithm\" category",
+    "description": "游戏开发",
+    "home_page_url": "https://asdlkjqpwoei.github.io",
+    "items": [
+        {
+            "id": "https://asdlkjqpwoei.github.io/2023/06/21/DataStructrue/",
+            "url": "https://asdlkjqpwoei.github.io/2023/06/21/DataStructrue/",
+            "title": "Data Structrue",
+            "date_published": "2023-06-21T08:17:07.589Z",
+            "content_html": "",
+            "tags": []
+        }
+    ]
+}
