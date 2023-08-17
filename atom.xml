@@ -3,7 +3,23 @@
     <id>https://asdlkjqpwoei.github.io</id>
     <title>Jager的工地</title>
     <link href="https://asdlkjqpwoei.github.io" />
-    <updated>2023-06-28T08:57:10.586Z</updated>
+    <updated>2023-08-17T08:48:18.779Z</updated>
+    <entry>
+        <id>https://asdlkjqpwoei.github.io/2023/08/17/WarFirstPersonNote/</id>
+        <title>War First Person Development Note</title>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/08/17/WarFirstPersonNote/"/>
+        <content type="html">&lt;h1 id=&#34;编译Unreal-Engine出现UBT被占用的问题&#34;&gt;&lt;a href=&#34;#编译Unreal-Engine出现UBT被占用的问题&#34; class=&#34;headerlink&#34; title=&#34;编译Unreal Engine出现UBT被占用的问题&#34;&gt;&lt;/a&gt;编译Unreal Engine出现UBT被占用的问题&lt;/h1&gt;&lt;p&gt;Unreal Engine Forum Post: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bXMudW5yZWFsZW5naW5lLmNvbS90L2Vycm9yLW1zYjMwMjEtYWNjZXNzLXRvLXRoZS1wYXRoLWVwaWNnYW1lcy1jb3JlLWRsbC1pcy1kZW5pZWQvNjk1NjMyLzEw&#34;&gt;https://forums.unrealengine.com/t/error-msb3021-access-to-the-path-epicgames-core-dll-is-denied/695632/10&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Github Official Commit: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0VwaWNHYW1lcy9VbnJlYWxFbmdpbmUvY29tbWl0LzVhNzYxZDVlNDRjNTM1Y2RkNjA2OWJiOTljNzg2ZjAyYzdhYmUzM2I=&#34;&gt;https://github.com/EpicGames/UnrealEngine/commit/5a761d5e44c535cdd6069bb99c786f02c7abe33b&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;至于为啥我没能第一时间拉到官方的修复，是因为Release分支没有合并最新的修复，更新频率慢。&lt;/p&gt;
+&lt;h1 id=&#34;回转运动工作不正常&#34;&gt;&lt;a href=&#34;#回转运动工作不正常&#34; class=&#34;headerlink&#34; title=&#34;回转运动工作不正常&#34;&gt;&lt;/a&gt;回转运动工作不正常&lt;/h1&gt;&lt;p&gt;线性插值参数没填好，全是0，当然不会正常混合。&lt;/p&gt;
+&lt;h1 id=&#34;Unreal-Editor打开BP-WarWeapon蓝图出现栈溢出&#34;&gt;&lt;a href=&#34;#Unreal-Editor打开BP-WarWeapon蓝图出现栈溢出&#34; class=&#34;headerlink&#34; title=&#34;Unreal Editor打开BP_WarWeapon蓝图出现栈溢出&#34;&gt;&lt;/a&gt;Unreal Editor打开BP_WarWeapon蓝图出现栈溢出&lt;/h1&gt;&lt;p&gt;从日志查看调用栈发现是Editor一直在重复对UWarWeaponPropertiesComponent和UWarWeaponAmmunitionComponent这两个组件生成子节点造成栈溢出。&lt;/p&gt;
+&lt;p&gt;通过排查发现是对UPROPERTY的实现和工作流程理解不足，把AWarWeapon中这两个组件的EditDefaultsOnly改成VisibleDefaultsOnly就解决了问题。&lt;/p&gt;
+&lt;p&gt;至于具体是怎么导致栈溢出的，暂时未知。&lt;/p&gt;
+&lt;h1 id=&#34;蓝图重复出现相同的节点&#34;&gt;&lt;a href=&#34;#蓝图重复出现相同的节点&#34; class=&#34;headerlink&#34; title=&#34;蓝图重复出现相同的节点&#34;&gt;&lt;/a&gt;蓝图重复出现相同的节点&lt;/h1&gt;&lt;p&gt;BP_WarWeapon蓝图中出现多个同样的Category且完全一直的细节面板，它们的属性相互影响，指向的完全是同一个属性和内存。&lt;/p&gt;
+&lt;p&gt;通过排查发现是在多个有相互联系的类中把成员分到相同的Category导致的，比如AWarWeapon的UWarWeaponPropertiesComponent分类War|Weapon Properties，UWeaponPropertiesComponent中全部的成员分类到War|Weapon Properties，Editor在生成细节面板的时候会生成两个War|Weapon Properties，但其实都是指向相同的内存。&lt;/p&gt;
+</content>
+        <updated>2023-08-17T08:48:18.779Z</updated>
+    </entry>
     <entry>
         <id>https://asdlkjqpwoei.github.io/2023/06/28/ComputerGraphics/</id>
         <title>Computer Graphics Mathematics</title>
