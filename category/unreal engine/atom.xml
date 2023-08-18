@@ -8,7 +8,8 @@
         <id>https://asdlkjqpwoei.github.io/2023/08/17/WarFirstPersonNote/</id>
         <title>War First Person Development Note</title>
         <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/08/17/WarFirstPersonNote/"/>
-        <content type="html">&lt;h1 id=&#34;编译Unreal-Engine出现UBT被占用的问题&#34;&gt;&lt;a href=&#34;#编译Unreal-Engine出现UBT被占用的问题&#34; class=&#34;headerlink&#34; title=&#34;编译Unreal Engine出现UBT被占用的问题&#34;&gt;&lt;/a&gt;编译Unreal Engine出现UBT被占用的问题&lt;/h1&gt;&lt;p&gt;Unreal Engine Forum Post: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bXMudW5yZWFsZW5naW5lLmNvbS90L2Vycm9yLW1zYjMwMjEtYWNjZXNzLXRvLXRoZS1wYXRoLWVwaWNnYW1lcy1jb3JlLWRsbC1pcy1kZW5pZWQvNjk1NjMyLzEw&#34;&gt;https://forums.unrealengine.com/t/error-msb3021-access-to-the-path-epicgames-core-dll-is-denied/695632/10&lt;/span&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FzZGxranFwd29laS9XYXJGaXJzdFBlcnNvbg==&#34;&gt;War First Person&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;编译Unreal-Engine出现UBT被占用的问题&#34;&gt;&lt;a href=&#34;#编译Unreal-Engine出现UBT被占用的问题&#34; class=&#34;headerlink&#34; title=&#34;编译Unreal Engine出现UBT被占用的问题&#34;&gt;&lt;/a&gt;编译Unreal Engine出现UBT被占用的问题&lt;/h1&gt;&lt;p&gt;Unreal Engine Forum Post: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bXMudW5yZWFsZW5naW5lLmNvbS90L2Vycm9yLW1zYjMwMjEtYWNjZXNzLXRvLXRoZS1wYXRoLWVwaWNnYW1lcy1jb3JlLWRsbC1pcy1kZW5pZWQvNjk1NjMyLzEw&#34;&gt;https://forums.unrealengine.com/t/error-msb3021-access-to-the-path-epicgames-core-dll-is-denied/695632/10&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Github Official Commit: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0VwaWNHYW1lcy9VbnJlYWxFbmdpbmUvY29tbWl0LzVhNzYxZDVlNDRjNTM1Y2RkNjA2OWJiOTljNzg2ZjAyYzdhYmUzM2I=&#34;&gt;https://github.com/EpicGames/UnrealEngine/commit/5a761d5e44c535cdd6069bb99c786f02c7abe33b&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;至于为啥我没能第一时间拉到官方的修复，是因为Release分支没有合并最新的修复，更新频率慢。&lt;/p&gt;
 &lt;h1 id=&#34;回转运动工作不正常&#34;&gt;&lt;a href=&#34;#回转运动工作不正常&#34; class=&#34;headerlink&#34; title=&#34;回转运动工作不正常&#34;&gt;&lt;/a&gt;回转运动工作不正常&lt;/h1&gt;&lt;p&gt;线性插值参数没填好，全是0，当然不会正常混合。&lt;/p&gt;
@@ -61,8 +62,7 @@
 &lt;p&gt;可通过调用MarkPendingKillu或者MarkAsGarbage在对象上，强制下一个垃圾回收周期摧毁对象。部分类不支持该方式销毁，比如AActor和UActorComponent。&lt;/p&gt;
 &lt;p&gt;根据以上的原理，防止对象被回收的办法：标记为UPROPERTY，调用AddRoot函数。&lt;/p&gt;
 &lt;h1 id=&#34;Serialization-序列化&#34;&gt;&lt;a href=&#34;#Serialization-序列化&#34; class=&#34;headerlink&#34; title=&#34;Serialization(序列化)&#34;&gt;&lt;/a&gt;Serialization(序列化)&lt;/h1&gt;&lt;p&gt;一般是指将数据结构转换成其他格式方便传输&amp;#x2F;存储，提取其中的数据结构也就叫反序列化(Deserialization)。&lt;/p&gt;
-&lt;h1 id=&#34;性能优化相关&#34;&gt;&lt;a href=&#34;#性能优化相关&#34; class=&#34;headerlink&#34; title=&#34;性能优化相关&#34;&gt;&lt;/a&gt;性能优化相关&lt;/h1&gt;&lt;p&gt;还是得在项目中实践和学习，自家电脑跑大项目打个包都随便爆内存，效率极低。&lt;/p&gt;
-&lt;h2 id=&#34;特效&#34;&gt;&lt;a href=&#34;#特效&#34; class=&#34;headerlink&#34; title=&#34;特效&#34;&gt;&lt;/a&gt;特效&lt;/h2&gt;&lt;p&gt;OverDraw&lt;/p&gt;
+&lt;h1 id=&#34;性能优化相关&#34;&gt;&lt;a href=&#34;#性能优化相关&#34; class=&#34;headerlink&#34; title=&#34;性能优化相关&#34;&gt;&lt;/a&gt;性能优化相关&lt;/h1&gt;&lt;h2 id=&#34;特效&#34;&gt;&lt;a href=&#34;#特效&#34; class=&#34;headerlink&#34; title=&#34;特效&#34;&gt;&lt;/a&gt;特效&lt;/h2&gt;&lt;p&gt;OverDraw&lt;/p&gt;
 &lt;p&gt;Volume Domain&lt;/p&gt;
 &lt;h2 id=&#34;渲染&#34;&gt;&lt;a href=&#34;#渲染&#34; class=&#34;headerlink&#34; title=&#34;渲染&#34;&gt;&lt;/a&gt;渲染&lt;/h2&gt;&lt;h3 id=&#34;渲染线程&#34;&gt;&lt;a href=&#34;#渲染线程&#34; class=&#34;headerlink&#34; title=&#34;渲染线程&#34;&gt;&lt;/a&gt;渲染线程&lt;/h3&gt;&lt;p&gt;RenderThread, RHIThread&lt;/p&gt;
 &lt;p&gt;Drawcall&lt;/p&gt;

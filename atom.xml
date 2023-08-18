@@ -3,12 +3,39 @@
     <id>https://asdlkjqpwoei.github.io</id>
     <title>Jager的工地</title>
     <link href="https://asdlkjqpwoei.github.io" />
-    <updated>2023-08-17T08:48:18.779Z</updated>
+    <updated>2023-08-18T10:22:55.954Z</updated>
+    <entry>
+        <id>https://asdlkjqpwoei.github.io/2023/08/18/Gossip/</id>
+        <title>杂谈/碎碎念</title>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/08/18/Gossip/"/>
+        <content type="html">&lt;h1 id=&#34;Call-of-Duty-Modern-Warfare-II-2020&#34;&gt;&lt;a href=&#34;#Call-of-Duty-Modern-Warfare-II-2020&#34; class=&#34;headerlink&#34; title=&#34;Call of Duty: Modern Warfare II(2020)&#34;&gt;&lt;/a&gt;Call of Duty: Modern Warfare II(2020)&lt;/h1&gt;&lt;p&gt;场景、特效、模型、动画：业界顶尖&lt;/p&gt;
+&lt;p&gt;枪械反馈和击杀反馈：业界顶尖&lt;/p&gt;
+&lt;p&gt;多人游戏平衡性：传统艺能&lt;/p&gt;
+&lt;p&gt;综合游戏体验：一坨大便&lt;/p&gt;
+&lt;p&gt;地图设计：业界顶尖的稀烂&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;地图真就搁这里玩写实和战术是吧，拉出去就是4、5个枪位，道具还少得要死，CNM想要找人对枪还得集齐队友的道具才能从一个交叉点过去是吧。哦过完这一个交叉点过不了下一个，嘻嘻，纯纯的傻逼设计，能藏人的位置一堆还不好搜。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;游戏性相关的机制设计：退步&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;静步成为技能这个设计已经在前一作就实装了，极大地降低进攻欲望，这一作仍然继承，地图设计烂就算了，还在这里下绊脚的&lt;/em&gt;&lt;/p&gt;
+</content>
+        <updated>2023-08-18T10:22:55.954Z</updated>
+    </entry>
+    <entry>
+        <id>https://asdlkjqpwoei.github.io/2023/08/18/PrinciplesOfMathematicalAnalysis/</id>
+        <title>Principles of Mathematical Analysis</title>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/08/18/PrinciplesOfMathematicalAnalysis/"/>
+        <content type="html">&lt;h1 id=&#34;The-Real-and-Complex-Number-Systems-实数和复数&#34;&gt;&lt;a href=&#34;#The-Real-and-Complex-Number-Systems-实数和复数&#34; class=&#34;headerlink&#34; title=&#34;The Real and Complex Number Systems(实数和复数)&#34;&gt;&lt;/a&gt;The Real and Complex Number Systems(实数和复数)&lt;/h1&gt;&lt;p&gt;全面的主要数学分析讨论（比如收敛性、连续性、不同和积分）必须建立在准确定义的数字概念。有理数不足以表示许多数字，比如没有有理数$a$能满足$a^2 &amp;#x3D; 2$。&lt;/p&gt;
+&lt;h1 id=&#34;Basic-Topology-基本拓扑&#34;&gt;&lt;a href=&#34;#Basic-Topology-基本拓扑&#34; class=&#34;headerlink&#34; title=&#34;Basic Topology(基本拓扑)&#34;&gt;&lt;/a&gt;Basic Topology(基本拓扑)&lt;/h1&gt;&lt;h2 id=&#34;Metric-Space-度量空间&#34;&gt;&lt;a href=&#34;#Metric-Space-度量空间&#34; class=&#34;headerlink&#34; title=&#34;Metric Space(度量空间)&#34;&gt;&lt;/a&gt;Metric Space(度量空间)&lt;/h2&gt;&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Principles of Mathematical Analysis - Walter Rudin&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <updated>2023-08-18T08:26:29.492Z</updated>
+    </entry>
     <entry>
         <id>https://asdlkjqpwoei.github.io/2023/08/17/WarFirstPersonNote/</id>
         <title>War First Person Development Note</title>
         <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/08/17/WarFirstPersonNote/"/>
-        <content type="html">&lt;h1 id=&#34;编译Unreal-Engine出现UBT被占用的问题&#34;&gt;&lt;a href=&#34;#编译Unreal-Engine出现UBT被占用的问题&#34; class=&#34;headerlink&#34; title=&#34;编译Unreal Engine出现UBT被占用的问题&#34;&gt;&lt;/a&gt;编译Unreal Engine出现UBT被占用的问题&lt;/h1&gt;&lt;p&gt;Unreal Engine Forum Post: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bXMudW5yZWFsZW5naW5lLmNvbS90L2Vycm9yLW1zYjMwMjEtYWNjZXNzLXRvLXRoZS1wYXRoLWVwaWNnYW1lcy1jb3JlLWRsbC1pcy1kZW5pZWQvNjk1NjMyLzEw&#34;&gt;https://forums.unrealengine.com/t/error-msb3021-access-to-the-path-epicgames-core-dll-is-denied/695632/10&lt;/span&gt;&lt;/p&gt;
+        <content type="html">&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FzZGxranFwd29laS9XYXJGaXJzdFBlcnNvbg==&#34;&gt;War First Person&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;编译Unreal-Engine出现UBT被占用的问题&#34;&gt;&lt;a href=&#34;#编译Unreal-Engine出现UBT被占用的问题&#34; class=&#34;headerlink&#34; title=&#34;编译Unreal Engine出现UBT被占用的问题&#34;&gt;&lt;/a&gt;编译Unreal Engine出现UBT被占用的问题&lt;/h1&gt;&lt;p&gt;Unreal Engine Forum Post: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bXMudW5yZWFsZW5naW5lLmNvbS90L2Vycm9yLW1zYjMwMjEtYWNjZXNzLXRvLXRoZS1wYXRoLWVwaWNnYW1lcy1jb3JlLWRsbC1pcy1kZW5pZWQvNjk1NjMyLzEw&#34;&gt;https://forums.unrealengine.com/t/error-msb3021-access-to-the-path-epicgames-core-dll-is-denied/695632/10&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Github Official Commit: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0VwaWNHYW1lcy9VbnJlYWxFbmdpbmUvY29tbWl0LzVhNzYxZDVlNDRjNTM1Y2RkNjA2OWJiOTljNzg2ZjAyYzdhYmUzM2I=&#34;&gt;https://github.com/EpicGames/UnrealEngine/commit/5a761d5e44c535cdd6069bb99c786f02c7abe33b&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;至于为啥我没能第一时间拉到官方的修复，是因为Release分支没有合并最新的修复，更新频率慢。&lt;/p&gt;
 &lt;h1 id=&#34;回转运动工作不正常&#34;&gt;&lt;a href=&#34;#回转运动工作不正常&#34; class=&#34;headerlink&#34; title=&#34;回转运动工作不正常&#34;&gt;&lt;/a&gt;回转运动工作不正常&lt;/h1&gt;&lt;p&gt;线性插值参数没填好，全是0，当然不会正常混合。&lt;/p&gt;
@@ -24,32 +51,87 @@
         <id>https://asdlkjqpwoei.github.io/2023/06/28/ComputerGraphics/</id>
         <title>Computer Graphics Mathematics</title>
         <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/28/ComputerGraphics/"/>
-        <content type="html"></content>
+        <content type="html">&lt;h1 id=&#34;Cartesian-Coordinate-System-笛卡儿坐标系&#34;&gt;&lt;a href=&#34;#Cartesian-Coordinate-System-笛卡儿坐标系&#34; class=&#34;headerlink&#34; title=&#34;Cartesian Coordinate System(笛卡儿坐标系)&#34;&gt;&lt;/a&gt;Cartesian Coordinate System(笛卡儿坐标系)&lt;/h1&gt;&lt;p&gt;使用n个互相垂直的轴描述n维空间，其中的点代表着空间的位置。在高中数学中常用的皆为二维Cartesian坐标系，在游戏行业中，常用的为三维的Cartesian坐标系。&lt;/p&gt;
+&lt;p&gt;手掌心朝上，无名指和小指蜷缩，食指和拇指伸直并且食指朝向自己身体的前方，中指垂直于手掌，将拇指指向设为x轴，食指指向设为y轴，中指指向设为z轴，就是高中数学常用的二维Cartesian坐标系平面加上一条垂直该平面的轴直线。&lt;/p&gt;
+&lt;p&gt;Game Engine Architecture(游戏引擎架构)书中的右手坐标系图是将食指朝向自己身体上方的图示。&lt;/p&gt;
+&lt;h1 id=&#34;矢量运算&#34;&gt;&lt;a href=&#34;#矢量运算&#34; class=&#34;headerlink&#34; title=&#34;矢量运算&#34;&gt;&lt;/a&gt;矢量运算&lt;/h1&gt;&lt;h2 id=&#34;Magnitude-模&#34;&gt;&lt;a href=&#34;#Magnitude-模&#34; class=&#34;headerlink&#34; title=&#34;Magnitude(模)&#34;&gt;&lt;/a&gt;Magnitude(模)&lt;/h2&gt;&lt;p&gt;标量，代表矢量在空间中的长度。一般使用勾股定理计算矢量的模。&lt;/p&gt;
+
+$$|a| = \sqrt[]{{a_x}^2 + {{a_y}^2} + {{a_z}^2}}$$
+
+
+&lt;h3 id=&#34;Note&#34;&gt;&lt;a href=&#34;#Note&#34; class=&#34;headerlink&#34; title=&#34;Note&#34;&gt;&lt;/a&gt;Note&lt;/h3&gt;&lt;p&gt;计算平方根通常会损耗性能，尽量使用模的平方。&lt;/p&gt;
+&lt;h2 id=&#34;Dot-Product-点积&#34;&gt;&lt;a href=&#34;#Dot-Product-点积&#34; class=&#34;headerlink&#34; title=&#34;Dot Product(点积)&#34;&gt;&lt;/a&gt;Dot Product(点积)&lt;/h2&gt;&lt;p&gt;别名：Scalar Product(标量积)或内积(Inner Product)&lt;/p&gt;
+&lt;p&gt;$$\vec{a} \cdot \vec{b} &amp;#x3D; {a_x} {b_x} + {a_y} {b_y} + {a_z} {b_z}$$&lt;/p&gt;
+&lt;p&gt;点积支持数学基本运算中的交换律和分配律。&lt;/p&gt;
+&lt;p&gt;通常用来对比两个游戏对象的位置和朝向：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$$\vec{a} \cdot \vec{b} &amp;#x3D; 1$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;两个对象共线，并且朝向完全相同&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$$\vec{a} \cdot \vec{b} &amp;#x3D; -1$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;两个对象共线，并且朝向完全相反。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$$\vec{a} \cdot \vec{b} &amp;#x3D; 0$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;两个对象的朝向相互垂直。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$$\vec{a} \cdot \vec{b} &amp;gt; 0$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;两个对象的朝向大致相同。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$$\vec{a} \cdot \vec{b} &amp;lt; 0$$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;两个对象的朝向大致相反。&lt;/p&gt;
+&lt;h2 id=&#34;Cross-Product-叉积&#34;&gt;&lt;a href=&#34;#Cross-Product-叉积&#34; class=&#34;headerlink&#34; title=&#34;Cross Product(叉积)&#34;&gt;&lt;/a&gt;Cross Product(叉积)&lt;/h2&gt;&lt;p&gt;别名：Vector Product(矢量积)或Outer Product(外积)&lt;/p&gt;
+&lt;p&gt;只定义于三维空间。结果是一个新的矢量，垂直于原来的两个参与运算的矢量。&lt;/p&gt;
+&lt;p&gt;$$\vec{a} \times \vec{b} &amp;#x3D; ({a_y} {b_z} - {a_z} {b_y})\vec{i} + ({a_z} {b_x} - {a_x} {b_z})\vec{j} + ({a_x} {b_y} - {a_y} {b_x})\vec{k} ]$$&lt;/p&gt;
+&lt;h3 id=&#34;叉积的模&#34;&gt;&lt;a href=&#34;#叉积的模&#34; class=&#34;headerlink&#34; title=&#34;叉积的模&#34;&gt;&lt;/a&gt;叉积的模&lt;/h3&gt;&lt;p&gt;$$|\vec{a} \times \vec{b}| &amp;#x3D; |\vec{a}| |\vec{b}| sin\theta$$&lt;/p&gt;
+&lt;h1 id=&#34;Linear-Interpolation-LERP-线性插值&#34;&gt;&lt;a href=&#34;#Linear-Interpolation-LERP-线性插值&#34; class=&#34;headerlink&#34; title=&#34;Linear Interpolation, LERP(线性插值)&#34;&gt;&lt;/a&gt;Linear Interpolation, LERP(线性插值)&lt;/h1&gt;&lt;p&gt;用来计算两个已知点的中间点。&lt;/p&gt;
+&lt;p&gt;$$LERP(\vec{A}, \vec{B}, \beta) &amp;#x3D; (1 - \beta)\vec{A} + \beta\vec{B} &amp;#x3D; [(1 - \beta)A_x + \beta B_x, (1 - \beta)A_y + \beta B_y, (1 - \beta)A_z + \beta B_z], \beta \in [0,1]$$&lt;/p&gt;
+&lt;h1 id=&#34;Matrix-矩阵&#34;&gt;&lt;a href=&#34;#Matrix-矩阵&#34; class=&#34;headerlink&#34; title=&#34;Matrix(矩阵)&#34;&gt;&lt;/a&gt;Matrix(矩阵)&lt;/h1&gt;&lt;p&gt;由$m &amp;#x2F;times n$个标量组成的长方形数组，矩阵可方便的表示线性变化，例如平移、旋转、缩放。&lt;/p&gt;
+&lt;p&gt;行(Row)与横，列(Column)与竖、纵。&lt;/p&gt;
+&lt;h2 id=&#34;Special-Orthogonal-Matrix-特殊正交矩阵-Isotropic-Matrix-各向同性矩阵-Orthonormal-Matrix-标准正交矩阵&#34;&gt;&lt;a href=&#34;#Special-Orthogonal-Matrix-特殊正交矩阵-Isotropic-Matrix-各向同性矩阵-Orthonormal-Matrix-标准正交矩阵&#34; class=&#34;headerlink&#34; title=&#34;Special Orthogonal Matrix(特殊正交矩阵), Isotropic Matrix(各向同性矩阵), Orthonormal Matrix(标准正交矩阵)&#34;&gt;&lt;/a&gt;Special Orthogonal Matrix(特殊正交矩阵), Isotropic Matrix(各向同性矩阵), Orthonormal Matrix(标准正交矩阵)&lt;/h2&gt;&lt;p&gt;一种所有行矢量及列矢量均为单位矢量的$3 \times 3$矩阵。&lt;/p&gt;
+&lt;h2 id=&#34;变换矩阵&#34;&gt;&lt;a href=&#34;#变换矩阵&#34; class=&#34;headerlink&#34; title=&#34;变换矩阵&#34;&gt;&lt;/a&gt;变换矩阵&lt;/h2&gt;&lt;p&gt;一种可表示三维变换的矩阵，包括平移、旋转、缩放。&lt;/p&gt;
+&lt;h2 id=&#34;Affine-Matrix-仿射矩阵&#34;&gt;&lt;a href=&#34;#Affine-Matrix-仿射矩阵&#34; class=&#34;headerlink&#34; title=&#34;Affine Matrix(仿射矩阵)&#34;&gt;&lt;/a&gt;Affine Matrix(仿射矩阵)&lt;/h2&gt;&lt;p&gt;能维持直线在变换前后的平行性以及相对的距离比，不一定维持直线在变换前后的绝对长度及角度的$4 \times 4$变换矩阵。&lt;/p&gt;
+&lt;p&gt;由平移、旋转、缩放、切变所组合而成的变换都是仿射矩阵。&lt;/p&gt;
+&lt;h1 id=&#34;Euler-Angle-欧拉角&#34;&gt;&lt;a href=&#34;#Euler-Angle-欧拉角&#34; class=&#34;headerlink&#34; title=&#34;Euler Angle(欧拉角)&#34;&gt;&lt;/a&gt;Euler Angle(欧拉角)&lt;/h1&gt;&lt;ul&gt;
+&lt;li&gt;Pitch(俯仰角)&lt;/li&gt;
+&lt;li&gt;Yaw(偏航角)&lt;/li&gt;
+&lt;li&gt;Roll(滚动角)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;Gimbal-Lock-万向节死锁&#34;&gt;&lt;a href=&#34;#Gimbal-Lock-万向节死锁&#34; class=&#34;headerlink&#34; title=&#34;Gimbal Lock(万向节死锁)&#34;&gt;&lt;/a&gt;Gimbal Lock(万向节死锁)&lt;/h2&gt;&lt;p&gt;当旋转90度时，三个主轴中的其中一个主轴就会与另一个主轴完全对其，此时三个主轴的状态就叫做万向节死锁，其中两个主轴已经完全对其，无法在单独的围绕其中一个主轴旋转，因为二者已经等效。&lt;/p&gt;
+&lt;h1 id=&#34;Quaternion-四元数&#34;&gt;&lt;a href=&#34;#Quaternion-四元数&#34; class=&#34;headerlink&#34; title=&#34;Quaternion(四元数)&#34;&gt;&lt;/a&gt;Quaternion(四元数)&lt;/h1&gt;&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Introduction to Linear Algebra [Fifth Edition] - Gilbert Strang&lt;/li&gt;
+&lt;li&gt;Game Engine Architecture [Third Edition] – Jason Gergory, 叶劲峰译&lt;/li&gt;
+&lt;/ol&gt;
+</content>
         <updated>2023-06-28T08:57:10.586Z</updated>
     </entry>
     <entry>
         <id>https://asdlkjqpwoei.github.io/2023/06/28/GameEngineArchitecture/</id>
         <title>Game Engine Architecture</title>
         <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/28/GameEngineArchitecture/"/>
-        <content type="html">&lt;h1 id=&#34;Runtime-Engine-Architecture&#34;&gt;&lt;a href=&#34;#Runtime-Engine-Architecture&#34; class=&#34;headerlink&#34; title=&#34;Runtime Engine Architecture&#34;&gt;&lt;/a&gt;Runtime Engine Architecture&lt;/h1&gt;&lt;h2 id=&#34;硬件层&#34;&gt;&lt;a href=&#34;#硬件层&#34; class=&#34;headerlink&#34; title=&#34;硬件层&#34;&gt;&lt;/a&gt;硬件层&lt;/h2&gt;&lt;p&gt;代表执行游戏的计算机系统或者主机，例如PC、XBox、PlayStation。&lt;/p&gt;
-&lt;h2 id=&#34;驱动程序&#34;&gt;&lt;a href=&#34;#驱动程序&#34; class=&#34;headerlink&#34; title=&#34;驱动程序&#34;&gt;&lt;/a&gt;驱动程序&lt;/h2&gt;&lt;p&gt;负责管理硬件资源，一般由操作系统或者硬件开发商提供。&lt;/p&gt;
-&lt;h2 id=&#34;操作系统&#34;&gt;&lt;a href=&#34;#操作系统&#34; class=&#34;headerlink&#34; title=&#34;操作系统&#34;&gt;&lt;/a&gt;操作系统&lt;/h2&gt;&lt;h2 id=&#34;第三方软件开发包和中间件&#34;&gt;&lt;a href=&#34;#第三方软件开发包和中间件&#34; class=&#34;headerlink&#34; title=&#34;第三方软件开发包和中间件&#34;&gt;&lt;/a&gt;第三方软件开发包和中间件&lt;/h2&gt;&lt;p&gt;引擎一般都会借用一部分第三方组件，例如DirectX、OpenGL等图形库，又或者Boost等数据结构及算法库，还有Havok、PhysX等负责物理的开发库。&lt;/p&gt;
-&lt;h2 id=&#34;平台独立层&#34;&gt;&lt;a href=&#34;#平台独立层&#34; class=&#34;headerlink&#34; title=&#34;平台独立层&#34;&gt;&lt;/a&gt;平台独立层&lt;/h2&gt;&lt;p&gt;将平台有关的部分与硬件底层分离，通常会有平台检测，包装平台相关的开发库和基础API，保证接口在不同平台的行为一致。&lt;/p&gt;
-&lt;h2 id=&#34;核心系统&#34;&gt;&lt;a href=&#34;#核心系统&#34; class=&#34;headerlink&#34; title=&#34;核心系统&#34;&gt;&lt;/a&gt;核心系统&lt;/h2&gt;&lt;p&gt;主要包含开发时需要用到的使用软件和功能，例如断言、内存分配、数学库和自定义的数据结构及算法等。&lt;/p&gt;
-&lt;h2 id=&#34;资源管理器&#34;&gt;&lt;a href=&#34;#资源管理器&#34; class=&#34;headerlink&#34; title=&#34;资源管理器&#34;&gt;&lt;/a&gt;资源管理器&lt;/h2&gt;&lt;p&gt;负责访问和管理任何类型的游戏资产和其他输入数据。&lt;/p&gt;
-&lt;h2 id=&#34;渲染引擎&#34;&gt;&lt;a href=&#34;#渲染引擎&#34; class=&#34;headerlink&#34; title=&#34;渲染引擎&#34;&gt;&lt;/a&gt;渲染引擎&lt;/h2&gt;&lt;p&gt;渲染引擎没有特别的架构，但是一般通用来说都采用分层架构&lt;/p&gt;
-&lt;h3 id=&#34;低阶渲染器&#34;&gt;&lt;a href=&#34;#低阶渲染器&#34; class=&#34;headerlink&#34; title=&#34;低阶渲染器&#34;&gt;&lt;/a&gt;低阶渲染器&lt;/h3&gt;&lt;p&gt;包含全部原始的渲染功能，着重渲染丰富的几何图元。&lt;/p&gt;
-&lt;h3 id=&#34;剔除优化&#34;&gt;&lt;a href=&#34;#剔除优化&#34; class=&#34;headerlink&#34; title=&#34;剔除优化&#34;&gt;&lt;/a&gt;剔除优化&lt;/h3&gt;&lt;p&gt;在低阶渲染器提交的几何图形不考虑其是否可见，在该层将不可见的图形提出。&lt;/p&gt;
-&lt;h3 id=&#34;视觉效果&#34;&gt;&lt;a href=&#34;#视觉效果&#34; class=&#34;headerlink&#34; title=&#34;视觉效果&#34;&gt;&lt;/a&gt;视觉效果&lt;/h3&gt;&lt;p&gt;一般有粒子系统、贴花系统、光照贴图及环境贴图、动态阴影、全屏后期处理效果等。&lt;/p&gt;
-&lt;h3 id=&#34;前端&#34;&gt;&lt;a href=&#34;#前端&#34; class=&#34;headerlink&#34; title=&#34;前端&#34;&gt;&lt;/a&gt;前端&lt;/h3&gt;&lt;p&gt;一般就是指二维的界面了，例如抬头显示器、菜单等等。&lt;/p&gt;
-&lt;h2 id=&#34;性能剖析及调试工具&#34;&gt;&lt;a href=&#34;#性能剖析及调试工具&#34; class=&#34;headerlink&#34; title=&#34;性能剖析及调试工具&#34;&gt;&lt;/a&gt;性能剖析及调试工具&lt;/h2&gt;&lt;p&gt;进行性能剖析以进行性能优化，否则市面上大多数硬件都无法负担游戏带来的负载从而极大地影响游戏体验。&lt;/p&gt;
-&lt;h2 id=&#34;物理（刚体动力学模拟）&#34;&gt;&lt;a href=&#34;#物理（刚体动力学模拟）&#34; class=&#34;headerlink&#34; title=&#34;物理（刚体动力学模拟）&#34;&gt;&lt;/a&gt;物理（刚体动力学模拟）&lt;/h2&gt;&lt;p&gt;提供拟真的物理模拟&lt;/p&gt;
-&lt;h2 id=&#34;动画&#34;&gt;&lt;a href=&#34;#动画&#34; class=&#34;headerlink&#34; title=&#34;动画&#34;&gt;&lt;/a&gt;动画&lt;/h2&gt;&lt;p&gt;负责提供动画相关的功能。&lt;/p&gt;
-&lt;h2 id=&#34;人体学接口设备&#34;&gt;&lt;a href=&#34;#人体学接口设备&#34; class=&#34;headerlink&#34; title=&#34;人体学接口设备&#34;&gt;&lt;/a&gt;人体学接口设备&lt;/h2&gt;&lt;p&gt;负责处理玩家输入，输入可以有多种设备提供，例如：键盘和鼠标、游戏手柄、方向盘、遥控器等。&lt;/p&gt;
-&lt;h2 id=&#34;音频&#34;&gt;&lt;a href=&#34;#音频&#34; class=&#34;headerlink&#34; title=&#34;音频&#34;&gt;&lt;/a&gt;音频&lt;/h2&gt;&lt;p&gt;提供处理及优化音频的功能，以实现更好的声乐效果。&lt;/p&gt;
-&lt;h2 id=&#34;在线多人-x2F-网络&#34;&gt;&lt;a href=&#34;#在线多人-x2F-网络&#34; class=&#34;headerlink&#34; title=&#34;在线多人&amp;#x2F;网络&#34;&gt;&lt;/a&gt;在线多人&amp;#x2F;网络&lt;/h2&gt;&lt;p&gt;提供多人游戏的功能&lt;/p&gt;
-&lt;h2 id=&#34;游戏性基础系统&#34;&gt;&lt;a href=&#34;#游戏性基础系统&#34; class=&#34;headerlink&#34; title=&#34;游戏性基础系统&#34;&gt;&lt;/a&gt;游戏性基础系统&lt;/h2&gt;&lt;p&gt;游戏性(Gameplay)：游戏内进行的活动、支配游戏虚拟世界的规则、玩家角色的能力、其他角色和对象的能力、玩家的长短目标。&lt;/p&gt;
-&lt;h2 id=&#34;专用子系统&#34;&gt;&lt;a href=&#34;#专用子系统&#34; class=&#34;headerlink&#34; title=&#34;专用子系统&#34;&gt;&lt;/a&gt;专用子系统&lt;/h2&gt;&lt;p&gt;针对游戏性进行特制开发的各类子系统，如专用渲染和AI。&lt;/p&gt;
+        <content type="html">&lt;h1 id=&#34;Runtime-Engine-Architecture&#34;&gt;&lt;a href=&#34;#Runtime-Engine-Architecture&#34; class=&#34;headerlink&#34; title=&#34;Runtime Engine Architecture&#34;&gt;&lt;/a&gt;Runtime Engine Architecture&lt;/h1&gt;&lt;h2 id=&#34;Target-Hardware-硬件层&#34;&gt;&lt;a href=&#34;#Target-Hardware-硬件层&#34; class=&#34;headerlink&#34; title=&#34;Target Hardware(硬件层)&#34;&gt;&lt;/a&gt;Target Hardware(硬件层)&lt;/h2&gt;&lt;p&gt;代表执行游戏的计算机系统或者主机，例如PC、XBox、PlayStation。&lt;/p&gt;
+&lt;h2 id=&#34;Device-Drivers-驱动程序&#34;&gt;&lt;a href=&#34;#Device-Drivers-驱动程序&#34; class=&#34;headerlink&#34; title=&#34;Device Drivers(驱动程序)&#34;&gt;&lt;/a&gt;Device Drivers(驱动程序)&lt;/h2&gt;&lt;p&gt;负责管理硬件资源，一般由操作系统或者硬件开发商提供。&lt;/p&gt;
+&lt;h2 id=&#34;Operating-System-操作系统&#34;&gt;&lt;a href=&#34;#Operating-System-操作系统&#34; class=&#34;headerlink&#34; title=&#34;Operating System(操作系统)&#34;&gt;&lt;/a&gt;Operating System(操作系统)&lt;/h2&gt;&lt;h2 id=&#34;Third-Party-SDKs-and-Middleware-第三方软件开发包和中间件&#34;&gt;&lt;a href=&#34;#Third-Party-SDKs-and-Middleware-第三方软件开发包和中间件&#34; class=&#34;headerlink&#34; title=&#34;Third-Party SDKs and Middleware(第三方软件开发包和中间件)&#34;&gt;&lt;/a&gt;Third-Party SDKs and Middleware(第三方软件开发包和中间件)&lt;/h2&gt;&lt;p&gt;引擎一般都会借用一部分第三方组件，例如DirectX、OpenGL等图形库，又或者Boost等数据结构及算法库，还有Havok、PhysX等负责物理的开发库。&lt;/p&gt;
+&lt;h2 id=&#34;Platform-Independence-Layer-平台独立层&#34;&gt;&lt;a href=&#34;#Platform-Independence-Layer-平台独立层&#34; class=&#34;headerlink&#34; title=&#34;Platform Independence Layer(平台独立层)&#34;&gt;&lt;/a&gt;Platform Independence Layer(平台独立层)&lt;/h2&gt;&lt;p&gt;将平台有关的部分与硬件底层分离，通常会有平台检测，包装平台相关的开发库和基础API，保证接口在不同平台的行为一致。&lt;/p&gt;
+&lt;h2 id=&#34;Core-System-核心系统&#34;&gt;&lt;a href=&#34;#Core-System-核心系统&#34; class=&#34;headerlink&#34; title=&#34;Core System(核心系统)&#34;&gt;&lt;/a&gt;Core System(核心系统)&lt;/h2&gt;&lt;p&gt;主要包含开发时需要用到的使用软件和功能，例如断言、内存分配、数学库和自定义的数据结构及算法等。&lt;/p&gt;
+&lt;h2 id=&#34;Resource-Manager-资源管理器&#34;&gt;&lt;a href=&#34;#Resource-Manager-资源管理器&#34; class=&#34;headerlink&#34; title=&#34;Resource Manager(资源管理器)&#34;&gt;&lt;/a&gt;Resource Manager(资源管理器)&lt;/h2&gt;&lt;p&gt;负责访问和管理任何类型的游戏资产和其他输入数据。&lt;/p&gt;
+&lt;h2 id=&#34;Redering-Engine-渲染引擎&#34;&gt;&lt;a href=&#34;#Redering-Engine-渲染引擎&#34; class=&#34;headerlink&#34; title=&#34;Redering Engine(渲染引擎)&#34;&gt;&lt;/a&gt;Redering Engine(渲染引擎)&lt;/h2&gt;&lt;p&gt;渲染引擎没有特别的架构，但是一般通用来说都采用分层架构&lt;/p&gt;
+&lt;h3 id=&#34;Low-Level-Renderer-低阶渲染器&#34;&gt;&lt;a href=&#34;#Low-Level-Renderer-低阶渲染器&#34; class=&#34;headerlink&#34; title=&#34;Low-Level Renderer(低阶渲染器)&#34;&gt;&lt;/a&gt;Low-Level Renderer(低阶渲染器)&lt;/h3&gt;&lt;p&gt;包含全部原始的渲染功能，着重渲染丰富的几何图元。&lt;/p&gt;
+&lt;h3 id=&#34;Scene-Graph-x2F-Culling-Optimization-剔除优化&#34;&gt;&lt;a href=&#34;#Scene-Graph-x2F-Culling-Optimization-剔除优化&#34; class=&#34;headerlink&#34; title=&#34;Scene Graph&amp;#x2F;Culling Optimization(剔除优化)&#34;&gt;&lt;/a&gt;Scene Graph&amp;#x2F;Culling Optimization(剔除优化)&lt;/h3&gt;&lt;p&gt;在低阶渲染器提交的几何图形不考虑其是否可见，在该层将不可见的图形剔除。&lt;/p&gt;
+&lt;h3 id=&#34;Visual-Effect-VFX-视觉效果&#34;&gt;&lt;a href=&#34;#Visual-Effect-VFX-视觉效果&#34; class=&#34;headerlink&#34; title=&#34;Visual Effect, VFX(视觉效果)&#34;&gt;&lt;/a&gt;Visual Effect, VFX(视觉效果)&lt;/h3&gt;&lt;p&gt;一般有粒子系统、贴花系统、光照贴图及环境贴图、动态阴影、全屏后期处理效果等。&lt;/p&gt;
+&lt;h3 id=&#34;Front-End-前端&#34;&gt;&lt;a href=&#34;#Front-End-前端&#34; class=&#34;headerlink&#34; title=&#34;Front End(前端)&#34;&gt;&lt;/a&gt;Front End(前端)&lt;/h3&gt;&lt;p&gt;一般就是指二维的界面了，例如抬头显示器、菜单等等。&lt;/p&gt;
+&lt;h2 id=&#34;Profiling-and-Debugging-Tools-性能剖析及调试工具&#34;&gt;&lt;a href=&#34;#Profiling-and-Debugging-Tools-性能剖析及调试工具&#34; class=&#34;headerlink&#34; title=&#34;Profiling and Debugging Tools(性能剖析及调试工具)&#34;&gt;&lt;/a&gt;Profiling and Debugging Tools(性能剖析及调试工具)&lt;/h2&gt;&lt;p&gt;进行性能剖析以进行性能优化，否则市面上大多数硬件都无法负担游戏带来的负载从而极大地影响游戏体验。&lt;/p&gt;
+&lt;h2 id=&#34;Collision-and-Physics-物理，刚体动力学模拟&#34;&gt;&lt;a href=&#34;#Collision-and-Physics-物理，刚体动力学模拟&#34; class=&#34;headerlink&#34; title=&#34;Collision and Physics(物理，刚体动力学模拟)&#34;&gt;&lt;/a&gt;Collision and Physics(物理，刚体动力学模拟)&lt;/h2&gt;&lt;p&gt;提供拟真的物理模拟&lt;/p&gt;
+&lt;h2 id=&#34;Animation-动画&#34;&gt;&lt;a href=&#34;#Animation-动画&#34; class=&#34;headerlink&#34; title=&#34;Animation(动画)&#34;&gt;&lt;/a&gt;Animation(动画)&lt;/h2&gt;&lt;p&gt;负责提供动画相关的功能。&lt;/p&gt;
+&lt;h2 id=&#34;Human-Interface-Devices-人体学接口设备&#34;&gt;&lt;a href=&#34;#Human-Interface-Devices-人体学接口设备&#34; class=&#34;headerlink&#34; title=&#34;Human Interface Devices(人体学接口设备)&#34;&gt;&lt;/a&gt;Human Interface Devices(人体学接口设备)&lt;/h2&gt;&lt;p&gt;负责处理玩家输入，输入可以有多种设备提供，例如：键盘和鼠标、游戏手柄、方向盘、遥控器等。&lt;/p&gt;
+&lt;h2 id=&#34;Audio-音频&#34;&gt;&lt;a href=&#34;#Audio-音频&#34; class=&#34;headerlink&#34; title=&#34;Audio(音频)&#34;&gt;&lt;/a&gt;Audio(音频)&lt;/h2&gt;&lt;p&gt;提供处理及优化音频的功能，以实现更好的声乐效果。&lt;/p&gt;
+&lt;h2 id=&#34;Only-Multiplayer-x2F-Networking-在线多人-x2F-网络&#34;&gt;&lt;a href=&#34;#Only-Multiplayer-x2F-Networking-在线多人-x2F-网络&#34; class=&#34;headerlink&#34; title=&#34;Only Multiplayer&amp;#x2F;Networking(在线多人&amp;#x2F;网络)&#34;&gt;&lt;/a&gt;Only Multiplayer&amp;#x2F;Networking(在线多人&amp;#x2F;网络)&lt;/h2&gt;&lt;p&gt;提供多人游戏的功能&lt;/p&gt;
+&lt;h2 id=&#34;Gameplay-Foundation-Systems-游戏性基础系统&#34;&gt;&lt;a href=&#34;#Gameplay-Foundation-Systems-游戏性基础系统&#34; class=&#34;headerlink&#34; title=&#34;Gameplay Foundation Systems(游戏性基础系统)&#34;&gt;&lt;/a&gt;Gameplay Foundation Systems(游戏性基础系统)&lt;/h2&gt;&lt;p&gt;游戏性(Gameplay)：游戏内进行的活动、支配游戏虚拟世界的规则、玩家角色的能力、其他角色和对象的能力、玩家的长短目标。&lt;/p&gt;
+&lt;h2 id=&#34;Game-Specific-Subsystems-专用子系统&#34;&gt;&lt;a href=&#34;#Game-Specific-Subsystems-专用子系统&#34; class=&#34;headerlink&#34; title=&#34;Game-Specific Subsystems(专用子系统)&#34;&gt;&lt;/a&gt;Game-Specific Subsystems(专用子系统)&lt;/h2&gt;&lt;p&gt;针对游戏性进行特制开发的各类子系统，如专用渲染和AI。&lt;/p&gt;
 &lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;Game Engine Architecture [Third Edition] – Jason Gergory, 叶劲峰译&lt;/li&gt;
 &lt;/ul&gt;
@@ -60,7 +142,20 @@
         <id>https://asdlkjqpwoei.github.io/2023/06/21/ComputerNetwork/</id>
         <title>Computer Network Basis</title>
         <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/ComputerNetwork/"/>
-        <content type="html">&lt;h1 id=&#34;OSI七层模型&#34;&gt;&lt;a href=&#34;#OSI七层模型&#34; class=&#34;headerlink&#34; title=&#34;OSI七层模型&#34;&gt;&lt;/a&gt;OSI七层模型&lt;/h1&gt;&lt;h1 id=&#34;应用层&#34;&gt;&lt;a href=&#34;#应用层&#34; class=&#34;headerlink&#34; title=&#34;应用层&#34;&gt;&lt;/a&gt;应用层&lt;/h1&gt;&lt;h1 id=&#34;表示层&#34;&gt;&lt;a href=&#34;#表示层&#34; class=&#34;headerlink&#34; title=&#34;表示层&#34;&gt;&lt;/a&gt;表示层&lt;/h1&gt;&lt;h1 id=&#34;会话层&#34;&gt;&lt;a href=&#34;#会话层&#34; class=&#34;headerlink&#34; title=&#34;会话层&#34;&gt;&lt;/a&gt;会话层&lt;/h1&gt;&lt;h1 id=&#34;传输层&#34;&gt;&lt;a href=&#34;#传输层&#34; class=&#34;headerlink&#34; title=&#34;传输层&#34;&gt;&lt;/a&gt;传输层&lt;/h1&gt;&lt;h1 id=&#34;网络层&#34;&gt;&lt;a href=&#34;#网络层&#34; class=&#34;headerlink&#34; title=&#34;网络层&#34;&gt;&lt;/a&gt;网络层&lt;/h1&gt;&lt;h1 id=&#34;数据链路层&#34;&gt;&lt;a href=&#34;#数据链路层&#34; class=&#34;headerlink&#34; title=&#34;数据链路层&#34;&gt;&lt;/a&gt;数据链路层&lt;/h1&gt;&lt;h1 id=&#34;物理层&#34;&gt;&lt;a href=&#34;#物理层&#34; class=&#34;headerlink&#34; title=&#34;物理层&#34;&gt;&lt;/a&gt;物理层&lt;/h1&gt;&lt;h1 id=&#34;传输控制协议-Transport-Control-Protocol&#34;&gt;&lt;a href=&#34;#传输控制协议-Transport-Control-Protocol&#34; class=&#34;headerlink&#34; title=&#34;传输控制协议(Transport Control Protocol)&#34;&gt;&lt;/a&gt;传输控制协议(Transport Control Protocol)&lt;/h1&gt;&lt;h2 id=&#34;初次建立通信连接的的过程&#34;&gt;&lt;a href=&#34;#初次建立通信连接的的过程&#34; class=&#34;headerlink&#34; title=&#34;初次建立通信连接的的过程&#34;&gt;&lt;/a&gt;初次建立通信连接的的过程&lt;/h2&gt;&lt;ol&gt;
+        <content type="html">&lt;h1 id=&#34;Open-System-Interconnection-Reference-Model-开放系统互连参考模型&#34;&gt;&lt;a href=&#34;#Open-System-Interconnection-Reference-Model-开放系统互连参考模型&#34; class=&#34;headerlink&#34; title=&#34;Open System Interconnection Reference Model(开放系统互连参考模型)&#34;&gt;&lt;/a&gt;Open System Interconnection Reference Model(开放系统互连参考模型)&lt;/h1&gt;&lt;p&gt;自顶向下&lt;/p&gt;
+&lt;h2 id=&#34;Application-Layer-应用层&#34;&gt;&lt;a href=&#34;#Application-Layer-应用层&#34; class=&#34;headerlink&#34; title=&#34;Application Layer(应用层)&#34;&gt;&lt;/a&gt;Application Layer(应用层)&lt;/h2&gt;&lt;p&gt;包含用户需要的各种协议，比如HTTP。&lt;/p&gt;
+&lt;h2 id=&#34;Presentation-Layer-表示层&#34;&gt;&lt;a href=&#34;#Presentation-Layer-表示层&#34; class=&#34;headerlink&#34; title=&#34;Presentation Layer(表示层)&#34;&gt;&lt;/a&gt;Presentation Layer(表示层)&lt;/h2&gt;&lt;p&gt;负责统一和管理数据的语法和语义。&lt;/p&gt;
+&lt;h2 id=&#34;Session-Layer-会话层&#34;&gt;&lt;a href=&#34;#Session-Layer-会话层&#34; class=&#34;headerlink&#34; title=&#34;Session Layer(会话层)&#34;&gt;&lt;/a&gt;Session Layer(会话层)&lt;/h2&gt;&lt;p&gt;允许不同机器上的用户建立会话&lt;/p&gt;
+&lt;h2 id=&#34;Transport-Layer-传输层&#34;&gt;&lt;a href=&#34;#Transport-Layer-传输层&#34; class=&#34;headerlink&#34; title=&#34;Transport Layer(传输层)&#34;&gt;&lt;/a&gt;Transport Layer(传输层)&lt;/h2&gt;&lt;p&gt;发送时，接收会话层的数据并进行处理，然后传递给网络层，并且确保数据能够正确的传输至另一端，&lt;/p&gt;
+&lt;h2 id=&#34;Network-Layer-网络层&#34;&gt;&lt;a href=&#34;#Network-Layer-网络层&#34; class=&#34;headerlink&#34; title=&#34;Network Layer(网络层)&#34;&gt;&lt;/a&gt;Network Layer(网络层)&lt;/h2&gt;&lt;p&gt;控制子网的运行，承担拥塞控制的大部分任务。&lt;/p&gt;
+&lt;h2 id=&#34;Data-Line-Layer-数据链路层&#34;&gt;&lt;a href=&#34;#Data-Line-Layer-数据链路层&#34; class=&#34;headerlink&#34; title=&#34;Data Line Layer(数据链路层)&#34;&gt;&lt;/a&gt;Data Line Layer(数据链路层)&lt;/h2&gt;&lt;p&gt;负责将原始的物理传输设施转换成一条没有传输错误的软件线路，也就是需要处理传输错误，承担一部分流量控制的任务。&lt;/p&gt;
+&lt;h2 id=&#34;Physical-Layer-物理层&#34;&gt;&lt;a href=&#34;#Physical-Layer-物理层&#34; class=&#34;headerlink&#34; title=&#34;Physical Layer(物理层)&#34;&gt;&lt;/a&gt;Physical Layer(物理层)&lt;/h2&gt;&lt;p&gt;负责在一条物理通信信道上传输原始二进制数据流。&lt;/p&gt;
+&lt;h1 id=&#34;TCP-x2F-IP-Reference-Model-TCP-x2F-IP参考模型&#34;&gt;&lt;a href=&#34;#TCP-x2F-IP-Reference-Model-TCP-x2F-IP参考模型&#34; class=&#34;headerlink&#34; title=&#34;TCP&amp;#x2F;IP Reference Model(TCP&amp;#x2F;IP参考模型)&#34;&gt;&lt;/a&gt;TCP&amp;#x2F;IP Reference Model(TCP&amp;#x2F;IP参考模型)&lt;/h1&gt;&lt;p&gt;自顶向下&lt;/p&gt;
+&lt;h2 id=&#34;Transport-Layer-传输层-1&#34;&gt;&lt;a href=&#34;#Transport-Layer-传输层-1&#34; class=&#34;headerlink&#34; title=&#34;Transport Layer(传输层)&#34;&gt;&lt;/a&gt;Transport Layer(传输层)&lt;/h2&gt;&lt;p&gt;对应开放系统互连模型的传输层&lt;/p&gt;
+&lt;h2 id=&#34;Internet-Layer-互联网层&#34;&gt;&lt;a href=&#34;#Internet-Layer-互联网层&#34; class=&#34;headerlink&#34; title=&#34;Internet Layer(互联网层)&#34;&gt;&lt;/a&gt;Internet Layer(互联网层)&lt;/h2&gt;&lt;p&gt;对应开放系统互联模型的网络层&lt;/p&gt;
+&lt;h2 id=&#34;Link-Layer-链路层&#34;&gt;&lt;a href=&#34;#Link-Layer-链路层&#34; class=&#34;headerlink&#34; title=&#34;Link Layer(链路层)&#34;&gt;&lt;/a&gt;Link Layer(链路层)&lt;/h2&gt;&lt;p&gt;大致对应开放系统互联模型的链路层，但是还包含一部分物理层。&lt;/p&gt;
+&lt;h1 id=&#34;传输控制协议-Transport-Control-Protocol-TCP&#34;&gt;&lt;a href=&#34;#传输控制协议-Transport-Control-Protocol-TCP&#34; class=&#34;headerlink&#34; title=&#34;传输控制协议(Transport Control Protocol, TCP)&#34;&gt;&lt;/a&gt;传输控制协议(Transport Control Protocol, TCP)&lt;/h1&gt;&lt;p&gt;为了在不可靠的互联网络上提供可靠的端到端字节流而专门设计的一个传输协议。&lt;/p&gt;
+&lt;h2 id=&#34;初次建立通信连接的的过程&#34;&gt;&lt;a href=&#34;#初次建立通信连接的的过程&#34; class=&#34;headerlink&#34; title=&#34;初次建立通信连接的的过程&#34;&gt;&lt;/a&gt;初次建立通信连接的的过程&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;客户端向服务器发送请求报文段，SYN标志位为1，并且包含一个随机的起始序号seq。&lt;/li&gt;
 &lt;li&gt;服务器接收到请求报文段，并同意建立连接以后，就回复客户端一个确认报文段，SYN标志位和ACK标志位都为1，还有个确认号字段为客户端起始序号+1(seq+1)，并且包含一个随机起始序号。&lt;/li&gt;
 &lt;li&gt;客户端收到确认报文段以后，向服务器发出确认报文，并且给该连接分配缓存和变量。ACK标志位为1，起始序号字段为客户端起始序号+1，服务端确认号ACK为服务端起始序号+1。&lt;/li&gt;
@@ -72,6 +167,7 @@
 &lt;li&gt;服务器数据传输完毕时，向客户端发出请求释放连接报文段。&lt;/li&gt;
 &lt;li&gt;客户端收到释放报文段后，回复一个确认报文段。服务端接收后会释放连接，客户端在一段时间后才会释放。&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;p&gt;Computer Networks - Andrew S.Tanenbaum, David J.Wetherall, 严伟、潘爱民译&lt;/p&gt;
 </content>
         <updated>2023-06-21T09:32:43.832Z</updated>
     </entry>
@@ -260,7 +356,12 @@
         <id>https://asdlkjqpwoei.github.io/2023/06/21/DataStructrue/</id>
         <title>Data Structrue</title>
         <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/DataStructrue/"/>
-        <content type="html"></content>
+        <content type="html">&lt;h1 id=&#34;Linked-List-链表&#34;&gt;&lt;a href=&#34;#Linked-List-链表&#34; class=&#34;headerlink&#34; title=&#34;Linked List(链表)&#34;&gt;&lt;/a&gt;Linked List(链表)&lt;/h1&gt;&lt;p&gt;线性结构，与数组的区别是可以不连续存储，链表变换时不必移动一整块内存。顺序由链表对象中的指针决定。&lt;/p&gt;
+&lt;h1 id=&#34;Singly-Linked-List-单向链表&#34;&gt;&lt;a href=&#34;#Singly-Linked-List-单向链表&#34; class=&#34;headerlink&#34; title=&#34;Singly Linked List(单向链表)&#34;&gt;&lt;/a&gt;Singly Linked List(单向链表)&lt;/h1&gt;&lt;h1 id=&#34;Doubly-Linked-List-双向链表&#34;&gt;&lt;a href=&#34;#Doubly-Linked-List-双向链表&#34; class=&#34;headerlink&#34; title=&#34;Doubly Linked List(双向链表)&#34;&gt;&lt;/a&gt;Doubly Linked List(双向链表)&lt;/h1&gt;&lt;h1 id=&#34;Stack-栈&#34;&gt;&lt;a href=&#34;#Stack-栈&#34; class=&#34;headerlink&#34; title=&#34;Stack(栈)&#34;&gt;&lt;/a&gt;Stack(栈)&lt;/h1&gt;&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Data Structures and Algorithm Analysis in C [Second Edition] - Mark Allen Weiss, 冯舜玺译&lt;/li&gt;
+&lt;li&gt;Introduction to Algorithm [Third Edition] - Thomas H.Cormen, Charles E.Leiserson, Ronald L. Rivest, Clifford Stein, 殷建平、徐云、王刚、刘晓光、苏明、邹恒明、王宏志译&lt;/li&gt;
+&lt;/ol&gt;
+</content>
         <updated>2023-06-21T08:17:07.589Z</updated>
     </entry>
     <entry>
@@ -304,8 +405,7 @@
 &lt;p&gt;可通过调用MarkPendingKillu或者MarkAsGarbage在对象上，强制下一个垃圾回收周期摧毁对象。部分类不支持该方式销毁，比如AActor和UActorComponent。&lt;/p&gt;
 &lt;p&gt;根据以上的原理，防止对象被回收的办法：标记为UPROPERTY，调用AddRoot函数。&lt;/p&gt;
 &lt;h1 id=&#34;Serialization-序列化&#34;&gt;&lt;a href=&#34;#Serialization-序列化&#34; class=&#34;headerlink&#34; title=&#34;Serialization(序列化)&#34;&gt;&lt;/a&gt;Serialization(序列化)&lt;/h1&gt;&lt;p&gt;一般是指将数据结构转换成其他格式方便传输&amp;#x2F;存储，提取其中的数据结构也就叫反序列化(Deserialization)。&lt;/p&gt;
-&lt;h1 id=&#34;性能优化相关&#34;&gt;&lt;a href=&#34;#性能优化相关&#34; class=&#34;headerlink&#34; title=&#34;性能优化相关&#34;&gt;&lt;/a&gt;性能优化相关&lt;/h1&gt;&lt;p&gt;还是得在项目中实践和学习，自家电脑跑大项目打个包都随便爆内存，效率极低。&lt;/p&gt;
-&lt;h2 id=&#34;特效&#34;&gt;&lt;a href=&#34;#特效&#34; class=&#34;headerlink&#34; title=&#34;特效&#34;&gt;&lt;/a&gt;特效&lt;/h2&gt;&lt;p&gt;OverDraw&lt;/p&gt;
+&lt;h1 id=&#34;性能优化相关&#34;&gt;&lt;a href=&#34;#性能优化相关&#34; class=&#34;headerlink&#34; title=&#34;性能优化相关&#34;&gt;&lt;/a&gt;性能优化相关&lt;/h1&gt;&lt;h2 id=&#34;特效&#34;&gt;&lt;a href=&#34;#特效&#34; class=&#34;headerlink&#34; title=&#34;特效&#34;&gt;&lt;/a&gt;特效&lt;/h2&gt;&lt;p&gt;OverDraw&lt;/p&gt;
 &lt;p&gt;Volume Domain&lt;/p&gt;
 &lt;h2 id=&#34;渲染&#34;&gt;&lt;a href=&#34;#渲染&#34; class=&#34;headerlink&#34; title=&#34;渲染&#34;&gt;&lt;/a&gt;渲染&lt;/h2&gt;&lt;h3 id=&#34;渲染线程&#34;&gt;&lt;a href=&#34;#渲染线程&#34; class=&#34;headerlink&#34; title=&#34;渲染线程&#34;&gt;&lt;/a&gt;渲染线程&lt;/h3&gt;&lt;p&gt;RenderThread, RHIThread&lt;/p&gt;
 &lt;p&gt;Drawcall&lt;/p&gt;

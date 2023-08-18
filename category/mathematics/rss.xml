@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Jager的工地 • Posts by &#34;mathematics&#34; category</title>
+        <link>https://asdlkjqpwoei.github.io</link>
+        <description>游戏开发</description>
+        <language>default</language>
+        <pubDate>Fri, 18 Aug 2023 16:26:29 +0800</pubDate>
+        <lastBuildDate>Fri, 18 Aug 2023 16:26:29 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/08/18/PrinciplesOfMathematicalAnalysis/</guid>
+            <title>Principles of Mathematical Analysis</title>
+            <link>https://asdlkjqpwoei.github.io/2023/08/18/PrinciplesOfMathematicalAnalysis/</link>
+            <pubDate>Fri, 18 Aug 2023 16:26:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;The-Real-and-Complex-Number-Systems-实数和复数&#34;&gt;&lt;a href=&#34;#The-Real-and-Complex-Number-Systems-实数和复数&#34; class=&#34;headerlink&#34; title=&#34;The Real and Complex Number Systems(实数和复数)&#34;&gt;&lt;/a&gt;The Real and Complex Number Systems(实数和复数)&lt;/h1&gt;&lt;p&gt;全面的主要数学分析讨论（比如收敛性、连续性、不同和积分）必须建立在准确定义的数字概念。有理数不足以表示许多数字，比如没有有理数$a$能满足$a^2 &amp;#x3D; 2$。&lt;/p&gt;
+&lt;h1 id=&#34;Basic-Topology-基本拓扑&#34;&gt;&lt;a href=&#34;#Basic-Topology-基本拓扑&#34; class=&#34;headerlink&#34; title=&#34;Basic Topology(基本拓扑)&#34;&gt;&lt;/a&gt;Basic Topology(基本拓扑)&lt;/h1&gt;&lt;h2 id=&#34;Metric-Space-度量空间&#34;&gt;&lt;a href=&#34;#Metric-Space-度量空间&#34; class=&#34;headerlink&#34; title=&#34;Metric Space(度量空间)&#34;&gt;&lt;/a&gt;Metric Space(度量空间)&lt;/h2&gt;&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;Principles of Mathematical Analysis - Walter Rudin&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

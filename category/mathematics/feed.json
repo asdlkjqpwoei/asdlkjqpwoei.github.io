@@ -1,0 +1,16 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Jager的工地 • All posts by \"mathematics\" category",
+    "description": "游戏开发",
+    "home_page_url": "https://asdlkjqpwoei.github.io",
+    "items": [
+        {
+            "id": "https://asdlkjqpwoei.github.io/2023/08/18/PrinciplesOfMathematicalAnalysis/",
+            "url": "https://asdlkjqpwoei.github.io/2023/08/18/PrinciplesOfMathematicalAnalysis/",
+            "title": "Principles of Mathematical Analysis",
+            "date_published": "2023-08-18T08:26:29.492Z",
+            "content_html": "<h1 id=\"The-Real-and-Complex-Number-Systems-实数和复数\"><a href=\"#The-Real-and-Complex-Number-Systems-实数和复数\" class=\"headerlink\" title=\"The Real and Complex Number Systems(实数和复数)\"></a>The Real and Complex Number Systems(实数和复数)</h1><p>全面的主要数学分析讨论（比如收敛性、连续性、不同和积分）必须建立在准确定义的数字概念。有理数不足以表示许多数字，比如没有有理数$a$能满足$a^2 &#x3D; 2$。</p>\n<h1 id=\"Basic-Topology-基本拓扑\"><a href=\"#Basic-Topology-基本拓扑\" class=\"headerlink\" title=\"Basic Topology(基本拓扑)\"></a>Basic Topology(基本拓扑)</h1><h2 id=\"Metric-Space-度量空间\"><a href=\"#Metric-Space-度量空间\" class=\"headerlink\" title=\"Metric Space(度量空间)\"></a>Metric Space(度量空间)</h2><h1 id=\"Reference\"><a href=\"#Reference\" class=\"headerlink\" title=\"Reference\"></a>Reference</h1><ol>\n<li>Principles of Mathematical Analysis - Walter Rudin</li>\n</ol>\n",
+            "tags": []
+        }
+    ]
+}

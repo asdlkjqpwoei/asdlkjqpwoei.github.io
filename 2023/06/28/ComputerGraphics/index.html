@@ -62,11 +62,11 @@ Heaven = Jager的工地 = 施工中</title>
   </h1>
   
 <div class="meta">
-  <span class="item" title="创建时间：2023-06-28 16:57:10">
+  <span class="item" title="作成日：2023-06-28 16:57:10">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
-    <span class="text">发表于</span>
+    <span class="text">投稿日</span>
     <time itemprop="dateCreated datePublished" datetime="2023-06-28T16:57:10+08:00">2023-06-28</time>
   </span>
 </div>
@@ -77,7 +77,7 @@ Heaven = Jager的工地 = 施工中</title>
         <nav id="nav">
   <div class="inner">
     <div class="toggle">
-      <div class="lines" aria-label="切换导航栏">
+      <div class="lines" aria-label="ナビゲーションバーの切り替え">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
@@ -100,12 +100,12 @@ Heaven = Jager的工地 = 施工中</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclize41wj20zk0m87gk.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhpw3lwj20zk0m8gvw.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicis081o9j20zk0m8dmr.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeubcbajj20zk0m8h1h.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclxfdlttj20zk0m8npd.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciszlczyj20zk0m816d.jpg"></li>
+          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gipeybxm1pj20zk0m8niv.jpg"></li>
         </ul>
       </div>
     </header>
@@ -130,8 +130,8 @@ Heaven = Jager的工地 = 施工中</title>
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Computer-Graphics/" itemprop="item" rel="index" title="分类于 Computer Graphics"><span itemprop="name">Computer Graphics</span></a>
+<span><a href="/">ホーム</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Computer-Graphics/" itemprop="item" rel="index" title="カテゴリ Computer Graphics"><span itemprop="name">Computer Graphics</span></a>
 <meta itemprop="position" content="1" /></span>
 </div>
 
@@ -151,7 +151,62 @@ Heaven = Jager的工地 = 施工中</title>
   <div class="body md" itemprop="articleBody">
     
 
-    
+    <h1 id="Cartesian-Coordinate-System-笛卡儿坐标系"><a href="#Cartesian-Coordinate-System-笛卡儿坐标系" class="headerlink" title="Cartesian Coordinate System(笛卡儿坐标系)"></a>Cartesian Coordinate System(笛卡儿坐标系)</h1><p>使用n个互相垂直的轴描述n维空间，其中的点代表着空间的位置。在高中数学中常用的皆为二维Cartesian坐标系，在游戏行业中，常用的为三维的Cartesian坐标系。</p>
+<p>手掌心朝上，无名指和小指蜷缩，食指和拇指伸直并且食指朝向自己身体的前方，中指垂直于手掌，将拇指指向设为x轴，食指指向设为y轴，中指指向设为z轴，就是高中数学常用的二维Cartesian坐标系平面加上一条垂直该平面的轴直线。</p>
+<p>Game Engine Architecture(游戏引擎架构)书中的右手坐标系图是将食指朝向自己身体上方的图示。</p>
+<h1 id="矢量运算"><a href="#矢量运算" class="headerlink" title="矢量运算"></a>矢量运算</h1><h2 id="Magnitude-模"><a href="#Magnitude-模" class="headerlink" title="Magnitude(模)"></a>Magnitude(模)</h2><p>标量，代表矢量在空间中的长度。一般使用勾股定理计算矢量的模。</p>
+
+$$|a| = \sqrt[]{{a_x}^2 + {{a_y}^2} + {{a_z}^2}}$$
+
+
+<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><p>计算平方根通常会损耗性能，尽量使用模的平方。</p>
+<h2 id="Dot-Product-点积"><a href="#Dot-Product-点积" class="headerlink" title="Dot Product(点积)"></a>Dot Product(点积)</h2><p>别名：Scalar Product(标量积)或内积(Inner Product)</p>
+<p>$$\vec{a} \cdot \vec{b} &#x3D; {a_x} {b_x} + {a_y} {b_y} + {a_z} {b_z}$$</p>
+<p>点积支持数学基本运算中的交换律和分配律。</p>
+<p>通常用来对比两个游戏对象的位置和朝向：</p>
+<ul>
+<li>$$\vec{a} \cdot \vec{b} &#x3D; 1$$</li>
+</ul>
+<p>两个对象共线，并且朝向完全相同</p>
+<ul>
+<li>$$\vec{a} \cdot \vec{b} &#x3D; -1$$</li>
+</ul>
+<p>两个对象共线，并且朝向完全相反。</p>
+<ul>
+<li>$$\vec{a} \cdot \vec{b} &#x3D; 0$$</li>
+</ul>
+<p>两个对象的朝向相互垂直。</p>
+<ul>
+<li>$$\vec{a} \cdot \vec{b} &gt; 0$$</li>
+</ul>
+<p>两个对象的朝向大致相同。</p>
+<ul>
+<li>$$\vec{a} \cdot \vec{b} &lt; 0$$</li>
+</ul>
+<p>两个对象的朝向大致相反。</p>
+<h2 id="Cross-Product-叉积"><a href="#Cross-Product-叉积" class="headerlink" title="Cross Product(叉积)"></a>Cross Product(叉积)</h2><p>别名：Vector Product(矢量积)或Outer Product(外积)</p>
+<p>只定义于三维空间。结果是一个新的矢量，垂直于原来的两个参与运算的矢量。</p>
+<p>$$\vec{a} \times \vec{b} &#x3D; ({a_y} {b_z} - {a_z} {b_y})\vec{i} + ({a_z} {b_x} - {a_x} {b_z})\vec{j} + ({a_x} {b_y} - {a_y} {b_x})\vec{k} ]$$</p>
+<h3 id="叉积的模"><a href="#叉积的模" class="headerlink" title="叉积的模"></a>叉积的模</h3><p>$$|\vec{a} \times \vec{b}| &#x3D; |\vec{a}| |\vec{b}| sin\theta$$</p>
+<h1 id="Linear-Interpolation-LERP-线性插值"><a href="#Linear-Interpolation-LERP-线性插值" class="headerlink" title="Linear Interpolation, LERP(线性插值)"></a>Linear Interpolation, LERP(线性插值)</h1><p>用来计算两个已知点的中间点。</p>
+<p>$$LERP(\vec{A}, \vec{B}, \beta) &#x3D; (1 - \beta)\vec{A} + \beta\vec{B} &#x3D; [(1 - \beta)A_x + \beta B_x, (1 - \beta)A_y + \beta B_y, (1 - \beta)A_z + \beta B_z], \beta \in [0,1]$$</p>
+<h1 id="Matrix-矩阵"><a href="#Matrix-矩阵" class="headerlink" title="Matrix(矩阵)"></a>Matrix(矩阵)</h1><p>由$m &#x2F;times n$个标量组成的长方形数组，矩阵可方便的表示线性变化，例如平移、旋转、缩放。</p>
+<p>行(Row)与横，列(Column)与竖、纵。</p>
+<h2 id="Special-Orthogonal-Matrix-特殊正交矩阵-Isotropic-Matrix-各向同性矩阵-Orthonormal-Matrix-标准正交矩阵"><a href="#Special-Orthogonal-Matrix-特殊正交矩阵-Isotropic-Matrix-各向同性矩阵-Orthonormal-Matrix-标准正交矩阵" class="headerlink" title="Special Orthogonal Matrix(特殊正交矩阵), Isotropic Matrix(各向同性矩阵), Orthonormal Matrix(标准正交矩阵)"></a>Special Orthogonal Matrix(特殊正交矩阵), Isotropic Matrix(各向同性矩阵), Orthonormal Matrix(标准正交矩阵)</h2><p>一种所有行矢量及列矢量均为单位矢量的$3 \times 3$矩阵。</p>
+<h2 id="变换矩阵"><a href="#变换矩阵" class="headerlink" title="变换矩阵"></a>变换矩阵</h2><p>一种可表示三维变换的矩阵，包括平移、旋转、缩放。</p>
+<h2 id="Affine-Matrix-仿射矩阵"><a href="#Affine-Matrix-仿射矩阵" class="headerlink" title="Affine Matrix(仿射矩阵)"></a>Affine Matrix(仿射矩阵)</h2><p>能维持直线在变换前后的平行性以及相对的距离比，不一定维持直线在变换前后的绝对长度及角度的$4 \times 4$变换矩阵。</p>
+<p>由平移、旋转、缩放、切变所组合而成的变换都是仿射矩阵。</p>
+<h1 id="Euler-Angle-欧拉角"><a href="#Euler-Angle-欧拉角" class="headerlink" title="Euler Angle(欧拉角)"></a>Euler Angle(欧拉角)</h1><ul>
+<li>Pitch(俯仰角)</li>
+<li>Yaw(偏航角)</li>
+<li>Roll(滚动角)</li>
+</ul>
+<h2 id="Gimbal-Lock-万向节死锁"><a href="#Gimbal-Lock-万向节死锁" class="headerlink" title="Gimbal Lock(万向节死锁)"></a>Gimbal Lock(万向节死锁)</h2><p>当旋转90度时，三个主轴中的其中一个主轴就会与另一个主轴完全对其，此时三个主轴的状态就叫做万向节死锁，其中两个主轴已经完全对其，无法在单独的围绕其中一个主轴旋转，因为二者已经等效。</p>
+<h1 id="Quaternion-四元数"><a href="#Quaternion-四元数" class="headerlink" title="Quaternion(四元数)"></a>Quaternion(四元数)</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol>
+<li>Introduction to Linear Algebra [Fifth Edition] - Gilbert Strang</li>
+<li>Game Engine Architecture [Third Edition] – Jason Gergory, 叶劲峰译</li>
+</ol>
+
   </div>
 
    <footer>
@@ -161,30 +216,30 @@ Heaven = Jager的工地 = 施工中</title>
     <span class="icon">
       <i class="ic i-calendar-check"></i>
     </span>
-    <span class="text">更新于</span>
-    <time title="修改时间：2023-06-28 17:05:05" itemprop="dateModified" datetime="2023-06-28T17:05:05+08:00">2023-06-28</time>
+    <span class="text">編集日</span>
+    <time title="修正日：2023-08-18 18:41:34" itemprop="dateModified" datetime="2023-08-18T18:41:34+08:00">2023-08-18</time>
   </span>
 </div>
 
       
 <div class="reward">
-  <button><i class="ic i-heartbeat"></i> 赞赏</button>
-  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <button><i class="ic i-heartbeat"></i> 寄付</button>
+  <p>*~(￣▽￣)~[お茶]を一杯ください</p>
   <div id="qr">
       
       <div>
-        <img data-src="/images/wechatpay.png" alt="asdlkjqpwoei 微信支付">
-        <p>微信支付</p>
+        <img data-src="/images/wechatpay.png" alt="asdlkjqpwoei WeChat 支払う">
+        <p>WeChat 支払う</p>
       </div>
       
       <div>
-        <img data-src="/images/alipay.png" alt="asdlkjqpwoei 支付宝">
-        <p>支付宝</p>
+        <img data-src="/images/alipay.png" alt="asdlkjqpwoei Alipay">
+        <p>Alipay</p>
       </div>
       
       <div>
-        <img data-src="/images/paypal.png" alt="asdlkjqpwoei 贝宝">
-        <p>贝宝</p>
+        <img data-src="/images/paypal.png" alt="asdlkjqpwoei PayPal">
+        <p>PayPal</p>
       </div>
   </div>
 </div>
@@ -194,14 +249,14 @@ Heaven = Jager的工地 = 施工中</title>
 <div id="copyright">
 <ul>
   <li class="author">
-    <strong>本文作者： </strong>asdlkjqpwoei <i class="ic i-at"><em>@</em></i>Jager的工地
+    <strong>著者： </strong>asdlkjqpwoei <i class="ic i-at"><em>@</em></i>Jager的工地
   </li>
   <li class="link">
-    <strong>本文链接：</strong>
+    <strong>記事へのリンク：</strong>
     <a href="https://asdlkjqpwoei.github.io/2023/06/28/ComputerGraphics/" title="Computer Graphics Mathematics">https://asdlkjqpwoei.github.io/2023/06/28/ComputerGraphics/</a>
   </li>
   <li class="license">
-    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+    <strong>著作権表示： </strong>このブログ内のすべての記事は、特別な記載がない限り <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> の下のライセンスで保護されています。
   </li>
 </ul>
 </div>
@@ -217,8 +272,8 @@ Heaven = Jager的工地 = 施工中</title>
     <div class="item left">
       
 
-  <a href="/2023/06/28/GameEngineArchitecture/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclx29mstj20zk0m8hdt.jpg" title="Game Engine Architecture">
-  <span class="type">上一篇</span>
+  <a href="/2023/06/28/GameEngineArchitecture/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclhfehz7j20zk0m8u0x.jpg" title="Game Engine Architecture">
+  <span class="type">前の記事</span>
   <span class="category"><i class="ic i-flag"></i> Game Engine</span>
   <h3>Game Engine Architecture</h3>
   </a>
@@ -227,8 +282,8 @@ Heaven = Jager的工地 = 施工中</title>
     <div class="item right">
       
 
-  <a href="/2023/08/17/WarFirstPersonNote/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipew8gmvyj20zk0m87wh.jpg" title="War First Person Development Note">
-  <span class="type">下一篇</span>
+  <a href="/2023/08/17/WarFirstPersonNote/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva2.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxp31goj20zk0m8qv5.jpg" title="War First Person Development Note">
+  <span class="type">次の記事</span>
   <span class="category"><i class="ic i-flag"></i> Unreal Engine</span>
   <h3>War First Person Development Note</h3>
   </a>
@@ -248,14 +303,15 @@ Heaven = Jager的工地 = 施工中</title>
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="文章目录">
+      <div class="contents panel pjax" data-title="見出し">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Cartesian-Coordinate-System-%E7%AC%9B%E5%8D%A1%E5%84%BF%E5%9D%90%E6%A0%87%E7%B3%BB"><span class="toc-number">1.</span> <span class="toc-text">Cartesian Coordinate System(笛卡儿坐标系)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9F%A2%E9%87%8F%E8%BF%90%E7%AE%97"><span class="toc-number">2.</span> <span class="toc-text">矢量运算</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Magnitude-%E6%A8%A1"><span class="toc-number">2.1.</span> <span class="toc-text">Magnitude(模)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Note"><span class="toc-number">2.1.1.</span> <span class="toc-text">Note</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dot-Product-%E7%82%B9%E7%A7%AF"><span class="toc-number">2.2.</span> <span class="toc-text">Dot Product(点积)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Cross-Product-%E5%8F%89%E7%A7%AF"><span class="toc-number">2.3.</span> <span class="toc-text">Cross Product(叉积)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%89%E7%A7%AF%E7%9A%84%E6%A8%A1"><span class="toc-number">2.3.1.</span> <span class="toc-text">叉积的模</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Linear-Interpolation-LERP-%E7%BA%BF%E6%80%A7%E6%8F%92%E5%80%BC"><span class="toc-number">3.</span> <span class="toc-text">Linear Interpolation, LERP(线性插值)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Matrix-%E7%9F%A9%E9%98%B5"><span class="toc-number">4.</span> <span class="toc-text">Matrix(矩阵)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Special-Orthogonal-Matrix-%E7%89%B9%E6%AE%8A%E6%AD%A3%E4%BA%A4%E7%9F%A9%E9%98%B5-Isotropic-Matrix-%E5%90%84%E5%90%91%E5%90%8C%E6%80%A7%E7%9F%A9%E9%98%B5-Orthonormal-Matrix-%E6%A0%87%E5%87%86%E6%AD%A3%E4%BA%A4%E7%9F%A9%E9%98%B5"><span class="toc-number">4.1.</span> <span class="toc-text">Special Orthogonal Matrix(特殊正交矩阵), Isotropic Matrix(各向同性矩阵), Orthonormal Matrix(标准正交矩阵)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%98%E6%8D%A2%E7%9F%A9%E9%98%B5"><span class="toc-number">4.2.</span> <span class="toc-text">变换矩阵</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Affine-Matrix-%E4%BB%BF%E5%B0%84%E7%9F%A9%E9%98%B5"><span class="toc-number">4.3.</span> <span class="toc-text">Affine Matrix(仿射矩阵)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Euler-Angle-%E6%AC%A7%E6%8B%89%E8%A7%92"><span class="toc-number">5.</span> <span class="toc-text">Euler Angle(欧拉角)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Gimbal-Lock-%E4%B8%87%E5%90%91%E8%8A%82%E6%AD%BB%E9%94%81"><span class="toc-number">5.1.</span> <span class="toc-text">Gimbal Lock(万向节死锁)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Quaternion-%E5%9B%9B%E5%85%83%E6%95%B0"><span class="toc-number">6.</span> <span class="toc-text">Quaternion(四元数)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">7.</span> <span class="toc-text">Reference</span></a></li></ol>
       </div>
-      <div class="related panel pjax" data-title="系列文章">
+      <div class="related panel pjax" data-title="関連記事">
         <ul>
           <li class="active"><a href="/2023/06/28/ComputerGraphics/" rel="bookmark" title="Computer Graphics Mathematics">Computer Graphics Mathematics</a></li>
         </ul>
       </div>
-      <div class="overview panel" data-title="站点概览">
+      <div class="overview panel" data-title="概要">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="asdlkjqpwoei"
       data-src="/images/avatar.jpg">
@@ -266,14 +322,14 @@ Heaven = Jager的工地 = 施工中</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">11</span>
-        <span class="name">文章</span>
+        <span class="count">13</span>
+        <span class="name">ポスト</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">6</span>
-        <span class="name">分类</span>
+        <span class="count">8</span>
+        <span class="name">カテゴリ</span>
       </a>
     </div>
 </nav>
@@ -287,32 +343,32 @@ Heaven = Jager的工地 = 施工中</title>
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+    <a href="/" rel="section"><i class="ic i-home"></i>ホーム</a>
   </li>
 
     
   <li class="item">
-    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+    <a href="/about/" rel="section"><i class="ic i-user"></i>プロフィール</a>
   </li>
 
         
   <li class="item dropdown">
-      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>投稿</a>
     <ul class="submenu">
 
         
   <li class="item">
-    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>アーカイブ</a>
   </li>
 
         
   <li class="item">
-    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>カテゴリ</a>
   </li>
 
         
   <li class="item">
-    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>タグ</a>
   </li>
 
   </ul>
@@ -325,12 +381,12 @@ Heaven = Jager的工地 = 施工中</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2023/06/28/GameEngineArchitecture/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+        <a href="/2023/06/28/GameEngineArchitecture/" rel="prev" title="前の記事"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2023/08/17/WarFirstPersonNote/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+        <a href="/2023/08/17/WarFirstPersonNote/" rel="next" title="次の記事"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -346,93 +402,23 @@ Heaven = Jager的工地 = 施工中</title>
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>随机文章</h2>
+  <h2>ランダムな記事</h2>
   <ul>
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Data-Structure-and-Algorithm/" title="分类于 Data Structure and Algorithm">Data Structure and Algorithm</a>
+<a href="/categories/Game-Engine/" title="カテゴリ Game Engine">Game Engine</a>
 </div>
 
-    <span><a href="/2023/06/21/DataStructrue/" title="Data Structrue">Data Structrue</a></span>
+    <span><a href="/2023/06/28/GameEngineArchitecture/" title="Game Engine Architecture">Game Engine Architecture</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Unreal-Engine/" title="分类于 Unreal Engine">Unreal Engine</a>
-</div>
-
-    <span><a href="/2023/06/20/Lyra/" title="Lyra Sample">Lyra Sample</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Cpp/" title="分类于 Cpp">Cpp</a>
-</div>
-
-    <span><a href="/2023/06/21/Cpp17/" title="Cpp 17">Cpp 17</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Cpp/" title="分类于 Cpp">Cpp</a>
-</div>
-
-    <span><a href="/2023/06/21/Cpp11/" title="Cpp 11">Cpp 11</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Computer-Graphics/" title="分类于 Computer Graphics">Computer Graphics</a>
-</div>
-
-    <span><a href="/2023/06/28/ComputerGraphics/" title="Computer Graphics Mathematics">Computer Graphics Mathematics</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Cpp/" title="分类于 Cpp">Cpp</a>
-</div>
-
-    <span><a href="/2023/06/21/StandardTemplateLibrary/" title="Standard Template Library">Standard Template Library</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Computer-Network/" title="分类于 Computer Network">Computer Network</a>
-</div>
-
-    <span><a href="/2023/06/21/ComputerNetwork/" title="Computer Network Basis">Computer Network Basis</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Unreal-Engine/" title="分类于 Unreal Engine">Unreal Engine</a>
-</div>
-
-    <span><a href="/2023/06/21/UnrealEngineBasis/" title="Unreal Engine Basis">Unreal Engine Basis</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Unreal-Engine/" title="分类于 Unreal Engine">Unreal Engine</a>
+<a href="/categories/Unreal-Engine/" title="カテゴリ Unreal Engine">Unreal Engine</a>
 </div>
 
     <span><a href="/2023/08/17/WarFirstPersonNote/" title="War First Person Development Note">War First Person Development Note</a></span>
@@ -442,16 +428,86 @@ Heaven = Jager的工地 = 施工中</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Game-Engine/" title="分类于 Game Engine">Game Engine</a>
+<a href="/categories/Computer-Network/" title="カテゴリ Computer Network">Computer Network</a>
 </div>
 
-    <span><a href="/2023/06/28/GameEngineArchitecture/" title="Game Engine Architecture">Game Engine Architecture</a></span>
+    <span><a href="/2023/06/21/ComputerNetwork/" title="Computer Network Basis">Computer Network Basis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Cpp/" title="カテゴリ Cpp">Cpp</a>
+</div>
+
+    <span><a href="/2023/06/21/StandardTemplateLibrary/" title="Standard Template Library">Standard Template Library</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Other/" title="カテゴリ Other">Other</a>
+</div>
+
+    <span><a href="/2023/08/18/Gossip/" title="杂谈&#x2F;碎碎念">杂谈/碎碎念</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Unreal-Engine/" title="カテゴリ Unreal Engine">Unreal Engine</a>
+</div>
+
+    <span><a href="/2023/06/21/UnrealEngineBasis/" title="Unreal Engine Basis">Unreal Engine Basis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Cpp/" title="カテゴリ Cpp">Cpp</a>
+</div>
+
+    <span><a href="/2023/06/21/Cpp11/" title="Cpp 11">Cpp 11</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Mathematics/" title="カテゴリ Mathematics">Mathematics</a>
+</div>
+
+    <span><a href="/2023/08/18/PrinciplesOfMathematicalAnalysis/" title="Principles of Mathematical Analysis">Principles of Mathematical Analysis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Data-Structure-and-Algorithm/" title="カテゴリ Data Structure and Algorithm">Data Structure and Algorithm</a>
+</div>
+
+    <span><a href="/2023/06/21/DataStructrue/" title="Data Structrue">Data Structrue</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Unreal-Engine/" title="カテゴリ Unreal Engine">Unreal Engine</a>
+</div>
+
+    <span><a href="/2023/06/20/Lyra/" title="Lyra Sample">Lyra Sample</a></span>
   </li>
 
   </ul>
 </div>
 <div>
-  <h2>最新评论</h2>
+  <h2>最近のコメント</h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -467,7 +523,7 @@ Heaven = Jager的工地 = 施工中</title>
     <span class="author" itemprop="copyrightHolder">asdlkjqpwoei @ Heaven</span>
   </div>
   <div class="powered-by">
-    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
   </div>
 </div>
 
@@ -482,12 +538,12 @@ Heaven = Jager的工地 = 施工中</title>
       hide: "(´Д｀)大変だ！"
     },
     search : {
-      placeholder: "文章搜索",
-      empty: "关于 「 ${query} 」，什么也没搜到",
-      stats: "${time} ms 内找到 ${hits} 条结果"
+      placeholder: "検索…",
+      empty: "「 ${query} 」については何も見つかりませんでした",
+      stats: "${time} ms以内に ${hits} 件の結果が見つかりました"
     },
     valine: true,fancybox: true,
-    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    copyright: 'コピーは成功しました。 <br> 再印刷については、 ％s 契約に従ってください。',
     ignores : [
       function(uri) {
         return uri.includes('#');
