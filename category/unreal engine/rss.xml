@@ -13,15 +13,40 @@
             <link>https://asdlkjqpwoei.github.io/2023/08/17/WarFirstPersonNote/</link>
             <pubDate>Thu, 17 Aug 2023 16:48:18 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FzZGxranFwd29laS9XYXJGaXJzdFBlcnNvbg==&#34;&gt;War First Person&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;编译Unreal-Engine出现UBT被占用的问题&#34;&gt;&lt;a href=&#34;#编译Unreal-Engine出现UBT被占用的问题&#34; class=&#34;headerlink&#34; title=&#34;编译Unreal Engine出现UBT被占用的问题&#34;&gt;&lt;/a&gt;编译Unreal Engine出现UBT被占用的问题&lt;/h1&gt;&lt;p&gt;Unreal Engine Forum Post: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bXMudW5yZWFsZW5naW5lLmNvbS90L2Vycm9yLW1zYjMwMjEtYWNjZXNzLXRvLXRoZS1wYXRoLWVwaWNnYW1lcy1jb3JlLWRsbC1pcy1kZW5pZWQvNjk1NjMyLzEw&#34;&gt;https://forums.unrealengine.com/t/error-msb3021-access-to-the-path-epicgames-core-dll-is-denied/695632/10&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Plan&#34;&gt;&lt;a href=&#34;#Plan&#34; class=&#34;headerlink&#34; title=&#34;Plan&#34;&gt;&lt;/a&gt;Plan&lt;/h1&gt;&lt;h2 id=&#34;基本框架&#34;&gt;&lt;a href=&#34;#基本框架&#34; class=&#34;headerlink&#34; title=&#34;基本框架&#34;&gt;&lt;/a&gt;基本框架&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;基本的人物模型和角色移动。&lt;/li&gt;
+&lt;li&gt;动画资源整合及动画后期处理。&lt;/li&gt;
+&lt;li&gt;武器和射击方案初步成型。&lt;/li&gt;
+&lt;li&gt;摄像机人称切换。&lt;/li&gt;
+&lt;li&gt;调试输出界面。&lt;/li&gt;
+&lt;li&gt;基本抬头显示器。&lt;/li&gt;
+&lt;li&gt;建立基本游戏模式和玩家状态。&lt;/li&gt;
+&lt;li&gt;基本的敌对AI。&lt;/li&gt;
+&lt;li&gt;主界面。&lt;/li&gt;
+&lt;li&gt;将多余的资源和插件移除。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;进阶&#34;&gt;&lt;a href=&#34;#进阶&#34; class=&#34;headerlink&#34; title=&#34;进阶&#34;&gt;&lt;/a&gt;进阶&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;将射击方案替换成投射物物理碰撞，而不是射线检测。&lt;/li&gt;
+&lt;li&gt;提供更多的武器和更多样的射击。&lt;/li&gt;
+&lt;li&gt;提供更多的道具以扩展玩法。&lt;/li&gt;
+&lt;li&gt;添加人物技能以扩展玩法。&lt;/li&gt;
+&lt;li&gt;扩展敌对AI使游戏更具趣味性和挑战性。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;优化&#34;&gt;&lt;a href=&#34;#优化&#34; class=&#34;headerlink&#34; title=&#34;优化&#34;&gt;&lt;/a&gt;优化&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;寻找科幻风格的抬头显示器样式和界面样式。&lt;/li&gt;
+&lt;li&gt;尝试自行设计关卡和地形，使其具有线性展示的作品。&lt;/li&gt;
+&lt;li&gt;整合更多的动画，提供更多的动作可能。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;Issue&#34;&gt;&lt;a href=&#34;#Issue&#34; class=&#34;headerlink&#34; title=&#34;Issue&#34;&gt;&lt;/a&gt;Issue&lt;/h1&gt;&lt;h2 id=&#34;编译Unreal-Engine出现UBT被占用的问题&#34;&gt;&lt;a href=&#34;#编译Unreal-Engine出现UBT被占用的问题&#34; class=&#34;headerlink&#34; title=&#34;编译Unreal Engine出现UBT被占用的问题&#34;&gt;&lt;/a&gt;编译Unreal Engine出现UBT被占用的问题&lt;/h2&gt;&lt;p&gt;Unreal Engine Forum Post: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bXMudW5yZWFsZW5naW5lLmNvbS90L2Vycm9yLW1zYjMwMjEtYWNjZXNzLXRvLXRoZS1wYXRoLWVwaWNnYW1lcy1jb3JlLWRsbC1pcy1kZW5pZWQvNjk1NjMyLzEw&#34;&gt;https://forums.unrealengine.com/t/error-msb3021-access-to-the-path-epicgames-core-dll-is-denied/695632/10&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Github Official Commit: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0VwaWNHYW1lcy9VbnJlYWxFbmdpbmUvY29tbWl0LzVhNzYxZDVlNDRjNTM1Y2RkNjA2OWJiOTljNzg2ZjAyYzdhYmUzM2I=&#34;&gt;https://github.com/EpicGames/UnrealEngine/commit/5a761d5e44c535cdd6069bb99c786f02c7abe33b&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;至于为啥我没能第一时间拉到官方的修复，是因为Release分支没有合并最新的修复，更新频率慢。&lt;/p&gt;
-&lt;h1 id=&#34;回转运动工作不正常&#34;&gt;&lt;a href=&#34;#回转运动工作不正常&#34; class=&#34;headerlink&#34; title=&#34;回转运动工作不正常&#34;&gt;&lt;/a&gt;回转运动工作不正常&lt;/h1&gt;&lt;p&gt;线性插值参数没填好，全是0，当然不会正常混合。&lt;/p&gt;
-&lt;h1 id=&#34;Unreal-Editor打开BP-WarWeapon蓝图出现栈溢出&#34;&gt;&lt;a href=&#34;#Unreal-Editor打开BP-WarWeapon蓝图出现栈溢出&#34; class=&#34;headerlink&#34; title=&#34;Unreal Editor打开BP_WarWeapon蓝图出现栈溢出&#34;&gt;&lt;/a&gt;Unreal Editor打开BP_WarWeapon蓝图出现栈溢出&lt;/h1&gt;&lt;p&gt;从日志查看调用栈发现是Editor一直在重复对UWarWeaponPropertiesComponent和UWarWeaponAmmunitionComponent这两个组件生成子节点造成栈溢出。&lt;/p&gt;
+&lt;h2 id=&#34;回转运动工作不正常&#34;&gt;&lt;a href=&#34;#回转运动工作不正常&#34; class=&#34;headerlink&#34; title=&#34;回转运动工作不正常&#34;&gt;&lt;/a&gt;回转运动工作不正常&lt;/h2&gt;&lt;p&gt;线性插值参数没填好，全是0，当然不会正常混合。&lt;/p&gt;
+&lt;h2 id=&#34;Unreal-Editor打开BP-WarWeapon蓝图出现栈溢出&#34;&gt;&lt;a href=&#34;#Unreal-Editor打开BP-WarWeapon蓝图出现栈溢出&#34; class=&#34;headerlink&#34; title=&#34;Unreal Editor打开BP_WarWeapon蓝图出现栈溢出&#34;&gt;&lt;/a&gt;Unreal Editor打开BP_WarWeapon蓝图出现栈溢出&lt;/h2&gt;&lt;p&gt;从日志查看调用栈发现是Editor一直在重复对UWarWeaponPropertiesComponent和UWarWeaponAmmunitionComponent这两个组件生成子节点造成栈溢出。&lt;/p&gt;
 &lt;p&gt;通过排查发现是对UPROPERTY的实现和工作流程理解不足，把AWarWeapon中这两个组件的EditDefaultsOnly改成VisibleDefaultsOnly就解决了问题。&lt;/p&gt;
 &lt;p&gt;至于具体是怎么导致栈溢出的，暂时未知。&lt;/p&gt;
-&lt;h1 id=&#34;蓝图重复出现相同的节点&#34;&gt;&lt;a href=&#34;#蓝图重复出现相同的节点&#34; class=&#34;headerlink&#34; title=&#34;蓝图重复出现相同的节点&#34;&gt;&lt;/a&gt;蓝图重复出现相同的节点&lt;/h1&gt;&lt;p&gt;BP_WarWeapon蓝图中出现多个同样的Category且完全一直的细节面板，它们的属性相互影响，指向的完全是同一个属性和内存。&lt;/p&gt;
+&lt;h2 id=&#34;蓝图重复出现相同的节点&#34;&gt;&lt;a href=&#34;#蓝图重复出现相同的节点&#34; class=&#34;headerlink&#34; title=&#34;蓝图重复出现相同的节点&#34;&gt;&lt;/a&gt;蓝图重复出现相同的节点&lt;/h2&gt;&lt;p&gt;BP_WarWeapon蓝图中出现多个同样的Category且完全一直的细节面板，它们的属性相互影响，指向的完全是同一个属性和内存。&lt;/p&gt;
 &lt;p&gt;通过排查发现是在多个有相互联系的类中把成员分到相同的Category导致的，比如AWarWeapon的UWarWeaponPropertiesComponent分类War|Weapon Properties，UWeaponPropertiesComponent中全部的成员分类到War|Weapon Properties，Editor在生成细节面板的时候会生成两个War|Weapon Properties，但其实都是指向相同的内存。&lt;/p&gt;
+&lt;h2 id=&#34;摄像机人称切换无效果&#34;&gt;&lt;a href=&#34;#摄像机人称切换无效果&#34; class=&#34;headerlink&#34; title=&#34;摄像机人称切换无效果&#34;&gt;&lt;/a&gt;摄像机人称切换无效果&lt;/h2&gt;&lt;p&gt;To be fixed&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -586,7 +611,7 @@
 &lt;/ul&gt;
 &lt;h4 id=&#34;Conclusion-for-myself-1&#34;&gt;&lt;a href=&#34;#Conclusion-for-myself-1&#34; class=&#34;headerlink&#34; title=&#34;Conclusion for myself&#34;&gt;&lt;/a&gt;Conclusion for myself&lt;/h4&gt;&lt;p&gt;该方案是射线检测，根据瞄准和枪械的参数进行搜索，然后通过游戏技能系统和Game Feature去调用执行伤害计算，最终再通过游戏技能系统和Game Feature应用伤害至目标Actor。&lt;/p&gt;
 &lt;p&gt;Modifier让我有点熟悉，是Dota 2创意工坊的文档中有提过，并且有过编写，Modifier可以当作Buff或者Debuff对象，与这里遇到的Modifier有一定程度的相似。&lt;/p&gt;
-&lt;h1 id=&#34;Lyra-Camera&#34;&gt;&lt;a href=&#34;#Lyra-Camera&#34; class=&#34;headerlink&#34; title=&#34;Lyra Camera&#34;&gt;&lt;/a&gt;Lyra Camera&lt;/h1&gt;&lt;h1 id=&#34;Lyra-AI-Behavior-Tree&#34;&gt;&lt;a href=&#34;#Lyra-AI-Behavior-Tree&#34; class=&#34;headerlink&#34; title=&#34;Lyra AI Behavior Tree&#34;&gt;&lt;/a&gt;Lyra AI Behavior Tree&lt;/h1&gt;&lt;h1 id=&#34;Conclusion-for-myself-2&#34;&gt;&lt;a href=&#34;#Conclusion-for-myself-2&#34; class=&#34;headerlink&#34; title=&#34;Conclusion for myself&#34;&gt;&lt;/a&gt;Conclusion for myself&lt;/h1&gt;&lt;p&gt;Lyra的框架设计大量采用了ECS的思想，能用来缓解AActor、ACharacter、AController在Gameplay上的臃肿问题。&lt;br&gt;动态装卸玩法的思路非常适合网游或者长期运营的游戏，但是可能不一定适用于一些大型单机游戏。用来做RPG为主的混合类型游戏相当合适，但是不代表做别的游戏类型不合适，因为其中的代码架构设计也可以用来做别的游戏。&lt;br&gt;EnhancedInput比旧版本的输入提供了更多的轮子，长按、点按等方式不用自己造了，但是将配置、输入方式、配置映射、游戏逻辑分开，用起来其实有一点麻烦，但是其可扩展性和灵活性相当的好。不单止可以做普通的角色射击，还可以加其他载具相关的。&lt;br&gt;第一次接触动画向开发相关的结构，Lyra动画方案提供了更优的模块化，争取了更高的实时性能。&lt;br&gt;数据驱动型的框架，将玩法设计完全交给了设计师。但是要求设计师有写蓝图脚本的能力，不太清楚国内的团队，国外团队确实可以采用这个方案。&lt;/p&gt;
+&lt;h1 id=&#34;Lyra-Camera&#34;&gt;&lt;a href=&#34;#Lyra-Camera&#34; class=&#34;headerlink&#34; title=&#34;Lyra Camera&#34;&gt;&lt;/a&gt;Lyra Camera&lt;/h1&gt;&lt;h1 id=&#34;Lyra-AI-Behavior-Tree&#34;&gt;&lt;a href=&#34;#Lyra-AI-Behavior-Tree&#34; class=&#34;headerlink&#34; title=&#34;Lyra AI Behavior Tree&#34;&gt;&lt;/a&gt;Lyra AI Behavior Tree&lt;/h1&gt;&lt;h1 id=&#34;Conclusion-for-myself-2&#34;&gt;&lt;a href=&#34;#Conclusion-for-myself-2&#34; class=&#34;headerlink&#34; title=&#34;Conclusion for myself&#34;&gt;&lt;/a&gt;Conclusion for myself&lt;/h1&gt;&lt;p&gt;Lyra的代码设计大量采用ECS架构设计，能用来缓解AActor、ACharacter、AController在Gameplay代码设计上的臃肿问题。&lt;br&gt;相比Unreal Engine 4时期的ShooterGame样例，Lyra样例更加复杂，提供了更好的独立游戏模板，更好的功能模块细分思路可供参考，偏向一个AAA级游戏开发工业的细分方式。&lt;br&gt;动态装卸玩法的框架设计非常适合网游或者长期运营的游戏，但是可能不一定适用于一些大型单机游戏。用来做RPG为主的混合类型游戏相当合适，但是不代表做别的游戏类型不合适，因为其中的代码架构设计也可以用来做别的游戏。&lt;br&gt;EnhancedInput比旧版本的输入提供了更多的轮子，比如长按、点按等方式不用自己造了，但是将配置、输入方式、配置映射、游戏逻辑分开，用起来其实有一点麻烦，但是其可扩展性和灵活性相当的好。不单止可以做普通的角色射击，还可以加其他载具相关的。&lt;br&gt;第一次接触动画向开发相关的结构，Lyra动画方案提供了更优的模块化，争取了更高的实时性能。&lt;br&gt;数据驱动型的Gameplay框架，可将玩法设计完全交给了设计师。但是要求设计师有写蓝图脚本的能力，不太清楚国内的团队，国外成熟的开发团队确实可以采用这个方案，因为我了解到的国外成熟团队设计师确实具备写脚本的技能。&lt;/p&gt;
 &lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;h2 id=&#34;Official-Documentation&#34;&gt;&lt;a href=&#34;#Official-Documentation&#34; class=&#34;headerlink&#34; title=&#34;Official Documentation&#34;&gt;&lt;/a&gt;Official Documentation&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVucmVhbGVuZ2luZS5jb20vNS4yL2VuLVVTL2VuaGFuY2VkLWlucHV0LWluLXVucmVhbC1lbmdpbmUv&#34;&gt;Enhanced Input in Unreal Engine | Unreal Engine 5.2 Documentation&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVucmVhbGVuZ2luZS5jb20vNS4yL2VuLVVTL2dhbWVwbGF5LWFiaWxpdHktc3lzdGVtLWZvci11bnJlYWwtZW5naW5lLw==&#34;&gt;Gameplay Ability System for Unreal Engine | Unreal Engine 5.2 Documentation&lt;/span&gt;&lt;/li&gt;
