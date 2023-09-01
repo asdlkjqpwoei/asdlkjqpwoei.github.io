@@ -36,6 +36,8 @@
 &lt;li&gt;寻找科幻风格的抬头显示器样式和界面样式。&lt;/li&gt;
 &lt;li&gt;尝试自行设计关卡和地形，使其具有线性展示的作品。&lt;/li&gt;
 &lt;li&gt;整合更多的动画，提供更多的动作可能。&lt;/li&gt;
+&lt;li&gt;尝试在射击时提供更好的美术或动画效果。&lt;/li&gt;
+&lt;li&gt;往着沉浸式体验的开发方向发展。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1 id=&#34;Issue&#34;&gt;&lt;a href=&#34;#Issue&#34; class=&#34;headerlink&#34; title=&#34;Issue&#34;&gt;&lt;/a&gt;Issue&lt;/h1&gt;&lt;h2 id=&#34;编译Unreal-Engine出现UBT被占用的问题&#34;&gt;&lt;a href=&#34;#编译Unreal-Engine出现UBT被占用的问题&#34; class=&#34;headerlink&#34; title=&#34;编译Unreal Engine出现UBT被占用的问题&#34;&gt;&lt;/a&gt;编译Unreal Engine出现UBT被占用的问题&lt;/h2&gt;&lt;p&gt;Unreal Engine Forum Post: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9mb3J1bXMudW5yZWFsZW5naW5lLmNvbS90L2Vycm9yLW1zYjMwMjEtYWNjZXNzLXRvLXRoZS1wYXRoLWVwaWNnYW1lcy1jb3JlLWRsbC1pcy1kZW5pZWQvNjk1NjMyLzEw&#34;&gt;https://forums.unrealengine.com/t/error-msb3021-access-to-the-path-epicgames-core-dll-is-denied/695632/10&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Github Official Commit: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0VwaWNHYW1lcy9VbnJlYWxFbmdpbmUvY29tbWl0LzVhNzYxZDVlNDRjNTM1Y2RkNjA2OWJiOTljNzg2ZjAyYzdhYmUzM2I=&#34;&gt;https://github.com/EpicGames/UnrealEngine/commit/5a761d5e44c535cdd6069bb99c786f02c7abe33b&lt;/span&gt;&lt;/p&gt;
