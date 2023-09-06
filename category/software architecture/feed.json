@@ -1,0 +1,16 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Jager的工地 • All posts by \"software architecture\" category",
+    "description": "游戏开发",
+    "home_page_url": "https://asdlkjqpwoei.github.io",
+    "items": [
+        {
+            "id": "https://asdlkjqpwoei.github.io/2023/09/05/SoftwareArchitecture/",
+            "url": "https://asdlkjqpwoei.github.io/2023/09/05/SoftwareArchitecture/",
+            "title": "Software Architecture",
+            "date_published": "2023-09-05T08:09:21.986Z",
+            "content_html": "<p>当自己尝试做过小工具或者参与过一些大项目，会发现如果代码没有进行合理的组织和分配，会变得极难维护，而且会降低自己对开发工作的动力，最终不了了之。</p>\n<h1 id=\"Observer-Pattern-观察者模式\"><a href=\"#Observer-Pattern-观察者模式\" class=\"headerlink\" title=\"Observer Pattern(观察者模式)\"></a>Observer Pattern(观察者模式)</h1><p>一种行为型设计模型，一对多的依赖关系。当一个对象的状态发生改变时，其所有依赖者都会收到通知并自动更新。</p>\n<h1 id=\"Model-View-Controller-模型-视图-控制器-MVC\"><a href=\"#Model-View-Controller-模型-视图-控制器-MVC\" class=\"headerlink\" title=\"Model View Controller(模型-视图-控制器, MVC)\"></a>Model View Controller(模型-视图-控制器, MVC)</h1><p>目的是实现一种动态的程序设计，一般在交互式应用程序中有所体现。</p>\n<p>Model(模型): 一般负责程序的逻辑和数据的处理，提供操作。</p>\n<p>View(视图): 一般是负责如何显示或表示模型，反馈。</p>\n<p>Controller(控制器): 一般是负责处理用户输入事件，对模型进行操作，控制程序工作流程。</p>\n<h1 id=\"Entity-Component-System-实体-组件-系统-ECS\"><a href=\"#Entity-Component-System-实体-组件-系统-ECS\" class=\"headerlink\" title=\"Entity Component System(实体-组件-系统, ECS)\"></a>Entity Component System(实体-组件-系统, ECS)</h1><p>ECS遵循组合优于继承的原则，每一个实体不由类继承所定义，但是会通过组件相互关联，系统在全局范围内对有所需组件的实体进行操作。</p>\n<p>Entity(实体): 通常是指一些通用对象，比如游戏开发中，每个游戏对象都是实体，内有一个唯一的标识符。</p>\n<p>Component(组件): 通常是指实体所拥有的特定功能或者某一个方面，并且拥有相应的数据。</p>\n<p>System(系统): 通常是指一个功能过程，作用于具有所需组件所有实体的过程，比如物理系统查询具有质量组件的实体。</p>\n<h1 id=\"Note\"><a href=\"#Note\" class=\"headerlink\" title=\"Note\"></a>Note</h1><ol>\n<li>子类好屌哦</li>\n<li>组合优于继承</li>\n<li>将动作定义成一个类</li>\n<li>使用实体元类(？)</li>\n</ol>\n<h1 id=\"Reference\"><a href=\"#Reference\" class=\"headerlink\" title=\"Reference\"></a>Reference</h1><ol>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1KeEkzRXU1RFB3RQ==\">Bob Nystrom - Is There More to Game Architecture than ECS?</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRW50aXR5X2NvbXBvbmVudF9zeXN0ZW0=\">Entity Component System - wikipedia</span></li>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9yZWZhY3RvcmluZ2d1cnUuY24vZGVzaWduLXBhdHRlcm5zL29ic2VydmVy\">观察者设计模式</span></li>\n</ol>\n",
+            "tags": []
+        }
+    ]
+}

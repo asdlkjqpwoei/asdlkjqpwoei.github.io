@@ -13,7 +13,8 @@
             <link>https://asdlkjqpwoei.github.io/2023/08/17/WarFirstPersonNote/</link>
             <pubDate>Thu, 17 Aug 2023 16:48:18 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FzZGxranFwd29laS9XYXJGaXJzdFBlcnNvbg==&#34;&gt;War First Person&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;Plan&#34;&gt;&lt;a href=&#34;#Plan&#34; class=&#34;headerlink&#34; title=&#34;Plan&#34;&gt;&lt;/a&gt;Plan&lt;/h1&gt;&lt;h2 id=&#34;基本框架&#34;&gt;&lt;a href=&#34;#基本框架&#34; class=&#34;headerlink&#34; title=&#34;基本框架&#34;&gt;&lt;/a&gt;基本框架&lt;/h2&gt;&lt;ol&gt;
+&lt;h1 id=&#34;Plan&#34;&gt;&lt;a href=&#34;#Plan&#34; class=&#34;headerlink&#34; title=&#34;Plan&#34;&gt;&lt;/a&gt;Plan&lt;/h1&gt;&lt;p&gt;走一步看一步吧&lt;/p&gt;
+&lt;h2 id=&#34;基本框架&#34;&gt;&lt;a href=&#34;#基本框架&#34; class=&#34;headerlink&#34; title=&#34;基本框架&#34;&gt;&lt;/a&gt;基本框架&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;基本的人物模型和角色移动。&lt;/li&gt;
 &lt;li&gt;动画资源整合及动画后期处理。&lt;/li&gt;
 &lt;li&gt;武器和射击方案初步成型。&lt;/li&gt;
@@ -93,7 +94,10 @@
 &lt;p&gt;可通过调用MarkPendingKillu或者MarkAsGarbage在对象上，强制下一个垃圾回收周期摧毁对象。部分类不支持该方式销毁，比如AActor和UActorComponent。&lt;/p&gt;
 &lt;p&gt;根据以上的原理，防止对象被回收的办法：标记为UPROPERTY，调用AddRoot函数。&lt;/p&gt;
 &lt;h1 id=&#34;Serialization-序列化&#34;&gt;&lt;a href=&#34;#Serialization-序列化&#34; class=&#34;headerlink&#34; title=&#34;Serialization(序列化)&#34;&gt;&lt;/a&gt;Serialization(序列化)&lt;/h1&gt;&lt;p&gt;一般是指将数据结构转换成其他格式方便传输&amp;#x2F;存储，提取其中的数据结构也就叫反序列化(Deserialization)。&lt;/p&gt;
-&lt;h1 id=&#34;性能优化相关&#34;&gt;&lt;a href=&#34;#性能优化相关&#34; class=&#34;headerlink&#34; title=&#34;性能优化相关&#34;&gt;&lt;/a&gt;性能优化相关&lt;/h1&gt;&lt;h2 id=&#34;特效&#34;&gt;&lt;a href=&#34;#特效&#34; class=&#34;headerlink&#34; title=&#34;特效&#34;&gt;&lt;/a&gt;特效&lt;/h2&gt;&lt;p&gt;OverDraw&lt;/p&gt;
+&lt;h1 id=&#34;性能优化相关&#34;&gt;&lt;a href=&#34;#性能优化相关&#34; class=&#34;headerlink&#34; title=&#34;性能优化相关&#34;&gt;&lt;/a&gt;性能优化相关&lt;/h1&gt;&lt;p&gt;如果是AAA游戏开发工作者，性能相关的问题可以说是命根子了。&lt;/p&gt;
+&lt;p&gt;需要对引擎各个关键模块的工作流程和图形接口有所了解，对项目熟悉的情况下，可能才比较合适去做性能优化。因为要使用各种工具去抓许多数据，做性能剖析，才能去优化。&lt;/p&gt;
+&lt;p&gt;当GameThred计算每帧游戏逻辑需要的时间高于显卡每帧执行命令和计算的时间时，就是CPU出现了性能瓶颈。反之，是GPU出现了性能瓶颈。&lt;/p&gt;
+&lt;h2 id=&#34;特效&#34;&gt;&lt;a href=&#34;#特效&#34; class=&#34;headerlink&#34; title=&#34;特效&#34;&gt;&lt;/a&gt;特效&lt;/h2&gt;&lt;p&gt;OverDraw&lt;/p&gt;
 &lt;p&gt;Volume Domain&lt;/p&gt;
 &lt;h2 id=&#34;渲染&#34;&gt;&lt;a href=&#34;#渲染&#34; class=&#34;headerlink&#34; title=&#34;渲染&#34;&gt;&lt;/a&gt;渲染&lt;/h2&gt;&lt;h3 id=&#34;渲染线程&#34;&gt;&lt;a href=&#34;#渲染线程&#34; class=&#34;headerlink&#34; title=&#34;渲染线程&#34;&gt;&lt;/a&gt;渲染线程&lt;/h3&gt;&lt;p&gt;RenderThread, RHIThread&lt;/p&gt;
 &lt;p&gt;Drawcall&lt;/p&gt;
@@ -213,24 +217,25 @@
 &lt;p&gt;Notifies the crash reporter and outputs FormattedText to the log if Expression is false.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;PURE-VIRTUAL&#34;&gt;&lt;a href=&#34;#PURE-VIRTUAL&#34; class=&#34;headerlink&#34; title=&#34;PURE_VIRTUAL&#34;&gt;&lt;/a&gt;PURE_VIRTUAL&lt;/h2&gt;&lt;p&gt;Unreal Engine特性，由于所有继承UObject的UClass必须能实例化，因此的一般的类不可以包含纯虚函数。一些游戏业务场景要求该类的某个虚函数必须在子类有实现，普通虚函数无法达到该要求，PURE_VIRTUAL因此诞生。&lt;/p&gt;
-&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;h2 id=&#34;Official-Documentation&#34;&gt;&lt;a href=&#34;#Official-Documentation&#34; class=&#34;headerlink&#34; title=&#34;Official Documentation&#34;&gt;&lt;/a&gt;Official Documentation&lt;/h2&gt;&lt;ul&gt;
+&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;h2 id=&#34;Official-Documentation&#34;&gt;&lt;a href=&#34;#Official-Documentation&#34; class=&#34;headerlink&#34; title=&#34;Official Documentation&#34;&gt;&lt;/a&gt;Official Documentation&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVucmVhbGVuZ2luZS5jb20vNS4yL2VuLVVTL2dhbWVwbGF5LWZyYW1ld29yay1xdWljay1yZWZlcmVuY2UtaW4tdW5yZWFsLWVuZ2luZS8=&#34;&gt;Gameplay Framework Quick Reference in Unreal Engine | Unreal Engine 5.2 Documentation&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVucmVhbGVuZ2luZS5jb20vNS4yL2VuLVVTL2Fzc2VydHMtaW4tdW5yZWFsLWVuZ2luZS8=&#34;&gt;Asserts in Unreal Engine | Unreal Engine 5.2 Documentation&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVucmVhbGVuZ2luZS5jb20vNS4yL2VuLVVTL2NsYXNzLXNwZWNpZmllcnMv&#34;&gt;Class Specifiers | Unreal Engine 5.2 Documentation&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;Community-Wiki&#34;&gt;&lt;a href=&#34;#Community-Wiki&#34; class=&#34;headerlink&#34; title=&#34;Community Wiki&#34;&gt;&lt;/a&gt;Community Wiki&lt;/h2&gt;&lt;ul&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;Community-Wiki&#34;&gt;&lt;a href=&#34;#Community-Wiki&#34; class=&#34;headerlink&#34; title=&#34;Community Wiki&#34;&gt;&lt;/a&gt;Community Wiki&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91bnJlYWxjb21tdW5pdHkud2lraS91bnJlYWwtcHJvcGVydHktc3lzdGVtLShyZWZsZWN0aW9uKS0zNmQxZTY=&#34;&gt;Unreal Property System (Reflection) | Unreal Engine Community Wiki&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91bnJlYWxjb21tdW5pdHkud2lraS9kZWxlZ2F0ZXMtaW4tdWU0LXJhdy1jcHAtYW5kLWJwLWV4cG9zZWQteGlmbWNtcTU=&#34;&gt;Delegates | Unreal Engine Community Wiki&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91bnJlYWxjb21tdW5pdHkud2lraS9nYXJiYWdlLWNvbGxlY3Rpb24tMzZkMWRh&#34;&gt;Garbage Collection | Unreal Engine Community Wiki&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;Book&#34;&gt;&lt;a href=&#34;#Book&#34; class=&#34;headerlink&#34; title=&#34;Book&#34;&gt;&lt;/a&gt;Book&lt;/h2&gt;&lt;ul&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;Book&#34;&gt;&lt;a href=&#34;#Book&#34; class=&#34;headerlink&#34; title=&#34;Book&#34;&gt;&lt;/a&gt;Book&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;Game Engine Architecture [Third Edition] – Jason Gergory, 叶劲峰译&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;Third-Party-Articles&#34;&gt;&lt;a href=&#34;#Third-Party-Articles&#34; class=&#34;headerlink&#34; title=&#34;Third Party Articles&#34;&gt;&lt;/a&gt;Third Party Articles&lt;/h2&gt;&lt;ul&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;Third-Party-Articles&#34;&gt;&lt;a href=&#34;#Third-Party-Articles&#34; class=&#34;headerlink&#34; title=&#34;Third Party Articles&#34;&gt;&lt;/a&gt;Third Party Articles&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vdS1uLW93ZW4vcC8xNjQyNTM1OC5odG1s&#34;&gt;UE4学习笔记：Gameplay框架及其模块梳理（上篇） - U_N_Owen – 博客园&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC82MTI4MzcwNDU=&#34;&gt;Unreal Engine的Gameplay框架和重点 – 知乎&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC81OTE5ODIwMjA=&#34;&gt;UE5 -- Control Rig与IK Rig介绍 – 知乎&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;Video&#34;&gt;&lt;a href=&#34;#Video&#34; class=&#34;headerlink&#34; title=&#34;Video&#34;&gt;&lt;/a&gt;Video&lt;/h2&gt;&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUZWNDExRzcyUS8/c3BtX2lkX2Zyb209MzMzLjk5OS4wLjAmdmRfc291cmNlPTQyNzM1MTA0ODc5NzNhNTdmNzIzZDVjNmYzYzZkMDY2&#34;&gt;UnrealCircle苏州UE4性能优化 | 周华 苏州谜匣数娱&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>

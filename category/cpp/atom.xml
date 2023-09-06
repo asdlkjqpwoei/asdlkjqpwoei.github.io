@@ -179,8 +179,7 @@
 &lt;h1 id=&#34;移动语义&#34;&gt;&lt;a href=&#34;#移动语义&#34; class=&#34;headerlink&#34; title=&#34;移动语义&#34;&gt;&lt;/a&gt;移动语义&lt;/h1&gt;&lt;p&gt;主要是为了降低内存的使用，参数传递的过程中不出现新的无用副本。&lt;/p&gt;
 &lt;h1 id=&#34;完美转发&#34;&gt;&lt;a href=&#34;#完美转发&#34; class=&#34;headerlink&#34; title=&#34;完美转发&#34;&gt;&lt;/a&gt;完美转发&lt;/h1&gt;&lt;p&gt;为了解决参数传递时，参数可能已经不是原来内存的问题。&lt;/p&gt;
 &lt;p&gt;std::forward&amp;lt;&amp;gt;&lt;/p&gt;
-&lt;h1 id=&#34;元组&#34;&gt;&lt;a href=&#34;#元组&#34; class=&#34;headerlink&#34; title=&#34;元组&#34;&gt;&lt;/a&gt;元组&lt;/h1&gt;&lt;p&gt;std::tuple&lt;/p&gt;
-&lt;h1 id=&#34;Lambda表达式&#34;&gt;&lt;a href=&#34;#Lambda表达式&#34; class=&#34;headerlink&#34; title=&#34;Lambda表达式&#34;&gt;&lt;/a&gt;Lambda表达式&lt;/h1&gt;&lt;p&gt;开始支持Lambda表达式&lt;/p&gt;
+&lt;h1 id=&#34;std-tuple元组&#34;&gt;&lt;a href=&#34;#std-tuple元组&#34; class=&#34;headerlink&#34; title=&#34;std::tuple元组&#34;&gt;&lt;/a&gt;std::tuple元组&lt;/h1&gt;&lt;h1 id=&#34;Lambda表达式&#34;&gt;&lt;a href=&#34;#Lambda表达式&#34; class=&#34;headerlink&#34; title=&#34;Lambda表达式&#34;&gt;&lt;/a&gt;Lambda表达式&lt;/h1&gt;&lt;p&gt;开始支持Lambda表达式&lt;/p&gt;
 &lt;h1 id=&#34;using定义别名&#34;&gt;&lt;a href=&#34;#using定义别名&#34; class=&#34;headerlink&#34; title=&#34;using定义别名&#34;&gt;&lt;/a&gt;using定义别名&lt;/h1&gt;&lt;p&gt;typedef无法重定义模板中的一些语法，using定义别名因此而生。&lt;/p&gt;
 </content>
         <updated>2023-06-21T08:58:37.322Z</updated>

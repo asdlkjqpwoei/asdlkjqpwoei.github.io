@@ -5,8 +5,149 @@
         <link>https://asdlkjqpwoei.github.io</link>
         <description>游戏开发</description>
         <language>default</language>
-        <pubDate>Fri, 18 Aug 2023 18:22:55 +0800</pubDate>
-        <lastBuildDate>Fri, 18 Aug 2023 18:22:55 +0800</lastBuildDate>
+        <pubDate>Tue, 05 Sep 2023 19:39:19 +0800</pubDate>
+        <lastBuildDate>Tue, 05 Sep 2023 19:39:19 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/09/05/ArchLinuxInstallation/</guid>
+            <title>Arch Linux Installation</title>
+            <link>https://asdlkjqpwoei.github.io/2023/09/05/ArchLinuxInstallation/</link>
+            <pubDate>Tue, 05 Sep 2023 19:39:19 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;大学时玩多个Linux发行版，是Arch Linux比较符合我的胃口，虽然说入门相比其他发行版有点困难，在单个物理机上装了Windows和Arch Linux双系统，但是其中学到了一些东西。工作以后玩得少了，由于没有两台物理机，我也没什么必要用双系统了，因为多数时候还是在Windows平台上进行开发，换了新硬盘，不用Linux了，做个纪念。&lt;/p&gt;
+&lt;h1 id=&#34;Installation-Medium&#34;&gt;&lt;a href=&#34;#Installation-Medium&#34; class=&#34;headerlink&#34; title=&#34;Installation Medium&#34;&gt;&lt;/a&gt;Installation Medium&lt;/h1&gt;&lt;p&gt;可以用一个无重要数据的U盘作为启动盘，需要一个制作启动盘的工具，我用的是Rufus，在Arch Linux下载安装镜像后，用制作工具将U盘制作成启动盘。&lt;/p&gt;
+&lt;h1 id=&#34;Boot-the-live-environment&#34;&gt;&lt;a href=&#34;#Boot-the-live-environment&#34; class=&#34;headerlink&#34; title=&#34;Boot the live environment&#34;&gt;&lt;/a&gt;Boot the live environment&lt;/h1&gt;&lt;p&gt;根据自己计算机主板的供应商品牌，找到进入BIOS或UEFI的办法，通常是在启动后按键盘上的某一个键（Del或者F9，具体需要参考说明书或操作手册）。进入后修改启动顺序，使U盘启动盘为第一个启动的设备，具体需要参考主板的说明书或者操作手册。&lt;br&gt;Arch Linux安装镜像不支持安全启动(Secure Boot)，在进入UEFI以后需要安全启动，通常默认为开启。&lt;/p&gt;
+&lt;h1 id=&#34;Verify-the-boot-mode&#34;&gt;&lt;a href=&#34;#Verify-the-boot-mode&#34; class=&#34;headerlink&#34; title=&#34;Verify the boot mode&#34;&gt;&lt;/a&gt;Verify the boot mode&lt;/h1&gt;&lt;p&gt;目前最新的引导启动模式为UEFI，旧的一般为BIOS，可通过命令行检查引导启动模式：&lt;code&gt;cat /sys/firmware/efi/fw_platform_size&lt;/code&gt;，或者查阅主板的说明书或操作手册&lt;/p&gt;
+&lt;p&gt;如果返回值为64，那么引导启动模式为UEFI，并且是64位 x64 UEFI。如果返回值为32，那么引导启动模式为UEFI，并且是32位 x32 UEFI。如果提示文件不存在，那么启动模式可能为BIOS。&lt;/p&gt;
+&lt;h1 id=&#34;Set-the-console-keyboard-layout-and-font&#34;&gt;&lt;a href=&#34;#Set-the-console-keyboard-layout-and-font&#34; class=&#34;headerlink&#34; title=&#34;Set the console keyboard layout and font&#34;&gt;&lt;/a&gt;Set the console keyboard layout and font&lt;/h1&gt;&lt;p&gt;默认的命令行键盘布局为标准的美国键盘布局，对于我们来说一般不用动。&lt;/p&gt;
+&lt;h1 id=&#34;Connet-to-the-Internet&#34;&gt;&lt;a href=&#34;#Connet-to-the-Internet&#34; class=&#34;headerlink&#34; title=&#34;Connet to the Internet&#34;&gt;&lt;/a&gt;Connet to the Internet&lt;/h1&gt;&lt;p&gt;可以通过命令&lt;code&gt;ip link&lt;/code&gt;查看网络接口状况。&lt;/p&gt;
+&lt;p&gt;有线网络通常不太需要关注网络连接问题，因为一般在进入安装环境后就有网络了，可以通过命令&lt;code&gt;dhcp&lt;/code&gt;保证网络连接或者查错。&lt;/p&gt;
+&lt;p&gt;但是无线网络可能需要通过命令&lt;code&gt;iwctl&lt;/code&gt;自行连接。&lt;/p&gt;
+&lt;p&gt;可以通过命令&lt;code&gt;ping &amp;lt;URL&amp;gt;&lt;/code&gt;来检查网络是否畅通。&lt;/p&gt;
+&lt;h1 id=&#34;Update-the-system-lock&#34;&gt;&lt;a href=&#34;#Update-the-system-lock&#34; class=&#34;headerlink&#34; title=&#34;Update the system lock&#34;&gt;&lt;/a&gt;Update the system lock&lt;/h1&gt;&lt;p&gt;可通过命令&lt;code&gt;timedatectl&lt;/code&gt;进行网络时间同步，保证操作系统时间正确。&lt;/p&gt;
+&lt;h1 id=&#34;Partition-the-disk&#34;&gt;&lt;a href=&#34;#Partition-the-disk&#34; class=&#34;headerlink&#34; title=&#34;Partition the disk&#34;&gt;&lt;/a&gt;Partition the disk&lt;/h1&gt;&lt;p&gt;操作系统识别到存储硬件后，就会为其分配一个块设备，如&amp;#x2F;dev&amp;#x2F;sda，可以通过命令行&lt;code&gt;lsblk&lt;/code&gt;或&lt;code&gt;fdisk&lt;/code&gt;来进行查看硬盘状况。&lt;/p&gt;
+&lt;p&gt;Arch Linux的安装环境提供了不同的分区管理工具，可以通过这些分区管理工具给硬盘格式化和分区。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9saW51eC5kaWUubmV0L21hbi84L2NmZGlzaw==&#34;&gt;cfdisk&lt;/span&gt;，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tYW4uYXJjaGxpbnV4Lm9yZy9tYW4vY2ZkaXNrLjg=&#34;&gt;Arch Manul cfdisk&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9tYW43Lm9yZy9saW51eC9tYW4tcGFnZXMvbWFuOC9mZGlzay44Lmh0bWw=&#34;&gt;fdisk&lt;/span&gt;，&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93aWtpLmFyY2hsaW51eC5vcmcvdGl0bGUvRmRpc2s=&#34;&gt;Arch Linux介绍fdisk&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;一个装载着操作系统的主要设备必须要有根分区，如果使用UEFI引导模式，那还必须得有一个EFI系统分区。&lt;/p&gt;
+&lt;h2 id=&#34;分区样例&#34;&gt;&lt;a href=&#34;#分区样例&#34; class=&#34;headerlink&#34; title=&#34;分区样例&#34;&gt;&lt;/a&gt;分区样例&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;UEFI引导模式，GPT分区表&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Mount Point(挂载点)&lt;/th&gt;
+&lt;th&gt;Partition(分区)&lt;/th&gt;
+&lt;th&gt;Partition Type(分区类型)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;&amp;#x2F;mnt&amp;#x2F;boot&lt;/td&gt;
+&lt;td&gt;&amp;#x2F;dev&amp;#x2F;efi_system_partition&lt;/td&gt;
+&lt;td&gt;EFI System partition&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;[SWAP]&lt;/td&gt;
+&lt;td&gt;&amp;#x2F;dev&amp;#x2F;swap_partition&lt;/td&gt;
+&lt;td&gt;Linux swap&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;#x2F;mnt&lt;/td&gt;
+&lt;td&gt;&amp;#x2F;dev&amp;#x2F;root_partition&lt;/td&gt;
+&lt;td&gt;Linux x86-64 root(&amp;#x2F;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;BIOS引导模式，MBR分区表&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Mount Point(挂载点)&lt;/th&gt;
+&lt;th&gt;Partition(分区)&lt;/th&gt;
+&lt;th&gt;Partition Type(分区类型)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;[SWAP]&lt;/td&gt;
+&lt;td&gt;&amp;#x2F;dev&amp;#x2F;swap_partition&lt;/td&gt;
+&lt;td&gt;Linux swap&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&amp;#x2F;mnt&lt;/td&gt;
+&lt;td&gt;&amp;#x2F;dev&amp;#x2F;root_partition&lt;/td&gt;
+&lt;td&gt;Linux&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;Format-the-partitions&#34;&gt;&lt;a href=&#34;#Format-the-partitions&#34; class=&#34;headerlink&#34; title=&#34;Format the partitions&#34;&gt;&lt;/a&gt;Format the partitions&lt;/h1&gt;&lt;p&gt;可通过命令&lt;code&gt;mkfs&lt;/code&gt;来创建新的文件系统，关于该文件系统的选择和命令行的使用，可以从官方Wiki&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93aWtpLmFyY2hsaW51eC5vcmcvdGl0bGUvRmlsZV9zeXN0ZW1zI0NyZWF0ZV9hX2ZpbGVfc3lzdGVt&#34;&gt;文件系统&lt;/span&gt;了解更多。&lt;/p&gt;
+&lt;p&gt;可通过命令&lt;code&gt;mkswap&lt;/code&gt;来创建交换分区，用法&lt;code&gt;mkswap /dev/swap_partition&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Mount-the-file-systems&#34;&gt;&lt;a href=&#34;#Mount-the-file-systems&#34; class=&#34;headerlink&#34; title=&#34;Mount the file systems&#34;&gt;&lt;/a&gt;Mount the file systems&lt;/h1&gt;&lt;p&gt;完成分区和格式化以后，就需要挂载设备，挂载点一般是&amp;#x2F;mnt。可通过命令&lt;code&gt;mount &amp;lt;block device identity&amp;gt; &amp;lt;mount point&amp;gt;&lt;/code&gt;，例如&lt;code&gt;mount /dev/partition /mnt&lt;/code&gt;。&lt;/p&gt;
+&lt;h1 id=&#34;Select-the-mirrors&#34;&gt;&lt;a href=&#34;#Select-the-mirrors&#34; class=&#34;headerlink&#34; title=&#34;Select the mirrors&#34;&gt;&lt;/a&gt;Select the mirrors&lt;/h1&gt;&lt;p&gt;通过Linux的文本编辑器打开文件&amp;#x2F;etc&amp;#x2F;pacman.d&amp;#x2F;mirrorlist，根据其中的格式，更换为国内镜像源以得到更好的网络传输速率，已知环境中有的文本编辑器有nano、vi、vim。&lt;/p&gt;
+&lt;p&gt;可从Arch Linux官方社区的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcmNobGludXgub3JnL21pcnJvcnMv&#34;&gt;镜像列表&lt;/span&gt;寻找你想要更换的镜像源。&lt;/p&gt;
+&lt;h1 id=&#34;Install-essential-packages&#34;&gt;&lt;a href=&#34;#Install-essential-packages&#34; class=&#34;headerlink&#34; title=&#34;Install essential packages&#34;&gt;&lt;/a&gt;Install essential packages&lt;/h1&gt;&lt;p&gt;&lt;code&gt;pacstrap -K /mnt base linux linux-firmware networkmanager dhcpcd netctl&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Configure-the-system&#34;&gt;&lt;a href=&#34;#Configure-the-system&#34; class=&#34;headerlink&#34; title=&#34;Configure the system&#34;&gt;&lt;/a&gt;Configure the system&lt;/h1&gt;&lt;p&gt;&lt;code&gt;genfstab -U /mnt &amp;gt;&amp;gt; /mnt/etc/fstab&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Chroot&#34;&gt;&lt;a href=&#34;#Chroot&#34; class=&#34;headerlink&#34; title=&#34;Chroot&#34;&gt;&lt;/a&gt;Chroot&lt;/h1&gt;&lt;p&gt;&lt;code&gt;arch-chroot /mnt&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在执行完该命令后我们就处在新的操作系统环境中了，可以趁这个时候安装自己所需要的软件。&lt;/p&gt;
+&lt;h1 id=&#34;Time-zone&#34;&gt;&lt;a href=&#34;#Time-zone&#34; class=&#34;headerlink&#34; title=&#34;Time zone&#34;&gt;&lt;/a&gt;Time zone&lt;/h1&gt;&lt;p&gt;&lt;code&gt;ln -sf /usr/share/zoneinfo/&amp;lt;region&amp;gt;/&amp;lt;city&amp;gt; /etc/localtime&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;一般来说设置在上海，所以是&lt;code&gt;ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;hwclock --systohc&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Localization&#34;&gt;&lt;a href=&#34;#Localization&#34; class=&#34;headerlink&#34; title=&#34;Localization&#34;&gt;&lt;/a&gt;Localization&lt;/h1&gt;&lt;p&gt;使用文本编辑器打开&amp;#x2F;etc&amp;#x2F;locale&amp;#x2F;gen，去除自己所需语言的注释，一般来说应该有en_US.UTF-8 UTF8、zh_CN.UTF-8 UTF-8、zh_TW.UTF-8 UTF-8，然后执行命令&lt;code&gt;locale-gen&lt;/code&gt;来生成本地化文件。&lt;/p&gt;
+&lt;p&gt;创建或打开locale.config，写入内容&lt;code&gt;LANG=en_US.UTF-8&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;如果需要改变默认的命令行键盘布局，编辑&amp;#x2F;etc&amp;#x2F;vconsole.conf。&lt;/p&gt;
+&lt;h1 id=&#34;Network-configuration&#34;&gt;&lt;a href=&#34;#Network-configuration&#34; class=&#34;headerlink&#34; title=&#34;Network configuration&#34;&gt;&lt;/a&gt;Network configuration&lt;/h1&gt;&lt;p&gt;创建或打开&amp;#x2F;etc&amp;#x2F;hostname，在文件中写入一个自行设定的主机名。&lt;/p&gt;
+&lt;p&gt;使用文本编辑器打开&amp;#x2F;etc&amp;#x2F;hosts，在文件中添加内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;127.0.0.1 localhost&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;::1 localhost&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;127.0.1.1 &amp;lt;hostname&amp;gt;.localdomain &amp;lt;hostname&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;h1 id=&#34;Root-password&#34;&gt;&lt;a href=&#34;#Root-password&#34; class=&#34;headerlink&#34; title=&#34;Root password&#34;&gt;&lt;/a&gt;Root password&lt;/h1&gt;&lt;p&gt;通过命令&lt;code&gt;passwd&lt;/code&gt;设置root用户的密码。&lt;/p&gt;
+&lt;h1 id=&#34;Boot-loader&#34;&gt;&lt;a href=&#34;#Boot-loader&#34; class=&#34;headerlink&#34; title=&#34;Boot loader&#34;&gt;&lt;/a&gt;Boot loader&lt;/h1&gt;&lt;p&gt;可以选择使用grub作为启动引导，成功后将会显示在自己的BIOS或者UEFI的启动项中。不同启动方式需要的软件包可能有所不同，这里只记录UEFI的情况。&lt;/p&gt;
+&lt;p&gt;除了grub，还需要安装efibootmgr、os-prober和ntfs-3g，这两个软件会寻找其他设备中的启动项入口，比如你是双系统能选择启动哪个系统。&lt;/p&gt;
+&lt;p&gt;关于grub的使用，可参阅&lt;/p&gt;
+&lt;p&gt;主要使用grub-install和grub-mkconfig，先进行grub-install安装，再用grub-mkconfig生成配置文件，安装命令行样例：&lt;code&gt;grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub&lt;/code&gt;，生成配置文件命令行样例：&lt;code&gt;grub-mkconfig -o /boot/grub/grub.cfg&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;完成后可以重启进入安装完毕的新操作系统Arch Linux了。&lt;/p&gt;
+&lt;h2 id=&#34;Note&#34;&gt;&lt;a href=&#34;#Note&#34; class=&#34;headerlink&#34; title=&#34;Note&#34;&gt;&lt;/a&gt;Note&lt;/h2&gt;&lt;p&gt;可以通过查看文件&amp;#x2F;boot&amp;#x2F;grub&amp;#x2F;grub.cfg来检查是否生成了所有你需要的操作系统入口，如果找不到其他操作系统入口比如Windows，可能需要手动编辑该配置文件来添加操作系统入口。&lt;/p&gt;
+&lt;p&gt;如果硬件经历了一些变动，导致Arch Linux启动项消失，可以通过重新配置系统和重新配置启动引导来恢复正常。&lt;/p&gt;
+&lt;h1 id=&#34;Add-new-user&#34;&gt;&lt;a href=&#34;#Add-new-user&#34; class=&#34;headerlink&#34; title=&#34;Add new user&#34;&gt;&lt;/a&gt;Add new user&lt;/h1&gt;&lt;p&gt;可通过命令&lt;code&gt;useradd&lt;/code&gt;来添加新的用户，例如：&lt;code&gt;useradd -m -G wheel &amp;lt;username&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;可通过命令&lt;code&gt;passwd&lt;/code&gt;来给新用户设置密码，例如：&lt;code&gt;passwrd &amp;lt;username&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Graphic-user-interface&#34;&gt;&lt;a href=&#34;#Graphic-user-interface&#34; class=&#34;headerlink&#34; title=&#34;Graphic user interface&#34;&gt;&lt;/a&gt;Graphic user interface&lt;/h1&gt;&lt;p&gt;可选择安装Xorg提供图形服务，有关Xorg和图形处理器驱动的安装和相关详情，需阅读&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93aWtpLmFyY2hsaW51eC5vcmcvdGl0bGUvWG9yZyNEcml2ZXJfaW5zdGFsbGF0aW9u&#34;&gt;Xorg&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;Desktop-environment&#34;&gt;&lt;a href=&#34;#Desktop-environment&#34; class=&#34;headerlink&#34; title=&#34;Desktop environment&#34;&gt;&lt;/a&gt;Desktop environment&lt;/h1&gt;&lt;p&gt;可从多个Linux&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93aWtpLmFyY2hsaW51eC5vcmcvdGl0bGUvRGVza3RvcF9lbnZpcm9ubWVudA==&#34;&gt;桌面环境&lt;/span&gt;中选择一个安装。&lt;/p&gt;
+&lt;h1 id=&#34;Display-Manager&#34;&gt;&lt;a href=&#34;#Display-Manager&#34; class=&#34;headerlink&#34; title=&#34;Display Manager&#34;&gt;&lt;/a&gt;Display Manager&lt;/h1&gt;&lt;p&gt;可从多个&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93aWtpLmFyY2hsaW51eC5vcmcvdGl0bGUvRGlzcGxheV9tYW5hZ2Vy&#34;&gt;显示管理器&lt;/span&gt;中选择一个安装。&lt;/p&gt;
+&lt;h1 id=&#34;Arch-User-Repository&#34;&gt;&lt;a href=&#34;#Arch-User-Repository&#34; class=&#34;headerlink&#34; title=&#34;Arch User Repository&#34;&gt;&lt;/a&gt;Arch User Repository&lt;/h1&gt;&lt;p&gt;AUR是Arch Linux的灵魂之一，大多数不存在官方镜像源中的软件都可以从这里获取，由于AUR的存在使得Arch Linux的软件生态比其他发行版更为健壮。&lt;/p&gt;
+&lt;h1 id=&#34;Note-1&#34;&gt;&lt;a href=&#34;#Note-1&#34; class=&#34;headerlink&#34; title=&#34;Note&#34;&gt;&lt;/a&gt;Note&lt;/h1&gt;&lt;p&gt;Arch Linux的官方社区相当活跃，Wiki也很齐全，大部分问题或者疑惑都可以通过查阅Wiki解答，也可以去社区Newbie模块发帖询问。当Arch Linux用多了以后也能给予一点点开源的贡献了，开源的魅力会逐渐显现。&lt;/p&gt;
+&lt;p&gt;（在Arch Linux上玩Minecraft时有需求过一个地图编辑器Amulet，发现缺少依赖，反馈了这个问题，发布者给它修了）&lt;/p&gt;
+&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93aWtpLmFyY2hsaW51eC5vcmcvdGl0bGUvSW5zdGFsbGF0aW9uX2d1aWRl&#34;&gt;Installation guide - ArchWiki&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cudmlzZWF0b3IuY29tLzIwMTcvMDUvMTcvYXJjaF9pbnN0YWxsLw==&#34;&gt;以官方Wiki的方式安装ArchLinux - Viseator’s blog&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/09/05/SoftwareArchitecture/</guid>
+            <title>Software Architecture</title>
+            <link>https://asdlkjqpwoei.github.io/2023/09/05/SoftwareArchitecture/</link>
+            <pubDate>Tue, 05 Sep 2023 16:09:21 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;当自己尝试做过小工具或者参与过一些大项目，会发现如果代码没有进行合理的组织和分配，会变得极难维护，而且会降低自己对开发工作的动力，最终不了了之。&lt;/p&gt;
+&lt;h1 id=&#34;Observer-Pattern-观察者模式&#34;&gt;&lt;a href=&#34;#Observer-Pattern-观察者模式&#34; class=&#34;headerlink&#34; title=&#34;Observer Pattern(观察者模式)&#34;&gt;&lt;/a&gt;Observer Pattern(观察者模式)&lt;/h1&gt;&lt;p&gt;一种行为型设计模型，一对多的依赖关系。当一个对象的状态发生改变时，其所有依赖者都会收到通知并自动更新。&lt;/p&gt;
+&lt;h1 id=&#34;Model-View-Controller-模型-视图-控制器-MVC&#34;&gt;&lt;a href=&#34;#Model-View-Controller-模型-视图-控制器-MVC&#34; class=&#34;headerlink&#34; title=&#34;Model View Controller(模型-视图-控制器, MVC)&#34;&gt;&lt;/a&gt;Model View Controller(模型-视图-控制器, MVC)&lt;/h1&gt;&lt;p&gt;目的是实现一种动态的程序设计，一般在交互式应用程序中有所体现。&lt;/p&gt;
+&lt;p&gt;Model(模型): 一般负责程序的逻辑和数据的处理，提供操作。&lt;/p&gt;
+&lt;p&gt;View(视图): 一般是负责如何显示或表示模型，反馈。&lt;/p&gt;
+&lt;p&gt;Controller(控制器): 一般是负责处理用户输入事件，对模型进行操作，控制程序工作流程。&lt;/p&gt;
+&lt;h1 id=&#34;Entity-Component-System-实体-组件-系统-ECS&#34;&gt;&lt;a href=&#34;#Entity-Component-System-实体-组件-系统-ECS&#34; class=&#34;headerlink&#34; title=&#34;Entity Component System(实体-组件-系统, ECS)&#34;&gt;&lt;/a&gt;Entity Component System(实体-组件-系统, ECS)&lt;/h1&gt;&lt;p&gt;ECS遵循组合优于继承的原则，每一个实体不由类继承所定义，但是会通过组件相互关联，系统在全局范围内对有所需组件的实体进行操作。&lt;/p&gt;
+&lt;p&gt;Entity(实体): 通常是指一些通用对象，比如游戏开发中，每个游戏对象都是实体，内有一个唯一的标识符。&lt;/p&gt;
+&lt;p&gt;Component(组件): 通常是指实体所拥有的特定功能或者某一个方面，并且拥有相应的数据。&lt;/p&gt;
+&lt;p&gt;System(系统): 通常是指一个功能过程，作用于具有所需组件所有实体的过程，比如物理系统查询具有质量组件的实体。&lt;/p&gt;
+&lt;h1 id=&#34;Note&#34;&gt;&lt;a href=&#34;#Note&#34; class=&#34;headerlink&#34; title=&#34;Note&#34;&gt;&lt;/a&gt;Note&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;子类好屌哦&lt;/li&gt;
+&lt;li&gt;组合优于继承&lt;/li&gt;
+&lt;li&gt;将动作定义成一个类&lt;/li&gt;
+&lt;li&gt;使用实体元类(？)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1KeEkzRXU1RFB3RQ==&#34;&gt;Bob Nystrom - Is There More to Game Architecture than ECS?&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRW50aXR5X2NvbXBvbmVudF9zeXN0ZW0=&#34;&gt;Entity Component System - wikipedia&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yZWZhY3RvcmluZ2d1cnUuY24vZGVzaWduLXBhdHRlcm5zL29ic2VydmVy&#34;&gt;观察者设计模式&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/08/18/Gossip/</guid>
             <title>杂谈/碎碎念</title>
@@ -32,6 +173,8 @@
 &lt;h1 id=&#34;Cyberpunk-2077&#34;&gt;&lt;a href=&#34;#Cyberpunk-2077&#34; class=&#34;headerlink&#34; title=&#34;Cyberpunk 2077&#34;&gt;&lt;/a&gt;Cyberpunk 2077&lt;/h1&gt;&lt;h1 id=&#34;Devil-May-Cry-DMC&#34;&gt;&lt;a href=&#34;#Devil-May-Cry-DMC&#34; class=&#34;headerlink&#34; title=&#34;Devil May Cry - DMC&#34;&gt;&lt;/a&gt;Devil May Cry - DMC&lt;/h1&gt;&lt;h1 id=&#34;Devil-May-Cry-5&#34;&gt;&lt;a href=&#34;#Devil-May-Cry-5&#34; class=&#34;headerlink&#34; title=&#34;Devil May Cry 5&#34;&gt;&lt;/a&gt;Devil May Cry 5&lt;/h1&gt;&lt;h1 id=&#34;Dota-2&#34;&gt;&lt;a href=&#34;#Dota-2&#34; class=&#34;headerlink&#34; title=&#34;Dota 2&#34;&gt;&lt;/a&gt;Dota 2&lt;/h1&gt;&lt;p&gt;最敬佩的游戏，由玩家所创造，由玩家所抚养，几经风雨到了重视社区发展又是业界顶尖的Valve之手，又回馈了玩家，无法复刻的奇迹。除了游戏性上的问题我挑不出这个游戏会有什么样的质量问题，更没有严重的游戏体验问题，有也是玩家环境的原因，而不是游戏带来的问题，游戏性、音乐、美术、画面表现力等均是同类竞品顶尖水准。&lt;/p&gt;
 &lt;h1 id=&#34;Elden-Ring&#34;&gt;&lt;a href=&#34;#Elden-Ring&#34; class=&#34;headerlink&#34; title=&#34;Elden Ring&#34;&gt;&lt;/a&gt;Elden Ring&lt;/h1&gt;&lt;p&gt;不愧是TGA年度游戏，在适应并且克服From Software ARPG游戏一脉相承的主角残疾人性能以后，二周目收集到足够的道具和资源，真正的乐趣就此显现，可以当个法爷丢法术，可以力敏战士拼熟练度，可以力量猛男带盾纯莽。玩法多样，动作丰富，开放世界是为了提供更多的过关方法，而不是重复的罐头，地图设计的每一个角落都有其存在的意义。&lt;/p&gt;
 &lt;h1 id=&#34;Genshin-Impact&#34;&gt;&lt;a href=&#34;#Genshin-Impact&#34; class=&#34;headerlink&#34; title=&#34;Genshin Impact&#34;&gt;&lt;/a&gt;Genshin Impact&lt;/h1&gt;&lt;p&gt;为什么会玩呢，在上海条件不好只能退而求其次。一开始确实感觉挺惊艳的，美术和音乐良好（为什么良好呢，因为除了美术和音乐别的都很烂，这两个有一个不行就没有了解的必要），过了三天后发现没啥意思，12+的故事相当弱智，播片和画面表现力也没有让人感到惊艳。战斗系统虽然好，但是收费模式和运营模式极大的拉长和限制在短时间免费游玩条件下能够体验到的战斗系统多样性。再后来发现不过是套着开放世界皮的抽卡手游，探索给的奖励就是打发乞丐的，无法提升游戏体验，甚至是降低，战斗系统很好玩但是收费和运营限制，美术很好看但也就只有好看，配乐也是花了重金砸出来不错的效果，然而游戏体验就是一坨，比起其他手游不过是剧情、美术、配乐更加突出，别的均是一丘之貉。&lt;/p&gt;
+&lt;h1 id=&#34;PUBG-Battlegrounds&#34;&gt;&lt;a href=&#34;#PUBG-Battlegrounds&#34; class=&#34;headerlink&#34; title=&#34;PUBG: Battlegrounds&#34;&gt;&lt;/a&gt;PUBG: Battlegrounds&lt;/h1&gt;&lt;p&gt;2017年至2018年大火的吃鸡，一开始觉得这游戏应该是有一个不错的质量和新鲜的玩法火的，碰了以后才发现仅仅只有新鲜的玩法，别的屁都不是，偏偏这也让它火了，游戏业就是这么神奇。&lt;/p&gt;
+&lt;p&gt;残疾人般的角色动作流畅度、模糊不清的交互、屎一样的枪械和命中反馈、极度糟糕的资源利用率和优化，这破游戏也配叫射击游戏？不愧是韩国人小作坊出来的，没这一口玩法红利就该死在无名的游戏墓地了。&lt;/p&gt;
 &lt;h1 id=&#34;The-Witcher-3-Wild-Hunt&#34;&gt;&lt;a href=&#34;#The-Witcher-3-Wild-Hunt&#34; class=&#34;headerlink&#34; title=&#34;The Witcher 3: Wild Hunt&#34;&gt;&lt;/a&gt;The Witcher 3: Wild Hunt&lt;/h1&gt;&lt;h1 id=&#34;Red-Alert-2-Mental-Omega&#34;&gt;&lt;a href=&#34;#Red-Alert-2-Mental-Omega&#34; class=&#34;headerlink&#34; title=&#34;Red Alert 2 Mental Omega&#34;&gt;&lt;/a&gt;Red Alert 2 Mental Omega&lt;/h1&gt;&lt;p&gt;基于红色警戒2尤里的复仇做的同人模组，其内容丰富与改动得令我大吃一惊，与原版红色警戒2几乎是完全不同的两个游戏。剧情青出于蓝而胜于蓝，除了缺少过场和演出为其增色（民间用爱发癫不求太多），通过文本的叙述可以发现这个同人模组写的剧情格局更大，牵扯更多，更加跌宕起伏，比起原版那稍显儿戏的剧情，这个同人模组更为严肃认真，逻辑缜密。&lt;/p&gt;
 &lt;p&gt;新增了特别多的单位和阵容，特色鲜明，并且特别强调反装甲和反步兵的克制关系，可玩性更好，有更多的选择。&lt;/p&gt;
 &lt;h1 id=&#34;Sekiro-Shadow-Die-Twice&#34;&gt;&lt;a href=&#34;#Sekiro-Shadow-Die-Twice&#34; class=&#34;headerlink&#34; title=&#34;Sekiro Shadow Die Twice&#34;&gt;&lt;/a&gt;Sekiro Shadow Die Twice&lt;/h1&gt;&lt;p&gt;第一次接触From Software的动作游戏，一开始受了点苦，难以适应相对其他游戏主角残疾般的动作流畅度，慢慢凹过来以后逐渐体验到其乐趣。不同于传统的ARPG，弱化数值影响的只狼更偏向于一个较为纯粹的ACT，唯有通过解读敌人动作和洞悉敌人弱点机制才能进行游戏，并不能数值碾压（话说From Software的其他ARPG也不会让数值碾压到离谱的程度，指玩家压怪物），但是移除体力条、加入架势条、完美弹刀能不受伤害并且给敌人增加架势值的设计使得进攻的风险变低、收益变高，并且美术和音乐的组合氛围塑造优秀，给予一种刀剑定生死的紧张刺激感和“有生之荣，无死之耻”的壮烈感，一下子打了4周目。&lt;/p&gt;
@@ -57,7 +200,8 @@
             <link>https://asdlkjqpwoei.github.io/2023/08/17/WarFirstPersonNote/</link>
             <pubDate>Thu, 17 Aug 2023 16:48:18 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2FzZGxranFwd29laS9XYXJGaXJzdFBlcnNvbg==&#34;&gt;War First Person&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;Plan&#34;&gt;&lt;a href=&#34;#Plan&#34; class=&#34;headerlink&#34; title=&#34;Plan&#34;&gt;&lt;/a&gt;Plan&lt;/h1&gt;&lt;h2 id=&#34;基本框架&#34;&gt;&lt;a href=&#34;#基本框架&#34; class=&#34;headerlink&#34; title=&#34;基本框架&#34;&gt;&lt;/a&gt;基本框架&lt;/h2&gt;&lt;ol&gt;
+&lt;h1 id=&#34;Plan&#34;&gt;&lt;a href=&#34;#Plan&#34; class=&#34;headerlink&#34; title=&#34;Plan&#34;&gt;&lt;/a&gt;Plan&lt;/h1&gt;&lt;p&gt;走一步看一步吧&lt;/p&gt;
+&lt;h2 id=&#34;基本框架&#34;&gt;&lt;a href=&#34;#基本框架&#34; class=&#34;headerlink&#34; title=&#34;基本框架&#34;&gt;&lt;/a&gt;基本框架&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;基本的人物模型和角色移动。&lt;/li&gt;
 &lt;li&gt;动画资源整合及动画后期处理。&lt;/li&gt;
 &lt;li&gt;武器和射击方案初步成型。&lt;/li&gt;
@@ -395,8 +539,7 @@ $$|a| = \sqrt[]{{a_x}^2 + {{a_y}^2} + {{a_z}^2}}$$
 &lt;h1 id=&#34;移动语义&#34;&gt;&lt;a href=&#34;#移动语义&#34; class=&#34;headerlink&#34; title=&#34;移动语义&#34;&gt;&lt;/a&gt;移动语义&lt;/h1&gt;&lt;p&gt;主要是为了降低内存的使用，参数传递的过程中不出现新的无用副本。&lt;/p&gt;
 &lt;h1 id=&#34;完美转发&#34;&gt;&lt;a href=&#34;#完美转发&#34; class=&#34;headerlink&#34; title=&#34;完美转发&#34;&gt;&lt;/a&gt;完美转发&lt;/h1&gt;&lt;p&gt;为了解决参数传递时，参数可能已经不是原来内存的问题。&lt;/p&gt;
 &lt;p&gt;std::forward&amp;lt;&amp;gt;&lt;/p&gt;
-&lt;h1 id=&#34;元组&#34;&gt;&lt;a href=&#34;#元组&#34; class=&#34;headerlink&#34; title=&#34;元组&#34;&gt;&lt;/a&gt;元组&lt;/h1&gt;&lt;p&gt;std::tuple&lt;/p&gt;
-&lt;h1 id=&#34;Lambda表达式&#34;&gt;&lt;a href=&#34;#Lambda表达式&#34; class=&#34;headerlink&#34; title=&#34;Lambda表达式&#34;&gt;&lt;/a&gt;Lambda表达式&lt;/h1&gt;&lt;p&gt;开始支持Lambda表达式&lt;/p&gt;
+&lt;h1 id=&#34;std-tuple元组&#34;&gt;&lt;a href=&#34;#std-tuple元组&#34; class=&#34;headerlink&#34; title=&#34;std::tuple元组&#34;&gt;&lt;/a&gt;std::tuple元组&lt;/h1&gt;&lt;h1 id=&#34;Lambda表达式&#34;&gt;&lt;a href=&#34;#Lambda表达式&#34; class=&#34;headerlink&#34; title=&#34;Lambda表达式&#34;&gt;&lt;/a&gt;Lambda表达式&lt;/h1&gt;&lt;p&gt;开始支持Lambda表达式&lt;/p&gt;
 &lt;h1 id=&#34;using定义别名&#34;&gt;&lt;a href=&#34;#using定义别名&#34; class=&#34;headerlink&#34; title=&#34;using定义别名&#34;&gt;&lt;/a&gt;using定义别名&lt;/h1&gt;&lt;p&gt;typedef无法重定义模板中的一些语法，using定义别名因此而生。&lt;/p&gt;
  ]]></description>
         </item>
@@ -468,7 +611,10 @@ $$|a| = \sqrt[]{{a_x}^2 + {{a_y}^2} + {{a_z}^2}}$$
 &lt;p&gt;可通过调用MarkPendingKillu或者MarkAsGarbage在对象上，强制下一个垃圾回收周期摧毁对象。部分类不支持该方式销毁，比如AActor和UActorComponent。&lt;/p&gt;
 &lt;p&gt;根据以上的原理，防止对象被回收的办法：标记为UPROPERTY，调用AddRoot函数。&lt;/p&gt;
 &lt;h1 id=&#34;Serialization-序列化&#34;&gt;&lt;a href=&#34;#Serialization-序列化&#34; class=&#34;headerlink&#34; title=&#34;Serialization(序列化)&#34;&gt;&lt;/a&gt;Serialization(序列化)&lt;/h1&gt;&lt;p&gt;一般是指将数据结构转换成其他格式方便传输&amp;#x2F;存储，提取其中的数据结构也就叫反序列化(Deserialization)。&lt;/p&gt;
-&lt;h1 id=&#34;性能优化相关&#34;&gt;&lt;a href=&#34;#性能优化相关&#34; class=&#34;headerlink&#34; title=&#34;性能优化相关&#34;&gt;&lt;/a&gt;性能优化相关&lt;/h1&gt;&lt;h2 id=&#34;特效&#34;&gt;&lt;a href=&#34;#特效&#34; class=&#34;headerlink&#34; title=&#34;特效&#34;&gt;&lt;/a&gt;特效&lt;/h2&gt;&lt;p&gt;OverDraw&lt;/p&gt;
+&lt;h1 id=&#34;性能优化相关&#34;&gt;&lt;a href=&#34;#性能优化相关&#34; class=&#34;headerlink&#34; title=&#34;性能优化相关&#34;&gt;&lt;/a&gt;性能优化相关&lt;/h1&gt;&lt;p&gt;如果是AAA游戏开发工作者，性能相关的问题可以说是命根子了。&lt;/p&gt;
+&lt;p&gt;需要对引擎各个关键模块的工作流程和图形接口有所了解，对项目熟悉的情况下，可能才比较合适去做性能优化。因为要使用各种工具去抓许多数据，做性能剖析，才能去优化。&lt;/p&gt;
+&lt;p&gt;当GameThred计算每帧游戏逻辑需要的时间高于显卡每帧执行命令和计算的时间时，就是CPU出现了性能瓶颈。反之，是GPU出现了性能瓶颈。&lt;/p&gt;
+&lt;h2 id=&#34;特效&#34;&gt;&lt;a href=&#34;#特效&#34; class=&#34;headerlink&#34; title=&#34;特效&#34;&gt;&lt;/a&gt;特效&lt;/h2&gt;&lt;p&gt;OverDraw&lt;/p&gt;
 &lt;p&gt;Volume Domain&lt;/p&gt;
 &lt;h2 id=&#34;渲染&#34;&gt;&lt;a href=&#34;#渲染&#34; class=&#34;headerlink&#34; title=&#34;渲染&#34;&gt;&lt;/a&gt;渲染&lt;/h2&gt;&lt;h3 id=&#34;渲染线程&#34;&gt;&lt;a href=&#34;#渲染线程&#34; class=&#34;headerlink&#34; title=&#34;渲染线程&#34;&gt;&lt;/a&gt;渲染线程&lt;/h3&gt;&lt;p&gt;RenderThread, RHIThread&lt;/p&gt;
 &lt;p&gt;Drawcall&lt;/p&gt;
@@ -588,24 +734,25 @@ $$|a| = \sqrt[]{{a_x}^2 + {{a_y}^2} + {{a_z}^2}}$$
 &lt;p&gt;Notifies the crash reporter and outputs FormattedText to the log if Expression is false.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;PURE-VIRTUAL&#34;&gt;&lt;a href=&#34;#PURE-VIRTUAL&#34; class=&#34;headerlink&#34; title=&#34;PURE_VIRTUAL&#34;&gt;&lt;/a&gt;PURE_VIRTUAL&lt;/h2&gt;&lt;p&gt;Unreal Engine特性，由于所有继承UObject的UClass必须能实例化，因此的一般的类不可以包含纯虚函数。一些游戏业务场景要求该类的某个虚函数必须在子类有实现，普通虚函数无法达到该要求，PURE_VIRTUAL因此诞生。&lt;/p&gt;
-&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;h2 id=&#34;Official-Documentation&#34;&gt;&lt;a href=&#34;#Official-Documentation&#34; class=&#34;headerlink&#34; title=&#34;Official Documentation&#34;&gt;&lt;/a&gt;Official Documentation&lt;/h2&gt;&lt;ul&gt;
+&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;h2 id=&#34;Official-Documentation&#34;&gt;&lt;a href=&#34;#Official-Documentation&#34; class=&#34;headerlink&#34; title=&#34;Official Documentation&#34;&gt;&lt;/a&gt;Official Documentation&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVucmVhbGVuZ2luZS5jb20vNS4yL2VuLVVTL2dhbWVwbGF5LWZyYW1ld29yay1xdWljay1yZWZlcmVuY2UtaW4tdW5yZWFsLWVuZ2luZS8=&#34;&gt;Gameplay Framework Quick Reference in Unreal Engine | Unreal Engine 5.2 Documentation&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVucmVhbGVuZ2luZS5jb20vNS4yL2VuLVVTL2Fzc2VydHMtaW4tdW5yZWFsLWVuZ2luZS8=&#34;&gt;Asserts in Unreal Engine | Unreal Engine 5.2 Documentation&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnVucmVhbGVuZ2luZS5jb20vNS4yL2VuLVVTL2NsYXNzLXNwZWNpZmllcnMv&#34;&gt;Class Specifiers | Unreal Engine 5.2 Documentation&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;Community-Wiki&#34;&gt;&lt;a href=&#34;#Community-Wiki&#34; class=&#34;headerlink&#34; title=&#34;Community Wiki&#34;&gt;&lt;/a&gt;Community Wiki&lt;/h2&gt;&lt;ul&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;Community-Wiki&#34;&gt;&lt;a href=&#34;#Community-Wiki&#34; class=&#34;headerlink&#34; title=&#34;Community Wiki&#34;&gt;&lt;/a&gt;Community Wiki&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91bnJlYWxjb21tdW5pdHkud2lraS91bnJlYWwtcHJvcGVydHktc3lzdGVtLShyZWZsZWN0aW9uKS0zNmQxZTY=&#34;&gt;Unreal Property System (Reflection) | Unreal Engine Community Wiki&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91bnJlYWxjb21tdW5pdHkud2lraS9kZWxlZ2F0ZXMtaW4tdWU0LXJhdy1jcHAtYW5kLWJwLWV4cG9zZWQteGlmbWNtcTU=&#34;&gt;Delegates | Unreal Engine Community Wiki&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly91bnJlYWxjb21tdW5pdHkud2lraS9nYXJiYWdlLWNvbGxlY3Rpb24tMzZkMWRh&#34;&gt;Garbage Collection | Unreal Engine Community Wiki&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;Book&#34;&gt;&lt;a href=&#34;#Book&#34; class=&#34;headerlink&#34; title=&#34;Book&#34;&gt;&lt;/a&gt;Book&lt;/h2&gt;&lt;ul&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;Book&#34;&gt;&lt;a href=&#34;#Book&#34; class=&#34;headerlink&#34; title=&#34;Book&#34;&gt;&lt;/a&gt;Book&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;Game Engine Architecture [Third Edition] – Jason Gergory, 叶劲峰译&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;Third-Party-Articles&#34;&gt;&lt;a href=&#34;#Third-Party-Articles&#34; class=&#34;headerlink&#34; title=&#34;Third Party Articles&#34;&gt;&lt;/a&gt;Third Party Articles&lt;/h2&gt;&lt;ul&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;Third-Party-Articles&#34;&gt;&lt;a href=&#34;#Third-Party-Articles&#34; class=&#34;headerlink&#34; title=&#34;Third Party Articles&#34;&gt;&lt;/a&gt;Third Party Articles&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vdS1uLW93ZW4vcC8xNjQyNTM1OC5odG1s&#34;&gt;UE4学习笔记：Gameplay框架及其模块梳理（上篇） - U_N_Owen – 博客园&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC82MTI4MzcwNDU=&#34;&gt;Unreal Engine的Gameplay框架和重点 – 知乎&lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC81OTE5ODIwMjA=&#34;&gt;UE5 -- Control Rig与IK Rig介绍 – 知乎&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;Video&#34;&gt;&lt;a href=&#34;#Video&#34; class=&#34;headerlink&#34; title=&#34;Video&#34;&gt;&lt;/a&gt;Video&lt;/h2&gt;&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUZWNDExRzcyUS8/c3BtX2lkX2Zyb209MzMzLjk5OS4wLjAmdmRfc291cmNlPTQyNzM1MTA0ODc5NzNhNTdmNzIzZDVjNmYzYzZkMDY2&#34;&gt;UnrealCircle苏州UE4性能优化 | 周华 苏州谜匣数娱&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>

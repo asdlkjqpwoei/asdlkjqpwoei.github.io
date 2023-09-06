@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Jager的工地 • Posts by &#34;software architecture&#34; category</title>
+        <link>https://asdlkjqpwoei.github.io</link>
+        <description>游戏开发</description>
+        <language>default</language>
+        <pubDate>Tue, 05 Sep 2023 16:09:21 +0800</pubDate>
+        <lastBuildDate>Tue, 05 Sep 2023 16:09:21 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/09/05/SoftwareArchitecture/</guid>
+            <title>Software Architecture</title>
+            <link>https://asdlkjqpwoei.github.io/2023/09/05/SoftwareArchitecture/</link>
+            <pubDate>Tue, 05 Sep 2023 16:09:21 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;当自己尝试做过小工具或者参与过一些大项目，会发现如果代码没有进行合理的组织和分配，会变得极难维护，而且会降低自己对开发工作的动力，最终不了了之。&lt;/p&gt;
+&lt;h1 id=&#34;Observer-Pattern-观察者模式&#34;&gt;&lt;a href=&#34;#Observer-Pattern-观察者模式&#34; class=&#34;headerlink&#34; title=&#34;Observer Pattern(观察者模式)&#34;&gt;&lt;/a&gt;Observer Pattern(观察者模式)&lt;/h1&gt;&lt;p&gt;一种行为型设计模型，一对多的依赖关系。当一个对象的状态发生改变时，其所有依赖者都会收到通知并自动更新。&lt;/p&gt;
+&lt;h1 id=&#34;Model-View-Controller-模型-视图-控制器-MVC&#34;&gt;&lt;a href=&#34;#Model-View-Controller-模型-视图-控制器-MVC&#34; class=&#34;headerlink&#34; title=&#34;Model View Controller(模型-视图-控制器, MVC)&#34;&gt;&lt;/a&gt;Model View Controller(模型-视图-控制器, MVC)&lt;/h1&gt;&lt;p&gt;目的是实现一种动态的程序设计，一般在交互式应用程序中有所体现。&lt;/p&gt;
+&lt;p&gt;Model(模型): 一般负责程序的逻辑和数据的处理，提供操作。&lt;/p&gt;
+&lt;p&gt;View(视图): 一般是负责如何显示或表示模型，反馈。&lt;/p&gt;
+&lt;p&gt;Controller(控制器): 一般是负责处理用户输入事件，对模型进行操作，控制程序工作流程。&lt;/p&gt;
+&lt;h1 id=&#34;Entity-Component-System-实体-组件-系统-ECS&#34;&gt;&lt;a href=&#34;#Entity-Component-System-实体-组件-系统-ECS&#34; class=&#34;headerlink&#34; title=&#34;Entity Component System(实体-组件-系统, ECS)&#34;&gt;&lt;/a&gt;Entity Component System(实体-组件-系统, ECS)&lt;/h1&gt;&lt;p&gt;ECS遵循组合优于继承的原则，每一个实体不由类继承所定义，但是会通过组件相互关联，系统在全局范围内对有所需组件的实体进行操作。&lt;/p&gt;
+&lt;p&gt;Entity(实体): 通常是指一些通用对象，比如游戏开发中，每个游戏对象都是实体，内有一个唯一的标识符。&lt;/p&gt;
+&lt;p&gt;Component(组件): 通常是指实体所拥有的特定功能或者某一个方面，并且拥有相应的数据。&lt;/p&gt;
+&lt;p&gt;System(系统): 通常是指一个功能过程，作用于具有所需组件所有实体的过程，比如物理系统查询具有质量组件的实体。&lt;/p&gt;
+&lt;h1 id=&#34;Note&#34;&gt;&lt;a href=&#34;#Note&#34; class=&#34;headerlink&#34; title=&#34;Note&#34;&gt;&lt;/a&gt;Note&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;子类好屌哦&lt;/li&gt;
+&lt;li&gt;组合优于继承&lt;/li&gt;
+&lt;li&gt;将动作定义成一个类&lt;/li&gt;
+&lt;li&gt;使用实体元类(？)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g/dj1KeEkzRXU1RFB3RQ==&#34;&gt;Bob Nystrom - Is There More to Game Architecture than ECS?&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvRW50aXR5X2NvbXBvbmVudF9zeXN0ZW0=&#34;&gt;Entity Component System - wikipedia&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9yZWZhY3RvcmluZ2d1cnUuY24vZGVzaWduLXBhdHRlcm5zL29ic2VydmVy&#34;&gt;观察者设计模式&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

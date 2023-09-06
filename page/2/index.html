@@ -66,7 +66,7 @@
         <nav id="nav">
   <div class="inner">
     <div class="toggle">
-      <div class="lines" aria-label="切换导航栏">
+      <div class="lines" aria-label="Toggle navigation bar">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
@@ -89,12 +89,12 @@
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciub8ja1j20zk0m81ky.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1gicit4jrvuj20zk0m8785.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giclhtuo6nj20zk0m8ttm.jpg"></li>
-          <li class="item" data-background-image="https://tva2.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclj61ylzj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclg5ms2rj20zk0m8u0x.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giciukx8a7j20zk0m8aio.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipey0a334j20zk0m8qpt.jpg"></li>
+          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclh5u05ej20zk0m87df.jpg"></li>
         </ul>
       </div>
     </header>
@@ -120,12 +120,85 @@
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/06/21/UnrealEngineBasis/" itemprop="url" title="Unreal Engine Basis"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giciuja1j1j20zk0m8kjl.jpg"></a>
+    <a href="/2023/06/21/Cpp11/" itemprop="url" title="Cpp 11"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gicitf0kl1j20zk0m87fe.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2023-06-21 16:13:39">
+  <span class="item" title="Created: 2023-06-21 16:58:37">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-06-21T16:58:37+08:00">2023-06-21</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/06/21/Cpp11/" itemprop="url" title="Cpp 11">Cpp 11</a></h3>
+    <div class="excerpt">
+        智能指针
+unique_ptr：独占一个对象和资源，一旦被销毁或者置空，相关资源都会被销毁。拥有另一个对象后，之前的对象和相关资源都会被销毁。
+
+weak_ptr：允许共享但不允许拥有一个对象，一旦最后一个拥有该对象的智能指针失去所有权，任何一个weak_ptr都自动为空。
+
+shared_ptr：允许共享拥有同一个对象，最后一个拥有该对象shared_ptr会销毁该对象，并清理相关资源。
+
+constexprconst未指明该常量是编译器常量还是运行期常量，constexpr告知变量是编译期常量。
+可变模板参数允许任意多个、任意类别的模板参数，同时在定义时无需固定参数个数。
+右值引用右值可以...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/Cpp/" itemprop="url" title="Cpp"><i class="ic i-flag"></i>Cpp</a>
+      </span>
+    </div>
+    <a href="/2023/06/21/Cpp11/" itemprop="url" title="Cpp 11" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/06/21/DataStructrue/" itemprop="url" title="Data Structrue"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclimtf7dj20zk0m8qav.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-06-21 16:17:07">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <time itemprop="dateCreated datePublished" datetime="2023-06-21T16:17:07+08:00">2023-06-21</time>
+  </span>
+</div>
+
+    <h3><a href="/2023/06/21/DataStructrue/" itemprop="url" title="Data Structrue">Data Structrue</a></h3>
+    <div class="excerpt">
+        Linked List(链表)线性结构，与数组的区别是可以不连续存储，链表变换时不必移动一整块内存。元素的顺序一般由链表对象中的指针决定。
+搜索链表在最坏情况下的运行时间为$&#92;theta(n)$。
+插入一个元素进入链表的运行时间一般为$&#92;theta(1)$
+删除一个链表中的元素的运行时间一般为$&#92;theta(1)$
+Singly Linked List(单向链表)链表中元素的指针仅包含指向下一个元素的指针。
+Doubly Linked List(双向链表)链表中元素的指针包含指向下一个元素的指针和上一个元素的指针
+Circular Linked...
+    </div>
+    <div class="meta footer">
+      <span>
+        <a href="/categories/Data-Structure-and-Algorithm/" itemprop="url" title="Data Structure and Algorithm"><i class="ic i-flag"></i>Data Structure and Algorithm</a>
+      </span>
+    </div>
+    <a href="/2023/06/21/DataStructrue/" itemprop="url" title="Data Structrue" class="btn">more...</a>
+  </div>
+</article>
+
+        
+<article class="item">
+  <div class="cover">
+    <a href="/2023/06/21/UnrealEngineBasis/" itemprop="url" title="Unreal Engine Basis"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclfw2t96j20zk0m8x6p.jpg"></a>
+  </div>
+  <div class="info">
+    
+<div class="meta">
+  <span class="item" title="Created: 2023-06-21 16:13:39">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
@@ -151,12 +224,12 @@ Usage头文件中包含下列语句可以被标记为该翻译单元（文件&am
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/06/21/Cpp/" itemprop="url" title="Cpp Basis"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></a>
+    <a href="/2023/06/21/Cpp/" itemprop="url" title="Cpp Basis"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1gipevgoki5j20zk0m84qp.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2023-06-21 16:12:20">
+  <span class="item" title="Created: 2023-06-21 16:12:20">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
@@ -193,12 +266,12 @@ const
         
 <article class="item">
   <div class="cover">
-    <a href="/2023/06/20/Lyra/" itemprop="url" title="Lyra Sample"><img data-src="https://tva2.sinaimg.cn/mw690/6833939bly1giclize41wj20zk0m87gk.jpg"></a>
+    <a href="/2023/06/20/Lyra/" itemprop="url" title="Lyra Sample"><img data-src="https://tva3.sinaimg.cn/mw690/6833939bly1giclj61ylzj20zk0m8b29.jpg"></a>
   </div>
   <div class="info">
     
 <div class="meta">
-  <span class="item" title="创建时间：2023-06-20 15:25:08">
+  <span class="item" title="Created: 2023-06-20 15:25:08">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
@@ -234,7 +307,7 @@ Settings for the Game Features framework.
   
   <nav class="pagination">
     <div class="inner">
-    <a class="extend prev" rel="prev" href="/"><i class="ic i-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/"><i class="ic i-angle-left" aria-label="Previous page"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </div>
   </nav>
 
@@ -247,11 +320,11 @@ Settings for the Game Features framework.
 
   <div class="panels">
     <div class="inner">
-      <div class="contents panel pjax" data-title="文章目录">
+      <div class="contents panel pjax" data-title="Contents">
       </div>
-      <div class="related panel pjax" data-title="系列文章">
+      <div class="related panel pjax" data-title="Related">
       </div>
-      <div class="overview panel" data-title="站点概览">
+      <div class="overview panel" data-title="Overview">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <img class="image" itemprop="image" alt="asdlkjqpwoei"
       data-src="/images/avatar.jpg">
@@ -262,20 +335,21 @@ Settings for the Game Features framework.
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">13</span>
-        <span class="name">文章</span>
+        <span class="count">15</span>
+        <span class="name">posts</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">8</span>
-        <span class="name">分类</span>
+        <span class="count">10</span>
+        <span class="name">categories</span>
       </a>
     </div>
 </nav>
 
 <div class="social">
       <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FzZGxranFwd29laQ==" title="https:&#x2F;&#x2F;github.com&#x2F;asdlkjqpwoei"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTgwMDYyMjgx" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;80062281"><i class="ic i-cloud-music"></i></span>
       <a href="/1125050703@qq.com" title="1125050703@qq.com" class="item email"><i class="ic i-envelope"></i></a>
 </div>
 
@@ -283,32 +357,32 @@ Settings for the Game Features framework.
   
     
   <li class="item">
-    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
   </li>
 
     
   <li class="item">
-    <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+    <a href="/about/" rel="section"><i class="ic i-user"></i>About</a>
   </li>
 
         
   <li class="item dropdown">
-      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
     <ul class="submenu">
 
         
   <li class="item">
-    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
   </li>
 
         
   <li class="item">
-    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
   </li>
 
         
   <li class="item">
-    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
   </li>
 
   </ul>
@@ -339,13 +413,13 @@ Settings for the Game Features framework.
         <div class="widgets">
           
 <div class="rpost pjax">
-  <h2>随机文章</h2>
+  <h2>Random Posts</h2>
   <ul>
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Mathematics/" title="分类于 Mathematics">Mathematics</a>
+<a href="/categories/Mathematics/" title="In Mathematics">Mathematics</a>
 </div>
 
     <span><a href="/2023/08/18/PrinciplesOfMathematicalAnalysis/" title="Principles of Mathematical Analysis">Principles of Mathematical Analysis</a></span>
@@ -355,37 +429,17 @@ Settings for the Game Features framework.
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Cpp/" title="分类于 Cpp">Cpp</a>
+<a href="/categories/Data-Structure-and-Algorithm/" title="In Data Structure and Algorithm">Data Structure and Algorithm</a>
 </div>
 
-    <span><a href="/2023/06/21/Cpp11/" title="Cpp 11">Cpp 11</a></span>
+    <span><a href="/2023/06/21/DataStructrue/" title="Data Structrue">Data Structrue</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Unreal-Engine/" title="分类于 Unreal Engine">Unreal Engine</a>
-</div>
-
-    <span><a href="/2023/06/20/Lyra/" title="Lyra Sample">Lyra Sample</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Unreal-Engine/" title="分类于 Unreal Engine">Unreal Engine</a>
-</div>
-
-    <span><a href="/2023/06/21/UnrealEngineBasis/" title="Unreal Engine Basis">Unreal Engine Basis</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Cpp/" title="分类于 Cpp">Cpp</a>
+<a href="/categories/Cpp/" title="In Cpp">Cpp</a>
 </div>
 
     <span><a href="/2023/06/21/Cpp17/" title="Cpp 17">Cpp 17</a></span>
@@ -395,7 +449,17 @@ Settings for the Game Features framework.
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Unreal-Engine/" title="分类于 Unreal Engine">Unreal Engine</a>
+<a href="/categories/Unreal-Engine/" title="In Unreal Engine">Unreal Engine</a>
+</div>
+
+    <span><a href="/2023/06/20/Lyra/" title="Lyra Sample">Lyra Sample</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Unreal-Engine/" title="In Unreal Engine">Unreal Engine</a>
 </div>
 
     <span><a href="/2023/08/17/WarFirstPersonNote/" title="War First Person Development Note">War First Person Development Note</a></span>
@@ -405,7 +469,17 @@ Settings for the Game Features framework.
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Other/" title="分类于 Other">Other</a>
+<a href="/categories/Computer-Graphics/" title="In Computer Graphics">Computer Graphics</a>
+</div>
+
+    <span><a href="/2023/06/28/ComputerGraphics/" title="Computer Graphics Mathematics">Computer Graphics Mathematics</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Other/" title="In Other">Other</a>
 </div>
 
     <span><a href="/2023/08/18/Gossip/" title="杂谈&#x2F;碎碎念">杂谈/碎碎念</a></span>
@@ -415,36 +489,36 @@ Settings for the Game Features framework.
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Cpp/" title="分类于 Cpp">Cpp</a>
+<a href="/categories/Computer-Network/" title="In Computer Network">Computer Network</a>
+</div>
+
+    <span><a href="/2023/06/21/ComputerNetwork/" title="Computer Network Basis">Computer Network Basis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Cpp/" title="In Cpp">Cpp</a>
+</div>
+
+    <span><a href="/2023/06/21/Cpp11/" title="Cpp 11">Cpp 11</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Cpp/" title="In Cpp">Cpp</a>
 </div>
 
     <span><a href="/2023/06/21/Cpp/" title="Cpp Basis">Cpp Basis</a></span>
   </li>
 
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Cpp/" title="分类于 Cpp">Cpp</a>
-</div>
-
-    <span><a href="/2023/06/21/StandardTemplateLibrary/" title="Standard Template Library">Standard Template Library</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Computer-Graphics/" title="分类于 Computer Graphics">Computer Graphics</a>
-</div>
-
-    <span><a href="/2023/06/28/ComputerGraphics/" title="Computer Graphics Mathematics">Computer Graphics Mathematics</a></span>
-  </li>
-
   </ul>
 </div>
 <div>
-  <h2>最新评论</h2>
+  <h2>Recent Comments</h2>
   <ul class="leancloud-recent-comment"></ul>
 </div>
 
@@ -460,7 +534,7 @@ Settings for the Game Features framework.
     <span class="author" itemprop="copyrightHolder">asdlkjqpwoei @ Heaven</span>
   </div>
   <div class="powered-by">
-    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
   </div>
 </div>
 
@@ -471,16 +545,16 @@ Settings for the Game Features framework.
   var LOCAL = {
     path: 'page/2/',
     favicon: {
-      show: "（●´3｀●）やれやれだぜ",
-      hide: "(´Д｀)大変だ！"
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
     },
     search : {
-      placeholder: "文章搜索",
-      empty: "关于 「 ${query} 」，什么也没搜到",
-      stats: "${time} ms 内找到 ${hits} 条结果"
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
     },
     valine: true,fancybox: true,
-    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
     ignores : [
       function(uri) {
         return uri.includes('#');
