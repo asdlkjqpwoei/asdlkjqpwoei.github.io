@@ -100,12 +100,12 @@ Heaven = Jager的工地 = 施工中</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1giclxp31goj20zk0m8qv5.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyonbf9j20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gicm0fdw5cj20zk0m8hdt.jpg"></li>
-          <li class="item" data-background-image="https://tva3.sinaimg.cn/large/6833939bly1gipeyvx1d4j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicliwyw55j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gicm07ih54j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1gipew28b65j20zk0m8hdt.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva4.sinaimg.cn/large/6833939bly1giclh3brzpj20zk0m8ann.jpg"></li>
         </ul>
       </div>
     </header>
@@ -166,7 +166,9 @@ Heaven = Jager的工地 = 施工中</title>
 <p>队列的插入操作被称为入队(Enqueue)，而删除操作被称为出队(Dequeue)，且一般在实际的实现中不要求参数。</p>
 <p>队列下溢是指试图对空队列执行出队，队列上溢是指试图对已满队列执行入队。</p>
 <p>入队、出队的运行时间均为$\theta(1)$。</p>
-<h1 id="Hash-哈希表，散列表"><a href="#Hash-哈希表，散列表" class="headerlink" title="Hash(哈希表，散列表)"></a>Hash(哈希表，散列表)</h1><h2 id="Separate-Chaining-分离链接"><a href="#Separate-Chaining-分离链接" class="headerlink" title="Separate Chaining(分离链接)"></a>Separate Chaining(分离链接)</h2><h2 id="Open-Addressing-开放定址"><a href="#Open-Addressing-开放定址" class="headerlink" title="Open Addressing(开放定址)"></a>Open Addressing(开放定址)</h2><h1 id="Binary-Tree-二叉搜索树"><a href="#Binary-Tree-二叉搜索树" class="headerlink" title="Binary Tree(二叉搜索树)"></a>Binary Tree(二叉搜索树)</h1><h1 id="Splay-Tree-伸展树"><a href="#Splay-Tree-伸展树" class="headerlink" title="Splay Tree(伸展树)"></a>Splay Tree(伸展树)</h1><h1 id="B-Tree-B树"><a href="#B-Tree-B树" class="headerlink" title="B-Tree(B树)"></a>B-Tree(B树)</h1><h1 id="Self-Balancing-Binary-Tree-自平衡二叉树"><a href="#Self-Balancing-Binary-Tree-自平衡二叉树" class="headerlink" title="Self-Balancing Binary Tree(自平衡二叉树)"></a>Self-Balancing Binary Tree(自平衡二叉树)</h1><h1 id="Red-Black-Tree-红黑树"><a href="#Red-Black-Tree-红黑树" class="headerlink" title="Red Black Tree(红黑树)"></a>Red Black Tree(红黑树)</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol>
+<h1 id="Hash-哈希表，散列表"><a href="#Hash-哈希表，散列表" class="headerlink" title="Hash(哈希表，散列表)"></a>Hash(哈希表，散列表)</h1><p>以常数平均时间执行插入、删除、查找的数据结构。该数据结构的元素被映射到从0至表的大小-1这个范围中的某个数，并且被放到相应的结构单元中，这个过程由散列函数(Hash Function)负责。这个过程中会不可避免地遇到散列值冲突的问题，如果碰上表的大小和元素具有一些不理想的性质，那么散列函数还需要处理这些性质带来的问题。</p>
+<h2 id="Separate-Chaining-分离链接"><a href="#Separate-Chaining-分离链接" class="headerlink" title="Separate Chaining(分离链接)"></a>Separate Chaining(分离链接)</h2><p>将散列到同一个散列值的元素用一个链表保存</p>
+<h2 id="Open-Addressing-开放定址"><a href="#Open-Addressing-开放定址" class="headerlink" title="Open Addressing(开放定址)"></a>Open Addressing(开放定址)</h2><h1 id="Binary-Tree-二叉搜索树"><a href="#Binary-Tree-二叉搜索树" class="headerlink" title="Binary Tree(二叉搜索树)"></a>Binary Tree(二叉搜索树)</h1><h1 id="Splay-Tree-伸展树"><a href="#Splay-Tree-伸展树" class="headerlink" title="Splay Tree(伸展树)"></a>Splay Tree(伸展树)</h1><h1 id="B-Tree-B树"><a href="#B-Tree-B树" class="headerlink" title="B-Tree(B树)"></a>B-Tree(B树)</h1><h1 id="Self-Balancing-Binary-Tree-自平衡二叉树"><a href="#Self-Balancing-Binary-Tree-自平衡二叉树" class="headerlink" title="Self-Balancing Binary Tree(自平衡二叉树)"></a>Self-Balancing Binary Tree(自平衡二叉树)</h1><h2 id="Single-Rotation-单旋转"><a href="#Single-Rotation-单旋转" class="headerlink" title="Single Rotation(单旋转)"></a>Single Rotation(单旋转)</h2><h2 id="Double-Rotation-双旋转"><a href="#Double-Rotation-双旋转" class="headerlink" title="Double Rotation(双旋转)"></a>Double Rotation(双旋转)</h2><h1 id="Red-Black-Tree-红黑树"><a href="#Red-Black-Tree-红黑树" class="headerlink" title="Red Black Tree(红黑树)"></a>Red Black Tree(红黑树)</h1><h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ol>
 <li>Data Structures and Algorithm Analysis in C [Second Edition] - Mark Allen Weiss, 冯舜玺译</li>
 <li>Introduction to Algorithm [Third Edition] - Thomas H.Cormen, Charles E.Leiserson, Ronald L. Rivest, Clifford Stein, 殷建平、徐云、王刚、刘晓光、苏明、邹恒明、王宏志译</li>
 </ol>
@@ -181,7 +183,7 @@ Heaven = Jager的工地 = 施工中</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2023-09-02 02:54:56" itemprop="dateModified" datetime="2023-09-02T02:54:56+08:00">2023-09-02</time>
+    <time title="Modified: 2023-09-07 02:28:59" itemprop="dateModified" datetime="2023-09-07T02:28:59+08:00">2023-09-07</time>
   </span>
 </div>
 
@@ -213,7 +215,7 @@ Heaven = Jager的工地 = 施工中</title>
     <div class="item left">
       
 
-  <a href="/2023/06/21/UnrealEngineBasis/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclh3brzpj20zk0m8ann.jpg" title="Unreal Engine Basis">
+  <a href="/2023/06/21/UnrealEngineBasis/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclwrdwyaj20zk0m8are.jpg" title="Unreal Engine Basis">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> Unreal Engine</span>
   <h3>Unreal Engine Basis</h3>
@@ -223,7 +225,7 @@ Heaven = Jager的工地 = 施工中</title>
     <div class="item right">
       
 
-  <a href="/2023/06/21/Cpp11/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva3.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclxfdlttj20zk0m8npd.jpg" title="Cpp 11">
+  <a href="/2023/06/21/Cpp11/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva4.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipesrnqv3j20zk0m8ava.jpg" title="Cpp 11">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> Cpp</span>
   <h3>Cpp 11</h3>
@@ -245,7 +247,7 @@ Heaven = Jager的工地 = 施工中</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linked-List-%E9%93%BE%E8%A1%A8"><span class="toc-number">1.</span> <span class="toc-text">Linked List(链表)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Singly-Linked-List-%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8"><span class="toc-number">1.1.</span> <span class="toc-text">Singly Linked List(单向链表)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Doubly-Linked-List-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="toc-number">1.2.</span> <span class="toc-text">Doubly Linked List(双向链表)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Circular-Linked-List-%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8"><span class="toc-number">1.3.</span> <span class="toc-text">Circular Linked List(双向循环链表)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Stack-%E6%A0%88"><span class="toc-number">2.</span> <span class="toc-text">Stack(栈)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Queue-%E9%98%9F%E5%88%97"><span class="toc-number">3.</span> <span class="toc-text">Queue(队列)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hash-%E5%93%88%E5%B8%8C%E8%A1%A8%EF%BC%8C%E6%95%A3%E5%88%97%E8%A1%A8"><span class="toc-number">4.</span> <span class="toc-text">Hash(哈希表，散列表)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Separate-Chaining-%E5%88%86%E7%A6%BB%E9%93%BE%E6%8E%A5"><span class="toc-number">4.1.</span> <span class="toc-text">Separate Chaining(分离链接)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Open-Addressing-%E5%BC%80%E6%94%BE%E5%AE%9A%E5%9D%80"><span class="toc-number">4.2.</span> <span class="toc-text">Open Addressing(开放定址)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Binary-Tree-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-number">5.</span> <span class="toc-text">Binary Tree(二叉搜索树)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Splay-Tree-%E4%BC%B8%E5%B1%95%E6%A0%91"><span class="toc-number">6.</span> <span class="toc-text">Splay Tree(伸展树)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#B-Tree-B%E6%A0%91"><span class="toc-number">7.</span> <span class="toc-text">B-Tree(B树)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Self-Balancing-Binary-Tree-%E8%87%AA%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-number">8.</span> <span class="toc-text">Self-Balancing Binary Tree(自平衡二叉树)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Red-Black-Tree-%E7%BA%A2%E9%BB%91%E6%A0%91"><span class="toc-number">9.</span> <span class="toc-text">Red Black Tree(红黑树)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">10.</span> <span class="toc-text">Reference</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Linked-List-%E9%93%BE%E8%A1%A8"><span class="toc-number">1.</span> <span class="toc-text">Linked List(链表)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Singly-Linked-List-%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8"><span class="toc-number">1.1.</span> <span class="toc-text">Singly Linked List(单向链表)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Doubly-Linked-List-%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8"><span class="toc-number">1.2.</span> <span class="toc-text">Doubly Linked List(双向链表)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Circular-Linked-List-%E5%8F%8C%E5%90%91%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8"><span class="toc-number">1.3.</span> <span class="toc-text">Circular Linked List(双向循环链表)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Stack-%E6%A0%88"><span class="toc-number">2.</span> <span class="toc-text">Stack(栈)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Queue-%E9%98%9F%E5%88%97"><span class="toc-number">3.</span> <span class="toc-text">Queue(队列)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Hash-%E5%93%88%E5%B8%8C%E8%A1%A8%EF%BC%8C%E6%95%A3%E5%88%97%E8%A1%A8"><span class="toc-number">4.</span> <span class="toc-text">Hash(哈希表，散列表)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Separate-Chaining-%E5%88%86%E7%A6%BB%E9%93%BE%E6%8E%A5"><span class="toc-number">4.1.</span> <span class="toc-text">Separate Chaining(分离链接)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Open-Addressing-%E5%BC%80%E6%94%BE%E5%AE%9A%E5%9D%80"><span class="toc-number">4.2.</span> <span class="toc-text">Open Addressing(开放定址)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Binary-Tree-%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91"><span class="toc-number">5.</span> <span class="toc-text">Binary Tree(二叉搜索树)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Splay-Tree-%E4%BC%B8%E5%B1%95%E6%A0%91"><span class="toc-number">6.</span> <span class="toc-text">Splay Tree(伸展树)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#B-Tree-B%E6%A0%91"><span class="toc-number">7.</span> <span class="toc-text">B-Tree(B树)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Self-Balancing-Binary-Tree-%E8%87%AA%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="toc-number">8.</span> <span class="toc-text">Self-Balancing Binary Tree(自平衡二叉树)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Single-Rotation-%E5%8D%95%E6%97%8B%E8%BD%AC"><span class="toc-number">8.1.</span> <span class="toc-text">Single Rotation(单旋转)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Double-Rotation-%E5%8F%8C%E6%97%8B%E8%BD%AC"><span class="toc-number">8.2.</span> <span class="toc-text">Double Rotation(双旋转)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Red-Black-Tree-%E7%BA%A2%E9%BB%91%E6%A0%91"><span class="toc-number">9.</span> <span class="toc-text">Red Black Tree(红黑树)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">10.</span> <span class="toc-text">Reference</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -263,7 +265,7 @@ Heaven = Jager的工地 = 施工中</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">15</span>
+        <span class="count">16</span>
         <span class="name">posts</span>
       </a>
     </div>
@@ -350,20 +352,20 @@ Heaven = Jager的工地 = 施工中</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Data-Structure-and-Algorithm/" title="In Data Structure and Algorithm">Data Structure and Algorithm</a>
+<a href="/categories/Cpp/" title="In Cpp">Cpp</a>
 </div>
 
-    <span><a href="/2023/06/21/DataStructrue/" title="Data Structrue">Data Structrue</a></span>
+    <span><a href="/2023/06/21/Cpp11/" title="Cpp 11">Cpp 11</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Linux/" title="In Linux">Linux</a>
+<a href="/categories/Data-Structure-and-Algorithm/" title="In Data Structure and Algorithm">Data Structure and Algorithm</a>
 </div>
 
-    <span><a href="/2023/09/05/ArchLinuxInstallation/" title="Arch Linux Installation">Arch Linux Installation</a></span>
+    <span><a href="/2023/06/21/DataStructrue/" title="Data Structrue">Data Structrue</a></span>
   </li>
 
       
@@ -380,6 +382,16 @@ Heaven = Jager的工地 = 施工中</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/Computer-Network/" title="In Computer Network">Computer Network</a>
+</div>
+
+    <span><a href="/2023/06/21/ComputerNetwork/" title="Computer Network Basis">Computer Network Basis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/Cpp/" title="In Cpp">Cpp</a>
 </div>
 
@@ -390,10 +402,30 @@ Heaven = Jager的工地 = 施工中</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Unreal-Engine/" title="In Unreal Engine">Unreal Engine</a>
+<a href="/categories/Game-Engine/" title="In Game Engine">Game Engine</a>
 </div>
 
-    <span><a href="/2023/06/21/UnrealEngineBasis/" title="Unreal Engine Basis">Unreal Engine Basis</a></span>
+    <span><a href="/2023/06/28/GameEngineArchitecture/" title="Game Engine Architecture">Game Engine Architecture</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Linux/" title="In Linux">Linux</a>
+</div>
+
+    <span><a href="/2023/09/05/ArchLinuxInstallation/" title="Arch Linux Installation">Arch Linux Installation</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Other/" title="In Other">Other</a>
+</div>
+
+    <span><a href="/2023/08/18/Gossip/" title="杂谈&#x2F;碎碎念">杂谈/碎碎念</a></span>
   </li>
 
       
@@ -413,37 +445,7 @@ Heaven = Jager的工地 = 施工中</title>
 <a href="/categories/Cpp/" title="In Cpp">Cpp</a>
 </div>
 
-    <span><a href="/2023/06/21/Cpp11/" title="Cpp 11">Cpp 11</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Unreal-Engine/" title="In Unreal Engine">Unreal Engine</a>
-</div>
-
-    <span><a href="/2023/08/17/WarFirstPersonNote/" title="War First Person Development Note">War First Person Development Note</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Cpp/" title="In Cpp">Cpp</a>
-</div>
-
     <span><a href="/2023/06/21/Cpp/" title="Cpp Basis">Cpp Basis</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Other/" title="In Other">Other</a>
-</div>
-
-    <span><a href="/2023/08/18/Gossip/" title="杂谈&#x2F;碎碎念">杂谈/碎碎念</a></span>
   </li>
 
   </ul>

@@ -236,7 +236,7 @@
 &lt;h1 id=&#34;内存模型&#34;&gt;&lt;a href=&#34;#内存模型&#34; class=&#34;headerlink&#34; title=&#34;内存模型&#34;&gt;&lt;/a&gt;内存模型&lt;/h1&gt;&lt;p&gt;栈(Stack)、堆(Heap)、自由存储区、全局&amp;#x2F;静态数据区(全局和静态存在同一块内存中)、常量存储区、自由存储区、执行代码区&lt;/p&gt;
 &lt;h2 id=&#34;栈&#34;&gt;&lt;a href=&#34;#栈&#34; class=&#34;headerlink&#34; title=&#34;栈&#34;&gt;&lt;/a&gt;栈&lt;/h2&gt;&lt;p&gt;内存分配的运算内置于中央处理器的指令集中，执行函数时，函数内的局部变量会存在栈上，结束时会被释放。&lt;/p&gt;
 &lt;h2 id=&#34;堆&#34;&gt;&lt;a href=&#34;#堆&#34; class=&#34;headerlink&#34; title=&#34;堆&#34;&gt;&lt;/a&gt;堆&lt;/h2&gt;&lt;p&gt;由用户使用new关键字分配的内存，只由应用程序控制，需要使用delete释放堆内存。没有及时释放可能会造成内存泄漏。&lt;/p&gt;
-&lt;h2 id=&#34;全局-x2F-静态数据&#34;&gt;&lt;a href=&#34;#全局-x2F-静态数据&#34; class=&#34;headerlink&#34; title=&#34;全局&amp;#x2F;静态数据&#34;&gt;&lt;/a&gt;全局&amp;#x2F;静态数据&lt;/h2&gt;&lt;p&gt;全局变量和静态变量的存储区域，又分为已初始化区和未初始化区。&lt;/p&gt;
+&lt;h2 id=&#34;全局-静态数据&#34;&gt;&lt;a href=&#34;#全局-静态数据&#34; class=&#34;headerlink&#34; title=&#34;全局&amp;#x2F;静态数据&#34;&gt;&lt;/a&gt;全局&amp;#x2F;静态数据&lt;/h2&gt;&lt;p&gt;全局变量和静态变量的存储区域，又分为已初始化区和未初始化区。&lt;/p&gt;
 &lt;h2 id=&#34;常量存储区&#34;&gt;&lt;a href=&#34;#常量存储区&#34; class=&#34;headerlink&#34; title=&#34;常量存储区&#34;&gt;&lt;/a&gt;常量存储区&lt;/h2&gt;&lt;p&gt;常量的存储区域。&lt;/p&gt;
 &lt;h2 id=&#34;自由存储区&#34;&gt;&lt;a href=&#34;#自由存储区&#34; class=&#34;headerlink&#34; title=&#34;自由存储区&#34;&gt;&lt;/a&gt;自由存储区&lt;/h2&gt;&lt;p&gt;由malloc分配的内存，一般用free释放。&lt;/p&gt;
 &lt;h2 id=&#34;执行代码区&#34;&gt;&lt;a href=&#34;#执行代码区&#34; class=&#34;headerlink&#34; title=&#34;执行代码区&#34;&gt;&lt;/a&gt;执行代码区&lt;/h2&gt;&lt;p&gt;存放函数体的二进制代码。&lt;/p&gt;
