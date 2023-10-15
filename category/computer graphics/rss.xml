@@ -5,13 +5,13 @@
         <link>https://asdlkjqpwoei.github.io</link>
         <description>游戏开发</description>
         <language>default</language>
-        <pubDate>Wed, 28 Jun 2023 16:57:10 +0800</pubDate>
-        <lastBuildDate>Wed, 28 Jun 2023 16:57:10 +0800</lastBuildDate>
+        <pubDate>Wed, 13 Sep 2023 17:17:15 +0800</pubDate>
+        <lastBuildDate>Wed, 13 Sep 2023 17:17:15 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/06/28/ComputerGraphics/</guid>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/09/13/ComputerGraphics/</guid>
             <title>Computer Graphics Mathematics</title>
-            <link>https://asdlkjqpwoei.github.io/2023/06/28/ComputerGraphics/</link>
-            <pubDate>Wed, 28 Jun 2023 16:57:10 +0800</pubDate>
+            <link>https://asdlkjqpwoei.github.io/2023/09/13/ComputerGraphics/</link>
+            <pubDate>Wed, 13 Sep 2023 17:17:15 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;Cartesian-Coordinate-System-笛卡儿坐标系&#34;&gt;&lt;a href=&#34;#Cartesian-Coordinate-System-笛卡儿坐标系&#34; class=&#34;headerlink&#34; title=&#34;Cartesian Coordinate System(笛卡儿坐标系)&#34;&gt;&lt;/a&gt;Cartesian Coordinate System(笛卡儿坐标系)&lt;/h1&gt;&lt;p&gt;使用n个互相垂直的轴描述n维空间，其中的点代表着空间的位置。在高中数学中常用的皆为二维Cartesian坐标系，在游戏行业中，常用的为三维的Cartesian坐标系。&lt;/p&gt;
 &lt;p&gt;手掌心朝上，无名指和小指蜷缩，食指和拇指伸直并且食指朝向自己身体的前方，中指垂直于手掌，将拇指指向设为x轴，食指指向设为y轴，中指指向设为z轴，就是高中数学常用的二维Cartesian坐标系平面加上一条垂直该平面的轴直线。&lt;/p&gt;
 &lt;p&gt;Game Engine Architecture(游戏引擎架构)书中的右手坐标系图是将食指朝向自己身体上方的图示。&lt;/p&gt;

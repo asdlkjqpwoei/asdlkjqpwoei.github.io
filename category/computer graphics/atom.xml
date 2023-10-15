@@ -3,11 +3,11 @@
     <id>https://asdlkjqpwoei.github.io</id>
     <title>Jager的工地 • Posts by &#34;computer graphics&#34; category</title>
     <link href="https://asdlkjqpwoei.github.io" />
-    <updated>2023-06-28T08:57:10.586Z</updated>
+    <updated>2023-09-13T09:17:15.055Z</updated>
     <entry>
-        <id>https://asdlkjqpwoei.github.io/2023/06/28/ComputerGraphics/</id>
+        <id>https://asdlkjqpwoei.github.io/2023/09/13/ComputerGraphics/</id>
         <title>Computer Graphics Mathematics</title>
-        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/28/ComputerGraphics/"/>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/09/13/ComputerGraphics/"/>
         <content type="html">&lt;h1 id=&#34;Cartesian-Coordinate-System-笛卡儿坐标系&#34;&gt;&lt;a href=&#34;#Cartesian-Coordinate-System-笛卡儿坐标系&#34; class=&#34;headerlink&#34; title=&#34;Cartesian Coordinate System(笛卡儿坐标系)&#34;&gt;&lt;/a&gt;Cartesian Coordinate System(笛卡儿坐标系)&lt;/h1&gt;&lt;p&gt;使用n个互相垂直的轴描述n维空间，其中的点代表着空间的位置。在高中数学中常用的皆为二维Cartesian坐标系，在游戏行业中，常用的为三维的Cartesian坐标系。&lt;/p&gt;
 &lt;p&gt;手掌心朝上，无名指和小指蜷缩，食指和拇指伸直并且食指朝向自己身体的前方，中指垂直于手掌，将拇指指向设为x轴，食指指向设为y轴，中指指向设为z轴，就是高中数学常用的二维Cartesian坐标系平面加上一条垂直该平面的轴直线。&lt;/p&gt;
 &lt;p&gt;Game Engine Architecture(游戏引擎架构)书中的右手坐标系图是将食指朝向自己身体上方的图示。&lt;/p&gt;
@@ -64,6 +64,6 @@ $$|a| = \sqrt[]{{a_x}^2 + {{a_y}^2} + {{a_z}^2}}$$
 &lt;li&gt;Game Engine Architecture [Third Edition] – Jason Gergory, 叶劲峰译&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <updated>2023-06-28T08:57:10.586Z</updated>
+        <updated>2023-09-13T09:17:15.055Z</updated>
     </entry>
 </feed>
