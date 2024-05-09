@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Jager的工地 • Posts by &#34;applied physics&#34; category</title>
+        <link>https://asdlkjqpwoei.github.io</link>
+        <description>游戏开发</description>
+        <language>default</language>
+        <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
+        <lastBuildDate>Thu, 09 May 2024 22:33:29 +0800</lastBuildDate>
+        <item>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2024/05/09/AppliedPhysicsForGame/</guid>
+            <title>Applied Physics For Game</title>
+            <link>https://asdlkjqpwoei.github.io/2024/05/09/AppliedPhysicsForGame/</link>
+            <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;Projectile-Motion-斜抛运动&#34;&gt;&lt;a href=&#34;#Projectile-Motion-斜抛运动&#34; class=&#34;headerlink&#34; title=&#34;Projectile Motion(斜抛运动)&#34;&gt;&lt;/a&gt;Projectile Motion(斜抛运动)&lt;/h1&gt;&lt;p&gt;$v$ - 初始速度大小, $t$ - 运动时间, $x$ - 水平位移距离, $y$ - 垂直位移距离, $g$ - 重力加速度, $\theta$ - 物体初始速度方向&lt;/p&gt;
+&lt;p&gt;Horizontal Displacement(物体水平位移)：&lt;/p&gt;
+&lt;p&gt;$$ x &amp;#x3D; v t \cos(\theta) $$&lt;/p&gt;
+&lt;p&gt;Vertical Displacement(物体垂直位移)：&lt;/p&gt;
+&lt;p&gt;$$ y &amp;#x3D; v t \sin(\theta) - \frac{g t ^ 2}{2} $$ &lt;/p&gt;
+&lt;p&gt;已知水平位移、垂直位移、初始速度方向，求初始速度大小：&lt;/p&gt;
+&lt;p&gt;$$ v &amp;#x3D; \sqrt{\frac{g x^2}{2 x \sin(\theta) \cos(\theta) - 2 y \cos^2(\theta)}} $$&lt;/p&gt;
+&lt;p&gt;已知水平位移、垂直位移、初始速度大小，求初始速度方向：&lt;/p&gt;
+&lt;p&gt;$$ \theta &amp;#x3D; \arctan(\frac{-v^2 \pm \sqrt{v^4 - g (g x^2 + 2 y v^2)}}{-g x}) $$&lt;/p&gt;
+&lt;p&gt;需用上$\cos^2(theta) &amp;#x3D; \frac{1}{\tan^2(\theta) + 1}$进行数学推导&lt;/p&gt;
+&lt;p&gt;水平位移：&lt;/p&gt;
+&lt;p&gt;$$ d &amp;#x3D; \frac{v \cos(\theta)(v \sin(\theta) + \sqrt{(v \sin(\theta))^2 + 2 g y})}{|g}  $$&lt;/p&gt;
+&lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;h2 id=&#34;Wiki&#34;&gt;&lt;a href=&#34;#Wiki&#34; class=&#34;headerlink&#34; title=&#34;Wiki&#34;&gt;&lt;/a&gt;Wiki&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUHJvamVjdGlsZV9tb3Rpb24=&#34;&gt;Projectile Motion - Wikipedia&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;Community&#34;&gt;&lt;a href=&#34;#Community&#34; class=&#34;headerlink&#34; title=&#34;Community&#34;&gt;&lt;/a&gt;Community&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC83MDg0MTI4MTUxMDc2MzM5NzQ5I2hlYWRpbmctMjc=&#34;&gt;抛射体运动在游戏开发中的时间 - 掘金&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

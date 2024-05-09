@@ -5,13 +5,13 @@
         <link>https://asdlkjqpwoei.github.io</link>
         <description>游戏开发</description>
         <language>default</language>
-        <pubDate>Wed, 21 Jun 2023 17:18:46 +0800</pubDate>
-        <lastBuildDate>Wed, 21 Jun 2023 17:18:46 +0800</lastBuildDate>
+        <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
+        <lastBuildDate>Thu, 09 May 2024 22:33:29 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/06/21/StandardTemplateLibrary/</guid>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2024/05/09/StandardTemplateLibrary/</guid>
             <title>Standard Template Library</title>
-            <link>https://asdlkjqpwoei.github.io/2023/06/21/StandardTemplateLibrary/</link>
-            <pubDate>Wed, 21 Jun 2023 17:18:46 +0800</pubDate>
+            <link>https://asdlkjqpwoei.github.io/2024/05/09/StandardTemplateLibrary/</link>
+            <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;标准模板库容器&#34;&gt;&lt;a href=&#34;#标准模板库容器&#34; class=&#34;headerlink&#34; title=&#34;标准模板库容器&#34;&gt;&lt;/a&gt;标准模板库容器&lt;/h1&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -155,20 +155,20 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/06/21/Cpp17/</guid>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2024/05/09/Cpp17/</guid>
             <title>Cpp 17</title>
-            <link>https://asdlkjqpwoei.github.io/2023/06/21/Cpp17/</link>
-            <pubDate>Wed, 21 Jun 2023 17:00:15 +0800</pubDate>
+            <link>https://asdlkjqpwoei.github.io/2024/05/09/Cpp17/</link>
+            <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;命名空间嵌套&#34;&gt;&lt;a href=&#34;#命名空间嵌套&#34; class=&#34;headerlink&#34; title=&#34;命名空间嵌套&#34;&gt;&lt;/a&gt;命名空间嵌套&lt;/h1&gt;&lt;h1 id=&#34;std-optional&#34;&gt;&lt;a href=&#34;#std-optional&#34; class=&#34;headerlink&#34; title=&#34;std::optional&#34;&gt;&lt;/a&gt;std::optional&lt;/h1&gt;&lt;p&gt;主要是为了可以让函数可返回多个值。&lt;/p&gt;
 &lt;h1 id=&#34;Lambda表达式&#34;&gt;&lt;a href=&#34;#Lambda表达式&#34; class=&#34;headerlink&#34; title=&#34;Lambda表达式&#34;&gt;&lt;/a&gt;Lambda表达式&lt;/h1&gt;&lt;p&gt;可捕获对象的副本，而非对象的引用。&lt;/p&gt;
 &lt;h1 id=&#34;智能指针&#34;&gt;&lt;a href=&#34;#智能指针&#34; class=&#34;headerlink&#34; title=&#34;智能指针&#34;&gt;&lt;/a&gt;智能指针&lt;/h1&gt;&lt;p&gt;移除std::auto_ptr。&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/06/21/Cpp11/</guid>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2024/05/09/Cpp11/</guid>
             <title>Cpp 11</title>
-            <link>https://asdlkjqpwoei.github.io/2023/06/21/Cpp11/</link>
-            <pubDate>Wed, 21 Jun 2023 16:58:37 +0800</pubDate>
+            <link>https://asdlkjqpwoei.github.io/2024/05/09/Cpp11/</link>
+            <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;智能指针&#34;&gt;&lt;a href=&#34;#智能指针&#34; class=&#34;headerlink&#34; title=&#34;智能指针&#34;&gt;&lt;/a&gt;智能指针&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;unique_ptr：独占一个对象和资源，一旦被销毁或者置空，相关资源都会被销毁。拥有另一个对象后，之前的对象和相关资源都会被销毁。&lt;/p&gt;
 &lt;/li&gt;
@@ -188,10 +188,10 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/06/21/Cpp/</guid>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2024/05/09/Cpp/</guid>
             <title>Cpp Basis</title>
-            <link>https://asdlkjqpwoei.github.io/2023/06/21/Cpp/</link>
-            <pubDate>Wed, 21 Jun 2023 16:12:20 +0800</pubDate>
+            <link>https://asdlkjqpwoei.github.io/2024/05/09/Cpp/</link>
+            <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;Keyword-关键字&#34;&gt;&lt;a href=&#34;#Keyword-关键字&#34; class=&#34;headerlink&#34; title=&#34;Keyword(关键字)&#34;&gt;&lt;/a&gt;Keyword(关键字)&lt;/h1&gt;&lt;h2 id=&#34;static&#34;&gt;&lt;a href=&#34;#static&#34; class=&#34;headerlink&#34; title=&#34;static&#34;&gt;&lt;/a&gt;static&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;修饰变量，改变变量的生命周期和存储区域，使变量存储在静态区&amp;#x2F;全局区&lt;/li&gt;
 &lt;li&gt;修饰函数，改变函数定义的作用范围，只有定义该函数的文件才可使用该函数，防止与其他人的函数发生同名冲突。&lt;/li&gt;

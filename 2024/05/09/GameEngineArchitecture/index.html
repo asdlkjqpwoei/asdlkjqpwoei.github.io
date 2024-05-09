@@ -1,0 +1,513 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Jager的工地" href="https://asdlkjqpwoei.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Jager的工地" href="https://asdlkjqpwoei.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Jager的工地" href="https://asdlkjqpwoei.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://asdlkjqpwoei.github.io/2024/05/09/GameEngineArchitecture/">
+
+
+
+  <title>
+Game Engine Architecture - Game Engine |
+Heaven = Jager的工地 = 施工中</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Game Engine Architecture
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="作成日：2024-05-09 22:33:29">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">投稿日</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-05-09T22:33:29+08:00">2024-05-09</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="ナビゲーションバーの切り替え">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Heaven</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciundwu5j20zk0m8n9e.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclfb3vzhj20zk0m8wny.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph4lm9i7j20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipexw3o58j20zk0m8e81.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicitspjpbj20zk0m81ky.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">ホーム</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Game-Engine/" itemprop="item" rel="index" title="カテゴリ Game Engine"><span itemprop="name">Game Engine</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="default">
+  <link itemprop="mainEntityOfPage" href="https://asdlkjqpwoei.github.io/2024/05/09/GameEngineArchitecture/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="asdlkjqpwoei">
+    <meta itemprop="description" content="施工中, 游戏开发">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Jager的工地">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="Runtime-Engine-Architecture"><a href="#Runtime-Engine-Architecture" class="headerlink" title="Runtime Engine Architecture"></a>Runtime Engine Architecture</h1><h2 id="Target-Hardware-硬件层"><a href="#Target-Hardware-硬件层" class="headerlink" title="Target Hardware(硬件层)"></a>Target Hardware(硬件层)</h2><p>代表执行游戏的计算机系统或者主机，例如PC、XBox、PlayStation。</p>
+<h2 id="Device-Drivers-驱动程序"><a href="#Device-Drivers-驱动程序" class="headerlink" title="Device Drivers(驱动程序)"></a>Device Drivers(驱动程序)</h2><p>负责管理硬件资源，一般由操作系统或者硬件开发商提供。</p>
+<h2 id="Operating-System-操作系统"><a href="#Operating-System-操作系统" class="headerlink" title="Operating System(操作系统)"></a>Operating System(操作系统)</h2><h2 id="Third-Party-SDKs-and-Middleware-第三方软件开发包和中间件"><a href="#Third-Party-SDKs-and-Middleware-第三方软件开发包和中间件" class="headerlink" title="Third-Party SDKs and Middleware(第三方软件开发包和中间件)"></a>Third-Party SDKs and Middleware(第三方软件开发包和中间件)</h2><p>引擎一般都会借用一部分第三方组件，例如DirectX、OpenGL等图形库，又或者Boost等数据结构及算法库，还有Havok、PhysX等负责物理的开发库。</p>
+<h2 id="Platform-Independence-Layer-平台独立层"><a href="#Platform-Independence-Layer-平台独立层" class="headerlink" title="Platform Independence Layer(平台独立层)"></a>Platform Independence Layer(平台独立层)</h2><p>将平台有关的部分与硬件底层分离，通常会有平台检测，包装平台相关的开发库和基础API，保证接口在不同平台的行为一致。</p>
+<h2 id="Core-System-核心系统"><a href="#Core-System-核心系统" class="headerlink" title="Core System(核心系统)"></a>Core System(核心系统)</h2><p>主要包含开发时需要用到的使用软件和功能，例如断言、内存分配、数学库和自定义的数据结构及算法等。</p>
+<h2 id="Resource-Manager-资源管理器"><a href="#Resource-Manager-资源管理器" class="headerlink" title="Resource Manager(资源管理器)"></a>Resource Manager(资源管理器)</h2><p>负责访问和管理任何类型的游戏资产和其他输入数据。</p>
+<h2 id="Redering-Engine-渲染引擎"><a href="#Redering-Engine-渲染引擎" class="headerlink" title="Redering Engine(渲染引擎)"></a>Redering Engine(渲染引擎)</h2><p>渲染引擎没有特别的架构，但是一般通用来说都采用分层架构</p>
+<h3 id="Low-Level-Renderer-低阶渲染器"><a href="#Low-Level-Renderer-低阶渲染器" class="headerlink" title="Low-Level Renderer(低阶渲染器)"></a>Low-Level Renderer(低阶渲染器)</h3><p>包含全部原始的渲染功能，着重渲染丰富的几何图元。</p>
+<h3 id="Scene-Graph-Culling-Optimization-剔除优化"><a href="#Scene-Graph-Culling-Optimization-剔除优化" class="headerlink" title="Scene Graph&#x2F;Culling Optimization(剔除优化)"></a>Scene Graph&#x2F;Culling Optimization(剔除优化)</h3><p>在低阶渲染器提交的几何图形不考虑其是否可见，在该层将不可见的图形剔除。</p>
+<h3 id="Visual-Effect-VFX-视觉效果"><a href="#Visual-Effect-VFX-视觉效果" class="headerlink" title="Visual Effect, VFX(视觉效果)"></a>Visual Effect, VFX(视觉效果)</h3><p>一般有粒子系统、贴花系统、光照贴图及环境贴图、动态阴影、全屏后期处理效果等。</p>
+<h3 id="Front-End-前端"><a href="#Front-End-前端" class="headerlink" title="Front End(前端)"></a>Front End(前端)</h3><p>一般就是指二维的界面了，例如抬头显示器、菜单等等。</p>
+<h2 id="Profiling-and-Debugging-Tools-性能剖析及调试工具"><a href="#Profiling-and-Debugging-Tools-性能剖析及调试工具" class="headerlink" title="Profiling and Debugging Tools(性能剖析及调试工具)"></a>Profiling and Debugging Tools(性能剖析及调试工具)</h2><p>进行性能剖析以进行性能优化，否则市面上大多数硬件都无法负担游戏带来的负载从而极大地影响游戏体验。</p>
+<h2 id="Collision-and-Physics-物理，刚体动力学模拟"><a href="#Collision-and-Physics-物理，刚体动力学模拟" class="headerlink" title="Collision and Physics(物理，刚体动力学模拟)"></a>Collision and Physics(物理，刚体动力学模拟)</h2><p>提供拟真的物理模拟</p>
+<h2 id="Animation-动画"><a href="#Animation-动画" class="headerlink" title="Animation(动画)"></a>Animation(动画)</h2><p>负责提供动画相关的功能。</p>
+<h2 id="Human-Interface-Devices-人体学接口设备"><a href="#Human-Interface-Devices-人体学接口设备" class="headerlink" title="Human Interface Devices(人体学接口设备)"></a>Human Interface Devices(人体学接口设备)</h2><p>负责处理玩家输入，输入可以有多种设备提供，例如：键盘和鼠标、游戏手柄、方向盘、遥控器等。</p>
+<h2 id="Audio-音频"><a href="#Audio-音频" class="headerlink" title="Audio(音频)"></a>Audio(音频)</h2><p>提供处理及优化音频的功能，以实现更好的声乐效果。</p>
+<h2 id="Only-Multiplayer-Networking-在线多人-网络"><a href="#Only-Multiplayer-Networking-在线多人-网络" class="headerlink" title="Only Multiplayer&#x2F;Networking(在线多人&#x2F;网络)"></a>Only Multiplayer&#x2F;Networking(在线多人&#x2F;网络)</h2><p>提供多人游戏的功能</p>
+<h2 id="Gameplay-Foundation-Systems-游戏性基础系统"><a href="#Gameplay-Foundation-Systems-游戏性基础系统" class="headerlink" title="Gameplay Foundation Systems(游戏性基础系统)"></a>Gameplay Foundation Systems(游戏性基础系统)</h2><p>游戏性(Gameplay)：游戏内进行的活动、支配游戏虚拟世界的规则、玩家角色的能力、其他角色和对象的能力、玩家的长短目标。</p>
+<h2 id="Game-Specific-Subsystems-专用子系统"><a href="#Game-Specific-Subsystems-专用子系统" class="headerlink" title="Game-Specific Subsystems(专用子系统)"></a>Game-Specific Subsystems(专用子系统)</h2><p>针对游戏性进行特制开发的各类子系统，如专用渲染和AI。</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><ul>
+<li>Game Engine Architecture [Third Edition] – Jason Gergory, 叶劲峰译</li>
+</ul>
+
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">編集日</span>
+    <time title="修正日：2023-08-17 19:00:13" itemprop="dateModified" datetime="2023-08-17T19:00:13+08:00">2023-08-17</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>著者： </strong>asdlkjqpwoei <i class="ic i-at"><em>@</em></i>Jager的工地
+  </li>
+  <li class="link">
+    <strong>記事へのリンク：</strong>
+    <a href="https://asdlkjqpwoei.github.io/2024/05/09/GameEngineArchitecture/" title="Game Engine Architecture">https://asdlkjqpwoei.github.io/2024/05/09/GameEngineArchitecture/</a>
+  </li>
+  <li class="license">
+    <strong>著作権表示： </strong>このブログ内のすべての記事は、特別な記載がない限り <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> の下のライセンスで保護されています。
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/05/09/DataStructrue/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclg5ms2rj20zk0m8u0x.jpg" title="Data Structrue">
+  <span class="type">前の記事</span>
+  <span class="category"><i class="ic i-flag"></i> Data Structure and Algorithm</span>
+  <h3>Data Structrue</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/05/09/Gossip/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipeun65urj20zk0m81ii.jpg" title="杂谈&#x2F;碎碎念">
+  <span class="type">次の記事</span>
+  <span class="category"><i class="ic i-flag"></i> Other</span>
+  <h3>杂谈/碎碎念</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="見出し">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Runtime-Engine-Architecture"><span class="toc-number">1.</span> <span class="toc-text">Runtime Engine Architecture</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Target-Hardware-%E7%A1%AC%E4%BB%B6%E5%B1%82"><span class="toc-number">1.1.</span> <span class="toc-text">Target Hardware(硬件层)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Device-Drivers-%E9%A9%B1%E5%8A%A8%E7%A8%8B%E5%BA%8F"><span class="toc-number">1.2.</span> <span class="toc-text">Device Drivers(驱动程序)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Operating-System-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.3.</span> <span class="toc-text">Operating System(操作系统)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Third-Party-SDKs-and-Middleware-%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%8C%85%E5%92%8C%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="toc-number">1.4.</span> <span class="toc-text">Third-Party SDKs and Middleware(第三方软件开发包和中间件)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Platform-Independence-Layer-%E5%B9%B3%E5%8F%B0%E7%8B%AC%E7%AB%8B%E5%B1%82"><span class="toc-number">1.5.</span> <span class="toc-text">Platform Independence Layer(平台独立层)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Core-System-%E6%A0%B8%E5%BF%83%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.6.</span> <span class="toc-text">Core System(核心系统)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Resource-Manager-%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8"><span class="toc-number">1.7.</span> <span class="toc-text">Resource Manager(资源管理器)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Redering-Engine-%E6%B8%B2%E6%9F%93%E5%BC%95%E6%93%8E"><span class="toc-number">1.8.</span> <span class="toc-text">Redering Engine(渲染引擎)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Low-Level-Renderer-%E4%BD%8E%E9%98%B6%E6%B8%B2%E6%9F%93%E5%99%A8"><span class="toc-number">1.8.1.</span> <span class="toc-text">Low-Level Renderer(低阶渲染器)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Scene-Graph-Culling-Optimization-%E5%89%94%E9%99%A4%E4%BC%98%E5%8C%96"><span class="toc-number">1.8.2.</span> <span class="toc-text">Scene Graph&#x2F;Culling Optimization(剔除优化)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Visual-Effect-VFX-%E8%A7%86%E8%A7%89%E6%95%88%E6%9E%9C"><span class="toc-number">1.8.3.</span> <span class="toc-text">Visual Effect, VFX(视觉效果)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Front-End-%E5%89%8D%E7%AB%AF"><span class="toc-number">1.8.4.</span> <span class="toc-text">Front End(前端)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Profiling-and-Debugging-Tools-%E6%80%A7%E8%83%BD%E5%89%96%E6%9E%90%E5%8F%8A%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7"><span class="toc-number">1.9.</span> <span class="toc-text">Profiling and Debugging Tools(性能剖析及调试工具)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Collision-and-Physics-%E7%89%A9%E7%90%86%EF%BC%8C%E5%88%9A%E4%BD%93%E5%8A%A8%E5%8A%9B%E5%AD%A6%E6%A8%A1%E6%8B%9F"><span class="toc-number">1.10.</span> <span class="toc-text">Collision and Physics(物理，刚体动力学模拟)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Animation-%E5%8A%A8%E7%94%BB"><span class="toc-number">1.11.</span> <span class="toc-text">Animation(动画)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Human-Interface-Devices-%E4%BA%BA%E4%BD%93%E5%AD%A6%E6%8E%A5%E5%8F%A3%E8%AE%BE%E5%A4%87"><span class="toc-number">1.12.</span> <span class="toc-text">Human Interface Devices(人体学接口设备)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Audio-%E9%9F%B3%E9%A2%91"><span class="toc-number">1.13.</span> <span class="toc-text">Audio(音频)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Only-Multiplayer-Networking-%E5%9C%A8%E7%BA%BF%E5%A4%9A%E4%BA%BA-%E7%BD%91%E7%BB%9C"><span class="toc-number">1.14.</span> <span class="toc-text">Only Multiplayer&#x2F;Networking(在线多人&#x2F;网络)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Gameplay-Foundation-Systems-%E6%B8%B8%E6%88%8F%E6%80%A7%E5%9F%BA%E7%A1%80%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.15.</span> <span class="toc-text">Gameplay Foundation Systems(游戏性基础系统)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Game-Specific-Subsystems-%E4%B8%93%E7%94%A8%E5%AD%90%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.16.</span> <span class="toc-text">Game-Specific Subsystems(专用子系统)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Reference"><span class="toc-number">2.</span> <span class="toc-text">Reference</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="関連記事">
+        <ul>
+          <li class="active"><a href="/2024/05/09/GameEngineArchitecture/" rel="bookmark" title="Game Engine Architecture">Game Engine Architecture</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="概要">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="asdlkjqpwoei"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">asdlkjqpwoei</p>
+  <div class="description" itemprop="description">游戏开发</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">17</span>
+        <span class="name">ポスト</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">11</span>
+        <span class="name">カテゴリ</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FzZGxranFwd29laQ==" title="https:&#x2F;&#x2F;github.com&#x2F;asdlkjqpwoei"><i class="ic i-github"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly9tdXNpYy4xNjMuY29tLyMvdXNlci9ob21lP2lkPTgwMDYyMjgx" title="https:&#x2F;&#x2F;music.163.com&#x2F;#&#x2F;user&#x2F;home?id&#x3D;80062281"><i class="ic i-cloud-music"></i></span>
+      <a href="/1125050703@qq.com" title="1125050703@qq.com" class="item email"><i class="ic i-envelope"></i></a>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>ホーム</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/about/" rel="section"><i class="ic i-user"></i>プロフィール</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>投稿</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>アーカイブ</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>カテゴリ</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>タグ</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/05/09/DataStructrue/" rel="prev" title="前の記事"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/05/09/Gossip/" rel="next" title="次の記事"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>ランダムな記事</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Data-Structure-and-Algorithm/" title="カテゴリ Data Structure and Algorithm">Data Structure and Algorithm</a>
+</div>
+
+    <span><a href="/2024/05/09/DataStructrue/" title="Data Structrue">Data Structrue</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Unreal-Engine/" title="カテゴリ Unreal Engine">Unreal Engine</a>
+</div>
+
+    <span><a href="/2024/05/09/UnrealEngineBasis/" title="Unreal Engine Basis">Unreal Engine Basis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Computer-Graphics/" title="カテゴリ Computer Graphics">Computer Graphics</a>
+</div>
+
+    <span><a href="/2024/05/09/ComputerGraphics/" title="Computer Graphics Mathematics">Computer Graphics Mathematics</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Unreal-Engine/" title="カテゴリ Unreal Engine">Unreal Engine</a>
+</div>
+
+    <span><a href="/2024/05/09/Lyra/" title="Lyra Sample">Lyra Sample</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Mathematics/" title="カテゴリ Mathematics">Mathematics</a>
+</div>
+
+    <span><a href="/2024/05/09/PrinciplesOfMathematicalAnalysis/" title="Principles of Mathematical Analysis">Principles of Mathematical Analysis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Software-Architecture/" title="カテゴリ Software Architecture">Software Architecture</a>
+</div>
+
+    <span><a href="/2024/05/09/SoftwareArchitecture/" title="Software Architecture">Software Architecture</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Computer-Network/" title="カテゴリ Computer Network">Computer Network</a>
+</div>
+
+    <span><a href="/2024/05/09/ComputerNetwork/" title="Computer Network Basis">Computer Network Basis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Cpp/" title="カテゴリ Cpp">Cpp</a>
+</div>
+
+    <span><a href="/2024/05/09/Cpp/" title="Cpp Basis">Cpp Basis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Cpp/" title="カテゴリ Cpp">Cpp</a>
+</div>
+
+    <span><a href="/2024/05/09/Cpp17/" title="Cpp 17">Cpp 17</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Unreal-Engine/" title="カテゴリ Unreal Engine">Unreal Engine</a>
+</div>
+
+    <span><a href="/2024/05/09/WarFirstPersonNote/" title="War First Person Development Note">War First Person Development Note</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最近のコメント</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">asdlkjqpwoei @ Heaven</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/05/09/GameEngineArchitecture/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "検索…",
+      empty: "「 ${query} 」については何も見つかりませんでした",
+      stats: "${time} ms以内に ${hits} 件の結果が見つかりました"
+    },
+    valine: true,fancybox: true,
+    copyright: 'コピーは成功しました。 <br> 再印刷については、 ％s 契約に従ってください。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

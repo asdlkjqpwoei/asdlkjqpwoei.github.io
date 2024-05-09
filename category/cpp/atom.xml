@@ -3,11 +3,11 @@
     <id>https://asdlkjqpwoei.github.io</id>
     <title>Jager的工地 • Posts by &#34;cpp&#34; category</title>
     <link href="https://asdlkjqpwoei.github.io" />
-    <updated>2023-06-21T09:18:46.352Z</updated>
+    <updated>2024-05-09T14:33:29.093Z</updated>
     <entry>
-        <id>https://asdlkjqpwoei.github.io/2023/06/21/StandardTemplateLibrary/</id>
+        <id>https://asdlkjqpwoei.github.io/2024/05/09/StandardTemplateLibrary/</id>
         <title>Standard Template Library</title>
-        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/StandardTemplateLibrary/"/>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2024/05/09/StandardTemplateLibrary/"/>
         <content type="html">&lt;h1 id=&#34;标准模板库容器&#34;&gt;&lt;a href=&#34;#标准模板库容器&#34; class=&#34;headerlink&#34; title=&#34;标准模板库容器&#34;&gt;&lt;/a&gt;标准模板库容器&lt;/h1&gt;&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -149,22 +149,22 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;&lt;/table&gt;
 </content>
-        <updated>2023-06-21T09:18:46.352Z</updated>
+        <updated>2024-05-09T14:33:29.093Z</updated>
     </entry>
     <entry>
-        <id>https://asdlkjqpwoei.github.io/2023/06/21/Cpp17/</id>
+        <id>https://asdlkjqpwoei.github.io/2024/05/09/Cpp17/</id>
         <title>Cpp 17</title>
-        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/Cpp17/"/>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2024/05/09/Cpp17/"/>
         <content type="html">&lt;h1 id=&#34;命名空间嵌套&#34;&gt;&lt;a href=&#34;#命名空间嵌套&#34; class=&#34;headerlink&#34; title=&#34;命名空间嵌套&#34;&gt;&lt;/a&gt;命名空间嵌套&lt;/h1&gt;&lt;h1 id=&#34;std-optional&#34;&gt;&lt;a href=&#34;#std-optional&#34; class=&#34;headerlink&#34; title=&#34;std::optional&#34;&gt;&lt;/a&gt;std::optional&lt;/h1&gt;&lt;p&gt;主要是为了可以让函数可返回多个值。&lt;/p&gt;
 &lt;h1 id=&#34;Lambda表达式&#34;&gt;&lt;a href=&#34;#Lambda表达式&#34; class=&#34;headerlink&#34; title=&#34;Lambda表达式&#34;&gt;&lt;/a&gt;Lambda表达式&lt;/h1&gt;&lt;p&gt;可捕获对象的副本，而非对象的引用。&lt;/p&gt;
 &lt;h1 id=&#34;智能指针&#34;&gt;&lt;a href=&#34;#智能指针&#34; class=&#34;headerlink&#34; title=&#34;智能指针&#34;&gt;&lt;/a&gt;智能指针&lt;/h1&gt;&lt;p&gt;移除std::auto_ptr。&lt;/p&gt;
 </content>
-        <updated>2023-06-21T09:00:15.298Z</updated>
+        <updated>2024-05-09T14:33:29.076Z</updated>
     </entry>
     <entry>
-        <id>https://asdlkjqpwoei.github.io/2023/06/21/Cpp11/</id>
+        <id>https://asdlkjqpwoei.github.io/2024/05/09/Cpp11/</id>
         <title>Cpp 11</title>
-        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/Cpp11/"/>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2024/05/09/Cpp11/"/>
         <content type="html">&lt;h1 id=&#34;智能指针&#34;&gt;&lt;a href=&#34;#智能指针&#34; class=&#34;headerlink&#34; title=&#34;智能指针&#34;&gt;&lt;/a&gt;智能指针&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;unique_ptr：独占一个对象和资源，一旦被销毁或者置空，相关资源都会被销毁。拥有另一个对象后，之前的对象和相关资源都会被销毁。&lt;/p&gt;
 &lt;/li&gt;
@@ -182,12 +182,12 @@
 &lt;h1 id=&#34;std-tuple元组&#34;&gt;&lt;a href=&#34;#std-tuple元组&#34; class=&#34;headerlink&#34; title=&#34;std::tuple元组&#34;&gt;&lt;/a&gt;std::tuple元组&lt;/h1&gt;&lt;h1 id=&#34;Lambda表达式&#34;&gt;&lt;a href=&#34;#Lambda表达式&#34; class=&#34;headerlink&#34; title=&#34;Lambda表达式&#34;&gt;&lt;/a&gt;Lambda表达式&lt;/h1&gt;&lt;p&gt;开始支持Lambda表达式&lt;/p&gt;
 &lt;h1 id=&#34;using定义别名&#34;&gt;&lt;a href=&#34;#using定义别名&#34; class=&#34;headerlink&#34; title=&#34;using定义别名&#34;&gt;&lt;/a&gt;using定义别名&lt;/h1&gt;&lt;p&gt;typedef无法重定义模板中的一些语法，using定义别名因此而生。&lt;/p&gt;
 </content>
-        <updated>2023-06-21T08:58:37.322Z</updated>
+        <updated>2024-05-09T14:33:29.075Z</updated>
     </entry>
     <entry>
-        <id>https://asdlkjqpwoei.github.io/2023/06/21/Cpp/</id>
+        <id>https://asdlkjqpwoei.github.io/2024/05/09/Cpp/</id>
         <title>Cpp Basis</title>
-        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/Cpp/"/>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2024/05/09/Cpp/"/>
         <content type="html">&lt;h1 id=&#34;Keyword-关键字&#34;&gt;&lt;a href=&#34;#Keyword-关键字&#34; class=&#34;headerlink&#34; title=&#34;Keyword(关键字)&#34;&gt;&lt;/a&gt;Keyword(关键字)&lt;/h1&gt;&lt;h2 id=&#34;static&#34;&gt;&lt;a href=&#34;#static&#34; class=&#34;headerlink&#34; title=&#34;static&#34;&gt;&lt;/a&gt;static&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;修饰变量，改变变量的生命周期和存储区域，使变量存储在静态区&amp;#x2F;全局区&lt;/li&gt;
 &lt;li&gt;修饰函数，改变函数定义的作用范围，只有定义该函数的文件才可使用该函数，防止与其他人的函数发生同名冲突。&lt;/li&gt;
@@ -244,6 +244,6 @@
 &lt;h1 id=&#34;多线程&#34;&gt;&lt;a href=&#34;#多线程&#34; class=&#34;headerlink&#34; title=&#34;多线程&#34;&gt;&lt;/a&gt;多线程&lt;/h1&gt;&lt;h2 id=&#34;volatile&#34;&gt;&lt;a href=&#34;#volatile&#34; class=&#34;headerlink&#34; title=&#34;volatile&#34;&gt;&lt;/a&gt;volatile&lt;/h2&gt;&lt;p&gt;允许变量被未知因素更改，并且不会再被编译器优化。&lt;/p&gt;
 &lt;p&gt;多线程接触得少，难以得出更深的理解。&lt;/p&gt;
 </content>
-        <updated>2023-06-21T08:12:20.048Z</updated>
+        <updated>2024-05-09T14:33:29.074Z</updated>
     </entry>
 </feed>

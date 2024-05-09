@@ -3,11 +3,11 @@
     <id>https://asdlkjqpwoei.github.io</id>
     <title>Jager的工地 • Posts by &#34;data structure and algorithm&#34; category</title>
     <link href="https://asdlkjqpwoei.github.io" />
-    <updated>2023-06-21T08:17:07.589Z</updated>
+    <updated>2024-05-09T14:33:29.076Z</updated>
     <entry>
-        <id>https://asdlkjqpwoei.github.io/2023/06/21/DataStructrue/</id>
+        <id>https://asdlkjqpwoei.github.io/2024/05/09/DataStructrue/</id>
         <title>Data Structrue</title>
-        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/DataStructrue/"/>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2024/05/09/DataStructrue/"/>
         <content type="html">&lt;h1 id=&#34;Linked-List-链表&#34;&gt;&lt;a href=&#34;#Linked-List-链表&#34; class=&#34;headerlink&#34; title=&#34;Linked List(链表)&#34;&gt;&lt;/a&gt;Linked List(链表)&lt;/h1&gt;&lt;p&gt;线性结构，与数组的区别是可以不连续存储，链表变换时不必移动一整块内存。元素的顺序一般由链表对象中的指针决定。&lt;/p&gt;
 &lt;p&gt;搜索链表在最坏情况下的运行时间为$\theta(n)$。&lt;/p&gt;
 &lt;p&gt;插入一个元素进入链表的运行时间一般为$\theta(1)$&lt;/p&gt;
@@ -30,6 +30,6 @@
 &lt;li&gt;Introduction to Algorithm [Third Edition] - Thomas H.Cormen, Charles E.Leiserson, Ronald L. Rivest, Clifford Stein, 殷建平、徐云、王刚、刘晓光、苏明、邹恒明、王宏志译&lt;/li&gt;
 &lt;/ol&gt;
 </content>
-        <updated>2023-06-21T08:17:07.589Z</updated>
+        <updated>2024-05-09T14:33:29.076Z</updated>
     </entry>
 </feed>

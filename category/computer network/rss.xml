@@ -5,13 +5,13 @@
         <link>https://asdlkjqpwoei.github.io</link>
         <description>游戏开发</description>
         <language>default</language>
-        <pubDate>Wed, 21 Jun 2023 17:32:43 +0800</pubDate>
-        <lastBuildDate>Wed, 21 Jun 2023 17:32:43 +0800</lastBuildDate>
+        <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
+        <lastBuildDate>Thu, 09 May 2024 22:33:29 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/06/21/ComputerNetwork/</guid>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2024/05/09/ComputerNetwork/</guid>
             <title>Computer Network Basis</title>
-            <link>https://asdlkjqpwoei.github.io/2023/06/21/ComputerNetwork/</link>
-            <pubDate>Wed, 21 Jun 2023 17:32:43 +0800</pubDate>
+            <link>https://asdlkjqpwoei.github.io/2024/05/09/ComputerNetwork/</link>
+            <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;Open-System-Interconnection-Reference-Model-开放系统互连参考模型&#34;&gt;&lt;a href=&#34;#Open-System-Interconnection-Reference-Model-开放系统互连参考模型&#34; class=&#34;headerlink&#34; title=&#34;Open System Interconnection Reference Model(开放系统互连参考模型)&#34;&gt;&lt;/a&gt;Open System Interconnection Reference Model(开放系统互连参考模型)&lt;/h1&gt;&lt;p&gt;自顶向下&lt;/p&gt;
 &lt;h2 id=&#34;Application-Layer-应用层&#34;&gt;&lt;a href=&#34;#Application-Layer-应用层&#34; class=&#34;headerlink&#34; title=&#34;Application Layer(应用层)&#34;&gt;&lt;/a&gt;Application Layer(应用层)&lt;/h2&gt;&lt;p&gt;包含用户需要的各种协议，比如HTTP。&lt;/p&gt;
 &lt;h2 id=&#34;Presentation-Layer-表示层&#34;&gt;&lt;a href=&#34;#Presentation-Layer-表示层&#34; class=&#34;headerlink&#34; title=&#34;Presentation Layer(表示层)&#34;&gt;&lt;/a&gt;Presentation Layer(表示层)&lt;/h2&gt;&lt;p&gt;负责统一和管理数据的语法和语义。&lt;/p&gt;

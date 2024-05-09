@@ -5,13 +5,13 @@
         <link>https://asdlkjqpwoei.github.io</link>
         <description>游戏开发</description>
         <language>default</language>
-        <pubDate>Wed, 21 Jun 2023 16:17:07 +0800</pubDate>
-        <lastBuildDate>Wed, 21 Jun 2023 16:17:07 +0800</lastBuildDate>
+        <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
+        <lastBuildDate>Thu, 09 May 2024 22:33:29 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/06/21/DataStructrue/</guid>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2024/05/09/DataStructrue/</guid>
             <title>Data Structrue</title>
-            <link>https://asdlkjqpwoei.github.io/2023/06/21/DataStructrue/</link>
-            <pubDate>Wed, 21 Jun 2023 16:17:07 +0800</pubDate>
+            <link>https://asdlkjqpwoei.github.io/2024/05/09/DataStructrue/</link>
+            <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;Linked-List-链表&#34;&gt;&lt;a href=&#34;#Linked-List-链表&#34; class=&#34;headerlink&#34; title=&#34;Linked List(链表)&#34;&gt;&lt;/a&gt;Linked List(链表)&lt;/h1&gt;&lt;p&gt;线性结构，与数组的区别是可以不连续存储，链表变换时不必移动一整块内存。元素的顺序一般由链表对象中的指针决定。&lt;/p&gt;
 &lt;p&gt;搜索链表在最坏情况下的运行时间为$\theta(n)$。&lt;/p&gt;
 &lt;p&gt;插入一个元素进入链表的运行时间一般为$\theta(1)$&lt;/p&gt;

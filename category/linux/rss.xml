@@ -5,13 +5,13 @@
         <link>https://asdlkjqpwoei.github.io</link>
         <description>游戏开发</description>
         <language>default</language>
-        <pubDate>Tue, 05 Sep 2023 19:39:19 +0800</pubDate>
-        <lastBuildDate>Tue, 05 Sep 2023 19:39:19 +0800</lastBuildDate>
+        <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
+        <lastBuildDate>Thu, 09 May 2024 22:33:29 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/09/05/ArchLinuxInstallation/</guid>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2024/05/09/ArchLinuxInstallation/</guid>
             <title>Arch Linux Installation</title>
-            <link>https://asdlkjqpwoei.github.io/2023/09/05/ArchLinuxInstallation/</link>
-            <pubDate>Tue, 05 Sep 2023 19:39:19 +0800</pubDate>
+            <link>https://asdlkjqpwoei.github.io/2024/05/09/ArchLinuxInstallation/</link>
+            <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;大学时玩多个Linux发行版，是Arch Linux比较符合我的胃口，虽然说入门相比其他发行版有点困难，在单个物理机上装了Windows和Arch Linux双系统，但是其中学到了一些东西。工作以后玩得少了，由于没有两台物理机，我也没什么必要用双系统了，因为多数时候还是在Windows平台上进行开发，换了新硬盘，不用Linux了，做个纪念。&lt;/p&gt;
 &lt;h1 id=&#34;Installation-Medium&#34;&gt;&lt;a href=&#34;#Installation-Medium&#34; class=&#34;headerlink&#34; title=&#34;Installation Medium&#34;&gt;&lt;/a&gt;Installation Medium&lt;/h1&gt;&lt;p&gt;可以用一个无重要数据的U盘作为启动盘，需要一个制作启动盘的工具，我用的是Rufus，在Arch Linux下载安装镜像后，用制作工具将U盘制作成启动盘。&lt;/p&gt;
 &lt;h1 id=&#34;Boot-the-live-environment&#34;&gt;&lt;a href=&#34;#Boot-the-live-environment&#34; class=&#34;headerlink&#34; title=&#34;Boot the live environment&#34;&gt;&lt;/a&gt;Boot the live environment&lt;/h1&gt;&lt;p&gt;根据自己计算机主板的供应商品牌，找到进入BIOS或UEFI的办法，通常是在启动后按键盘上的某一个键（Del或者F9，具体需要参考说明书或操作手册）。进入后修改启动顺序，使U盘启动盘为第一个启动的设备，具体需要参考主板的说明书或者操作手册。&lt;br&gt;Arch Linux安装镜像不支持安全启动(Secure Boot)，在进入UEFI以后需要安全启动，通常默认为开启。&lt;/p&gt;

@@ -5,15 +5,15 @@
         <link>https://asdlkjqpwoei.github.io</link>
         <description>游戏开发</description>
         <language>default</language>
-        <pubDate>Wed, 28 Jun 2023 16:57:10 +0800</pubDate>
-        <lastBuildDate>Wed, 28 Jun 2023 16:57:10 +0800</lastBuildDate>
+        <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
+        <lastBuildDate>Thu, 09 May 2024 22:33:29 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/06/28/ComputerGraphics/</guid>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2024/05/09/ComputerGraphics/</guid>
             <title>Computer Graphics Mathematics</title>
-            <link>https://asdlkjqpwoei.github.io/2023/06/28/ComputerGraphics/</link>
-            <pubDate>Wed, 28 Jun 2023 16:57:10 +0800</pubDate>
+            <link>https://asdlkjqpwoei.github.io/2024/05/09/ComputerGraphics/</link>
+            <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;Cartesian-Coordinate-System-笛卡儿坐标系&#34;&gt;&lt;a href=&#34;#Cartesian-Coordinate-System-笛卡儿坐标系&#34; class=&#34;headerlink&#34; title=&#34;Cartesian Coordinate System(笛卡儿坐标系)&#34;&gt;&lt;/a&gt;Cartesian Coordinate System(笛卡儿坐标系)&lt;/h1&gt;&lt;p&gt;使用n个互相垂直的轴描述n维空间，其中的点代表着空间的位置。在高中数学中常用的皆为二维Cartesian坐标系，在游戏行业中，常用的为三维的Cartesian坐标系。&lt;/p&gt;
-&lt;p&gt;手掌心朝上，无名指和小指蜷缩，食指和拇指伸直并且食指朝向自己身体的前方，中指垂直于手掌，将拇指指向设为x轴，食指指向设为y轴，中指指向设为z轴，就是高中数学常用的二维Cartesian坐标系平面加上一条垂直该平面的轴直线。&lt;/p&gt;
+&lt;p&gt;手掌心朝上，无名指和小指蜷缩，食指和拇指伸直并且食指朝向自己身体的前方，中指垂直于手掌，将拇指指向设$x$轴，食指指向设为$y$轴，中指指向设为$z$轴，就是高中数学常用的二维Cartesian坐标系平面加上一条垂直该平面的轴直线。&lt;/p&gt;
 &lt;p&gt;Game Engine Architecture(游戏引擎架构)书中的右手坐标系图是将食指朝向自己身体上方的图示。&lt;/p&gt;
 &lt;h1 id=&#34;矢量运算&#34;&gt;&lt;a href=&#34;#矢量运算&#34; class=&#34;headerlink&#34; title=&#34;矢量运算&#34;&gt;&lt;/a&gt;矢量运算&lt;/h1&gt;&lt;h2 id=&#34;Magnitude-模&#34;&gt;&lt;a href=&#34;#Magnitude-模&#34; class=&#34;headerlink&#34; title=&#34;Magnitude(模)&#34;&gt;&lt;/a&gt;Magnitude(模)&lt;/h2&gt;&lt;p&gt;标量，代表矢量在空间中的长度。一般使用勾股定理计算矢量的模。&lt;/p&gt;
 
@@ -47,7 +47,7 @@ $$|a| = \sqrt[]{{a_x}^2 + {{a_y}^2} + {{a_z}^2}}$$
 &lt;p&gt;两个对象的朝向大致相反。&lt;/p&gt;
 &lt;h2 id=&#34;Cross-Product-叉积&#34;&gt;&lt;a href=&#34;#Cross-Product-叉积&#34; class=&#34;headerlink&#34; title=&#34;Cross Product(叉积)&#34;&gt;&lt;/a&gt;Cross Product(叉积)&lt;/h2&gt;&lt;p&gt;别名：Vector Product(矢量积)或Outer Product(外积)&lt;/p&gt;
 &lt;p&gt;只定义于三维空间。结果是一个新的矢量，垂直于原来的两个参与运算的矢量。&lt;/p&gt;
-&lt;p&gt;$$\vec{a} \times \vec{b} &amp;#x3D; ({a_y} {b_z} - {a_z} {b_y})\vec{i} + ({a_z} {b_x} - {a_x} {b_z})\vec{j} + ({a_x} {b_y} - {a_y} {b_x})\vec{k} ]$$&lt;/p&gt;
+&lt;p&gt;$$\vec{a} \times \vec{b} &amp;#x3D; ({a_y} {b_z} - {a_z} {b_y})\vec{i} + ({a_z} {b_x} - {a_x} {b_z})\vec{j} + ({a_x} {b_y} - {a_y} {b_x})\vec{k} $$&lt;/p&gt;
 &lt;h3 id=&#34;叉积的模&#34;&gt;&lt;a href=&#34;#叉积的模&#34; class=&#34;headerlink&#34; title=&#34;叉积的模&#34;&gt;&lt;/a&gt;叉积的模&lt;/h3&gt;&lt;p&gt;$$|\vec{a} \times \vec{b}| &amp;#x3D; |\vec{a}| |\vec{b}| sin\theta$$&lt;/p&gt;
 &lt;h1 id=&#34;Linear-Interpolation-LERP-线性插值&#34;&gt;&lt;a href=&#34;#Linear-Interpolation-LERP-线性插值&#34; class=&#34;headerlink&#34; title=&#34;Linear Interpolation, LERP(线性插值)&#34;&gt;&lt;/a&gt;Linear Interpolation, LERP(线性插值)&lt;/h1&gt;&lt;p&gt;用来计算两个已知点的中间点。&lt;/p&gt;
 &lt;p&gt;$$LERP(\vec{A}, \vec{B}, \beta) &amp;#x3D; (1 - \beta)\vec{A} + \beta\vec{B} &amp;#x3D; [(1 - \beta)A_x + \beta B_x, (1 - \beta)A_y + \beta B_y, (1 - \beta)A_z + \beta B_z], \beta \in [0,1]$$&lt;/p&gt;

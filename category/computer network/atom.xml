@@ -3,11 +3,11 @@
     <id>https://asdlkjqpwoei.github.io</id>
     <title>Jager的工地 • Posts by &#34;computer network&#34; category</title>
     <link href="https://asdlkjqpwoei.github.io" />
-    <updated>2023-06-21T09:32:43.832Z</updated>
+    <updated>2024-05-09T14:33:29.074Z</updated>
     <entry>
-        <id>https://asdlkjqpwoei.github.io/2023/06/21/ComputerNetwork/</id>
+        <id>https://asdlkjqpwoei.github.io/2024/05/09/ComputerNetwork/</id>
         <title>Computer Network Basis</title>
-        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2023/06/21/ComputerNetwork/"/>
+        <link rel="alternate" href="https://asdlkjqpwoei.github.io/2024/05/09/ComputerNetwork/"/>
         <content type="html">&lt;h1 id=&#34;Open-System-Interconnection-Reference-Model-开放系统互连参考模型&#34;&gt;&lt;a href=&#34;#Open-System-Interconnection-Reference-Model-开放系统互连参考模型&#34; class=&#34;headerlink&#34; title=&#34;Open System Interconnection Reference Model(开放系统互连参考模型)&#34;&gt;&lt;/a&gt;Open System Interconnection Reference Model(开放系统互连参考模型)&lt;/h1&gt;&lt;p&gt;自顶向下&lt;/p&gt;
 &lt;h2 id=&#34;Application-Layer-应用层&#34;&gt;&lt;a href=&#34;#Application-Layer-应用层&#34; class=&#34;headerlink&#34; title=&#34;Application Layer(应用层)&#34;&gt;&lt;/a&gt;Application Layer(应用层)&lt;/h2&gt;&lt;p&gt;包含用户需要的各种协议，比如HTTP。&lt;/p&gt;
 &lt;h2 id=&#34;Presentation-Layer-表示层&#34;&gt;&lt;a href=&#34;#Presentation-Layer-表示层&#34; class=&#34;headerlink&#34; title=&#34;Presentation Layer(表示层)&#34;&gt;&lt;/a&gt;Presentation Layer(表示层)&lt;/h2&gt;&lt;p&gt;负责统一和管理数据的语法和语义。&lt;/p&gt;
@@ -35,6 +35,6 @@
 &lt;/ol&gt;
 &lt;h1 id=&#34;Reference&#34;&gt;&lt;a href=&#34;#Reference&#34; class=&#34;headerlink&#34; title=&#34;Reference&#34;&gt;&lt;/a&gt;Reference&lt;/h1&gt;&lt;p&gt;Computer Networks - Andrew S.Tanenbaum, David J.Wetherall, 严伟、潘爱民译&lt;/p&gt;
 </content>
-        <updated>2023-06-21T09:32:43.832Z</updated>
+        <updated>2024-05-09T14:33:29.074Z</updated>
     </entry>
 </feed>

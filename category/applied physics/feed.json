@@ -1,0 +1,16 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Jager的工地 • All posts by \"applied physics\" category",
+    "description": "游戏开发",
+    "home_page_url": "https://asdlkjqpwoei.github.io",
+    "items": [
+        {
+            "id": "https://asdlkjqpwoei.github.io/2024/05/09/AppliedPhysicsForGame/",
+            "url": "https://asdlkjqpwoei.github.io/2024/05/09/AppliedPhysicsForGame/",
+            "title": "Applied Physics For Game",
+            "date_published": "2024-05-09T14:33:29.071Z",
+            "content_html": "<h1 id=\"Projectile-Motion-斜抛运动\"><a href=\"#Projectile-Motion-斜抛运动\" class=\"headerlink\" title=\"Projectile Motion(斜抛运动)\"></a>Projectile Motion(斜抛运动)</h1><p>$v$ - 初始速度大小, $t$ - 运动时间, $x$ - 水平位移距离, $y$ - 垂直位移距离, $g$ - 重力加速度, $\\theta$ - 物体初始速度方向</p>\n<p>Horizontal Displacement(物体水平位移)：</p>\n<p>$$ x &#x3D; v t \\cos(\\theta) $$</p>\n<p>Vertical Displacement(物体垂直位移)：</p>\n<p>$$ y &#x3D; v t \\sin(\\theta) - \\frac{g t ^ 2}{2} $$ </p>\n<p>已知水平位移、垂直位移、初始速度方向，求初始速度大小：</p>\n<p>$$ v &#x3D; \\sqrt{\\frac{g x^2}{2 x \\sin(\\theta) \\cos(\\theta) - 2 y \\cos^2(\\theta)}} $$</p>\n<p>已知水平位移、垂直位移、初始速度大小，求初始速度方向：</p>\n<p>$$ \\theta &#x3D; \\arctan(\\frac{-v^2 \\pm \\sqrt{v^4 - g (g x^2 + 2 y v^2)}}{-g x}) $$</p>\n<p>需用上$\\cos^2(theta) &#x3D; \\frac{1}{\\tan^2(\\theta) + 1}$进行数学推导</p>\n<p>水平位移：</p>\n<p>$$ d &#x3D; \\frac{v \\cos(\\theta)(v \\sin(\\theta) + \\sqrt{(v \\sin(\\theta))^2 + 2 g y})}{|g}  $$</p>\n<h1 id=\"Reference\"><a href=\"#Reference\" class=\"headerlink\" title=\"Reference\"></a>Reference</h1><h2 id=\"Wiki\"><a href=\"#Wiki\" class=\"headerlink\" title=\"Wiki\"></a>Wiki</h2><ol>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUHJvamVjdGlsZV9tb3Rpb24=\">Projectile Motion - Wikipedia</span></li>\n</ol>\n<h2 id=\"Community\"><a href=\"#Community\" class=\"headerlink\" title=\"Community\"></a>Community</h2><ol>\n<li><span class=\"exturl\" data-url=\"aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC83MDg0MTI4MTUxMDc2MzM5NzQ5I2hlYWRpbmctMjc=\">抛射体运动在游戏开发中的时间 - 掘金</span></li>\n</ol>\n",
+            "tags": []
+        }
+    ]
+}

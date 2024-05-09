@@ -5,13 +5,13 @@
         <link>https://asdlkjqpwoei.github.io</link>
         <description>游戏开发</description>
         <language>default</language>
-        <pubDate>Wed, 28 Jun 2023 16:53:45 +0800</pubDate>
-        <lastBuildDate>Wed, 28 Jun 2023 16:53:45 +0800</lastBuildDate>
+        <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
+        <lastBuildDate>Thu, 09 May 2024 22:33:29 +0800</lastBuildDate>
         <item>
-            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2023/06/28/GameEngineArchitecture/</guid>
+            <guid isPermalink="true">https://asdlkjqpwoei.github.io/2024/05/09/GameEngineArchitecture/</guid>
             <title>Game Engine Architecture</title>
-            <link>https://asdlkjqpwoei.github.io/2023/06/28/GameEngineArchitecture/</link>
-            <pubDate>Wed, 28 Jun 2023 16:53:45 +0800</pubDate>
+            <link>https://asdlkjqpwoei.github.io/2024/05/09/GameEngineArchitecture/</link>
+            <pubDate>Thu, 09 May 2024 22:33:29 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;Runtime-Engine-Architecture&#34;&gt;&lt;a href=&#34;#Runtime-Engine-Architecture&#34; class=&#34;headerlink&#34; title=&#34;Runtime Engine Architecture&#34;&gt;&lt;/a&gt;Runtime Engine Architecture&lt;/h1&gt;&lt;h2 id=&#34;Target-Hardware-硬件层&#34;&gt;&lt;a href=&#34;#Target-Hardware-硬件层&#34; class=&#34;headerlink&#34; title=&#34;Target Hardware(硬件层)&#34;&gt;&lt;/a&gt;Target Hardware(硬件层)&lt;/h2&gt;&lt;p&gt;代表执行游戏的计算机系统或者主机，例如PC、XBox、PlayStation。&lt;/p&gt;
 &lt;h2 id=&#34;Device-Drivers-驱动程序&#34;&gt;&lt;a href=&#34;#Device-Drivers-驱动程序&#34; class=&#34;headerlink&#34; title=&#34;Device Drivers(驱动程序)&#34;&gt;&lt;/a&gt;Device Drivers(驱动程序)&lt;/h2&gt;&lt;p&gt;负责管理硬件资源，一般由操作系统或者硬件开发商提供。&lt;/p&gt;
 &lt;h2 id=&#34;Operating-System-操作系统&#34;&gt;&lt;a href=&#34;#Operating-System-操作系统&#34; class=&#34;headerlink&#34; title=&#34;Operating System(操作系统)&#34;&gt;&lt;/a&gt;Operating System(操作系统)&lt;/h2&gt;&lt;h2 id=&#34;Third-Party-SDKs-and-Middleware-第三方软件开发包和中间件&#34;&gt;&lt;a href=&#34;#Third-Party-SDKs-and-Middleware-第三方软件开发包和中间件&#34; class=&#34;headerlink&#34; title=&#34;Third-Party SDKs and Middleware(第三方软件开发包和中间件)&#34;&gt;&lt;/a&gt;Third-Party SDKs and Middleware(第三方软件开发包和中间件)&lt;/h2&gt;&lt;p&gt;引擎一般都会借用一部分第三方组件，例如DirectX、OpenGL等图形库，又或者Boost等数据结构及算法库，还有Havok、PhysX等负责物理的开发库。&lt;/p&gt;
