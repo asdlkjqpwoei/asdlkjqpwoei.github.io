@@ -22,7 +22,7 @@
 &lt;p&gt;Entity(实体): 通常是指一些通用对象，比如游戏开发中，每个游戏对象都是实体，内有一个唯一的标识符。&lt;/p&gt;
 &lt;p&gt;Component(组件): 通常是指实体所拥有的特定功能或者某一个方面，并且拥有相应的数据。&lt;/p&gt;
 &lt;p&gt;System(系统): 通常是指一个功能过程，作用于具有所需组件所有实体的过程，比如物理系统查询具有质量组件的实体。&lt;/p&gt;
-&lt;h1 id=&#34;Note&#34;&gt;&lt;a href=&#34;#Note&#34; class=&#34;headerlink&#34; title=&#34;Note&#34;&gt;&lt;/a&gt;Note&lt;/h1&gt;&lt;ol&gt;
+&lt;h1 id=&#34;除了常规遇到的架构，还有更多小巧思吗？&#34;&gt;&lt;a href=&#34;#除了常规遇到的架构，还有更多小巧思吗？&#34; class=&#34;headerlink&#34; title=&#34;除了常规遇到的架构，还有更多小巧思吗？&#34;&gt;&lt;/a&gt;除了常规遇到的架构，还有更多小巧思吗？&lt;/h1&gt;&lt;ol&gt;
 &lt;li&gt;子类好屌哦&lt;/li&gt;
 &lt;li&gt;组合优于继承&lt;/li&gt;
 &lt;li&gt;将动作定义成一个类&lt;/li&gt;
