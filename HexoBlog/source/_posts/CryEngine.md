@@ -1,10 +1,8 @@
 ---
 title: CryEngine
-categories: GameEngines
+categories: Game Engine
 ---
 # CryEngine
-
-Crysis系列的引擎，作为当年的显卡杀手，Crysis当时展现了无与伦比的画面表现力，其渲染值得研究并记录，即便已经过时。
 
 ## Installation
 
