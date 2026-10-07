@@ -1,27 +1,33 @@
-name: Deploy Hexo with pnpm
+name: Deploy Hexo via GitHub Actions Pages
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    
-    permissions:
-      contents: write
-
     steps:
       - name: Checkout Source
         uses: actions/checkout@v5
         with:
-          submodules: recursive
+          submodules: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v5
         with:
-          node-version: '26'
+          node-version: '20'
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v5
@@ -50,9 +56,18 @@ jobs:
         working-directory: ./HexoBlog
         run: pnpm hexo clean && pnpm hexo generate
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./HexoBlog/public
-          publish_branch: gh-pages
+          path: ./HexoBlog/public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
