@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="CryEngineCrysis系列的引擎，作为当年的显卡杀手，Crysis当时展现了无与伦比的画面表现力，其渲染值得研究并记录，即便已经过时。 Installation开源免费的CryEngine已经不再更新 TODO Render Scene Traversal  遍历场景的Octree(八叉树)，利用CryEngine自有的Coverage Buffer(C-Buffer)进行软预剔除 将不同">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CryEngine">
+<meta property="og:url" content="http://example.com/2026/10/07/CryEngine/index.html">
+<meta property="og:site_name" content="Constructor">
+<meta property="og:description" content="CryEngineCrysis系列的引擎，作为当年的显卡杀手，Crysis当时展现了无与伦比的画面表现力，其渲染值得研究并记录，即便已经过时。 Installation开源免费的CryEngine已经不再更新 TODO Render Scene Traversal  遍历场景的Octree(八叉树)，利用CryEngine自有的Coverage Buffer(C-Buffer)进行软预剔除 将不同">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-10-07T12:05:43.272Z">
+<meta property="article:modified_time" content="2026-10-07T12:05:43.272Z">
+<meta property="article:author" content="Assassin">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>CryEngine</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/writing/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/asdlkjqpwoei">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2026/10/07/Cpp17/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2026/10/07/DataStructrue/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2026/10/07/CryEngine/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2026/10/07/CryEngine/&text=CryEngine"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2026/10/07/CryEngine/&title=CryEngine"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2026/10/07/CryEngine/&is_video=false&description=CryEngine"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=CryEngine&body=Check out this article: http://example.com/2026/10/07/CryEngine/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2026/10/07/CryEngine/&title=CryEngine"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2026/10/07/CryEngine/&title=CryEngine"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2026/10/07/CryEngine/&title=CryEngine"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2026/10/07/CryEngine/&title=CryEngine"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2026/10/07/CryEngine/&name=CryEngine&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2026/10/07/CryEngine/&t=CryEngine"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CryEngine"><span class="toc-number">1.</span> <span class="toc-text">CryEngine</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-number">1.1.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Render"><span class="toc-number">1.2.</span> <span class="toc-text">Render</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0-%E6%96%BD%E5%B7%A5%E4%B8%AD"><span class="toc-number">1.3.</span> <span class="toc-text">具体实现(施工中)</span></a></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        CryEngine
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Assassin</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-10-07T12:05:43.272Z" class="dt-published" itemprop="datePublished">2026-10-07</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/GameEngines/">GameEngines</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h1 id="CryEngine"><a href="#CryEngine" class="headerlink" title="CryEngine"></a>CryEngine</h1><p>Crysis系列的引擎，作为当年的显卡杀手，Crysis当时展现了无与伦比的画面表现力，其渲染值得研究并记录，即便已经过时。</p>
+<h2 id="Installation"><a href="#Installation" class="headerlink" title="Installation"></a>Installation</h2><p>开源免费的CryEngine已经不再更新</p>
+<p>TODO</p>
+<h2 id="Render"><a href="#Render" class="headerlink" title="Render"></a>Render</h2><ol>
+<li>Scene Traversal</li>
+</ol>
+<p>遍历场景的Octree(八叉树)，利用CryEngine自有的Coverage Buffer(C-Buffer)进行软预剔除</p>
+<p>将不同的物体分类存入不同的渲染队列</p>
+<ol start="2">
+<li>RenderDLL</li>
+</ol>
+<p>将渲染项转换为底层图形指令。</p>
+<p>引入了 Tiled Shading（分块着色），处理海量动态光源。</p>
+<ol start="3">
+<li>Shadow Maps</li>
+</ol>
+<p>生成级联阴影贴图（CSM）。</p>
+<ol start="4">
+<li>Z-Prepass</li>
+</ol>
+<p>预深度遍历，减少 Overdraw。</p>
+<ol start="5">
+<li>Scene G-Buffer</li>
+</ol>
+<p>生成基础几何信息（深度、法线、粗糙度、金属度、反照率）。</p>
+<ol start="6">
+<li>Lighting Pass</li>
+</ol>
+<p>执行 SSDO（环境定向遮蔽） 和 SVOGI（基于体素的全局光照）。提供无需烘焙的实时 GI。</p>
+<ol start="7">
+<li>Post-Processing</li>
+</ol>
+<p>运动模糊、景深以及Lens Flare 效果。</p>
+<h2 id="具体实现-施工中"><a href="#具体实现-施工中" class="headerlink" title="具体实现(施工中)"></a>具体实现(施工中)</h2><ul>
+<li>\Code\CryEngine\RenderDll\XRenderD3D9\D3DRendPipeline.cpp</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Render thread only scene rendering</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">CD3D9Renderer::RT_RenderScene</span><span class="params">(CRenderView* pRenderView)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">FUNCTION_PROFILER_RENDERER</span>();</span><br><span class="line">	<span class="built_in">PROFILE_LABEL_SCOPE_DYNAMIC</span>((pRenderView-&gt;<span class="built_in">IsRecursive</span>() ? <span class="string">&quot;SCENE_REC&quot;</span> : <span class="string">&quot;SCENE&quot;</span>), <span class="string">&quot;SCENE&quot;</span>);</span><br><span class="line"></span><br><span class="line">	gcpRendD3D-&gt;<span class="built_in">SetCurDownscaleFactor</span>(gcpRendD3D-&gt;m_CurViewportScale);</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">PROFILE_FRAME</span>(WaitForRenderView);</span><br><span class="line">		pRenderView-&gt;<span class="built_in">SwitchUsageMode</span>(CRenderView::eUsageModeReading);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="type">const</span> CTimeValue Time = iTimer-&gt;<span class="built_in">GetAsyncTime</span>();</span><br><span class="line"></span><br><span class="line">	<span class="comment">// Only Billboard rendering doesn&#x27;t use CRenderOutput</span></span><br><span class="line">	<span class="keyword">if</span> (!pRenderView-&gt;<span class="built_in">GetRenderOutput</span>() &amp;&amp; !pRenderView-&gt;<span class="built_in">IsBillboardGenView</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		pRenderView-&gt;<span class="built_in">AssignRenderOutput</span>(<span class="built_in">GetActiveDisplayContext</span>()-&gt;<span class="built_in">GetRenderOutput</span>());</span><br><span class="line">		pRenderView-&gt;<span class="built_in">GetRenderOutput</span>()-&gt;<span class="built_in">BeginRendering</span>(pRenderView);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	std::shared_ptr&lt;CGraphicsPipeline&gt; pActiveGraphicsPipeline = pRenderView-&gt;<span class="built_in">GetGraphicsPipeline</span>();</span><br><span class="line">	uint32 shaderRenderingFlags = pActiveGraphicsPipeline-&gt;<span class="built_in">GetRenderFlags</span>();</span><br><span class="line"></span><br><span class="line">	CFlashTextureSourceSharedRT::<span class="built_in">SetupSharedRenderTargetRT</span>();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (!pRenderView-&gt;<span class="built_in">IsRecursive</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		D3D11_VIEWPORT viewport = <span class="built_in">RenderViewportToD3D11Viewport</span>(pRenderView-&gt;<span class="built_in">GetViewport</span>());</span><br><span class="line">		pActiveGraphicsPipeline-&gt;<span class="built_in">GetVrProjectionManager</span>()-&gt;<span class="built_in">Configure</span>(viewport, pRenderView-&gt;<span class="built_in">GetCurrentEye</span>() == CCamera::eEye_Right);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> nSaveDrawNear     = CV_r_nodrawnear;</span><br><span class="line">	<span class="type">int</span> nSaveDrawCaustics = CV_r_watercaustics;</span><br><span class="line">	<span class="keyword">if</span> (shaderRenderingFlags &amp; SHDF_NO_DRAWCAUSTICS)</span><br><span class="line">		CV_r_watercaustics = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">if</span> (shaderRenderingFlags &amp; SHDF_NO_DRAWNEAR)</span><br><span class="line">		CV_r_nodrawnear = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	m_bDeferredDecals = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">	m_vSceneLuminanceInfo = <span class="built_in">Vec4</span>(<span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">1.0f</span>, <span class="number">1.0f</span>);</span><br><span class="line">	m_fAdaptedSceneScale  = m_fAdaptedSceneScaleLBuffer = m_fScotopicSceneScale = <span class="number">1.0f</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">// This scope is the only one allowed to utilize the graphics pipeline</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">CRY_ASSERT</span>(shaderRenderingFlags &amp; SHDF_ALLOWHDR);</span><br><span class="line"></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">PROFILE_FRAME</span>(WaitForParticleRendItems);</span><br><span class="line">			<span class="built_in">SyncComputeVerticesJobs</span>();</span><br><span class="line">			<span class="built_in">UnLockParticleVideoMemory</span>(<span class="built_in">GetRenderFrameID</span>());</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		pActiveGraphicsPipeline-&gt;<span class="built_in">Update</span>(<span class="built_in">EShaderRenderingFlags</span>(shaderRenderingFlags));</span><br><span class="line"></span><br><span class="line">		<span class="comment">// Creating CompiledRenderObjects should happen after Update() call of the GraphicsPipeline, as it requires access to initialized Render Targets</span></span><br><span class="line">		<span class="comment">// If some pipeline stage manages/retires resources used in compiled objects, they should also be handled in Update()</span></span><br><span class="line">		pRenderView-&gt;<span class="built_in">CompileModifiedRenderObjects</span>();</span><br><span class="line"></span><br><span class="line">		<span class="comment">// Sort transparent lists that might have refractive items that will require resolve passes.</span></span><br><span class="line">		<span class="comment">// This is done after the CompileModifiedRenderObjects we need to project render items AABB.</span></span><br><span class="line">		pRenderView-&gt;<span class="built_in">StartOptimizeTransparentRenderItemsResolvesJob</span>();</span><br><span class="line"></span><br><span class="line">		pActiveGraphicsPipeline-&gt;<span class="built_in">Execute</span>();</span><br><span class="line"></span><br><span class="line">		<span class="comment">//////////////////////////////////////////////////////////////////////////</span></span><br><span class="line">		<span class="comment">// Normally it does this:</span></span><br><span class="line">		<span class="comment">//  [HDR,  renderResolution] CRenderingResources::s_ptexHDRTarget -&gt;</span></span><br><span class="line">		<span class="comment">//  [HDR,  outputResolution] CRenderOutput::m_pColorTarget -&gt;</span></span><br><span class="line">		<span class="comment">//  [HDR, displayResolution] CRenderingDisplayContext::m_pColorTarget -&gt;</span></span><br><span class="line">		<span class="comment">//  [LDR, displayResolution] BackBuffer</span></span><br><span class="line">		<span class="comment">//</span></span><br><span class="line">		<span class="comment">// Depending on the setting any of the targets can substitute an adjacent buffer, say:</span></span><br><span class="line">		<span class="comment">//  [HDR,  renderResolution] BackBuffer</span></span><br><span class="line">		<span class="comment">//</span></span><br><span class="line">		<span class="comment">// This would happen if the back-buffer is HDR and matches the rendering resolution</span></span><br><span class="line">		<span class="built_in">ResolveSupersampledRendering</span>(pActiveGraphicsPipeline);</span><br><span class="line">		<span class="built_in">ResolveSubsampledOutput</span>(pActiveGraphicsPipeline);</span><br><span class="line">		<span class="built_in">ResolveHighDynamicRangeDisplay</span>(pActiveGraphicsPipeline);</span><br><span class="line">		<span class="comment">// Everything after this location will render directly into the display buffer/resolution</span></span><br><span class="line">		<span class="comment">//////////////////////////////////////////////////////////////////////////</span></span><br><span class="line"></span><br><span class="line">		pActiveGraphicsPipeline-&gt;<span class="built_in">ClearState</span>();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">////////////////////////////////////////////////</span></span><br><span class="line"></span><br><span class="line">	CV_r_nodrawnear            = nSaveDrawNear;</span><br><span class="line">	CV_r_watercaustics         = nSaveDrawCaustics;</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">PROFILE_FRAME</span>(RenderViewEndFrame);</span><br><span class="line">		pRenderView-&gt;<span class="built_in">SwitchUsageMode</span>(CRenderView::eUsageModeReadingDone);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	SRenderStatistics::<span class="built_in">Write</span>().m_fRenderTime += iTimer-&gt;<span class="built_in">GetAsyncTime</span>().<span class="built_in">GetDifferenceInSeconds</span>(Time);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (CRendererCVars::CV_r_FlushToGPU &gt;= <span class="number">1</span>)</span><br><span class="line">		<span class="built_in">GetDeviceObjectFactory</span>().<span class="built_in">FlushToGPU</span>();</span><br><span class="line"></span><br><span class="line">	m_maskRenderPhaseLog[m_SceneRecurseCount - <span class="number">1</span>] |= eRP_RenderScene;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>\Code\CryEngine\RenderDll\Common\RenderOutput.cpp</li>
+</ul>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">CRenderOutput::BeginRendering</span><span class="params">(CRenderView* pRenderView, stl::optional&lt;uint32&gt; overrideClearFlags)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	m_bHDRRendering = pRenderView &amp;&amp; pRenderView-&gt;<span class="built_in">GetGraphicsPipeline</span>() &amp;&amp; pRenderView-&gt;<span class="built_in">GetGraphicsPipeline</span>()-&gt;<span class="built_in">AllowsHDRRendering</span>();</span><br><span class="line"></span><br><span class="line">	<span class="built_in">CRY_ASSERT</span>(gcpRendD3D-&gt;m_pRT-&gt;<span class="built_in">IsRenderThread</span>());</span><br><span class="line"></span><br><span class="line">	<span class="comment">//////////////////////////////////////////////////////////////////////////</span></span><br><span class="line">	<span class="comment">// Set HDR Render Target (Back Color Buffer)</span></span><br><span class="line">	<span class="comment">//////////////////////////////////////////////////////////////////////////</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (m_pDisplayContext)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">CRY_ASSERT</span>(m_OutputWidth  == CRendererCVars::<span class="built_in">GetCustomResWidth</span> (m_pDisplayContext-&gt;<span class="built_in">IsScalable</span>(), <span class="number">0</span>, m_pDisplayContext-&gt;<span class="built_in">GetDisplayResolution</span>()[<span class="number">0</span>]));</span><br><span class="line">		<span class="built_in">CRY_ASSERT</span>(m_OutputHeight == CRendererCVars::<span class="built_in">GetCustomResHeight</span>(m_pDisplayContext-&gt;<span class="built_in">IsScalable</span>(), <span class="number">0</span>, m_pDisplayContext-&gt;<span class="built_in">GetDisplayResolution</span>()[<span class="number">1</span>]));</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (pRenderView)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">// This scope is the only one allowed to produce HDR data, all the rest is LDR</span></span><br><span class="line">			m_pDisplayContext-&gt;<span class="built_in">BeginRendering</span>();</span><br><span class="line"><span class="comment">// 			m_pDisplayContext-&gt;SetLastCamera(CCamera::eEye_Left, pRenderView-&gt;GetCamera(CCamera::eEye_Left));</span></span><br><span class="line"><span class="comment">// 			m_pDisplayContext-&gt;SetLastCamera(CCamera::eEye_Right, pRenderView-&gt;GetCamera(CCamera::eEye_Right));</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span> <span class="keyword">if</span> (m_pDynTexture)</span><br><span class="line">	&#123;</span><br><span class="line">		m_pDynTexture-&gt;<span class="built_in">Update</span>(m_OutputWidth, m_OutputHeight);</span><br><span class="line">		m_pColorTarget = m_pDynTexture-&gt;m_pTexture;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//////////////////////////////////////////////////////////////////////////</span></span><br><span class="line">	<span class="comment">// Set Depth Z Render Target</span></span><br><span class="line">	<span class="comment">//////////////////////////////////////////////////////////////////////////</span></span><br><span class="line">	<span class="keyword">if</span> (m_bUseTempDepthBuffer)</span><br><span class="line">	&#123;</span><br><span class="line">		m_pDepthTarget = <span class="literal">nullptr</span>;</span><br><span class="line">		m_pDepthTarget.<span class="built_in">Assign_NoAddRef</span>(CRendererResources::<span class="built_in">CreateDepthTarget</span>(m_OutputWidth, m_OutputHeight, Clr_Empty, eTF_Unknown));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//////////////////////////////////////////////////////////////////////////</span></span><br><span class="line">	<span class="comment">// Clear render targets on demand.</span></span><br><span class="line">	<span class="comment">//////////////////////////////////////////////////////////////////////////</span></span><br><span class="line">	uint32 clearTargetFlag = overrideClearFlags.<span class="built_in">value_or</span>(m_clearTargetFlag);</span><br><span class="line">	ColorF clearColor = m_clearColor;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (pRenderView &amp;&amp; pRenderView-&gt;<span class="built_in">IsClearTarget</span>() &amp;&amp; CRendererCVars::CV_r_wireframe)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">// Override clear color from the Render View if given</span></span><br><span class="line">		clearTargetFlag |= FRT_CLEAR_COLOR;</span><br><span class="line">		clearColor = pRenderView-&gt;<span class="built_in">GetTargetClearColor</span>();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> ((clearTargetFlag = clearTargetFlag &amp; ~m_hasBeenCleared))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (clearTargetFlag &amp; (FRT_CLEAR_DEPTH | FRT_CLEAR_STENCIL))</span><br><span class="line">			CClearSurfacePass::<span class="built_in">Execute</span>(m_pDepthTarget,</span><br><span class="line">			                           (clearTargetFlag &amp; FRT_CLEAR_DEPTH ? CLEAR_ZBUFFER : <span class="number">0</span>) |</span><br><span class="line">			                           (clearTargetFlag &amp; FRT_CLEAR_STENCIL ? CLEAR_STENCIL : <span class="number">0</span>),</span><br><span class="line">			                           Clr_FarPlane_Rev.r,</span><br><span class="line">			                           Val_Stencil);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (clearTargetFlag &amp; FRT_CLEAR_COLOR)</span><br><span class="line">			CClearSurfacePass::<span class="built_in">Execute</span>(m_pColorTarget, clearColor);</span><br><span class="line"></span><br><span class="line">		m_hasBeenCleared |= clearTargetFlag;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//////////////////////////////////////////////////////////////////////////</span></span><br><span class="line">	<span class="comment">// Assign resources to RenderView</span></span><br><span class="line">	<span class="comment">//////////////////////////////////////////////////////////////////////////</span></span><br><span class="line">	<span class="keyword">if</span> (pRenderView)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">// <span class="doctag">NOTE:</span> for debugging to revert unsetting the target-pointers</span></span><br><span class="line">		pRenderView-&gt;<span class="built_in">InspectRenderOutput</span>();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//////////////////////////////////////////////////////////////////////////</span></span><br><span class="line">	<span class="comment">// <span class="doctag">TODO:</span> make color and/or depth|stencil optional (currently it&#x27;s enforced to have all of them)</span></span><br><span class="line">	<span class="built_in">CRY_ASSERT</span>(m_pColorTarget);</span><br><span class="line">	<span class="built_in">CRY_ASSERT</span>(m_pDepthTarget);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/writing/">Writing</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://github.com/asdlkjqpwoei">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#CryEngine"><span class="toc-number">1.</span> <span class="toc-text">CryEngine</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Installation"><span class="toc-number">1.1.</span> <span class="toc-text">Installation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Render"><span class="toc-number">1.2.</span> <span class="toc-text">Render</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B7%E4%BD%93%E5%AE%9E%E7%8E%B0-%E6%96%BD%E5%B7%A5%E4%B8%AD"><span class="toc-number">1.3.</span> <span class="toc-text">具体实现(施工中)</span></a></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2026/10/07/CryEngine/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2026/10/07/CryEngine/&text=CryEngine"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2026/10/07/CryEngine/&title=CryEngine"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2026/10/07/CryEngine/&is_video=false&description=CryEngine"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=CryEngine&body=Check out this article: http://example.com/2026/10/07/CryEngine/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2026/10/07/CryEngine/&title=CryEngine"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2026/10/07/CryEngine/&title=CryEngine"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2026/10/07/CryEngine/&title=CryEngine"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2026/10/07/CryEngine/&title=CryEngine"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2026/10/07/CryEngine/&name=CryEngine&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2026/10/07/CryEngine/&t=CryEngine"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2026
+    Assassin
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/writing/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/asdlkjqpwoei">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="标准模板库容器   容器 数据结构 时间复杂度 元素是否有序 元素是否可重复 注意事项    Array 数组 $O(1)$ 无序 可重复 支持任意访问   Vector 数组 在尾部操作时$O(1)$，在头部操作时$O(n)$ 无序 可重复 支持任意访问   Deque 双端队列 $O(1)$ 无序 可重复 支持任意访问   forward_list 单向链表 $O(1)$ 无序 可重复 不支持">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Standard Template Library">
+<meta property="og:url" content="http://example.com/2026/10/07/StandardTemplateLibrary/index.html">
+<meta property="og:site_name" content="Constructor">
+<meta property="og:description" content="标准模板库容器   容器 数据结构 时间复杂度 元素是否有序 元素是否可重复 注意事项    Array 数组 $O(1)$ 无序 可重复 支持任意访问   Vector 数组 在尾部操作时$O(1)$，在头部操作时$O(n)$ 无序 可重复 支持任意访问   Deque 双端队列 $O(1)$ 无序 可重复 支持任意访问   forward_list 单向链表 $O(1)$ 无序 可重复 不支持">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-10-07T12:05:43.298Z">
+<meta property="article:modified_time" content="2026-10-07T12:05:43.298Z">
+<meta property="article:author" content="Assassin">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Standard Template Library</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/writing/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/asdlkjqpwoei">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="Previous post" href="/2026/10/07/PrinciplesOfMathematicalAnalysis/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/2026/10/07/SoftwareArchitecture/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2026/10/07/StandardTemplateLibrary/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2026/10/07/StandardTemplateLibrary/&text=Standard Template Library"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2026/10/07/StandardTemplateLibrary/&title=Standard Template Library"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2026/10/07/StandardTemplateLibrary/&is_video=false&description=Standard Template Library"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Standard Template Library&body=Check out this article: http://example.com/2026/10/07/StandardTemplateLibrary/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2026/10/07/StandardTemplateLibrary/&title=Standard Template Library"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2026/10/07/StandardTemplateLibrary/&title=Standard Template Library"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2026/10/07/StandardTemplateLibrary/&title=Standard Template Library"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2026/10/07/StandardTemplateLibrary/&title=Standard Template Library"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2026/10/07/StandardTemplateLibrary/&name=Standard Template Library&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2026/10/07/StandardTemplateLibrary/&t=Standard Template Library"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E5%AE%B9%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">标准模板库容器</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Standard Template Library
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Assassin</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2026-10-07T12:05:43.298Z" class="dt-published" itemprop="datePublished">2026-10-07</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Cpp/">Cpp</a>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h1 id="标准模板库容器"><a href="#标准模板库容器" class="headerlink" title="标准模板库容器"></a>标准模板库容器</h1><table>
+<thead>
+<tr>
+<th>容器</th>
+<th>数据结构</th>
+<th>时间复杂度</th>
+<th>元素是否有序</th>
+<th>元素是否可重复</th>
+<th>注意事项</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Array</td>
+<td>数组</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>支持任意访问</td>
+</tr>
+<tr>
+<td>Vector</td>
+<td>数组</td>
+<td>在尾部操作时$O(1)$，在头部操作时$O(n)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>支持任意访问</td>
+</tr>
+<tr>
+<td>Deque</td>
+<td>双端队列</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>支持任意访问</td>
+</tr>
+<tr>
+<td>forward_list</td>
+<td>单向链表</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>不支持任意访问</td>
+</tr>
+<tr>
+<td>List</td>
+<td>双向链表</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>不支持任意访问</td>
+</tr>
+<tr>
+<td>Stack</td>
+<td>基于链表，deque&#x2F;lsit</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>deque&#x2F;list封闭头端开口。</td>
+</tr>
+<tr>
+<td>Queue</td>
+<td>基于链表，deque&#x2F;list</td>
+<td>$O(1)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>deque&#x2F;list封闭头端开口。</td>
+</tr>
+<tr>
+<td>priority_queue</td>
+<td>vector+max_heap</td>
+<td>$O(log_2n)$</td>
+<td>有序</td>
+<td>可重复</td>
+<td>使用堆处理和规则的vector容器</td>
+</tr>
+<tr>
+<td>Set</td>
+<td>红黑树</td>
+<td>$O(log_2n)$</td>
+<td>有序</td>
+<td>不可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>Multiset</td>
+<td>红黑树</td>
+<td>$O(log_2n)$</td>
+<td>有序</td>
+<td>可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>Map</td>
+<td>红黑树</td>
+<td>$O(log_2n)$</td>
+<td>有序</td>
+<td>不可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>Multimap</td>
+<td>红黑树</td>
+<td>$O(log_2n)$</td>
+<td>有序</td>
+<td>可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>unordered_set</td>
+<td>哈希表</td>
+<td>$O(1)-O(n)$</td>
+<td>无序</td>
+<td>不可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>unordered_multiset</td>
+<td>哈希表</td>
+<td>$O(1)-O(n)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>unordered_map</td>
+<td>哈希表</td>
+<td>$O(1)-O(n)$</td>
+<td>无序</td>
+<td>不可重复</td>
+<td>|</td>
+</tr>
+<tr>
+<td>unordered_multimap</td>
+<td>哈希表</td>
+<td>$O(1)-O(n)$</td>
+<td>无序</td>
+<td>可重复</td>
+<td>|</td>
+</tr>
+</tbody></table>
+
+  </div>
+</article>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">Home</a></li>
+        
+          <li><a href="/about/">About</a></li>
+        
+          <li><a href="/writing/">Writing</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://github.com/asdlkjqpwoei">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E6%A8%A1%E6%9D%BF%E5%BA%93%E5%AE%B9%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text">标准模板库容器</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2026/10/07/StandardTemplateLibrary/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2026/10/07/StandardTemplateLibrary/&text=Standard Template Library"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2026/10/07/StandardTemplateLibrary/&title=Standard Template Library"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2026/10/07/StandardTemplateLibrary/&is_video=false&description=Standard Template Library"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Standard Template Library&body=Check out this article: http://example.com/2026/10/07/StandardTemplateLibrary/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2026/10/07/StandardTemplateLibrary/&title=Standard Template Library"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2026/10/07/StandardTemplateLibrary/&title=Standard Template Library"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2026/10/07/StandardTemplateLibrary/&title=Standard Template Library"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2026/10/07/StandardTemplateLibrary/&title=Standard Template Library"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2026/10/07/StandardTemplateLibrary/&name=Standard Template Library&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2026/10/07/StandardTemplateLibrary/&t=Standard Template Library"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2016-2026
+    Assassin
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">Home</a></li><!--
+     --><!--
+       --><li><a href="/about/">About</a></li><!--
+     --><!--
+       --><li><a href="/writing/">Writing</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/asdlkjqpwoei">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+</body>
+</html>
