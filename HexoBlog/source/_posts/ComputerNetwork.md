@@ -1,6 +1,8 @@
 ---
 title: Computer Network Basis
 categories: Computer Network
+date: 2024-05-09
+updated: 2026-04-02
 ---
 # Open System Interconnection Reference Model(开放系统互连参考模型)
 

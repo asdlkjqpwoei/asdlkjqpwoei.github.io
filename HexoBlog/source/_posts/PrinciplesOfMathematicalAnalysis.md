@@ -1,6 +1,8 @@
 ---
 title: Principles of Mathematical Analysis
 categories: Mathematics
+date: 2024-05-09
+updated: 2026-04-02
 ---
 
 # The Real and Complex Number Systems(实数和复数)

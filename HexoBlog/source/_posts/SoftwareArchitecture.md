@@ -1,6 +1,8 @@
 ---
 title: Software Architecture
 categories: Software Architecture
+date: 2024-05-09
+updated: 2026-10-07
 ---
 当自己尝试做过小工具或者参与过一些大项目，会发现如果代码没有进行合理的组织和分配，会变得极难维护，而且会降低自己对开发工作的动力，最终不了了之。
 

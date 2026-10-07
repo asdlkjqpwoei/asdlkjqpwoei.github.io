@@ -1,6 +1,8 @@
 ---
 title: Data Structrue
 categories: Data Structure and Algorithm
+date: 2024-05-09
+updated: 2026-04-02
 ---
 # Linked List(链表)
 

@@ -1,6 +1,8 @@
 ---
 title: Game Engine Architecture
 categories: Game Engine
+date: 2024-05-09
+updated: 2026-04-02
 ---
 # Runtime Engine Architecture
 

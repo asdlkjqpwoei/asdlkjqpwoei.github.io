@@ -1,6 +1,8 @@
 ---
 title: Applied Physics For Game
 categories: Applied Physics
+date: 2024-05-09
+updated: 2026-04-02
 ---
 # Projectile Motion(斜抛运动)
 

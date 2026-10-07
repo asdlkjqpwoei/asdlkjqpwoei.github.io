@@ -1,6 +1,8 @@
 ---
 title: Computer Graphics Mathematics
 categories: Computer Graphics
+date: 2024-05-09
+updated: 2026-04-02
 ---
 # Cartesian Coordinate System(笛卡儿坐标系)
 

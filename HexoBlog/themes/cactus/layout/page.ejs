@@ -42,29 +42,37 @@
 					<%= category.name %>
 				</h2>
 				<ul class = "post-list">
-					<!-- 获取该类别下的所有文章，并先按 updated 降序，再按 date 降序排序 -->
-					<% var posts_in_category = category.posts.sort('-updated', '-date'); %>
-					<% posts_in_category.each(function(post) { %>
-					<li class = "post-item">
-						<!-- 显示更新时间或创建时间 -->
-						<span class="meta">
-							<!-- 1. 创建时间（固定显示） -->
-							<span class="created-date" title="创建时间">
-								<%= date(post.date, 'YYYY-MM-DD') %>
+				<!-- 按照最新更新时间（若无更新时间则按创建时间）倒序排列 -->
+					<% var posts_in_cat = category.posts.sort(function(a, b) {
+						var timeA = a.updated ? a.updated.valueOf() : a.date.valueOf();
+						var timeB = b.updated ? b.updated.valueOf() : b.date.valueOf();
+						return timeB - timeA;
+						});
+					%>
+
+					<% posts_in_cat.each(function(post){ %>
+						<li class="post-item">
+							<span class="meta">
+							<!-- 1. 严格读取 Front-Matter 的 date (创建时间) -->
+							<span class="created-date">
+							<%= date(post.date, 'YYYY-MM-DD') %>
 							</span>
-							<!-- 2. 更新时间（仅当 updated 存在且与 date 不同时显示） -->
-							<% 
-								var createdStr = date(post.date, 'YYYY-MM-DD');
-								var updatedStr = post.updated ? date(post.updated, 'YYYY-MM-DD') : createdStr;
+
+							<!-- 2. 只有在 Front-Matter 显式写了 updated，且与 date 不同时才显示 -->
+							<%
+								var cDate = date(post.date, 'YYYY-MM-DD');
+								var uDate = post.updated ? date(post.updated, 'YYYY-MM-DD') : '';
 							%>
-							<% if (updatedStr && updatedStr !== createdStr) { %>
-								<span class="updated-date" style="color: #888; font-size: 0.8em; margin-left: 0.4rem;" title="更新时间">
-								(Update at <%= updatedStr %>)
-								</span>
+							<% if (uDate && uDate !== cDate) { %>
+							<span class="updated-date" style="color: #888; font-size: 0.85em; margin-left: 0.4rem;">
+								(Updated at <%= uDate %>)
+							</span>
 							<% } %>
 							</span>
-						<span><a href = "<%- url_for(post.path) %>"><%= post.title %></a></span>
-					</li>
+							<span class="post-title">
+							<a href="<%- url_for(post.path) %>"><%= post.title %></a>
+							</span>
+						</li>
 					<% }); %>
 				</ul>
 				<% }); %>
