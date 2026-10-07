@@ -48,19 +48,21 @@
 					<li class = "post-item">
 						<!-- 显示更新时间或创建时间 -->
 						<span class="meta">
-						<!-- 始终显示创建时间 -->
-						<time datetime="<%= date_xml(post.date) %>" itemprop="datePublished">
-							<%= date(post.date, 'YYYY-MM-DD') %>
-						</time>
-						<!-- 判断并显示更新时间 -->
-						<% 
-							var createdDate = date(post.date, 'YYYY-MM-DD');
-							var updatedDate = date(post.updated, 'YYYY-MM-DD');
-						%>
-						<% if (post.updated && updatedDate !== createdDate) { %>
-							<span class="updated-time">(Updated at <%= updatedDate %>)</span>
-						<% } %>
-						</span>
+							<!-- 1. 创建时间（固定显示） -->
+							<span class="created-date" title="创建时间">
+								<%= date(post.date, 'YYYY-MM-DD') %>
+							</span>
+							<!-- 2. 更新时间（仅当 updated 存在且与 date 不同时显示） -->
+							<% 
+								var createdStr = date(post.date, 'YYYY-MM-DD');
+								var updatedStr = post.updated ? date(post.updated, 'YYYY-MM-DD') : createdStr;
+							%>
+							<% if (updatedStr && updatedStr !== createdStr) { %>
+								<span class="updated-date" style="color: #888; font-size: 0.8em; margin-left: 0.4rem;" title="更新时间">
+								(Update at <%= updatedStr %>)
+								</span>
+							<% } %>
+							</span>
 						<span><a href = "<%- url_for(post.path) %>"><%= post.title %></a></span>
 					</li>
 					<% }); %>
