@@ -44,7 +44,7 @@ jobs:
 
       - name: Install Dependencies
         working-directory: ./HexoBlog
-        run: pnpm install
+        run: pnpm install --allow-scripts
 
       - name: Generate Static Files
         working-directory: ./HexoBlog
