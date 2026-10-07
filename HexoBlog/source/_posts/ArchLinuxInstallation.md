@@ -2,7 +2,7 @@
 title: Arch Linux Installation
 categories: Linux
 ---
-大学时玩多个Linux发行版，是Arch Linux比较符合我的胃口，虽然说入门相比其他发行版有点困难，在单个物理机上装了Windows和Arch Linux双系统，但是其中学到了一些东西。工作以后玩得少了，由于没有两台物理机，我也没什么必要用双系统了，因为多数时候还是在Windows平台上进行开发，换了新硬盘，不用Linux了，做个纪念。
+大学时玩多个Linux发行版，是Arch Linux比较符合我的喜好，虽然说入门相比其他发行版有点困难，在单个物理机上装了Windows和Arch Linux双系统，但是其中学到了一些东西。由于没有两台物理机，无法同时使用，没什么必要用双系统，多数时候仍是在Windows平台上进行开发，换了新硬盘，不用Linux了，做个纪念。
 
 # Installation Medium
 
