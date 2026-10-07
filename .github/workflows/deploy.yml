@@ -28,12 +28,13 @@ jobs:
         uses: actions/setup-node@v5
         with:
           node-version: '26'
+          corepack-enable: true
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v5
         with:
           version: latest
-          run_install: true
+          run_install: false
 
       - name: Get pnpm store directory
         id: pnpm-cache
